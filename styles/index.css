@@ -1,8 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styling */
 * {
     font-family: "Work Sans", sans-serif;
+    margin: 0;
 }
 
+h2{
+  font-family: "Lora", serif;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+h3{
+  color: #44C853;
+  font-size: 28px;
+  margin-bottom: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+p{
+  color: #898384;
+}
 
 /* Header Styling */
 header{
@@ -14,11 +34,7 @@ header{
     justify-content: space-between;
     align-items: center;
   }
-  .brand-logo{
-    width: 150px;
-    height: 30px;
-  }
-  nav{
+ nav{
     width: 600px;
     display: flex;
     flex-direction: row;
@@ -32,27 +48,227 @@ header{
 }
   .green{
     width: 150px;
-    height: 35px;
+    height: 40px;
     font-size: 14px;
     font-weight: 600;
-    padding:10px 0;
+    padding:10px 10px;
     background-color: #44C853;
     color: #FFFFFF;
     border: none;
-    border-radius: 15px;
+    border-radius: 32px;
   }
+  .green:hover {
+    background-color: #077a43;
+  } 
+
+/* Hero Section */
+.hero{
+  display: flex;
+  flex-direction: row;
+  padding: 100px 0px;
+  gap: 250px;
+  justify-content: center;
+  background:rgba(250, 250, 250, 255);
+}
+
+.hero h2{
+  color: #44C853; 
+  margin-bottom: 0;
+}
+
+.hero p{
+  font-weight: 400;
+  width: 500px;
+  font-size: 23px;
+  line-height: 33.6px;
+}  
+
+
+.hero-text img{
+  margin-left: 250px;
+  margin-bottom: 10px;
+} 
+
+.hero-text button{
+  width:250px;
+  height: 70px;
+  margin-top: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 32px;
+  border:none;
+  outline: none;
+  color:white;
+  background: var(--Primary-Primary, #3325B2);
+}
+
+.hero-text button:hover{
+  background: #344bf9;
+}
+
+
+/* Our Mission */
+.mission{
+  display: flex;
+  padding: 100px 100px;
+  gap: 120px;
+  justify-content: center;
+  background:white;
+}
+.mission p{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.6px;
+}
+.mission button{
+  margin-top: 100px;
+  height:63px;
+  font-weight: 600;
+}
 
 
 
+/* Services */
+.services{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #EFEDFF;
+  align-items: center;
+  padding: 100px 100px;
+}
+
+.services h2{
+  margin: 7px 0px;
+}
+
+.services p{
+  margin-top: 0;
+}
+
+.services-container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin:40px 0;
+}
+
+.service-card h4{
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  margin: 12px 0;
+  line-height: 28.8px;
+  color:#44C853;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 32px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.service-card div{
+  margin-bottom: 80px;
+}
+.service-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+.card-btn {
+  width: 143px;
+  height: 41px;
+  border-radius: 32px;
+  border: none;
+  background: #DFDCF8;
+  padding: 10px 20px;
+  position: absolute;
+  bottom:20px;
+  left:20px;
+}  
+.card-btn:hover {
+  background: #8478f4;
+}
+.services .green {
+  display: inline-block;
+  background-color: #22b573;
+  color: white;
+  font-weight: 600;
+  width:196px;
+  height:63px;
+  margin-top: 70px;
+  padding: 10px 20px;
+  border-radius: 32px;
+}
+
+.services .green:hover {
+  background-color: #077a43;
+} 
 
 
 
+/* Why Medlorix */
+.why-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px;
+  background: #F5FFF6;
+}
+
+.intro{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.intro p{
+  font-size: 24px;
+  line-height: 28.8px;
+}
 
 
+.feature-row {
+  display: flex;
+  justify-content: space-evenly;  
+  gap: 50px;
+  margin-top: 50px;
+  align-items: center;
+  
+}
 
+.feature-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
 
+.features img {
+  width: 50px;
+  margin-bottom: 20px;
+}
 
+.features h4 {
+  margin-bottom: 0px;
+}
 
+.why-section button{
+  width:196px;
+  height:63px;
+  padding: 10px 32px;
+  border-radius: 32px;
+  border: none;
+  background-color: #3325B2;
+  color: white;
+  font-weight: 600;
+  margin-top: 70px;
+}
 
 
 
@@ -67,8 +283,6 @@ header{
   }
 
 .build-container h2{
-    font-family: "Lora", serif;
-    font-size: 40px;
     color: #FAFAFA;
     margin-bottom: 0;
 }  
@@ -123,7 +337,75 @@ header{
   }
   
 
-  /* Subscribe styling */
+  /* Tips */
+  .tips{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 100px;
+    background:#EFEDFF;
+  }
+  .tips h2{
+    color:#44C853;
+  }
+  .tip-p{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    width: 869px;
+    text-align: center;
+  }
+
+  h5{
+    color:#44C853;
+    margin-bottom:7px;
+    font-size: 14px;
+  }
+  .tips h4{
+    color:#898384;
+    margin-bottom: 7px;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+  .section-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+  }
+  .tip-card{
+    display: flex;
+    background:#FAFAFA ;
+    gap: 20px;
+    padding: 24px 36px;
+    border-radius: 32px;
+  }
+
+  .tip-card p{
+    margin-bottom: 15px;
+  }
+   .tip-card a{
+    font-weight: 600;
+    text-decoration: none;
+    color:#726C6C;
+   }
+
+   .tips button{
+    width:250px;
+    height:63px;
+    padding: 10px 32px;
+    border-radius: 32px;
+    border: none;
+    background-color: #3325B2;
+    color: white;
+    font-weight: 600;
+    margin-top: 70px;
+   }
+
+
+
+  /* Subscribe */
   #subscribe{
     background-color: #150F49;
     display: flex;
