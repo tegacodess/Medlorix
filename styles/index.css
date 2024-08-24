@@ -23,7 +23,10 @@ h3{
 p{
   color: #898384;
 }
-
+a{
+  text-decoration: none;
+  color: white;
+}
 /* Header Styling */
 header{
     padding: 0px 100px;
@@ -53,7 +56,6 @@ header{
     font-weight: 600;
     padding:10px 10px;
     background-color: #44C853;
-    color: #FFFFFF;
     border: none;
     border-radius: 32px;
   }
@@ -189,7 +191,11 @@ header{
   position: absolute;
   bottom:20px;
   left:20px;
+  font-weight: 600;
 }  
+.card-btn a{
+  color:#3325B2;
+}
 .card-btn:hover {
   background: #8478f4;
 }
