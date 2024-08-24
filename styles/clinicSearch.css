@@ -14,12 +14,6 @@ body{
 h2{
   font-family: "Lora", serif;
   font-size: 40px;
-  font-weight: 700;
-}
-h3{
-  font-family: "Lora", serif;
-  font-size: 40px;
-  font-weight: 700;
 }
 
 /* Header Styling */
@@ -155,7 +149,7 @@ nav a{
   align-items: center;
   padding: 100px 0px;
 }
-.build-container h3{
+.build-container h2{
   color: #FAFAFA;
 }
 .build-container{
@@ -254,7 +248,7 @@ nav a{
 }
 .bottom-layer button{
   width: 100px;
-  height: 40px;
+  height: 50px;
   background-color: #44C853;
   color: #FAFAFA;
   font-size: 10px;
