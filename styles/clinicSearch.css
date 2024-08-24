@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
   padding: 0;
   margin: 0;
@@ -8,6 +10,18 @@ body{
   font-family: "Work Sans", sans-serif;
   /* font-family: "Lora", serif; */
 }
+
+h2{
+  font-family: "Lora", serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+h3{
+  font-family: "Lora", serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
 /* Header Styling */
 header{
   padding: 0px 100px;
@@ -34,16 +48,19 @@ nav a{
   color: #5A5555;
   font-weight: 600;
 }
-header button{
+.green{
   width: 150px;
-  height: 30px;
+  height: 35px;
   font-size: 14px;
   font-weight: 600;
+  padding:10px 0;
   background-color: #44C853;
   color: #FFFFFF;
   border: none;
   border-radius: 15px;
 }
+
+
 /* Hero styling */
 #hero{
   padding: 20px 0px;
@@ -61,11 +78,9 @@ header button{
   gap: 10px;
   padding-block: 50px;
 }
-.search span{
+
+.search h2{
   color: #44C853;
-  font-size: 40px;
-  font-family: "Lora", serif;
-  font-weight: 700;
 }
 .search p{
   font-size: 20px;
@@ -140,9 +155,13 @@ header button{
   align-items: center;
   padding: 100px 0px;
 }
+.build-container h3{
+  color: #FAFAFA;
+}
 .build-container{
   width: 900px;
-  height: 350px;
+  height: 400px;
+  padding: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -245,37 +264,43 @@ header button{
 }
 
 /* footer styling */
-footer{
+.footer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin: 60px;
+}
+.main-footer{
+  display: flex;
+ 
 }
 .firstlayer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 50px 100px;
+  padding-left:  450px;
+    gap:100px;
   align-items: center;
 }
-.logo-aboutus{
+.logo-about{
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.logo-aboutus p{
+.logo-about p{
   font-size: 13px;
   color: #858088;
   font-weight: 400;
   width: 150px;
 }
-.socail-media{
+.social-media{
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 7px;
   margin-block: 10px 20px;
 }
-.socail-media img{
-  width: 35px;
-  height: 35px;
+.social-media img{
+  width: 30px;
+  height: 30px;
   background-color: #3325B2;
   padding: 5px;
   border-radius: 20px;
