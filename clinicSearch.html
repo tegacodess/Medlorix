@@ -5,29 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/clinicSearch.css">
-  <title>MedLorix</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles/clinicSearch.css">
+  <title>Medlorix</title>
 </head>
 <body>
   <header>
-    <a href="/"><img class="brand-logo" src="/logo/medlorix_logo.png" alt="Brand Logo"></a>
+    <a href="/src/index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
     <nav>
-      <a href="/clinicSearch.html">HOME</a>
       <a href="">SERVICES</a>
       <a href="">ABOUT US</a>
       <a href="">FAQS</a>
       <a href="">CONTACT</a>
     </nav>
-    <button>GET STARTED</button>
+    <button class="green">GET STARTED</button>
   </header>
 
   <!-- Hero Section -->
   <div id="hero">
     <div class="search">
-      <p><span>
+      <h2>
         Search for a nearby Clinic 
-      </span></p>
+      </h2>
       <p>
         Easily find the nearest clinics across Africa by selecting your country, state, and local area. Our intuitive search tool helps you locate the best healthcare facilities and nearby bus stops for quick access.
       </p>
@@ -40,25 +39,25 @@
         <div class="input-fields">
           <input type="search" placeholder="Enter your Country">
           <div class="dropdown-container">
-            <img src="/icons/dropdown_icon.png" alt="dropdown">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
           </div>
         </div>
         <div class="input-fields">
           <input type="search" placeholder="Enter your State">
           <div class="dropdown-container">
-            <img src="/icons/dropdown_icon.png" alt="dropdown">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
           </div>
         </div>
         <div class="input-fields">
           <input type="search" placeholder="Enter your Local Government Area / Province">
           <div class="dropdown-container">
-            <img src="/icons/dropdown_icon.png" alt="dropdown">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
           </div>
         </div>
         <div class="input-fields">
           <input type="search" placeholder="Enter Nearest Bus Stop / Landmark">
           <div class="dropdown-container">
-            <img src="/icons/dropdown_icon.png" alt="dropdown">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
           </div>
         </div>
       </div>
@@ -72,9 +71,9 @@
    <div id="build">
     <div class="build-container">
       <div class="left-card">
-        <p><span>
-          Build the future of <br>healthcare with us
-        </span></p>
+        <h2>
+          Build the future of healthcare with us
+        </h2>
         <p>
           Want to make an impact? Join us as we strive to provide the best healthcare experience to millions of people in Africa
         </p>
@@ -83,7 +82,7 @@
         </button>
       </div>
       <div class="right-card">
-        <img src="/icons/shakehands.png" alt="shake hands">
+        <img src="/images/Clinic Search Page/shakehands.png" alt="shake hands">
       </div>
     </div>
     <div class="shadow_color">
@@ -93,9 +92,9 @@
   <!-- Subscribe Section -->
   <div id="subscribe">
     <div class="top-layer">
-      <span>
+      <h2>
         Stay up to date on healthy living
-      </span>
+      </h2>
       <p>
         Be the first to receive expert insights, practical advice, and exclusive content directly to your inbox.
       </p>
@@ -110,51 +109,53 @@
 
   <!-- Footer Section -->
   <footer>
-    <div class="firstlayer">
-      <div class="logo-aboutus">
-        <a href="/"><img class="brand-logo" src="/logo/medlorix_logo.png" alt="Brand Logo"></a>
-        <p>
-          simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one easy-to-use platform.
-        </p>
-        <div class="socail-media">
-          <a href=""><img src="/icons/googleplus logo.png" alt=""></a>
-          <a href=""><img src="/icons/Facebook logo.png" alt=""></a>
-          <a href=""><img src="/icons/twitter logo.png" alt=""></a>
-          <a href=""><img src="/icons/Group 67.png" alt=""></a>
+    <div class="footer">
+      <div class="firstlayer">
+        <div class="logo-about">
+          <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+          <p>
+            simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one easy-to-use platform.
+          </p>
+          <div class="social-media">
+            <a href=""><img src="/images/Icons/google.png" alt="Google"></a>
+            <a href=""><img src="/images/Icons/facebook.png" alt="Facebook"></a>
+            <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
+            <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
+          </div>
+          <div class="back-to-top">
+            <a href="">  
+              <img src="/images/Clinic Search Page/akar-icons_arrow-left.png" alt="">
+              <span>Back to top</span>
+            </a>
+          </div>
         </div>
-        <div class="back-to-top">
-          <a href="">  
-            <img src="/icons/akar-icons_arrow-left.png" alt="">
-            <span>Back to top</span>
-          </a>
+        <div class="company">
+          <p><span>Company</span></p>
+          <a href="">Careers</a>
+          <a href="">About us</a>
+          <a href="">Our mission</a>
+          <a href="">Our Team</a>
+        </div>
+        <div class="company">
+          <p><span>Our Services</span></p>
+          <a href="">Clinic Search</a>
+          <a href="">See a Doctor</a>
+          <a href="">AI-Based Diagnosis</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div class="company">
+          <p><span>Legal</span></p>
+          <a href="">Privacy</a>
+          <a href="">Terms</a>
+          <a href="">Security</a>
         </div>
       </div>
-      <div class="company">
-        <p><span>Company</span></p>
-        <a href="">Careers</a>
-        <a href="">About us</a>
-        <a href="">Our mission</a>
-        <a href="">Our Team</a>
-      </div>
-      <div class="company">
-        <p><span>Our Services</span></p>
-        <a href="">Clinic Search</a>
-        <a href="">See a Doctor</a>
-        <a href="">AI-Based Diagnosis</a>
-        <a href="">Contact Us</a>
-      </div>
-      <div class="company">
-        <p><span>Legal</span></p>
-        <a href="">Privacy</a>
-        <a href="">Terms</a>
-        <a href="">Security</a>
-      </div>
-    </div>
-    <div class="lastlayer">
-      <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
-      <div class="terms">
-        <p>Terms and Conditions</p>
-        <p>Privacy Policy</p>
+      <div class="lastlayer">
+        <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+        <div class="terms">
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
       </div>
     </div>
   </footer>
