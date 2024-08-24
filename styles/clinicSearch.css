@@ -42,6 +42,9 @@ nav a{
   color: #5A5555;
   font-weight: 600;
 }
+nav a:hover{
+  color: #44C853;
+}
 .green{
   width: 150px;
   height: 35px;
@@ -52,8 +55,14 @@ nav a{
   color: #FFFFFF;
   border: none;
   border-radius: 15px;
+  transition: 0.5s ease-in-out;
 }
-
+.green:hover{
+  background-color: #FFFFFF;
+  border: 2px solid #44C853;
+  color: #44C853;
+  cursor: pointer;
+}
 
 /* Hero styling */
 #hero{
@@ -139,6 +148,13 @@ nav a{
   color: #FAFAFA;
   border: none;
   border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+.location button:hover{
+  background-color: #FFFFFF;
+  border: 2px solid #3325B2;
+  color: #3325B2;
+  cursor: pointer;
 }
 
 /* Build Styling */
@@ -168,7 +184,7 @@ nav a{
   flex-direction: column;
   gap: 30px;
 }
-.left-card span{
+.left-card h2{
   font-family: "Lora", serif;
   font-size: 40px;
   font-weight: 700;
@@ -190,6 +206,13 @@ nav a{
   font-weight: 600;
   border: none;
   border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+.left-card button:hover{
+  background-color: #FFFFFF;
+  border: 2px solid #44C853;
+  color: #44C853;
+  cursor: pointer;
 }
 .right-card img{
   width: 400px;
@@ -220,7 +243,7 @@ nav a{
   justify-content: center;
   gap: 10px;
 }
-.top-layer span{
+.top-layer h2{
   font-size: 40px;
   font-weight: 700;
   color: #44C853;
@@ -255,30 +278,34 @@ nav a{
   font-weight: 600;
   border: none;
   border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+.bottom-layer button:hover{
+  background-color: #FFFFFF;
+  border: 2px solid #44C853;
+  color: #44C853;
+  cursor: pointer;
 }
 
 /* footer styling */
 .footer{
   display: flex;
-  flex-direction: row;
-  margin: 60px;
-}
-.main-footer{
-  display: flex;
- 
+  flex-direction: column;
+  padding-top: 60px;
 }
 .firstlayer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left:  450px;
-    gap:100px;
   align-items: center;
+  padding: 0px 100px;
 }
 .logo-about{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 30px;
+  padding-right: 150px;
 }
 .logo-about p{
   font-size: 13px;
@@ -298,6 +325,12 @@ nav a{
   background-color: #3325B2;
   padding: 5px;
   border-radius: 20px;
+}
+.back-to-top{
+  transition: 0.5s;
+}
+.back-to-top:hover{
+  border: 1px solid #44C853;
 }
 .back-to-top a{
   display: flex;
@@ -333,7 +366,12 @@ nav a{
   font-weight: 600;
   color: #858088;
   margin-bottom: 10px;
+  transition: 0.5s ease-in-out;
 }
+.company a:hover{
+  color: #44C853;
+}
+
 .lastlayer{
   background-color: #150F49;
   padding: 40px 100px;
@@ -355,4 +393,567 @@ nav a{
   font-size: 15px;
   font-weight: 700;
   color: #FFFCFC;
+}
+
+
+/*Responsiveness*/
+/* X-large devices (large desktops, less than 1400px*/
+@media(max-width: 1400px){
+
+}
+/* Large devices (desktops, less than 1200px) */
+@media(max-width: 1200px){
+
+}
+/* Medium devices (tablet, less than 992px)*/
+@media(max-width: 992px){
+  header{
+    padding: 0px 50px;
+    height: 100px;
+  }
+  .brand-logo{
+    width: 100px;
+    height: 30px;
+  }
+  nav{
+    width: 500px;
+  }
+  nav a{
+    font-size: 12px;
+  }
+  .green{
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+  #hero{
+    padding: 20px 0px;
+    gap: 10px;
+  }
+  .search{
+    width: 500px;
+    padding-block: 40px;
+  }
+  .search h2{
+    font-size: 30px;
+  }
+  .search p{
+    font-size: 15px;
+  }
+  .location{
+    gap: 30px;
+  }
+  .located-near{
+    font-size: 29px;
+  }
+  .map-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+  .map-inputs input{
+    width: 250px;
+    height: 40px;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .map-inputs input::placeholder{
+    font-size: 13px;
+  }
+  .map-inputs img{
+    width: 10px;
+  }
+  .dropdown-container{
+    width: 40px;
+    height: 40px;
+    margin-left: -1px;
+  }
+  .location button{
+    height: 40px;
+    width: 120px;
+    font-size: 13px;
+  }
+  #build{
+    padding: 50px 0px;
+  }
+  .build-container{
+    width: 700px;
+    height: 300px;
+    padding: 20px;
+  }
+  .left-card{
+    gap: 20px;
+  }
+  .left-card h2{
+    font-size: 25px;
+    width: 250px;
+  }
+  .left-card p{
+    font-size: 13px;
+    width: 250px;
+  }
+  .left-card button{
+    width: 150px;
+    height: 40px;
+    font-size: 10px;
+  }
+  .right-card img{
+    width: 300px;
+  }
+  .shadow_color{
+    width: 600px;
+    height: 20px;
+  }
+  #subscribe{
+    padding: 40px 0;
+    gap: 30px;
+  }
+  .top-layer{
+    gap: 10px;
+  }
+  .top-layer h2{
+    font-size: 30px;
+  }
+  .top-layer p{
+    width: 500px;
+    font-size: 15px;
+  }.bottom-layer{
+    gap: 10px;
+  }
+  .bottom-layer input{
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder{
+    font-size: 12px;
+  }
+  .bottom-layer button{
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
+  .footer{
+    padding-top: 60px;
+  }
+  .firstlayer{
+    padding: 0px 50px;
+  }
+  .logo-about{
+    gap: 10px;
+    padding-bottom: 30px;
+    padding-right: 100px;
+  }
+  .logo-about p{
+    font-size: 12px;
+    width: 150px;
+  }
+  .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    margin-block: 10px 20px;
+  }
+  .social-media img{
+    width: 30px;
+    height: 30px;
+  }
+  .back-to-top a{
+    gap: 10px;
+  }
+  .back-to-top img{
+    width: 15px;
+  }
+  .back-to-top span{
+    font-size: 12px;
+  }
+  .company p{
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .company a{
+    font-size: 12px;
+  }
+  .lastlayer{
+    padding: 40px 50px;
+  }
+  .copyright{
+    font-size: 12px;
+  }
+  .terms{
+    gap: 15px;
+  }
+  .terms p{
+    font-size: 12px;
+  }
+  
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media(max-width: 768px){
+  header{
+    padding: 0px 20px;
+    height: 100px;
+  }
+  .brand-logo{
+    width: 80px;
+    height: 30px;
+  }
+  nav{
+    width: 450px;
+  }
+  nav a{
+    font-size: 12px;
+  }
+  .green{
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+  #hero{
+    padding: 10px 0px;
+    gap: 10px;
+  }
+  .search{
+    width: 400px;
+    padding-block: 40px;
+  }
+  .search h2{
+    font-size:25px;
+  }
+  .search p{
+    font-size: 13px;
+  }
+  .location{
+    gap: 30px;
+  }
+  .located-near{
+    font-size: 20px;
+  }
+  .map-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+  }
+  .map-inputs input{
+    width: 200px;
+    height: 40px;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .map-inputs input::placeholder{
+    font-size: 13px;
+  }
+  .map-inputs img{
+    width: 10px;
+  }
+  .dropdown-container{
+    width: 40px;
+    height: 40px;
+    margin-left: -1px;
+  }
+  .location button{
+    height: 40px;
+    width: 120px;
+    font-size: 13px;
+  }
+  #build{
+    padding: 50px 0px;
+  }
+  .build-container{
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+  }
+  .left-card{
+    gap: 20px;
+  }
+  .left-card h2{
+    font-size: 20px;
+    width: 200px;
+  }
+  .left-card p{
+    font-size: 13px;
+    width: 200px;
+  }
+  .left-card button{
+    width: 140px;
+    height: 40px;
+    font-size: 10px;
+  }
+  .right-card img{
+    width: 200px;
+  }
+  .shadow_color{
+    width: 400px;
+    height: 20px;
+  }
+  #subscribe{
+    padding: 40px 0;
+    gap: 30px;
+  }
+  .top-layer{
+    gap: 10px;
+  }
+  .top-layer h2{
+    font-size: 20px;
+  }
+  .top-layer p{
+    width: 400px;
+    font-size: 13px;
+  }.bottom-layer{
+    gap: 10px;
+  }
+  .bottom-layer input{
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder{
+    font-size: 12px;
+  }
+  .bottom-layer button{
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
+  .footer{
+    padding-top: 40px;
+  }
+  .firstlayer{
+    padding: 0px 20px;
+  }
+  .logo-about{
+    gap: 10px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+  }
+  .logo-about p{
+    font-size: 12px;
+    width: 150px;
+  }
+  .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    margin-block: 10px 20px;
+  }
+  .social-media img{
+    width: 30px;
+    height: 30px;
+  }
+  .back-to-top a{
+    gap: 10px;
+  }
+  .back-to-top img{
+    width: 15px;
+  }
+  .back-to-top span{
+    font-size: 12px;
+  }
+  .company p{
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .company a{
+    font-size: 12px;
+  }
+  .lastlayer{
+    padding: 30px 20px;
+  }
+  .copyright{
+    font-size: 10px;
+  }
+  .terms{
+    gap: 10px;
+  }
+  .terms p{
+    font-size: 10px;
+  }
+}
+
+/* X-small devices (potrait phones, less than 576px) */
+@media (max-width: 576px){
+  header{
+    padding: 0px 10px;
+    height: 60px;
+  }
+  .brand-logo{
+    width: 50px;
+    height: 30px;
+  }
+  nav{
+    width: 200px;
+  }
+  nav a{
+    font-size: 8px;
+  }
+  .green{
+    width: 80px;
+    height: 30px;
+    font-size: 8px;
+  }
+  #hero{
+    padding: 10px 0px;
+    gap: 10px;
+  }
+  .search{
+    width: 250px;
+    padding-block: 30px;
+  }
+  .search h2{
+    font-size:18px;
+  }
+  .search p{
+    font-size: 10px;
+  }
+  .location{
+    gap: 30px;
+  }
+  .located-near{
+    font-size: 15px;
+  }
+  .map-inputs{
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .map-inputs input{
+    width: 100px;
+    height: 30px;
+    padding-left: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .map-inputs input::placeholder{
+    font-size: 8px;
+  }
+  .map-inputs img{
+    width: 8px;
+  }
+  .dropdown-container{
+    width: 30px;
+    height: 30px;
+    margin-left: -1px;
+  }
+  .location button{
+    height: 30px;
+    width: 80px;
+    font-size: 10px;
+  }
+  #build{
+    padding: 40px 0px;
+  }
+  .build-container{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+  }
+  .left-card{
+    gap: 15px;
+  }
+  .left-card h2{
+    font-size: 13px;
+    width: 120px;
+  }
+  .left-card p{
+    font-size: 10px;
+    width: 120px;
+  }
+  .left-card button{
+    width: 120px;
+    height: 30px;
+    font-size: 9px;
+  }
+  .right-card img{
+    width: 140px;
+    height: 120px;
+  }
+  .shadow_color{
+    width: 250px;
+    height: 15px;
+  }
+  #subscribe{
+    padding: 40px 0;
+    gap: 20px;
+  }
+  .top-layer{
+    gap: 10px;
+  }
+  .top-layer h2{
+    font-size: 15px;
+  }
+  .top-layer p{
+    width: 300px;
+    font-size: 10px;
+  }.bottom-layer{
+    gap: 10px;
+  }
+  .bottom-layer input{
+    width: 200px;
+    height: 40px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder{
+    font-size: 10px;
+  }
+  .bottom-layer button{
+    width: 70px;
+    height: 35px;
+    font-size: 10px;
+  }
+  .footer{
+    padding-top: 20px;
+  }
+  .firstlayer{
+    padding: 0px 10px;
+  }
+  .logo-about{
+    gap: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  .logo-about p{
+    font-size: 9px;
+    width: 100px;
+  }
+  .social-media{
+    gap: 7px;
+    margin-block: 0px;
+  }
+  .social-media img{
+    width: 22px;
+    height: 22px;
+  }
+  .back-to-top a{
+    gap: 5px;
+  }
+  .back-to-top img{
+    width: 15px;
+  }
+  .back-to-top span{
+    font-size: 10px;
+  }
+  .company p{
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .company a{
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+  .lastlayer{
+    padding: 20px 10px;
+  }
+  .copyright{
+    font-size: 8px;
+  }
+  .terms{
+    gap: 5px;
+  }
+  .terms p{
+    font-size: 8px;
+  }
 }
