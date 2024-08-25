@@ -37,13 +37,20 @@ nav{
   justify-content: space-evenly;
 }
 nav a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
   text-decoration: none;
   font-size: 14px;
   color: #5A5555;
   font-weight: 600;
 }
 nav a:hover{
-  color: #44C853;
+  color: #3325B2;
+}
+.dropdown{
+  width: 10px;
 }
 .green{
   width: 150px;
@@ -790,6 +797,10 @@ nav a:hover{
   }
   nav a{
     font-size: 8px;
+    gap: 4px;
+  }
+  .dropdown{
+    width: 7px;
   }
   .green{
     width: 80px;
