@@ -1,0 +1,498 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ================ General Selector Section ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Lora", serif;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #44C853;
+    font-size: 28px;
+    margin-bottom: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+p {
+    color: #898384;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*==================== Header section ===================*/
+header {
+    padding: 0px 100px;
+    height: 100px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 150px;
+    height: 30px;
+}
+
+nav {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #5A5555;
+    font-weight: 600;
+}
+
+.green {
+    width: 150px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 0;
+    background-color: #44C853;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+}
+
+
+/*==================== Services Section =================*/
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    padding: 100px 100px;
+}
+
+.services h2 {
+    margin: 7px 0px;
+}
+
+.services p {
+    margin-top: 0;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.service-card h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    margin: 12px 0;
+    line-height: 28.8px;
+    color: #44C853;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 32px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.service-card div {
+    margin-bottom: 80px;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.card-btn {
+    width: 143px;
+    height: 41px;
+    border-radius: 32px;
+    border: none;
+    background: #DFDCF8;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: 600;
+}
+
+#btn-3{
+    font-size: 12.7px;
+    width: 175px;
+}
+
+.card-btn a {
+    color: #3325B2;
+}
+
+.card-btn:hover {
+    background: #8478f4;
+}
+
+.services .green {
+    display: inline-block;
+    background-color: #22b573;
+    color: white;
+    font-weight: 600;
+    width: 196px;
+    height: 63px;
+    margin-top: 70px;
+    padding: 10px 20px;
+    border-radius: 32px;
+}
+
+.services .green:hover {
+    background-color: #077a43;
+}
+
+/*==================== Testimonial ===================*/
+#testimonial {
+    background-color: #F8FFF9;
+    display: flex;
+    height: 400px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial-container{
+    display: flex;
+    padding-inline: 20px;
+    gap: 100px;
+    justify-content: space-between;
+}
+
+.first-layer{
+    width: 350px;
+    margin-top: 50px;
+}
+
+.first-layer p{
+    text-align: justify;
+    font-weight: 700;
+    color: #3325B2;
+    font-size: 32px;
+}
+
+.second-layer{
+    width: 609px;
+    height: 200px;
+    background: #FAFAFA;
+    gap: 20px;
+    padding: 24px 36px;
+    border-radius: 32px;
+}
+
+.review{
+    width: 301px;
+    height: 71px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.review-img{
+    width: 52px;
+    height: 52px;
+    margin-top: 10px;
+}
+
+.review-star{
+    width: 238px;
+    height: 71px;
+}
+
+.review-star h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: #898384;
+}
+
+.review-star p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.testimonial-arrow{
+    width: 20px;
+    height: 104px;
+    margin-top: 50px;
+}
+
+
+/* ================== Tips Section ===================*/
+.tips {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 100px;
+    background: #EFEDFF;
+}
+
+.tips h2 {
+    color: #44C853;
+}
+
+.tip-p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    width: 869px;
+    text-align: center;
+}
+
+h5 {
+    color: #44C853;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.tips h4 {
+    color: #898384;
+    margin-bottom: 7px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.tip-card {
+    display: flex;
+    background: #FAFAFA;
+    gap: 20px;
+    padding: 24px 36px;
+    border-radius: 32px;
+}
+
+.tip-card p {
+    margin-bottom: 15px;
+}
+
+.tip-card a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #726C6C;
+}
+
+.tips button {
+    width: 250px;
+    height: 63px;
+    padding: 10px 32px;
+    border-radius: 32px;
+    border: none;
+    background-color: #3325B2;
+    color: white;
+    font-weight: 600;
+    margin-top: 70px;
+}
+
+
+
+/* ================ Subscribe Section ==================*/
+#subscribe {
+    background-color: #150F49;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.top-layer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.top-layer span {
+    font-size: 40px;
+    font-weight: 700;
+    color: #44C853;
+}
+
+.top-layer p {
+    width: 500px;
+    color: #FEFCFF;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.bottom-layer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.bottom-layer input {
+    width: 400px;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+
+.bottom-layer input::placeholder {
+    color: #858088;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.bottom-layer button {
+    width: 100px;
+    height: 50px;
+    background-color: #44C853;
+    color: #FAFAFA;
+    font-size: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+}
+
+
+/*================= Footer styling Section ===============*/
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin: 60px;
+}
+
+.main-footer {
+    display: flex;
+
+}
+
+.firstlayer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 450px;
+    gap: 100px;
+    align-items: center;
+}
+
+.logo-about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo-about p {
+    font-size: 13px;
+    color: #858088;
+    font-weight: 400;
+    width: 150px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-block: 10px 20px;
+}
+
+.social-media img {
+    width: 35px;
+    height: 35px;
+    background-color: #3325B2;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.back-to-top a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+}
+
+.back-to-top img {
+    width: 20px;
+}
+
+.back-to-top span {
+    text-decoration: none;
+    color: #44C853;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.company p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #5D5561;
+    margin-bottom: 10px;
+}
+
+.company a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #858088;
+    margin-bottom: 10px;
+}
+
+.lastlayer {
+    background-color: #150F49;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFCFC;
+}
+
+.terms {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.terms p {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFCFC;
+}
