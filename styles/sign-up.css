@@ -68,9 +68,14 @@ h1 {
 
 .google-button {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    width: 572px;
+    /* width: 572px; */
+    width: 100%;
     padding: 0.5rem;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     border-radius: 20px;
     background-color: #fafafa;
     cursor: pointer;
@@ -81,6 +86,12 @@ h1 {
     font-size: 18px;
     line-height: 21.6px;
     text-align: center;
+}
+
+.google-button img {
+    margin-right: 10px;
+    width: 48px;
+    height: 48px;
 }
 .divider {
     display: center;
