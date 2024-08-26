@@ -10,7 +10,8 @@
 h2{
   font-family: "Lora", serif;
   font-size: 40px;
-  margin-top: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 h3{
@@ -67,9 +68,10 @@ header{
 .hero{
   display: flex;
   flex-direction: row;
-  padding: 100px 0px;
-  gap: 250px;
+  padding: 100px 100px;
+  gap: 150px;
   justify-content: center;
+  align-items: center;
   background:rgba(250, 250, 250, 255);
 }
 
@@ -84,7 +86,6 @@ header{
   font-size: 23px;
   line-height: 33.6px;
 }  
-
 
 .hero-text img{
   margin-left: 250px;
@@ -108,6 +109,13 @@ header{
   background: #344bf9;
 }
 
+.hero-image { 
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
 
 /* Our Mission */
 .mission{
@@ -117,6 +125,7 @@ header{
   justify-content: center;
   background:white;
 }
+
 .mission p{
   font-size: 24px;
   font-weight: 400;
@@ -233,21 +242,20 @@ header{
   gap: 50px;
 }
 
+.intro h2{
+  margin-bottom: 20px;
+}
 .intro p{
   font-size: 24px;
   line-height: 28.8px;
 }
-
-
 .feature-row {
   display: flex;
   justify-content: space-evenly;  
   gap: 50px;
-  margin-top: 50px;
-  align-items: center;
-  
+  margin-top: 70px;
+  align-items: center;  
 }
-
 .feature-item{
   display: flex;
   align-items: center;
@@ -261,7 +269,7 @@ header{
 }
 
 .features h4 {
-  margin-bottom: 0px;
+  margin-bottom: 7px;
 }
 
 .why-section button{
@@ -322,14 +330,15 @@ header{
     color: #FAFAFA;
   }
   .left-card button{
-    width: 150px;
-    height: 40px;
+    width: 190px;
+    height: 50px;
     background-color: #44C853;
     color: #FAFAFA;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
     border: none;
     border-radius: 20px;
+    transition: 0.5s ease-in-out;
   }
   .right-card img{
     width: 400px;
@@ -448,7 +457,7 @@ header{
     width: 400px;
     height: 50px;
     padding-left: 20px;
-    border-radius: 20px;
+    border-radius: 32px;
   }
   .bottom-layer input::placeholder{
     color: #858088;
@@ -463,7 +472,7 @@ header{
     font-size: 10px;
     font-weight: 600;
     border: none;
-    border-radius: 20px;
+    border-radius: 32px;
 }
 
 
@@ -481,8 +490,8 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left:  450px;
-      gap:100px;
+    padding-left: 450px;
+    gap:100px;
     align-items: center;
   }
   .logo-about{
@@ -503,10 +512,8 @@ header{
     margin-block: 10px 20px;
   }
   .social-media img{
-    width: 35px;
-    height: 35px;
-    background-color: #3325B2;
-    padding: 5px;
+    width: 30px;
+    height: 30px;
     border-radius: 20px;
   }
   .back-to-top a{
@@ -565,4 +572,109 @@ header{
     font-size: 15px;
     font-weight: 700;
     color: #FFFCFC;
+}
+
+/* Responsive Styling */
+/* X-large devices (large desktops, less than 1400px*/
+/* Large devices (desktops, less than 1200px) */
+@media(max-width: 1200px){
+
+  h2{
+    font-size:35px;
+  }
+  /* Hero Text */
+  .hero{
+    gap:50px;
+  }
+
+  .hero p{
+    font-size: 20px;
+  }
+  .hero-text img{
+    width: 215px;
+  }
+
+  .hero-text button{
+    width:200px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  /* Our Mission */
+  .mission{
+    gap: 50px;
+  }
+
+  .mission p{
+    font-size: 20px;
+  }
+
+  .mission button{
+    margin-top: 80px;
+    height: 60px;
+  }
+
+  /* Services */
+  .services .green{
+    margin-top: 50px;
+    width: 200px;
+    height: 60px;
+  }
+  
+  /* Why Medlorix */
+  .intro img{
+    width: 500px;
+  }
+  .intro p{
+    font-size: 20px;
+  }
+
+  /* Build */
+  .build-container{
+    gap:5px;
+  }
+
+  /* Tips */
+  .tip-card p {
+    font-size: 14px;
+  }
+
+  .tips button{
+    width:210px;
+    height:60px;
+    padding: 10px 20px;
+  }
+
+  /* Footer */
+  .firstlayer{
+    padding-left: 400px;
+  }
+}
+
+
+
+/* Medium devices (tablets, less than 992px) */
+@media(max-width:992px){
+
+  /* Hero */ 
+  /* Needs further adjustments */
+  .hero{
+    gap:50px;
+    padding:50px 50px;
+  }
+  .hero h2{
+    font-size:30px;
+  }
+  .hero p{
+    font-size: 16px;
+    width:300px;
+  }
+  .hero-text img{
+    width: 200px;
+    margin-left: 200px;
+  }
+  .hero-image{
+    max-width: 50%;
+  }
+
 }
