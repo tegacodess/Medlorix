@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medlorix | ChatBot</title>
+    <link rel="stylesheet" href="/styles/chatbot.css">
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <a href="index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="navigation">
+            <a href="/src/index.html">HOME</a>
+            <!-- Drop down menu for services -->
+            <div class="dropdown">
+                <a href="#" class="dropbtn">SERVICES
+                    <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+                </a>
+                <div class="dropdown-content">
+                    <a href="/src/services.html" class="dropdown-item">Our Services
+                        <span class="dropdown-icon">→</span>
+                    </a>
+                    <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+                        <span class="dropdown-icon">→</span>
+                    </a>
+
+                    <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
+                        <span class="dropdown-icon">→</span>
+                    </a>
+
+                    <a href="/src/sign-up.html" class="dropdown-item">AI Diagnosis
+                        <span class="dropdown-icon">→</span>
+                    </a>
+
+                    <a href="/src/career.html" class="dropdown-item">Careers
+                        <span class="dropdown-icon">→</span>
+                    </a>
+                </div>
+            </div>
+            <a href="/src/about.html">ABOUT US</a>
+            <a href="/src/faq.html">FAQS</a>
+            <a href="/src/contact.html">CONTACT</a>
+        </nav>
+        <!-- Green buttons -->
+        <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
+    </header>
+
+    <!-- Services -->
+    <section class="chatbot">
+        <h3>Services / AI Diagnosis</h3>
+        <p class="tip-p">Chat with Medlorix AI</p>
+
+        <div class="chat-card">
+            <div class="chatbot-description">
+                <h4>Hello! I’m Medlorix AI</h4>
+                <p>your health assistant.</p>
+                <div class="chatbot-description-2">
+                    <p>
+                        I can help you understand your symptoms and suggest possible diagnoses.
+                        Please remember that my advice is not a substitute for a doctor's consultation. Let's get
+                        started! How can I assist you today?
+                    </p>
+                </div>
+            </div>
+
+            <div class="chatbot-text">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Enter keywords like: Headache, High temperature, etc"
+                        id="MedlorixAI">
+                    <img src="/images/ChatBot Page/arrow-send.png" alt="" name="send" class="box-icon">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

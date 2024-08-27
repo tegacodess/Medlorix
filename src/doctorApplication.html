@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
   <title>Medlorix │ Doctor Application</title>
 
 </head>
+
 <body>
   <header>
     <a href="/src/index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
@@ -21,36 +23,39 @@
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
-    <nav>
-        <a href="/src/index.html">HOME</a>
-         <!-- Drop down menu for services -->
-        <div class="dropdown">
-          <a href="#" class="dropbtn">SERVICES
-            <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+    <nav class="navigation">
+      <a href="/src/index.html">HOME</a>
+      <!-- Drop down menu for services -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">SERVICES
+          <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+        </a>
+        <div class="dropdown-content">
+          <a href="/src/services.html" class="dropdown-item">Our Services
+            <span class="dropdown-icon">→</span>
           </a>
-          <div class="dropdown-content">
-            <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
-              <span class="dropdown-icon">→</span>
-              </a>
+          <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+            <span class="dropdown-icon">→</span>
+          </a>
 
-            <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor  
-              <span class="dropdown-icon">→</span>
-            </a>
+          <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
+            <span class="dropdown-icon">→</span>
+          </a>
 
-            <a href="/src/chatbot.html" class="dropdown-item">AI Diagnosis  
-              <span class="dropdown-icon">→</span>
-            </a>
+          <a href="/src/sign-up.html" class="dropdown-item">AI Diagnosis
+            <span class="dropdown-icon">→</span>
+          </a>
 
-            <a href="/src/career.html" class="dropdown-item">Careers  
-              <span class="dropdown-icon">→</span>
-            </a>
-          </div>
-        </div>              
-        <a href="/src/about.html">ABOUT US</a>
-        <a href="/src/faq.html">FAQS</a>
-        <a href="/src/contact.html">CONTACT</a>
+          <a href="/src/career.html" class="dropdown-item">Careers
+            <span class="dropdown-icon">→</span>
+          </a>
+        </div>
+      </div>
+      <a href="/src/about.html">ABOUT US</a>
+      <a href="/src/faq.html">FAQS</a>
+      <a href="/src/contact.html">CONTACT</a>
     </nav>
-    <a href="/src/sign-up.html"> <button class="green">GET STARTED</button></a>
+    <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
   </header>
 
   <!-- Hero Section -->
@@ -104,7 +109,7 @@
                 <label for="">Upload your CV/Resume</label>
                 <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
               </div>
-              <input type="file" id="fileInput" style="display: none;" accept=".txt,.pdf,.docx"/>
+              <input type="file" id="fileInput" style="display: none;" accept=".txt,.pdf,.docx" />
               <label for="fileInput" id="customPlaceholder">UPLOAD FILE</label>
             </div>
             <div class="cover-letter">
@@ -112,7 +117,7 @@
                 <label for="">Upload your Cover Letter</label>
                 <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
               </div>
-              <input type="file" id="fileInput" style="display: none;" accept=".txt,.pdf,.docx"/>
+              <input type="file" id="fileInput" style="display: none;" accept=".txt,.pdf,.docx" />
               <label for="fileInput" id="customPlaceholder">UPLOAD FILE</label>
             </div>
           </div>
@@ -121,7 +126,9 @@
           <div class="checkbox">
             <input type="checkbox">
             <p>
-              I have read the privacy policy and I hereby give my consent to Zuri Health to process and handle my personal data given in the application form and in my CV for the purpose of preparing the recruitment process as set forth in the privacy policy.
+              I have read the privacy policy and I hereby give my consent to Zuri Health to process and handle my
+              personal data given in the application form and in my CV for the purpose of preparing the recruitment
+              process as set forth in the privacy policy.
             </p>
           </div>
         </form>
@@ -155,9 +162,10 @@
   const fileInput = document.getElementById("fileInput");
   const customPlaceholder = document.getElementById("customPlaceholder");
 
-  fileInput.addEventListener("change", function() {
+  fileInput.addEventListener("change", function () {
     const fileName = fileInput.files[0] ? fileInput.files[0].name : "Choose a file";
     customPlaceholder.textContent = fileName;
   });
 </script>
+
 </html>
