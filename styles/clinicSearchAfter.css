@@ -1005,6 +1005,49 @@ nav a:hover{
 
 /* X-small devices (potrait phones, less than 576px) */
 @media (max-width: 576px){
+  /* Navigation */
+  header {
+   width: 90%;
+   margin: 0 auto;
+  }
+  .head {
+   margin-left: -20px;
+  }
+  .hamburger-menu {
+   display: block;
+   margin-top: 10px;
+  }
+  
+  .hamburger-menu .bar{
+   background-color: #3325B2;
+  }
+  
+  .navigation {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: -100%; /* Hide off-screen initially */
+   width: 100%;
+   background-color:#EFEDFF;
+   gap: 10px;
+   transition: left 0.4s;
+   flex-direction: column;
+   padding: 30px;
+   z-index: 9;
+  }
+  
+  nav a{
+   color:#3325B2;
+  }
+  
+  .navigation.show {
+   display: flex;
+   flex-direction: column;
+   left: 0;
+  }
+  .green{
+   display: none;
+  }
   header{
     padding: 0px 10px;
     height: 60px;
@@ -1187,3 +1230,4 @@ nav a:hover{
     font-size: 8px;
   }
 }
+

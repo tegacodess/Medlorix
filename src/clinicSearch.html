@@ -7,14 +7,24 @@
   <link rel="icon" type="image/png" href="/images/FAVICON.png">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/styles/clinicSearch.css">
+
+  <!-- JavaScript -->
+   <script src="/index.js" defer></script>
   <title>Medlorix │ Clinic Search</title>
 </head>
 <body>
   <header>
     <a href="/src/index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
-    <nav>
+    <!-- Hamburger Icon -->
+    <div class="hamburger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="navigation">
         <a href="/src/index.html">HOME</a>
          <!-- Drop down menu for services -->
+        <a href="/src/services.html">SERVICES</a>       
          <a href="">SERVICES
           <img class="dropdown" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
         </a>       
@@ -127,12 +137,7 @@
             <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
             <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
           </div>
-          <div class="back-to-top">
-            <a href="">  
-              <img src="/images/Clinic Search Page/akar-icons_arrow-left.png" alt="">
-              <span>Back to top</span>
-            </a>
-          </div>
+          
         </div>
         <div class="company">
           <p><span>Company</span></p>
@@ -155,6 +160,11 @@
           <a href="">Security</a>
         </div>
       </div>
+        <!-- Back to top arrow -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          <img src="/images/Icons/up-arrow.svg" />
+       </button>
+       
       <div class="lastlayer">
         <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
         <div class="terms">

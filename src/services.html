@@ -9,13 +9,20 @@
     <link rel="icon" type="image/png" href="/images/FAVICON.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/styles/service.css">
+    <!-- JavaScript -->
+    <script src="/index.js" defer></script>
 </head>
 
 <body>
     <!-- Header section -->
     <header>
         <a href="index.html"><img class="brand-logo" src="/images/servicePage/assets/Medlorix-logo.svg" alt="Medlorix logo"></a>
-        <nav>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="navigation">
             <a href="/src/index.html">HOME</a>
             <!-- Drop down menu for services -->
            <a href="/src/index.html">SERVICES</a>       
@@ -227,12 +234,7 @@
                         <a href=""><img src="/images/servicePage/assets/Icons/twitter.png" alt="Twitter"></a>
                         <a href=""><img src="/images/servicePage/assets/Icons/instagram.png" alt="Instagram"></a>
                     </div>
-                    <div class="back-to-top">
-                        <a href="">
-                            <img src="/images/servicePage/assets/Icons/akar-icons_arrow-left.png" alt="">
-                            <span>Back to top</span>
-                        </a>
-                    </div>
+                    
                 </div>
             </div>
             <div class="firstlayer">
@@ -258,6 +260,10 @@
                 </div>
             </div>
         </div>
+          <!-- Back to top arrow -->
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="/images/Icons/up-arrow.svg" />
+         </button>
         <div class="lastlayer">
             <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
             <div class="terms">

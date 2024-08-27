@@ -8,11 +8,20 @@
      <link rel="icon" type="image/png" href="/images/FAVICON.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/styles/index.css">
+
+    <!-- JavaScript -->
+    <script src="/index.js" defer></script>
 </head>
 <body>
     <header>
         <a href="index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
-        <nav>
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav class="navigation">
           <a href="/src/index.html">HOME</a>
           <!-- Drop down menu for services-->
          <a href="/src/index.html">SERVICES</a>       
@@ -35,7 +44,7 @@
             <button class="blue"><a href="">GET STARTED NOW</a></button>
         </div>
         <div class="hero-image">
-            <img src="/images/Home Page/Hero/Rectangle 2.png">
+            <img class="hero-im" src="/images/Home Page/Hero/Rectangle 2.png">
         </div>
     </section>
     
@@ -228,7 +237,8 @@
           </button>
         </div>
     </section>
-    <!-- Footer -->
+
+     <!-- Footer -->
      <footer>
         <div class="footer">
     
@@ -275,6 +285,10 @@
               </div>
             </div>
           </div>
+          <!-- Back to top arrow -->
+         <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="/images/Icons/up-arrow.svg" />
+         </button>
           <div class="lastlayer">
             <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
             <div class="terms">
