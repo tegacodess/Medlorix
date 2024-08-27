@@ -46,9 +46,7 @@ nav a{
 nav a:hover{
   color: #3325B2;
 }
-.dropdown{
-  width: 10px;
-}
+
 .green{
   width: 150px;
   height: 35px;
@@ -67,6 +65,67 @@ nav a:hover{
   color: #44C853;
   cursor: pointer;
 }
+
+/* Services Dropdown Menu Styling */
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-down.rotate {
+  transform: rotate(180deg);
+}
+.dropdown-icon, .dropdown-down{
+  width: 10px;
+  margin-left: 5px;
+}
+
+.dropbtn {
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  flex-direction: row;
+}
+
+.dropdown-content a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #726C6C;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; 
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ .dropdown-content.show {
+  display: block;
+}
+
 
 /* Hero styling */
 #hero{
