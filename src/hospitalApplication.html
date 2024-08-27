@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/FAVICON.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles/hospitalApplication.css">
+  <title>Medlorix │ Hospital Application</title>
+</head>
+<body>
+  <header>
+    <a href="/src/index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
+    <nav>
+        <a href="/src/index.html">HOME</a>
+         <!-- Drop down menu for services -->
+         <a href="">SERVICES
+          <img class="dropdown" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+        </a>       
+        <a href="/src/about.html">ABOUT US</a>
+        <a href="/src/faq.html">FAQS</a>
+        <a href="/src/contact.html">CONTACT</a>
+    </nav>
+    <button class="green">GET STARTED</button>
+  </header>
+
+  <!-- Hero Section -->
+  <div id="hero">
+    <div class="big-logo">
+      <img src="/images/Medlorix-logo.svg" alt="Medlorix logo">
+    </div>
+    <div class="application-container">
+      <div class="layer-1">
+        <p><span>Register to Partner with Us</span></p>
+        <p>Please fill in the following form, and our partnership team will be in touch soon. We look forward to reviewing your application</p>
+      </div>
+      <div class="layer-2">
+        <form action="#" method="post">
+          <!-- Input Section -->
+          <div class="input-section">
+            <div class="input-preview">
+              <label for="companyname">Company Name</label>
+              <input id="companyname" name="companyname" type="text" placeholder="Enter your company name">
+            </div>
+            <div class="input-preview">
+              <label for="companywebsite">Company Website/Linkedln</label>
+              <input id="companywebsite" name="companywebsite" type="text" placeholder="Enter your company website">
+            </div>
+            <div class="input-preview">
+              <label for="companyEmail">Company Email</label>
+              <input id="companyEmail" name="companyEmail" type="text" placeholder="Enter your Email address">
+            </div>
+            <div class="input-preview">
+              <label for="staffCapacity">Company Staff capacity</label>
+              <input id="staffCapacity" name="staffCapacity" type="number" placeholder="Enter company staff capacity in figures">
+            </div>
+            <div class="input-preview">
+              <label for="companyBase">Where is your company based?</label>
+              <select name="" id="" class="custom-dropdown">
+                <option value="" disabled selected>Select your Country</option>
+                <option value="Male">Nigerian</option>
+                <option value="Female">Ghana</option>
+                <option value="Female">Cameroon</option>
+                <option value="Female">Ivory Coast</option>
+                <option value="Female">Morocco</option>
+                <option value="Female">Algeria</option>
+              </select>
+            </div>
+            <div class="input-preview">
+              <label for="phonenumber">Phone Number</label>
+              <input id="phonenumber" name="phonenumber" type="number" placeholder="Enter your Contact Phone Number">
+            </div>
+          </div>
+
+          <!-- Upload Section -->
+          <div class="upload">
+            <div class="input-preview">
+              <label for="companyaddress">Company’s Address</label>
+              <textarea name="companyaddress" id="companyaddress" placeholder="Enter your Company's address"></textarea>
+            </div>
+          </div>
+
+          <!-- CheckBox Section -->
+          <div class="checkbox">
+            <input type="checkbox">
+            <p>
+              You agree to our friendly privacy policy.
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="layer-3">
+        <button>
+          SUBMIT
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">
+      <div class="lastlayer">
+        <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+        <div class="terms">
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  const fileInput = document.getElementById("fileInput");
+  const customPlaceholder = document.getElementById("customPlaceholder");
+
+  fileInput.addEventListener("change", function() {
+    const fileName = fileInput.files[0] ? fileInput.files[0].name : "Choose a file";
+    customPlaceholder.textContent = fileName;
+  });
+</script>
+</html>
