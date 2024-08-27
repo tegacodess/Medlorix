@@ -1,5 +1,18 @@
-// Services Dropdown Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
+  
+  const navLinks = document.querySelectorAll('nav a');
+  const currentPath = window.location.pathname;
+
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('nav-active');
+    } else {
+      link.classList.remove('nav-active');
+    }
+  });
+  
+  
+  // Services Dropdown Menu Functionality
   const dropbtn = document.querySelector('.dropbtn');
   const dropdownContent = document.querySelector('.dropdown-content');
   const dropdownMainIcon = document.querySelector('.dropdown-down');
@@ -25,14 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburgerMenu = document.querySelector(".hamburger-menu");
   const navigation = document.querySelector(".navigation");
   const headerLogo = document.querySelector(".brand-logo");
-  const navLinks = document.querySelectorAll(".navigation a");
+  const navigationLinks = document.querySelectorAll(".navigation a");
   
   hamburgerMenu?.addEventListener("click", function () {
     navigation.classList.toggle("show");
     headerLogo.classList.toggle("hide");
   });
   
-  navLinks.forEach((link) => {
+  navigationLinks.forEach((link) => {
     link.addEventListener("click", function () {
       navigation.classList.remove("show");
       headerLogo.classList.remove("hide");

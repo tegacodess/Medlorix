@@ -116,6 +116,7 @@ nav a:hover{
 }
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+  color:#3325B2;
 }
 
 .dropdown:hover .dropdown-content {
@@ -125,7 +126,9 @@ nav a:hover{
  .dropdown-content.show {
   display: block;
 }
-
+.nav-active{
+  color:#3325B2;
+}
 
 /* Hero styling */
 #hero{

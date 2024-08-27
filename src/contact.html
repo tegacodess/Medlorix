@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/FAVICON.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles/contact.css">
+
+  <!-- JavaScript -->
+  <script src="/index.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+    <!-- Hamburger Icon -->
+    <div class="hamburger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="navigation">
+      <a href="/src/index.html">HOME</a>
+      <!-- Drop down menu for services -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">SERVICES
+          <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+        </a>
+        <div class="dropdown-content">
+          <a href="/src/services.html" class="dropdown-item">Our Services
+            <span class="dropdown-icon">→</span>
+          </a>
+          <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/src/sign-up.html" class="dropdown-item">AI Diagnosis
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/src/career.html" class="dropdown-item">Careers
+            <span class="dropdown-icon">→</span>
+          </a>
+        </div>
+      </div>
+      <a href="/src/about.html">ABOUT US</a>
+      <a href="/src/faq.html">FAQS</a>
+      <a href="/src/contact.html">CONTACT</a>
+    </nav>
+    <!-- Green buttons -->
+    <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
+  </header>
+
+  <!-- Main -->
+   <section class="main">
+    <h4>Send a message to us</h4>
+    <h2>Drop a message for any query</h2>
+    <p>If you have an idea, we would love to hear about it.</p> 
+
+    <form action="/src/contact.html" method="POST">
+      <div class="form-group">
+       </div>
+        <div class="form-group">            
+            <input type="text" id="name" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">            
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>    
+        <div class="form-group">           
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">           
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+        </div>        
+        <div class="form-group">           
+            <textarea id="message" name="message" placeholder="What would you like to say?" required></textarea>
+        </div>    
+    </form>         
+    <div class="form-group">           
+        <button type="submit" class="green">SEND MESSAGE</button>
+    </div>    
+
+    </section>
+
+    <!-- Info -->
+    <section class="info">
+        <div class="info-group">
+            <img src="/images/Icons/location.png" alt="">
+        <div class="info-item">
+                <h3>Location</h3>
+                <p>123, Medlorix Street, Lagos, Nigeria</p>
+            </div>      
+        </div>
+        <div class="info-group">
+            <img src="/images/Icons/mail.png" alt="">
+            <div class="info-item">
+                <h3>Email</h3>
+                <p>info@medlorix.com</p>
+            </div>
+        </div>
+        <div class="info-group">
+            <img src="/images/Icons/phone.png" alt="">
+            <div class="info-item">
+                <h3>Phone</h3>
+                <p>+234 123 456 7890</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="subscribe">
+        <div class="top-layer">
+          <span>
+            Stay up to date on healthy living
+          </span>
+          <p>
+            Be the first to receive expert insights, practical advice, and exclusive content directly to your inbox.
+          </p>
+        </div>
+        <div class="bottom-layer">
+          <input type="email" placeholder="Enter your email">
+          <button> <a href="">
+              SUBSCRIBE
+            </a>
+          </button>
+        </div>
+    </section>
+    
+      <!-- Footer -->
+    <footer>
+        <div class="footer">
+    
+          <div class="main-footer">
+            <div class="logo-about">
+              <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+              <p>
+                simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
+                easy-to-use platform.
+              </p>
+              <div class="social-media">
+                <a href=""><img src="/images/Icons/google.png" alt="Google"></a>
+                <a href=""><img src="/images/Icons/facebook.png" alt="Facebook"></a>
+                <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
+                <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
+              </div>
+              <div class="back-to-top">
+                <a href="">
+                  <img src="/icons/akar-icons_arrow-left.png" alt="">
+                  <span>Back to top</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="firstlayer">
+            <div class="company">
+              <p><span>Company</span></p>
+              <a href="">Careers</a>
+              <a href="">About us</a>
+              <a href="">Our mission</a>
+              <a href="">Our Team</a>
+            </div>
+            <div class="company">
+              <p><span>Our Services</span></p>
+              <a href="">Clinic Search</a>
+              <a href="">See a Doctor</a>
+              <a href="">AI-Based Diagnosis</a>
+              <a href="">Contact Us</a>
+            </div>
+            <div class="company">
+              <p><span>Legal</span></p>
+              <a href="">Privacy</a>
+              <a href="">Terms</a>
+              <a href="">Security</a>
+            </div>
+          </div>
+        </div>
+        <!-- Back to top arrow -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          <img src="/images/Icons/up-arrow.svg" />
+        </button>
+        <div class="lastlayer">
+          <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+          <div class="terms">
+            <p>Terms and Conditions</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>  

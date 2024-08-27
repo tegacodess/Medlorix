@@ -98,6 +98,7 @@ header{
 }
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+  color:#3325B2;
 }
 
 .dropdown:hover .dropdown-content {
@@ -107,7 +108,9 @@ header{
  .dropdown-content.show {
   display: block;
 }
-
+.nav-active{
+  color:#3325B2;
+}
 
   /* first section styling */
 
@@ -526,7 +529,7 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 450px;
+  padding-left: 650px;
   gap:100px;
   align-items: center;
 }

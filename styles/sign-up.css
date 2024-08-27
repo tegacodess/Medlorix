@@ -3,6 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
 
 body {
     display: flex;
@@ -177,7 +184,6 @@ select {
     display: flex;
     justify-content: center;
     background-color: #3325B2;
-    color: white;
     border: none;
     height: 60px;
     cursor: pointer;
@@ -188,6 +194,9 @@ select {
     font-size: 18px;
     line-height: 11.6px;
     font-family: "Work Sans", sans-serif;
+}
+.continue-button a{
+    color:white;
 }
 .button-cont {
     display: flex;
@@ -208,7 +217,7 @@ select {
 
 }
 
-a {
+.sign-up a {
     color: #4C4CFF;
     text-decoration: none;
 }
