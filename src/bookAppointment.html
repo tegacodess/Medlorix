@@ -3,23 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Appointment</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/FAVICON.png">
+    <link rel="icon" type="image/png" href="/images/FAVICON.png" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/styles/bookAppointment.css" />
-    
+
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
+    <title>Medlorix │ Clinic Search</title>
   </head>
   <body>
-    <!-- header -->
     <header>
-      <a href="index.html"
+      <a href="/src/index.html"
         ><img
           class="brand-logo"
           src="/images/Medlorix-logo.svg"
-          alt="Medlorix logo"
+          alt="Medlorix Logo"
       /></a>
       <!-- Hamburger Icon -->
       <div class="hamburger-menu">
@@ -31,33 +30,43 @@
         <a href="/src/index.html">HOME</a>
         <!-- Drop down menu for services -->
         <div class="dropdown">
-          <a href="#" class="dropbtn">SERVICES
-            <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+          <a href="#" class="dropbtn"
+            >SERVICES
+            <img
+              class="dropdown-down"
+              src="/images/Clinic Search Page/dropdownIcon.png"
+              alt=""
+            />
           </a>
           <div class="dropdown-content">
-            <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
-              <span class="dropdown-icon">→</span>
-              </a>
-
-            <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor  
+            <a href="/src/clinicSearch.html" class="dropdown-item"
+              >Clinic Search
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="/src/chatbot.html" class="dropdown-item">AI Diagnosis  
+            <a href="/src/bookAppointment.html" class="dropdown-item"
+              >See a Doctor
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="/src/career.html" class="dropdown-item">Careers  
+            <a href="/src/chatbot.html" class="dropdown-item"
+              >AI Diagnosis
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/career.html" class="dropdown-item"
+              >Careers
               <span class="dropdown-icon">→</span>
             </a>
           </div>
-        </div>        
-       <a href="/src/about.html">ABOUT US</a>
-       <a href="/src/faq.html">FAQS</a>
-       <a href="/src/contact.html">CONTACT</a>
+        </div>
+        <a href="/src/about.html">ABOUT US</a>
+        <a href="/src/faq.html">FAQS</a>
+        <a href="/src/contact.html">CONTACT</a>
       </nav>
-      <!-- Green buttons -->
-      <a href="/src/sign-up.html"> <button class="green">GET STARTED</button></a>
+      <a href="/src/sign-up.html">
+        <button class="green">GET STARTED</button></a
+      >
     </header>
 
     <!-- hero section -->
@@ -128,7 +137,7 @@
           />
           <p id="directions">Directions</p>
         </div>
-        <div><p class="edit">Edit</p></div>
+        <div><button class="edit">Edit</button></div>
       </div>
     </section>
     <!-- Appointment details -->
@@ -179,7 +188,7 @@
                 type="text"
                 id="first-name"
                 name="first_name"
-               placeholder="John"
+                placeholder="John"
               />
             </div>
             <div class="form-group">
@@ -195,7 +204,7 @@
 
           <div class="form-row">
             <div class="form-group"></div>
-            <div class="form-group">
+            <div class="form-group" id="user-address">
               <label for="address">Address</label>
               <input
                 type="text"
@@ -204,7 +213,7 @@
                 placeholder="12, Mogaji Baboko street"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group" id="user-country">
               <label for="country">Country</label>
               <select id="country" name="country" class="custom-dropdown">
                 <option value="nigeria" selected>Nigeria</option>
@@ -214,7 +223,7 @@
 
           <div class="form-row">
             <div class="form-group"></div>
-            <div class="form-group">
+            <div class="form-group" id="user-state">
               <label for="state">State</label>
               <select id="state" name="state" class="custom-dropdown">
                 <option value="kwara" selected>Kwara</option>
@@ -347,14 +356,16 @@
           providing the highest quality of care and changing how healthcare is
           delivered.
         </p>
-        <a href="/src/hospitalApplication.html" class="button">Become Our Partner</a>
+        <a href="/src/hospitalApplication.html" class="button"
+          >Become Our Partner</a
+        >
       </div>
     </section>
 
     <!-- footer -->
     <footer>
       <div class="footer">
-        <div class="main-footer">
+        <div class="firstlayer">
           <div class="logo-about">
             <a href="/"
               ><img
@@ -379,10 +390,7 @@
                 ><img src="/images/Icons/instagram.png" alt="Instagram"
               /></a>
             </div>
-            
           </div>
-        </div>
-        <div class="firstlayer">
           <div class="company">
             <p><span>Company</span></p>
             <a href="">Careers</a>
@@ -404,19 +412,19 @@
             <a href="">Security</a>
           </div>
         </div>
-      </div>
         <!-- Back to top arrow -->
         <button onclick="topFunction()" id="myBtn" title="Go to top">
           <img src="/images/Icons/up-arrow.svg" />
-       </button>
-       
-      <div class="lastlayer">
-        <p class="copyright">
-          Copyright &copy; 2024. Medlorix. All rights reserved
-        </p>
-        <div class="terms">
-          <p>Terms and Conditions</p>
-          <p>Privacy Policy</p>
+        </button>
+
+        <div class="lastlayer">
+          <p class="copyright">
+            Copyright &copy; 2024. Medlorix. All rights reserved
+          </p>
+          <div class="terms">
+            <p>Terms and Conditions</p>
+            <p>Privacy Policy</p>
+          </div>
         </div>
       </div>
     </footer>
