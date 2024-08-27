@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/FAVICON.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles/doctorApplication.css">
+  <!-- JavaScript -->
+  <script src="/index.js" defer></script>
+  <title>Medlorix │ Doctor Application</title>
+
+</head>
+<body>
+  <header>
+    <a href="/src/index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
+    <!-- Hamburger Icon -->
+    <div class="hamburger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav>
+        <a href="/src/index.html">HOME</a>
+         <!-- Drop down menu for services -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn">SERVICES
+            <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+          </a>
+          <div class="dropdown-content">
+            <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+              <span class="dropdown-icon">→</span>
+              </a>
+
+            <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor  
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/chatbot.html" class="dropdown-item">AI Diagnosis  
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/career.html" class="dropdown-item">Careers  
+              <span class="dropdown-icon">→</span>
+            </a>
+          </div>
+        </div>              
+        <a href="/src/about.html">ABOUT US</a>
+        <a href="/src/faq.html">FAQS</a>
+        <a href="/src/contact.html">CONTACT</a>
+    </nav>
+    <a href="/src/sign-up.html"> <button class="green">GET STARTED</button></a>
+  </header>
+
+  <!-- Hero Section -->
+  <div id="hero">
+    <div class="big-logo">
+      <img src="/images/Medlorix-logo.svg" alt="Medlorix logo">
+    </div>
+    <div class="application-container">
+      <div class="layer-1">
+        <p><span>Apply Now!</span></p>
+        <p>Thanks for taking the bold step to join our team</p>
+      </div>
+      <div class="layer-2">
+        <form action="#" method="post">
+          <!-- Input Section -->
+          <div class="input-section">
+            <div class="input-preview">
+              <label for="firstname">First Name</label>
+              <input id="firstname" name="firstname" type="text" placeholder="Enter your First Name">
+            </div>
+            <div class="input-preview">
+              <label for="lastname">Last Name</label>
+              <input id="lastname" name="lastname" type="text" placeholder="Enter your Last Name">
+            </div>
+            <div class="input-preview">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="text" placeholder="Enter your Email">
+            </div>
+            <div class="input-preview">
+              <label for="phonenumber">Phone Number</label>
+              <input id="phonenumber" name="phonenumber" type="number" placeholder="Enter your Phone Number">
+            </div>
+            <div class="input-preview">
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender" class="custom-dropdown">
+                <option value="" disabled selected>Select your Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="input-preview">
+              <label for="country">Country</label>
+              <input id="country" name="country" type="text" placeholder="Enter your Country">
+            </div>
+          </div>
+
+          <!-- Upload Section -->
+          <div class="upload">
+            <div class="upload-resume">
+              <div>
+                <label for="">Upload your CV/Resume</label>
+                <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
+              </div>
+              <input type="file" id="fileInput" style="display: none;" accept=".txt,.pdf,.docx"/>
+              <label for="fileInput" id="customPlaceholder">UPLOAD FILE</label>
+            </div>
+            <div class="cover-letter">
+              <div>
+                <label for="">Upload your Cover Letter</label>
+                <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
+              </div>
+              <input type="file" id="fileInput" style="display: none;" accept=".txt,.pdf,.docx"/>
+              <label for="fileInput" id="customPlaceholder">UPLOAD FILE</label>
+            </div>
+          </div>
+
+          <!-- CheckBox Section -->
+          <div class="checkbox">
+            <input type="checkbox">
+            <p>
+              I have read the privacy policy and I hereby give my consent to Zuri Health to process and handle my personal data given in the application form and in my CV for the purpose of preparing the recruitment process as set forth in the privacy policy.
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="layer-3">
+        <button>
+          SUBMIT
+        </button>
+        <div>
+          <p>Already have an account?</p>
+          <a href="">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">
+      <div class="lastlayer">
+        <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+        <div class="terms">
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  const fileInput = document.getElementById("fileInput");
+  const customPlaceholder = document.getElementById("customPlaceholder");
+
+  fileInput.addEventListener("change", function() {
+    const fileName = fileInput.files[0] ? fileInput.files[0].name : "Choose a file";
+    customPlaceholder.textContent = fileName;
+  });
+</script>
+</html>

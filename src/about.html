@@ -8,23 +8,52 @@
    <!-- Favicon -->
    <link rel="icon" type="image/png" href="/images/FAVICON.png">
           <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="/styles/about.css">
+
+    <!-- JavaScript -->
+     <script src="/index.js" defer></script>
     <title>About Medlorix</title>
 </head>
 
 <body>
     <!-- This is the header-->
     <header>
-        <a href="/src/index.html"><img class="brand-logo" src="images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
-        <nav>
-            <a href="/src/index.html">HOME</a>
-            <!-- Drop down menu for services -->
-           <a href="/src/index.html">SERVICES</a>       
+        <a href="/src/index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="navigation">
+           <a href="/src/index.html">HOME</a>
+           <!-- Drop down menu for services -->
+          <div class="dropdown">
+            <a href="#" class="dropbtn">SERVICES
+              <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+            </a>
+            <div class="dropdown-content">
+              <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+                <span class="dropdown-icon">→</span>
+                </a>
+  
+              <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor  
+                <span class="dropdown-icon">→</span>
+              </a>
+  
+              <a href="/src/chatbot.html" class="dropdown-item">AI Diagnosis  
+                <span class="dropdown-icon">→</span>
+              </a>
+  
+              <a href="/src/career.html" class="dropdown-item">Careers  
+                <span class="dropdown-icon">→</span>
+              </a>
+            </div>
+           </div>             
            <a href="/src/about.html">ABOUT US</a>
            <a href="/src/faq.html">FAQS</a>
            <a href="/src/contact.html">CONTACT</a>
         </nav>
-        <button class="green">GET STARTED</button>
+       <a href="/src/sign-up.html"> <button class="green">GET STARTED</button></a>
       </header>
 
     <!-- First section-->
@@ -113,7 +142,7 @@
                     <img src="/images/About Page/Team/Fawazpicture.jpg" alt="Team member 1" class="team-image">
                     <div class="team-content">
                         <h3>Ope Fawaz Ademola</h3>
-                        <p>Team Lead</p>
+                        <p>Team Lead & Backend Developer</p>
                         <a>
                             <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
                         </a>
@@ -127,10 +156,10 @@
                     <div class="team-content">
                         <h3>Mogaji Bolaji Abdullah</h3>
                         <p>UI/UX Designer</p>
-                        <a>
+                        <a href="https://www.linkedin.com/in/mogaji-bolaji-abdullah-134a82220">
                             <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
                         </a>
-                        <a>
+                        <a href="https://x.com/mjdsgns/">
                            <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
                         </a>
                     </div> 
@@ -140,23 +169,10 @@
                     <div class="team-content">
                         <h3>Abioye Abdul-Lateef Olajide</h3>
                         <p>Frontend Developer</p>
-                        <a>
+                        <a href="https://linkedin.com/in/abioye-olajide-abdullateef/">
                             <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
                         </a>
-                        <a>
-                           <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
-                        </a>
-                    </div> 
-                </div>
-                <div class="team-member">
-                    <img src="/images/About Page/Team/Sule Abdulhakeem.jpg" alt="Team member 4" class="team-image">
-                    <div class="team-content">
-                        <h3>Sule Abdulhakeem</h3>
-                        <p>Backend Developer</p>
-                        <a>
-                            <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
-                        </a>
-                        <a>
+                        <a href="https://x.com/OlajideAbioye/">
                            <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
                         </a>
                     </div> 
@@ -166,11 +182,11 @@
                     <div class="team-content">
                         <h3>Ukpong Zion</h3>
                         <p>Frontend Developer</p>
-                        <a>
+                        <a href="https://www.linkedin.com/in/zion-ukpong-073891253/">
                             <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
                         </a>
-                        <a>
-                           <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
+                        <a href="https://x.com/tega_zion">
+                            <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
                         </a>
                     </div> 
                 </div>
@@ -179,23 +195,36 @@
                     <div class="team-content">
                         <h3>Ezema Mabel Ebele</h3>
                         <p>Frontend Developer</p>
-                        <a>
+                        <a href="https://www.linkedin.com/in/mabel-ezema-287940231/">
                             <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
                         </a>
-                        <a>
+                        <a href="https://x.com/EbeleMaybel">
+                            <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
+                        </a>
+                    </div> 
+                </div>
+                <div class="team-member">
+                    <img src="/images/About Page/Team/Sule Abdulhakeem.jpg" alt="Team member 4" class="team-image">
+                    <div class="team-content">
+                        <h3>Sule Abdulhakeem</h3>
+                        <p>Backend Developer</p>
+                        <a href="https://www.linkedin.com/in/abdulhakeem-sule-20558b249/">
+                            <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/hakiimii18/">
                            <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
                         </a>
                     </div> 
                 </div>
                 <div class="team-member">
-                    <img src="/images/About Page/Team/Fawazpicture.jpg" alt="Team member 1" class="team-image">
+                    <img src="/images/About Page/Team/Anuoluwapo Ali.jpg" alt="Team member 1" class="team-image">
                     <div class="team-content">
-                        <h3>Ope Fawaz Ademola</h3>
-                        <p>Team Lead</p>
-                        <a>
+                        <h3>Ali Anuoluwapo</h3>
+                        <p>Backend Developer</p>
+                        <a href="https://www.linkedin.com/in/anuoluwapo-ali-211762260/">
                             <img src="/images/About Page/Icons/entypo-social_linkedin-with-circle.png">
                         </a>
-                        <a>
+                        <a href="https://x.com/ali_anuoluwapo">
                            <img src="/images/About Page/Icons/Vector (3).png" alt="Twitter">
                         </a>
                     </div> 
@@ -230,7 +259,7 @@
     
           <div class="main-footer">
               <div class="logo-about">
-                <a href="/"><img class="brand-logo" src="images/Medlorix-logo.svg" alt="Brand Logo"></a>
+                <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
                 <p>
                   simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one easy-to-use platform.
                 </p>
@@ -240,12 +269,7 @@
                     <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
                     <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
                   </div>
-                <div class="back-to-top">
-                  <a href="">  
-                    <img src="/images/About Page/Icons/Vector.svg" alt="">
-                    <span>Back to top</span>
-                  </a>
-                </div>
+                
             </div>
           </div>
             <div class="firstlayer">
@@ -271,6 +295,10 @@
               </div>
             </div>
           </div>
+              <!-- Back to top arrow -->
+         <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="/images/Icons/up-arrow.svg" />
+         </button>
           <div class="lastlayer">
             <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
             <div class="terms">

@@ -8,6 +8,9 @@
     <link rel="icon" type="image/png" href="/images/FAVICON.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/styles/bookAppointment.css" />
+    
+    <!-- JavaScript -->
+    <script src="/index.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -18,16 +21,43 @@
           src="/images/Medlorix-logo.svg"
           alt="Medlorix logo"
       /></a>
-      <nav>
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="navigation">
         <a href="/src/index.html">HOME</a>
         <!-- Drop down menu for services -->
-       <a href="/src/index.html">SERVICES</a>       
+        <div class="dropdown">
+          <a href="#" class="dropbtn">SERVICES
+            <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+          </a>
+          <div class="dropdown-content">
+            <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+              <span class="dropdown-icon">→</span>
+              </a>
+
+            <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor  
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/chatbot.html" class="dropdown-item">AI Diagnosis  
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/career.html" class="dropdown-item">Careers  
+              <span class="dropdown-icon">→</span>
+            </a>
+          </div>
+        </div>        
        <a href="/src/about.html">ABOUT US</a>
        <a href="/src/faq.html">FAQS</a>
        <a href="/src/contact.html">CONTACT</a>
       </nav>
       <!-- Green buttons -->
-      <button class="green">GET STARTED</button>
+      <a href="/src/sign-up.html"> <button class="green">GET STARTED</button></a>
     </header>
 
     <!-- hero section -->
@@ -149,7 +179,7 @@
                 type="text"
                 id="first-name"
                 name="first_name"
-                value="Bolaji"
+               placeholder="John"
               />
             </div>
             <div class="form-group">
@@ -158,7 +188,7 @@
                 type="text"
                 id="last-name"
                 name="last_name"
-                value="Mogaji"
+                placeholder="Doe"
               />
             </div>
           </div>
@@ -171,7 +201,7 @@
                 type="text"
                 id="address"
                 name="address"
-                value="12, Mogaji Baboko street"
+                placeholder="12, Mogaji Baboko street"
               />
             </div>
             <div class="form-group">
@@ -225,7 +255,7 @@
                 type="text"
                 id="phone-number"
                 name="phone_number"
-                value="08124297144"
+                placeholder="08000000000"
               />
             </div>
             <div class="form-group">
@@ -234,7 +264,7 @@
                 type="email"
                 id="email"
                 name="email"
-                value="mogajibolajiabdullah@gmail.com"
+                placeholder="emailaddress@email.com"
               />
             </div>
           </div>
@@ -317,7 +347,7 @@
           providing the highest quality of care and changing how healthcare is
           delivered.
         </p>
-        <a href="#" class="button">Become Our Partner</a>
+        <a href="/src/hospitalApplication.html" class="button">Become Our Partner</a>
       </div>
     </section>
 
@@ -349,12 +379,7 @@
                 ><img src="/images/Icons/instagram.png" alt="Instagram"
               /></a>
             </div>
-            <div class="back-to-top">
-              <a href="">
-                <img src="/icons/akar-icons_arrow-left.png" alt="" />
-                <span>Back to top</span>
-              </a>
-            </div>
+            
           </div>
         </div>
         <div class="firstlayer">
@@ -380,6 +405,11 @@
           </div>
         </div>
       </div>
+        <!-- Back to top arrow -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          <img src="/images/Icons/up-arrow.svg" />
+       </button>
+       
       <div class="lastlayer">
         <p class="copyright">
           Copyright &copy; 2024. Medlorix. All rights reserved
