@@ -11,116 +11,115 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* margin: 0; */
-    background-color: #fafafa; 
+    margin: 0;
+    background-color: #f0f0f0;
 }
-
 
 .logo {
-    Width:294px;
+    max-width: 200px;
     Height: 69px;
-    Top: 18.37px;
-    Left: 70.86px;
-    max-width: 294px;
-    margin-top: 140px;
-
+    margin-bottom: 1.3rem;
+    margin-top: 10px;
 }
+
 .container {
-    margin-top: 30px;
-    width: 926px;
-    height: 1076px; 
     background-color: white;
+    padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0px; 
-    opacity: 1; 
-    color: #898384;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
+    /* margin-top: 10px; */
+
 }
 
 h1 {
     color: #44c853;
     font-family: 'Lora', serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 38px;
     line-height: 57.6px;
     text-align: center;
     margin-bottom: 10px;
-
+    margin-top: 0px;
 }
 
 .subtitle, .step {
     font-family: "Work Sans", sans-serif;
     margin-top: 0px;
     font-weight: 400px;
-    font-size: 24px;
-    line-height: 28.8px;
+    font-size: 20px;
+    line-height: 18.8px;
     text-align: center;
     color: #898384;
+    margin-bottom: 20px;
+
 }
+
 .step {
     color: #B5B3B3;
+    font-size: 15px;
     font-weight: 600px;
 }
 
+.google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.google-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    align-items: center;
+
+}
+
 .google-button {
+    margin-bottom: 1rem; 
     font-family: 'Plus Jakarta Sans', sans-serif;
-    /* width: 572px; */
-    width: 100%;
-    padding: 0.5rem;
-    border: none;
+    width: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    padding: 0.5rem;
+    border: none;
     border-radius: 20px;
     background-color: #fafafa;
     cursor: pointer;
     color: #352B3A;
     margin-bottom: 1rem;
-    height: 69px;
+    height: 50px;
     font-weight: 400px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 21.6px;
     text-align: center;
+    gap: 36px;
 }
 
-.google-button img {
-    margin-right: 10px;
-    width: 48px;
-    height: 48px;
-}
 .divider {
     display: center;
     font-family: Arial, sans-serif;
     align-items: center;
     text-align: center;
+    font-size: small;
     color: #777;
     margin-bottom: 20px;
 }
 
-.content {
-    Width: 742px;
-    Height: 1008px;
-    justify-content: space-between;
-}
-
-
 .registration-form {
     text-align: left;
     margin-top: 20px;
-    width: 700px;
-    margin-top: 30px;
+    width: 600px;
 
 }
 
 .form-row {
     display: flex;
     gap: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     height: 94px;
 }
 
@@ -136,29 +135,24 @@ label {
     font-family: 'Plus Jakarta Sans', sans-serif;
     margin-bottom: 0.25rem;
     font-weight: 400px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 21.6px;
 }
 
 input, select {
     background-color: #fafafa;
-    display: flex;
-    flex: 1;
-    height: 1000px;
+    display: block; 
+    width: 100%; 
     font-family: 'Plus Jakarta Sans', sans-serif;
-    padding: 10px;
     color: #5D5561;
     border: none;
-    font-size:x-small;
+    font-size: 14px;
     border-radius: 15px;
-    height: 69px;
-    font-weight: 400px;
-    font-size: 16px;
-    line-height: 19.2px;
-    padding:8px, 0px, 8px, 0px;
+    height: 50px; 
+    font-weight: 400; 
+    padding: 8px; 
+    box-sizing: border-box; 
 }
-
-
 
 select {
     appearance: none;
@@ -168,48 +162,50 @@ select {
     background-position-y: 50%;
     Width: 24.58;
     color: #9F9C9C;
-}
-
+} 
 
 .continue-button {
-    width: 674px;
+    width: 504px;
     border-radius: 35px;
+    display: flex;
+    justify-content: center;
     background-color: #3325B2;
     color: white;
     border: none;
-    height: 82px;
+    height: 60px;
     cursor: pointer;
-    margin-top: 1rem;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 0.9rem;
     font-weight: 700px;
     font-size: 18px;
-    line-height: 21.6px;
+    line-height: 11.6px;
     font-family: "Work Sans", sans-serif;
 }
-
+.button-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 .sign-in, .sign-up {
-    font-size: 0.9rem;
-    /* height: 69px; */
     font-weight: 400px;
-    font-size: 24px;
+    font-size: 14px;
     line-height: 28.8px;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
-
 .sign-in {
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 .sign-in a{
     color: #3325B2;
 
 }
+
 a {
-    color: #7e73e2;
+    color: #4C4CFF;
     text-decoration: none;
 }
+
 
 .lastlayer {
     width: 1440px;

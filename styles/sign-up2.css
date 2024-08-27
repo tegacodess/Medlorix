@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+    margin: 0;
+}
+
+.logo {
+    /* max-width: 0px;
+    width: 300px;
+    Height: 69px; */
+    margin-bottom: 5px;
+    margin-top: 50px;
+
+}
+
+.container {
+    margin-top: 5px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.logo img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #44c853;
+    margin-bottom: 10px;
+    font-size: 33px;
+    font-family: 'Lora', serif;
+}
+
+p {
+    color: #898384;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400px;
+    font-family: "Work Sans", sans-serif;
+}
+
+.step-indicator {
+    color: #7d7d7d;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.form-container form {
+    text-align: left;
+    padding: 40px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+    gap: 2rem;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #352B3A;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    gap: 20px;
+}
+
+.input-group input {
+    /* width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dedede;
+    font-size: 16px;
+    padding-right: 40px; */
+    background-color: #fafafa;
+    display: block; 
+    width: 100%; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #5D5561;
+    border: none;
+    font-size: 14px;
+    border-radius: 15px;
+    height: 50px; 
+    font-weight: 400; 
+    padding: 8px; 
+    box-sizing: border-box; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.terms {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #7d7d7d;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #7d7d7d;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.terms a {
+    color: #3b4cca;
+    text-decoration: none;
+}
+#terms {
+
+}
+span {
+    color: #3b4cca;
+}
+button[type="submit"] {
+    background-color: #3b4cca;
+    color: white;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    width: 508px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Work Sans", sans-serif;
+    margin-top: 30px;
+}
+.button-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+button[type="submit"]:hover {
+    background-color: #324ba8;
+}
+
+.signin {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #7d7d7d;
+    font-family: "Work Sans", sans-serif;
+}
+
+.signin a {
+    color: #3b4cca;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 28.8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.lastlayer {
+    width: 1440px;
+    height: 123px;
+    padding: 26px 120px 37px 120px;
+    background-color: #150F49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.lastlayer{
+    background-color: #150F49;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 170px;
+  }
+  .copyright{
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFCFC;
+  }
+  .terms{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
