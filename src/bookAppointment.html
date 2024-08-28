@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/FAVICON.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles/bookAppointment.css" />
+
+    <!-- JavaScript -->
+    <script src="/index.js" defer></script>
+    <title>Medlorix │ Clinic Search</title>
+  </head>
+  <body>
+    <header>
+      <a href="/src/index.html"
+        ><img
+          class="brand-logo"
+          src="/images/Medlorix-logo.svg"
+          alt="Medlorix Logo"
+      /></a>
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="navigation">
+        <a href="/src/index.html">HOME</a>
+        <!-- Drop down menu for services -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn"
+            >SERVICES
+            <img
+              class="dropdown-down"
+              src="/images/Clinic Search Page/dropdownIcon.png"
+              alt=""
+            />
+          </a>
+          <div class="dropdown-content">
+            <a href="/src/clinicSearch.html" class="dropdown-item"
+              >Clinic Search
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/bookAppointment.html" class="dropdown-item"
+              >See a Doctor
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/chatbot.html" class="dropdown-item"
+              >AI Diagnosis
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/src/career.html" class="dropdown-item"
+              >Careers
+              <span class="dropdown-icon">→</span>
+            </a>
+          </div>
+        </div>
+        <a href="/src/about.html">ABOUT US</a>
+        <a href="/src/faq.html">FAQS</a>
+        <a href="/src/contact.html">CONTACT</a>
+      </nav>
+      <a href="/src/sign-up.html">
+        <button class="green">GET STARTED</button></a
+      >
+    </header>
+
+    <!-- hero section -->
+    <section class="appointment-section">
+      <div class="overlay">
+        <img
+          src="../images/Home Page/Services/book-appointment.jfif"
+          alt="Doctor with patient"
+          class="background-image"
+        />
+      </div>
+      <div class="content">
+        <h1>Book an appointment</h1>
+        <p>
+          To request an appointment using our website, please complete the form
+          below. After you submit this information, a representative will
+          contact you by phone within two business days.
+          <strong>If you have a medical emergency, please dial 911.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Hospital details -->
+    <section class="details">
+      <div class="hospital-details">
+        <div class="column">
+          <p id="hospital-name">Gbobi Hospital</p>
+          <p></p>
+          <p id="hospital-type">General hospital</p>
+        </div>
+        <div class="location">
+          <img
+            src="../images/Clinic Search Page/icon.png"
+            alt="location icon"
+            id="location"
+          />
+          <p>
+            1, Tanke Junction, Illorin, <br />
+            Kwara state, Nigeria
+          </p>
+        </div>
+        <div class="column">
+          <p id="rating">
+            3.9
+            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+          </p>
+
+          <p><span>Available</span> Less busy</p>
+        </div>
+        <div class="phone">
+          <p>
+            <img
+              src="../images/Clinic Search Page/Phone call.png"
+              alt="phone call"
+            />
+            +(234)812 495 3729
+          </p>
+        </div>
+        <div class="column">
+          <img
+            src="../images/Clinic Search Page/ri_direction-line.png"
+            alt="direction"
+            id="direction-logo"
+          />
+          <p id="directions">Directions</p>
+        </div>
+        <div><button class="edit">Edit</button></div>
+      </div>
+    </section>
+    <!-- Appointment details -->
+
+    <section class="appointment-form">
+      <p>You would like to make an appointment with:</p>
+      <form action="#" method="post">
+        <!-- Doctor and Specialty Section -->
+        <div class="doc-and-specialty">
+          <div class="form-row" id="doctor-info">
+            <div class="form-group" id="select-doctor">
+              <label for="doctor" class="small-letters">Select a Doctor</label>
+              <select id="doctor" name="doctor" class="custom-dropdown">
+                <option value="" disabled selected>Select a doctor</option>
+                <option value="doctor1">Doctor 1</option>
+                <option value="doctor2">Doctor 2</option>
+              </select>
+            </div>
+            <div class="form-group" id="select-specialty">
+              <label for="specialty" class="small-letters"
+                >Doctor's Specialty (Required)</label
+              >
+              <select id="specialty" name="specialty" class="custom-dropdown">
+                <option value="" disabled selected>Adolescent Medicine</option>
+                <option value="specialty1">Specialty 1</option>
+                <option value="specialty2">Specialty 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patient's Information Section -->
+        <div class="patient-info">
+          <div class="form-row">
+            <div class="form-group">
+              <p>
+                Patient’s Information
+                <span class="small-letters">(Required)</span>
+              </p>
+              <p class="small-letters">
+                Your information is secure and not displayed to the public.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first_name"
+                placeholder="John"
+              />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last_name"
+                placeholder="Doe"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group"></div>
+            <div class="form-group" id="user-address">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="12, Mogaji Baboko street"
+              />
+            </div>
+            <div class="form-group" id="user-country">
+              <label for="country">Country</label>
+              <select id="country" name="country" class="custom-dropdown">
+                <option value="nigeria" selected>Nigeria</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group"></div>
+            <div class="form-group" id="user-state">
+              <label for="state">State</label>
+              <select id="state" name="state" class="custom-dropdown">
+                <option value="kwara" selected>Kwara</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="local-government"
+                >Local Government Area / Province</label
+              >
+              <select
+                id="local-government"
+                name="local_government"
+                class="custom-dropdown"
+              >
+                <option value="ilorin-west" selected>Ilorin West</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="contact-info">
+          <!-- Patient’s Contact Information Section -->
+          <div class="form-row">
+            <div class="form-group">
+              <p>
+                Patient’s Contact Information
+                <span class="small-letters">(Required)</span>
+              </p>
+              <p class="small-letters">
+                This is to be able to reach you in case of any adjustments in
+                your schedule.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="phone-number">Phone Number</label>
+              <input
+                type="text"
+                id="phone-number"
+                name="phone_number"
+                placeholder="08000000000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="emailaddress@email.com"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <!-- Appointment Information Section -->
+        <div class="appointment-info">
+          <div class="form-row">
+            <div class="form-group">
+              <p>
+                Appointment Information<span class="small-letters">
+                  (Required)</span
+                >
+              </p>
+              <p class="small-letters">
+                This is to be able to reach you in case of any adjustments in
+                your schedule.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label>Existing Patient?</label>
+              <div class="radio-group">
+                <label
+                  ><input
+                    type="radio"
+                    name="existing_patient"
+                    value="no"
+                    checked
+                  />
+                  No</label
+                >
+                <label
+                  ><input type="radio" name="existing_patient" value="yes" />
+                  Yes</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="appointment-date"
+                >Select a date for your appointment</label
+              >
+              <input
+                type="date"
+                id="appointment-date"
+                name="appointment_date"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"></div>
+
+            <div id="reason-for-diagnosis" class="form-group">
+              <label for="reason">Reason for Visit or Diagnosis</label>
+              <textarea id="reason" name="reason" rows="4"></textarea>
+            </div>
+            <div class="form-group"></div>
+          </div>
+        </div>
+        <div class="action-buttons">
+          <div class="form-button">
+            <p id="cancel">CANCEL</p>
+            <p id="book-appointment">BOOK APPOINTMENT</p>
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- see a doctor section -->
+    <section class="doctor-section">
+      <img
+        src="../images/Home Page/Services/see-a-doctor.jfif"
+        alt="Doctor"
+        class="background-image"
+      />
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="heading">Are you a doctor?</p>
+        <p>
+          Join our continent-wide network of clinical specialists dedicated to
+          providing the highest quality of care and changing how healthcare is
+          delivered.
+        </p>
+        <a href="/src/hospitalApplication.html" class="button"
+          >Become Our Partner</a
+        >
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <div class="firstlayer">
+          <div class="logo-about">
+            <a href="/"
+              ><img
+                class="brand-logo"
+                src="/images/Medlorix-logo.svg"
+                alt="Brand Logo"
+            /></a>
+            <p>
+              simplifies healthcare by helping users find clinics, book
+              appointments, and AI diagnosis. <br />All in one easy-to-use
+              platform.
+            </p>
+            <div class="social-media">
+              <a href=""><img src="/images/Icons/google.png" alt="Google" /></a>
+              <a href=""
+                ><img src="/images/Icons/facebook.png" alt="Facebook"
+              /></a>
+              <a href=""
+                ><img src="/images/Icons/twitter.png" alt="Twitter"
+              /></a>
+              <a href=""
+                ><img src="/images/Icons/instagram.png" alt="Instagram"
+              /></a>
+            </div>
+          </div>
+          <div class="company">
+            <p><span>Company</span></p>
+            <a href="">Careers</a>
+            <a href="">About us</a>
+            <a href="">Our mission</a>
+            <a href="">Our Team</a>
+          </div>
+          <div class="company">
+            <p><span>Our Services</span></p>
+            <a href="">Clinic Search</a>
+            <a href="">See a Doctor</a>
+            <a href="">AI-Based Diagnosis</a>
+            <a href="">Contact Us</a>
+          </div>
+          <div class="company">
+            <p><span>Legal</span></p>
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+            <a href="">Security</a>
+          </div>
+        </div>
+        <!-- Back to top arrow -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          <img src="/images/Icons/up-arrow.svg" />
+        </button>
+
+        <div class="lastlayer">
+          <p class="copyright">
+            Copyright &copy; 2024. Medlorix. All rights reserved
+          </p>
+          <div class="terms">
+            <p>Terms and Conditions</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
