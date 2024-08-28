@@ -189,7 +189,7 @@ form{
 .input-section{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 15px;
+  row-gap: 25px;
   column-gap: 50px;
 }
 .input-preview{
@@ -356,158 +356,60 @@ label{
     height: 30px;
     font-size: 10px;
   }
+  /* Hero Styling */
   #hero{
-    padding: 20px 0px;
+    gap: 20px;
+    padding-block: 20px;
+    padding-inline: 50px;
+  }
+  .big-logo img{
+    width: 150px;
+  }
+  .application-container{
+    width: 600px;
+    gap: 10px;
+    padding: 20px 20px;
+  }
+  .layer-1{
     gap: 10px;
   }
-  .search{
-    width: 500px;
-    padding-block: 40px;
+  .layer-1 span{
+    font-size: 25px;
   }
-  .search span{
-    font-size: 20px;
-  }
-  .search h2{
-    font-size: 30px;
-  }
-  .search p{
+  .layer-1 p{
     font-size: 15px;
+    width: 450px;
   }
-  .location{
-    gap: 30px;
-  }
-  .located-near{
-    font-size: 29px;
-  }
-  .map-inputs{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 20px;
-  }
-  .map-inputs input{
-    width: 250px;
-    height: 40px;
-    padding-left: 20px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  .map-inputs input::placeholder{
-    font-size: 13px;
-  }
-  .map-inputs img{
-    width: 10px;
-  }
-  .dropdown-container{
-    width: 40px;
-    height: 40px;
-    margin-left: -1px;
-  }
-  .location button{
-    height: 40px;
-    width: 120px;
-    font-size: 13px;
-  }
-  #build{
-    padding: 50px 0px;
-  }
-  .build-container{
-    width: 700px;
-    height: 300px;
-    padding: 20px;
-  }
-  .left-card{
+  /* Input Form Styling */
+  form{
+    padding-block: 20px;
     gap: 20px;
   }
-  .left-card h2{
-    font-size: 25px;
-    width: 250px;
+  .input-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 50px;
   }
-  .left-card p{
-    font-size: 13px;
-    width: 250px;
+  .input-preview{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
   }
-  .left-card button{
+  label{
+    font-size: 14px;
+    font-weight: 400;
+    color: #352B3A;
+  }
+  /* Checkbox Styling */
+  .layer-3 button{
     width: 150px;
-    height: 40px;
-    font-size: 10px;
-  }
-  .right-card img{
-    width: 300px;
-  }
-  .shadow_color{
-    width: 600px;
-    height: 20px;
-  }
-  #subscribe{
-    padding: 40px 0;
-    gap: 30px;
-  }
-  .top-layer{
-    gap: 10px;
-  }
-  .top-layer h2{
-    font-size: 30px;
-  }
-  .top-layer p{
-    width: 500px;
-    font-size: 15px;
-  }.bottom-layer{
-    gap: 10px;
-  }
-  .bottom-layer input{
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-  }
-  .bottom-layer input::placeholder{
-    font-size: 12px;
-  }
-  .bottom-layer button{
-    width: 80px;
-    height: 40px;
-    font-size: 10px;
+    height: 35px;
+    font-size: 13px;
+    padding:10px 0;
   }
   .footer{
     padding-top: 60px;
-  }
-  .firstlayer{
-    padding: 0px 50px;
-  }
-  .logo-about{
-    gap: 10px;
-    padding-bottom: 30px;
-    padding-right: 100px;
-  }
-  .logo-about p{
-    font-size: 12px;
-    width: 150px;
-  }
-  .social-media{
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-    margin-block: 10px 20px;
-  }
-  .social-media img{
-    width: 30px;
-    height: 30px;
-  }
-  .back-to-top a{
-    gap: 10px;
-  }
-  .back-to-top img{
-    width: 15px;
-  }
-  .back-to-top span{
-    font-size: 12px;
-  }
-  .company p{
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-  .company a{
-    font-size: 12px;
   }
   .lastlayer{
     padding: 40px 50px;
@@ -544,158 +446,79 @@ label{
     height: 30px;
     font-size: 10px;
   }
-  #hero{
-    padding: 10px 0px;
+   /* Hero Styling */
+   #hero{
+    gap: 20px;
+    padding-block: 20px;
+    padding-inline: 20px;
+  }
+  .big-logo img{
+    width: 120px;
+  }
+  .application-container{
+    width: 500px;
+    gap: 10px;
+    padding: 20px 10px;
+  }
+  .layer-1{
     gap: 10px;
   }
-  .search{
-    width: 400px;
-    padding-block: 40px;
-  }
-  .search span{
-    font-size: 17px;
-  }
-  .search h2{
-    font-size:25px;
-  }
-  .search p{
-    font-size: 13px;
-  }
-  .location{
-    gap: 30px;
-  }
-  .located-near{
+  .layer-1 span{
     font-size: 20px;
   }
-  .map-inputs{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 15px;
-    column-gap: 15px;
+  .layer-1 p{
+    font-size: 12px;
+    width: 350px;
   }
-  .map-inputs input{
-    width: 200px;
-    height: 40px;
-    padding-left: 20px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  .map-inputs input::placeholder{
-    font-size: 13px;
-  }
-  .map-inputs img{
-    width: 10px;
-  }
-  .dropdown-container{
-    width: 40px;
-    height: 40px;
-    margin-left: -1px;
-  }
-  .location button{
-    height: 40px;
-    width: 120px;
-    font-size: 13px;
-  }
-  #build{
-    padding: 50px 0px;
-  }
-  .build-container{
-    width: 500px;
-    height: 300px;
-    padding: 20px;
-  }
-  .left-card{
+  /* Input Form Styling */
+  form{
+    padding-block: 20px;
     gap: 20px;
   }
-  .left-card h2{
-    font-size: 20px;
-    width: 200px;
+  .input-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 50px;
   }
-  .left-card p{
+  .input-preview{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  label{
     font-size: 13px;
+    font-weight: 400;
+    color: #352B3A;
+  }
+  .input-preview input, .input-preview select{
+    height: 35px;
     width: 200px;
+    padding-left: 10px;
   }
-  .left-card button{
-    width: 140px;
-    height: 40px;
-    font-size: 10px;
-  }
-  .right-card img{
-    width: 200px;
-  }
-  .shadow_color{
-    width: 400px;
-    height: 20px;
-  }
-  #subscribe{
-    padding: 40px 0;
-    gap: 30px;
-  }
-  .top-layer{
-    gap: 10px;
-  }
-  .top-layer h2{
-    font-size: 20px;
-  }
-  .top-layer p{
-    width: 400px;
-    font-size: 13px;
-  }.bottom-layer{
-    gap: 10px;
-  }
-  .bottom-layer input{
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-  }
-  .bottom-layer input::placeholder{
+  .custom-dropdown{
+    appearance: none;
     font-size: 12px;
+    font-weight: 400;
+    color: #5D5561;
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    background-image: url("/images/Icons/dropdown_icon.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
   }
-  .bottom-layer button{
-    width: 80px;
-    height: 40px;
-    font-size: 10px;
+  .input-preview input:focus{
+    outline: none;
+    border-color: #666;
+  }
+  .input-preview input::placeholder{
+    font-size: 12px;
+    font-weight: 400;
+    color: #5D5561;
   }
   .footer{
     padding-top: 40px;
-  }
-  .firstlayer{
-    padding: 0px 20px;
-  }
-  .logo-about{
-    gap: 10px;
-    padding-bottom: 30px;
-    padding-right: 50px;
-  }
-  .logo-about p{
-    font-size: 12px;
-    width: 150px;
-  }
-  .social-media{
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-    margin-block: 10px 20px;
-  }
-  .social-media img{
-    width: 30px;
-    height: 30px;
-  }
-  .back-to-top a{
-    gap: 10px;
-  }
-  .back-to-top img{
-    width: 15px;
-  }
-  .back-to-top span{
-    font-size: 12px;
-  }
-  .company p{
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-  .company a{
-    font-size: 12px;
   }
   .lastlayer{
     padding: 30px 20px;
@@ -735,156 +558,80 @@ label{
     height: 30px;
     font-size: 8px;
   }
+  /* Hero Styling */
   #hero{
-    padding: 10px 0px;
+    gap: 20px;
+    padding-block: 20px;
+    padding-inline: 10px;
+  }
+  .big-logo img{
+    width: 100px;
+  }
+  .application-container{
+    width: 300px;
+    gap: 10px;
+    padding: 20px 10px;
+  }
+  .layer-1{
     gap: 10px;
   }
-  .search{
-    width: 250px;
-    padding-block: 30px;
+  .layer-1 span{
+    font-size: 18px;
   }
-  .search span{
-    font-size: 13px;
+  .layer-1 p{
+    font-size: 12px;
+    width: 260px;
   }
-  .search h2{
-    font-size:18px;
-  }
-  .search p{
-    font-size: 10px;
-  }
-  .location{
-    gap: 30px;
-  }
-  .located-near{
-    font-size: 15px;
-  }
-  .map-inputs{
-    row-gap: 10px;
-    column-gap: 10px;
-  }
-  .map-inputs input{
-    width: 100px;
-    height: 30px;
-    padding-left: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  .map-inputs input::placeholder{
-    font-size: 8px;
-  }
-  .map-inputs img{
-    width: 8px;
-  }
-  .dropdown-container{
-    width: 30px;
-    height: 30px;
-    margin-left: -1px;
-  }
-  .location button{
-    height: 30px;
-    width: 80px;
-    font-size: 10px;
-  }
-  #build{
-    padding: 40px 0px;
-  }
-  .build-container{
-    width: 300px;
-    height: 200px;
-    padding: 10px;
-  }
-  .left-card{
-    gap: 15px;
-  }
-  .left-card h2{
-    font-size: 13px;
-    width: 120px;
-  }
-  .left-card p{
-    font-size: 10px;
-    width: 120px;
-  }
-  .left-card button{
-    width: 120px;
-    height: 30px;
-    font-size: 9px;
-  }
-  .right-card img{
-    width: 140px;
-    height: 120px;
-  }
-  .shadow_color{
-    width: 250px;
-    height: 15px;
-  }
-  #subscribe{
-    padding: 40px 0;
+  /* Input Form Styling */
+  form{
+    padding-block: 20px;
     gap: 20px;
   }
-  .top-layer{
-    gap: 10px;
+  .input-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
   }
-  .top-layer h2{
-    font-size: 15px;
+  .input-preview{
+    gap: 7px;
   }
-  .top-layer p{
-    width: 300px;
-    font-size: 10px;
-  }.bottom-layer{
-    gap: 10px;
+  label{
+    font-size: 13px;
   }
-  .bottom-layer input{
-    width: 200px;
-    height: 40px;
-    padding-left: 20px;
-  }
-  .bottom-layer input::placeholder{
-    font-size: 10px;
-  }
-  .bottom-layer button{
-    width: 70px;
+  .input-preview input, .input-preview select{
     height: 35px;
-    font-size: 10px;
+    width: 260px;
+    padding-left: 10px;
+  }
+  .custom-dropdown{
+    font-size: 12px;
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    background-image: url("/images/Icons/dropdown_icon.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+  }
+  .input-preview input::placeholder{
+    font-size: 12px;
+  }
+  /* Upload Styling */
+  .upload{
+  align-items: center;
+  }
+  .input-preview textarea{
+  height: 40px;
+  width: 260px;
+  padding: 10px 10px ;
+  }
+  /* Checkbox Styling */
+  .checkbox{
+    width: 260px;
   }
   .footer{
     padding-top: 20px;
-  }
-  .firstlayer{
-    padding: 0px 10px;
-  }
-  .logo-about{
-    gap: 10px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-  }
-  .logo-about p{
-    font-size: 9px;
-    width: 100px;
-  }
-  .social-media{
-    gap: 7px;
-    margin-block: 0px;
-  }
-  .social-media img{
-    width: 22px;
-    height: 22px;
-  }
-  .back-to-top a{
-    gap: 5px;
-  }
-  .back-to-top img{
-    width: 15px;
-  }
-  .back-to-top span{
-    font-size: 10px;
-  }
-  .company p{
-    font-size: 10px;
-    margin-bottom: 5px;
-  }
-  .company a{
-    font-size: 8px;
-    margin-bottom: 5px;
   }
   .lastlayer{
     padding: 20px 10px;
