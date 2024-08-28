@@ -1,7 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
-  font-family: "Work Sans", sans-serif;
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+h2 {
+  font-family: "Lora", serif;
+  font-size: 40px;
 }
 
 /* Header Styling */
@@ -14,10 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.brand-logo {
-  width: 150px;
-  height: 30px;
-}
+
 nav {
   width: 600px;
   display: flex;
@@ -25,11 +33,19 @@ nav {
   justify-content: space-evenly;
 }
 nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
   text-decoration: none;
   font-size: 14px;
   color: #5a5555;
   font-weight: 600;
 }
+nav a:hover {
+  color: #3325b2;
+}
+
 .green {
   width: 150px;
   height: 35px;
@@ -40,8 +56,14 @@ nav a {
   color: #ffffff;
   border: none;
   border-radius: 15px;
+  transition: 0.5s ease-in-out;
 }
-
+.green:hover {
+  background-color: #ffffff;
+  border: 2px solid #44c853;
+  color: #44c853;
+  cursor: pointer;
+}
 
 /* Services Dropdown Menu Styling */
 /* Dropdown container */
@@ -54,7 +76,8 @@ nav a {
 .dropdown-down.rotate {
   transform: rotate(180deg);
 }
-.dropdown-icon, .dropdown-down{
+.dropdown-icon,
+.dropdown-down {
   width: 10px;
   margin-left: 5px;
 }
@@ -70,7 +93,7 @@ nav a {
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   flex-direction: row;
 }
@@ -79,7 +102,7 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #726C6C;
+  color: #726c6c;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -89,24 +112,23 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
 }
 .dropdown-content a:hover {
   background-color: #f1f1f1;
-  color:#3325B2;
+  color: #3325b2;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
- .dropdown-content.show {
+.dropdown-content.show {
   display: block;
 }
-.nav-active{
-  color:#3325B2;
+.nav-active {
+  color: #3325b2;
 }
-
 
 /* hero section */
 .appointment-section {
@@ -208,7 +230,6 @@ nav a {
 #hospital-type {
   color: #9f9c9c;
   line-height: 21.6px;
-  /* font-weight: 400; */
 
   text-align: left;
 }
@@ -219,12 +240,17 @@ nav a {
 }
 
 .hospital-details .edit {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  padding: 18px;
   background-color: #e0f6e2;
   color: #44c853;
   border-radius: 20px;
+  width: 93px;
+  height: 41px;
+  border: none;
+  text-align: center;
+  line-height: 41px;
 }
 
 #directions {
@@ -255,11 +281,9 @@ nav a {
 
 .appointment-form {
   max-width: 1440px;
-  /* margin: 50px auto; */
   margin: 30px 92px;
   padding: 20px;
   background-color: #ffffff;
-  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); */
 }
 
 .appointment-form h2,
@@ -323,7 +347,7 @@ nav a {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #d9d9d9;
-  /* background-color: #e3e3e3; */
+
   font-size: 16px;
   color: #1e1e1e;
 }
@@ -368,7 +392,7 @@ nav a {
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 10px;
-  padding-right: 30px; /* Space for the custom dropdown icon */
+  padding-right: 30px;
   border-radius: 5px;
   border: 1px solid #ccc;
 
@@ -377,7 +401,7 @@ nav a {
   background-image: url("/images/Icons/dropdown_icon.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-size: 16px; /* Adjust size as needed */
+  background-size: 16px;
 }
 
 .custom-dropdown:focus {
@@ -412,11 +436,11 @@ hr {
 /* see a doctor section */
 .doctor-section {
   position: relative;
-  width: 1235px;
+  max-width: 1235px;
   height: 469px;
-  border-radius: 15px; /* Adjust based on your design */
-  overflow: hidden; /* To clip the image and the overlay to the rounded corners */
-  margin: 0 auto; /* Center the section horizontally */
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .doctor-section .background-image {
@@ -432,10 +456,9 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(to right, #150f49 0%, #150f49 90%);
-   */
+
   background: linear-gradient(to left, rgba(21, 15, 73, 0) 0%, #150f49 90%);
-  opacity: 0.9; /* Slight transparency to let the image show through */
+  opacity: 0.9;
 }
 
 .doctor-section .content {
@@ -444,7 +467,7 @@ hr {
   left: 25%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  /* text-align: center; */
+
   padding: 20px;
 }
 
@@ -452,13 +475,11 @@ hr {
   color: #44c853;
   margin-top: 180px;
   font-size: 48px;
-  /* margin-bottom: 20px; */
 }
 
 .doctor-section .content p {
   font-size: 28px;
   padding-bottom: 50px;
-  /* padding-top: 5px; */
   max-width: 468px;
   line-height: 33.6px;
   color: #fafafa;
@@ -467,7 +488,7 @@ hr {
 .doctor-section .button {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #44c853; /* Green color for the button */
+  background-color: #44c853;
   color: #fafafa;
   text-decoration: none;
   border-radius: 50px;
@@ -478,24 +499,23 @@ hr {
 /* Footer styling */
 .footer {
   display: flex;
-  flex-direction: row;
-  margin: 60px;
-}
-.main-footer {
-  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
 }
 .firstlayer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 650px;
-  gap: 100px;
+
   align-items: center;
+  padding: 0px 100px;
 }
 .logo-about {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 30px;
+  padding-right: 150px;
 }
 .logo-about p {
   font-size: 13px;
@@ -510,12 +530,11 @@ hr {
   margin-block: 10px 20px;
 }
 .social-media img {
-  width: 35px;
-  height: 35px;
-  background-color: #3325b2;
-  padding: 5px;
+  width: 30px;
+  height: 30px;
   border-radius: 20px;
 }
+
 .company {
   display: flex;
   flex-direction: column;
@@ -533,7 +552,12 @@ hr {
   font-weight: 600;
   color: #858088;
   margin-bottom: 10px;
+  transition: 0.5s ease-in-out;
 }
+.company a:hover {
+  color: #44c853;
+}
+
 .lastlayer {
   background-color: #150f49;
   padding: 40px 100px;
@@ -557,7 +581,6 @@ hr {
   color: #fffcfc;
 }
 
-
 #myBtn {
   display: none;
   position: fixed;
@@ -566,60 +589,184 @@ hr {
   z-index: 99;
   border: none;
   outline: none;
-  background-color:#44C853;
+  background-color: #44c853;
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
 }
 
-
 /* Media Queries */
+@media (max-width: 992px) {
+  /* hospital details */
+  .hospital-details {
+    margin: 30px 42px;
+    font-size: 14px;
+  }
 
+  .hospital-details img {
+    width: 15px;
+  }
+
+  #hospital-name {
+    font-size: 20px;
+  }
+
+  .hospital-details .edit {
+    width: 83px;
+  }
+
+  #direction-logo {
+    width: 35px;
+  }
+
+  #rating {
+    font-size: 18px;
+  }
+
+  /* patient information */
+  .appointment-form {
+    margin: 30px 42px;
+  }
+  #user-address,
+  #user-country {
+    margin-top: -60px;
+  }
+  #user-state {
+    margin-top: 20px;
+  }
+  #reason-for-diagnosis {
+    margin-left: 240px;
+  }
+  /* see a doctor section */
+
+  .doctor-section {
+    margin: 30px 42px;
+  }
+  .doctor-section .content {
+    left: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* header */
+  header {
+    padding: 0px 20px;
+    height: 100px;
+  }
+  .brand-logo {
+    width: 80px;
+    height: 30px;
+  }
+  nav {
+    width: 450px;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  .green {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+  /* footer */
+  .footer {
+    padding-top: 40px;
+  }
+  .firstlayer {
+    padding: 0px 20px;
+  }
+  .logo-about {
+    gap: 10px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+  }
+  .logo-about p {
+    font-size: 12px;
+    width: 150px;
+  }
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    margin-block: 10px 20px;
+  }
+  .social-media img {
+    width: 30px;
+    height: 30px;
+  }
+  .back-to-top a {
+    gap: 10px;
+  }
+  .back-to-top img {
+    width: 15px;
+  }
+  .back-to-top span {
+    font-size: 12px;
+  }
+  .company p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .company a {
+    font-size: 12px;
+  }
+  .lastlayer {
+    padding: 30px 20px;
+  }
+  .copyright {
+    font-size: 10px;
+  }
+  .terms {
+    gap: 10px;
+  }
+  .terms p {
+    font-size: 10px;
+  }
+}
 /* X-Small devices (less than 576px) */
-@media(max-width:576px){
+@media (max-width: 576px) {
   /* Navigation */
   header {
-   width: 90%;
-   margin: 0 auto;
- }
- .head {
-   margin-left: -20px;
- }
- .hamburger-menu {
-   display: block;
-   margin-top: 10px;
- }
+    width: 90%;
+    margin: 0 auto;
+  }
+  .head {
+    margin-left: -20px;
+  }
+  .hamburger-menu {
+    display: block;
+    margin-top: 10px;
+  }
 
- .hamburger-menu .bar{
-   background-color: #3325B2;
- }
- 
- .navigation {
-   display: none;
-   position: fixed;
-   top: 0;
-   left: -100%; /* Hide off-screen initially */
-   width: 100%;
-   background-color:#EFEDFF;
-   gap: 10px;
-   transition: left 0.4s;
-   flex-direction: column;
-   padding: 30px;
-   z-index: 9;
- }
+  .hamburger-menu .bar {
+    background-color: #3325b2;
+  }
 
- nav a{
-   color:#3325B2;
- }
+  .navigation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hide off-screen initially */
+    width: 100%;
+    background-color: #efedff;
+    gap: 10px;
+    transition: left 0.4s;
+    flex-direction: column;
+    padding: 30px;
+    z-index: 9;
+  }
 
- .navigation.show {
-   display: flex;
-   flex-direction: column;
-   left: 0;
- }
- .green{
-   display: none;
- }
+  nav a {
+    color: #3325b2;
+  }
 
-} 
+  .navigation.show {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+  }
+  .green {
+    display: none;
+  }
+}
