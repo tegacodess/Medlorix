@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medlorix │ Welcome</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/FAVICON.png" />
     <!-- Stylesheet -->
@@ -10,15 +11,15 @@
 
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
-    <title>Medlorix │ Clinic Search</title>
   </head>
+
   <body>
     <header>
-      <a href="/src/index.html"
+      <a href="index.html"
         ><img
           class="brand-logo"
           src="/images/Medlorix-logo.svg"
-          alt="Medlorix Logo"
+          alt="Medlorix logo"
       /></a>
       <!-- Hamburger Icon -->
       <div class="hamburger-menu">
@@ -39,6 +40,10 @@
             />
           </a>
           <div class="dropdown-content">
+            <a href="/src/services.html" class="dropdown-item"
+              >Our Services
+              <span class="dropdown-icon">→</span>
+            </a>
             <a href="/src/clinicSearch.html" class="dropdown-item"
               >Clinic Search
               <span class="dropdown-icon">→</span>
@@ -49,7 +54,7 @@
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="/src/chatbot.html" class="dropdown-item"
+            <a href="/src/sign-up.html" class="dropdown-item"
               >AI Diagnosis
               <span class="dropdown-icon">→</span>
             </a>
@@ -64,7 +69,8 @@
         <a href="/src/faq.html">FAQS</a>
         <a href="/src/contact.html">CONTACT</a>
       </nav>
-      <a href="/src/sign-up.html">
+      <!-- Green buttons -->
+      <a href="/src/services.html">
         <button class="green">GET STARTED</button></a
       >
     </header>
@@ -111,22 +117,28 @@
         <div class="column">
           <p id="rating">
             3.9
-            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-            <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+            <span class="next-line">
+              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src="../images/Clinic Search Page/Star 12.png" alt="star"
+            /></span>
           </p>
 
-          <p><span>Available</span> Less busy</p>
+          <p id="status">
+            <span id="available">Available</span>
+            <span class="next-line"> Less busy </span>
+          </p>
         </div>
         <div class="phone">
           <p>
             <img
               src="../images/Clinic Search Page/Phone call.png"
               alt="phone call"
+              id="phonecall"
             />
-            +(234)812 495 3729
+            <span class="next-line"> +(234)812 495 3729</span>
           </p>
         </div>
         <div class="column">
