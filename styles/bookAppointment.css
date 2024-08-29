@@ -333,6 +333,15 @@ nav a:hover {
 .appointment-form .small-letters {
   font-size: 12px;
 }
+/* .form-test {
+  display: flex;
+  gap: 20px;
+  margin: auto;
+}
+
+#first-last {
+  max-width: 1000px;
+} */
 
 .form-row,
 #doctor-info {
@@ -368,7 +377,7 @@ nav a:hover {
   border-radius: 5px;
   border: 1px solid #d9d9d9;
 
-  font-size: 16px;
+  font-size: 18px;
   color: #1e1e1e;
 }
 #doctor,
@@ -659,6 +668,7 @@ hr {
   #reason-for-diagnosis {
     margin-left: 240px;
   }
+
   /* see a doctor section */
 
   .doctor-section {
@@ -696,30 +706,6 @@ hr {
   .appointment-section .content p {
     width: 689px;
   }
-
-  /* Footer */
-  /* .footer .firstlayer,
-  .footer .lastlayer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer .logo-about {
-    padding-right: 0;
-  }
-
-  .footer .social-media {
-    gap: 10px;
-  }
-
-  .footer .company a {
-    font-size: 12px;
-  }
-
-  .footer .copyright,
-  .footer .terms p {
-    font-size: 12px;
-  } */
 
   /* hospital details */
 
@@ -934,29 +920,6 @@ hr {
   #rating {
     font-size: 24px;
   }
-  /* .hospital-details {
-    flex-direction: column;
-    gap: 20px;
-    margin: 30px 20px;
-    padding: 20px;
-  }
-  .hospital-details .first-row {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hospital-details div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hospital-details #hospital-name {
-    font-size: 20px;
-  }
-
-  .hospital-details .edit {
-    width: 80px;
-  } */
 
   /* Appointment Form Section */
 
@@ -1027,5 +990,117 @@ hr {
   }
   .doctor-section .content .heading {
     font-size: 34px;
+  }
+}
+/* X-Small devices (less than 576px) */
+@media (max-width: 576px) {
+  /* Hero Section */
+  .appointment-section .content h1 {
+    font-size: 24px;
+  }
+  .appointment-section .content p {
+    font-size: 12px;
+    width: 300px;
+  }
+  /* hospital details */
+
+  .hospital-details {
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  .hospital-details div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hospital-details #hospital-name {
+    font-size: 20px;
+  }
+
+  .hospital-details .edit {
+    width: 80px;
+  }
+
+  /* appointment details */
+
+  #select-specialty,
+  #select-doctor {
+    max-width: 90px;
+  }
+  input,
+  select {
+    width: 110px;
+  }
+  #doctor {
+    margin-top: 15px;
+  }
+  #doctor,
+  #specialty {
+    font-size: 10px;
+  }
+
+  #user-state {
+    margin-top: 58px;
+  }
+  .radio-group {
+    gap: 10px;
+  }
+  .radio-group input {
+    width: 20px;
+  }
+  .form-group textarea {
+    width: 240px;
+  }
+  .form-button {
+    gap: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .form-button p {
+    font-size: 15px;
+  }
+  .action-buttons #book-appointment {
+    padding: 10px;
+  }
+
+  /* Doctor Section */
+
+  .doctor-section .content {
+    left: 35%;
+  }
+
+  .doctor-section .content p {
+    font-size: 12px;
+    line-height: 23.6px;
+  }
+  .doctor-section .content .heading {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .doctor-section .button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  /* Footer */
+  .footer .firstlayer,
+  .footer .lastlayer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer .social-media {
+    gap: 10px;
+  }
+
+  .footer .company a {
+    font-size: 12px;
+  }
+
+  .footer .copyright,
+  .footer .terms p {
+    font-size: 12px;
   }
 }
