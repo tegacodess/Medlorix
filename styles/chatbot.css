@@ -300,6 +300,16 @@ nav a {
     cursor: pointer;
 }
 
+.chatbot-text1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    padding: 10px 10px;
+    max-width: 1180px;
+}
 /* Media Queries For Hamburger and others*/
 /* X-large devices (large desktops, less than 1400px*/
 @media(max-width:1400px) {
@@ -344,6 +354,11 @@ nav a {
     height: 500px;
     margin-block: 3rem;
     position: relative;
+}
+
+.chatbot-text1 {
+    width: 550px;
+    text-align: center;
 }
 
 .chatbot-description {
@@ -438,6 +453,10 @@ nav a {
     height: 450px;
     margin-block: 2rem;
     position: relative;
+}
+.chatbot-text1 {
+    width: 450px;
+    text-align: center;
 }
 
 .chatbot-description {
@@ -560,6 +579,11 @@ nav a {
         width: 300px;
     }
 
+    .chatbot-text1 {
+        width: 300px;
+        text-align: center;
+    }
+
     .chatbot-description {
         margin-top: 2rem;
         height: 181px;
@@ -591,6 +615,7 @@ nav a {
         padding: 10px 10px;
         align-items: center;
     }
+    
     .chatbot-text input {
         width: 280px;
         height: 50px;
