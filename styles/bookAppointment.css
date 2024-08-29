@@ -333,15 +333,12 @@ nav a:hover {
 .appointment-form .small-letters {
   font-size: 12px;
 }
-/* .form-test {
+.form-test {
   display: flex;
   gap: 20px;
   margin: auto;
+  width: 832px;
 }
-
-#first-last {
-  max-width: 1000px;
-} */
 
 .form-row,
 #doctor-info {
@@ -380,6 +377,7 @@ nav a:hover {
   font-size: 18px;
   color: #1e1e1e;
 }
+
 #doctor,
 #specialty {
   border-radius: 18px;
@@ -658,15 +656,13 @@ hr {
   .appointment-form {
     margin: 30px 42px;
   }
-  #user-address,
-  #user-country {
-    margin-top: -60px;
-  }
-  #user-state {
-    margin-top: 20px;
-  }
+
   #reason-for-diagnosis {
-    margin-left: 240px;
+    margin-left: 300px;
+  }
+  .form-test {
+    margin: auto;
+    width: 532px;
   }
 
   /* see a doctor section */
@@ -768,9 +764,20 @@ hr {
   .form-group textarea {
     width: 390px;
   }
+
   #reason-for-diagnosis {
     margin-left: 180px;
     margin-top: -40px;
+  }
+  .form-test {
+    width: 500px;
+  }
+  #user-address,
+  #user-country {
+    margin-top: -50px;
+  }
+  #user-state {
+    margin-top: 20px;
   }
 
   /* Doctor Section */
@@ -969,13 +976,16 @@ hr {
     max-width: 203px;
   }
   #reason-for-diagnosis {
-    margin: auto;
+    /* margin: auto; */
+    margin-top: 5px;
+    margin-left: 100px;
   }
   .appointment-form p {
     margin-bottom: 10px;
   }
   .radio-group {
     gap: 10px;
+    margin-left: 20px;
   }
 
   /* Doctor Section */
@@ -992,8 +1002,8 @@ hr {
     font-size: 34px;
   }
 }
-/* X-Small devices (less than 576px) */
-@media (max-width: 576px) {
+/* X-Small devices (less than 320px) */
+@media (max-width: 320px) {
   /* Hero Section */
   .appointment-section .content h1 {
     font-size: 24px;
@@ -1037,6 +1047,16 @@ hr {
   #doctor {
     margin-top: 15px;
   }
+
+  #reason-for-diagnosis {
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .form-test {
+    width: 232px;
+  }
+
   #doctor,
   #specialty {
     font-size: 10px;
@@ -1047,6 +1067,7 @@ hr {
   }
   .radio-group {
     gap: 10px;
+    margin-left: 0;
   }
   .radio-group input {
     width: 20px;
