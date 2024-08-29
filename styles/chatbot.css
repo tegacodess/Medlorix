@@ -220,7 +220,7 @@ nav a {
     background-color: #F1F1F1;
     border-radius: 32px;
     padding: 20px;
-    width: 1100px;
+    max-width: 1100px;
     height: 600px;
     margin-block: 3rem;
     text-align: left;
@@ -300,8 +300,216 @@ nav a {
     cursor: pointer;
 }
 
-/* Media Queries For Hamburger*/
+.chatbot-text1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    padding: 10px 10px;
+    max-width: 1180px;
+}
+/* Media Queries For Hamburger and others*/
+/* X-large devices (large desktops, less than 1400px*/
+@media(max-width:1400px) {
 
+}
+/* Large devices (desktops, less than 1200px) */
+@media(max-width:1200px) {
+
+}
+/* Medium devices (tablet, less than 992px)*/
+@media(max-width:992px) {
+    header{
+        padding: 0px 50px;
+        height: 100px;
+    }
+    .brand-logo{
+        width: 100px;
+        height: 30px;
+    }
+    nav{
+        width: 500px;
+    }
+    nav a{
+        font-size: 12px;
+    }
+    .green{
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+    /* ================== ChatBot Styling ==================== */
+
+.chatbot h3 {
+    font-size: 25px;
+}
+.chatbot p {
+    font-size: 20px;
+}
+
+.chat-card {
+    padding: 20px;
+    height: 500px;
+    margin-block: 3rem;
+    position: relative;
+}
+
+.chatbot-text1 {
+    width: 550px;
+    text-align: center;
+}
+
+.chatbot-description {
+    margin-top: 3rem;
+    height: 181px;
+}
+
+.chatbot-description h4 {
+    font-size: 38px;
+}
+
+.chatbot-description p {
+    font-size: 22px;
+}
+
+.chatbot-description-2 {
+    width: 586px;
+    padding-inline: 50px;
+    height: 66px;
+    margin-top: 2rem;
+}
+
+.chatbot-description-2 p {
+    font-size: 17px;
+}
+
+
+/* Input Area */
+.chatbot-text {
+    margin-bottom: 25px;
+    padding: 10px 40px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.chatbot-text input {
+    width: 100%;
+    height: 50px;
+    margin-top: 8rem;
+    padding-left: 30px;
+    padding-right: 50px;
+    font-size: 15px;
+}
+
+
+.box-icon {
+    position: absolute;
+    right: 20px;
+    top: 85%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media(max-width:768px) {
+    header{
+        padding: 0px 20px;
+        height: 100px;
+      }
+      .brand-logo{
+        width: 80px;
+        height: 30px;
+      }
+      nav{
+        width: 450px;
+      }
+      nav a{
+        font-size: 12px;
+      }
+      .green{
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+      }
+    /* ================== ChatBot Styling ==================== */
+
+.chatbot h3 {
+    font-size: 22px;
+}
+.chatbot p {
+    font-size: 18px;
+}
+
+.chat-card {
+    padding: 20px;
+    height: 450px;
+    margin-block: 2rem;
+    position: relative;
+}
+.chatbot-text1 {
+    width: 450px;
+    text-align: center;
+}
+
+.chatbot-description {
+    margin-top: 3rem;
+    height: 181px;
+}
+
+.chatbot-description h4 {
+    font-size: 28px;
+}
+
+.chatbot-description p {
+    font-size: 20px;
+}
+
+.chatbot-description-2 {
+    width: 480px;
+    padding-inline: 20px;
+    height: 66px;
+    margin-top: 2rem;
+}
+
+.chatbot-description-2 p {
+    font-size: 15px;
+}
+
+
+/* Input Area */
+.chatbot-text {
+    margin-bottom: 25px;
+    padding: 10px 40px;
+}
+
+.chatbot-text input {
+    width: 100%;
+    height: 50px;
+    margin-top: 7rem;
+    padding-left: 30px;
+    padding-right: 50px;
+    font-size: 13px;
+}
+
+
+.box-icon {
+    position: absolute;
+    right: 20px;
+    top: 85%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+}
 /* X-Small devices (less than 576px) */
 @media(max-width:576px) {
 
@@ -309,6 +517,7 @@ nav a {
     header {
         width: 90%;
         margin: 0 auto;
+        position: relative;
     }
 
     .head {
@@ -318,6 +527,7 @@ nav a {
     .hamburger-menu {
         display: block;
         margin-top: 10px;
+        position: absolute;
     }
 
     .hamburger-menu .bar {
@@ -326,7 +536,7 @@ nav a {
 
     .navigation {
         display: none;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: -100%;
         /* Hide off-screen initially */
@@ -351,6 +561,77 @@ nav a {
 
     .green {
         display: none;
+    }
+     /* ================== ChatBot Styling ==================== */
+
+    .chatbot h3 {
+        font-size: 18px;
+    }
+    .chatbot p {
+        font-size: 15px;
+    }
+
+    .chat-card {
+        padding: 0px;
+        height: 400px;
+        margin-block: 2rem;
+        position: relative;
+        width: 300px;
+    }
+
+    .chatbot-text1 {
+        width: 300px;
+        text-align: center;
+    }
+
+    .chatbot-description {
+        margin-top: 2rem;
+        height: 181px;
+    }
+
+    .chatbot-description h4 {
+        font-size: 20px;
+    }
+
+    .chatbot-description p {
+        font-size: 17px;
+    }
+
+    .chatbot-description-2 {
+        width: 290px;
+        padding-inline: 10px;
+        height: 66px;
+        margin-top: 2rem;
+    }
+
+    .chatbot-description-2 p {
+        font-size: 13px;
+    }
+
+
+    /* Input Area */
+    .chatbot-text {
+        margin-bottom: 25px;
+        padding: 10px 10px;
+        align-items: center;
+    }
+    
+    .chatbot-text input {
+        width: 280px;
+        height: 50px;
+        margin-top: 6rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 13px;
+    }
+    .box-icon {
+        position: absolute;
+        right: 10px;
+        top: 85%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
     }
 
 }
