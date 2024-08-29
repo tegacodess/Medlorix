@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medlorix │ Welcome</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/FAVICON.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles/FAQ.css">
+
+  <!-- JavaScript -->
+  <script src="/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+      <a href="index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="navigation">
+        <a href="/src/index.html">HOME</a>
+        <!-- Drop down menu for services -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn">SERVICES
+            <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+          </a>
+          <div class="dropdown-content">
+            <a href="/src/services.html" class="dropdown-item">Our Services
+              <span class="dropdown-icon">→</span>
+            </a>
+            <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+              <span class="dropdown-icon">→</span>
+            </a>
+  
+            <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
+              <span class="dropdown-icon">→</span>
+            </a>
+  
+            <a href="/src/sign-up.html" class="dropdown-item">AI Diagnosis
+              <span class="dropdown-icon">→</span>
+            </a>
+  
+            <a href="/src/career.html" class="dropdown-item">Careers
+              <span class="dropdown-icon">→</span>
+            </a>
+          </div>
+        </div>
+        <a href="/src/about.html">ABOUT US</a>
+        <a href="/src/faq.html">FAQS</a>
+        <a href="/src/contact.html">CONTACT</a>
+      </nav>
+      <!-- Green buttons -->
+      <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
+    </header>
+
+        <!-- First section-->
+        <div id="container">
+            <div class="content">
+                <h3>FAQS</h3>
+                <h2>Frequently Asked Questions</h2>
+                <p>your trusted partner in navigating health and wellness from anywhere at anytime</p>
+            </div>
+        </div>
+
+    <div class="faq-container">
+        <h3>FAQs</h3>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-content">
+            <div class="faq-image">
+                <img src="../images/Stethoscope image.png" alt="Medlorix healthcare illustration">
+            </div>
+            <div class="faq-questions">
+                <details>
+                    <summary>What is Medlorix?</summary>
+                    <p>Medlorix is a comprehensive healthcare platform designed to help you diagnose symptoms, find nearby clinics, book appointments, and access health-related information all from one place.</p>
+                </details>
+                <details>
+                    <summary>How does the symptom checker work?</summary>
+                    <p>Simply input your symptoms into our symptom checker, and our AI will analyze them to suggest possible diagnoses. Please remember, this is not a substitute for professional medical advice.</p>
+                </details>
+                <details>
+                    <summary>How can I find a nearby clinic?</summary>
+                    <p>Use our clinic search feature to select your country, state, local government, and nearest bus stop. Our platform will show you a list of nearby clinics with details, reviews, and availability.</p>
+                </details>
+                <details>
+                    <summary>How do I book an appointment?</summary>
+                    <p>Once you find a clinic, you can view their availability and book an appointment directly through our platform. You will receive a confirmation and reminder of your appointment via your email address.</p>
+                </details>
+                <details>
+                    <summary>What if I need emergency guidance?</summary>
+                    <p>Describe your emergency situation in our emergency guidance tool. Our AI will provide first aid steps and immediate actions you can take while waiting for professional help.</p>
+                </details>
+                <details>
+                    <summary>Can I read health and nutrition articles on Medlorix?</summary>
+                    <p>Yes, we feature a range of health and nutrition articles. You can browse and read them directly on our platform to stay informed and healthy.</p>
+                </details>
+                <details>
+                    <summary>How do I sign up as a mental health expert?</summary>
+                    <p>Currently, we are working on expanding our mental health support services. If you're interested in joining our network of experts, please check back soon for more details.</p>
+                </details>
+                <details>
+                    <summary>Is my data secure with Medlorix?</summary>
+                    <p>Absolutely. We prioritize your privacy and security, implementing strong encryption and following stringent data protection practices.</p>
+                </details>
+                <details>
+                    <summary>How can I contact Medlorix for support?</summary>
+                    <p>For any questions or support needs, you can reach us via the contact form on our website, or email us at support@medlorix.com.</p>
+                </details>
+                <details>
+                    <summary>When will new features be available?</summary>
+                    <p>We're continuously working on improving our platform. Keep an eye on our updates and announcements for information on new features and enhancements.</p>
+                </details>
+            </div>
+        </div>
+        <div class="faq-footer">
+            <p>Can't find what you're looking for?</p>
+            <a href="#" class="message-us">Message Us</a>
+        </div>
+    </div>
+    
+    <!-- Main -->
+   <section class="main">
+    <h4>Message Us</h4>
+    <h2>Do You Have Any Questions?</h2>
+    <p>If you have an idea, we would love to hear about it.</p> 
+
+    <form action="/src/contact.html" method="POST">
+      <div class="form-group">
+       </div>
+        <div class="form-group">            
+            <input type="text" id="name" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">            
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>    
+        <div class="form-group">           
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">           
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+        </div>        
+        <div class="form-group">           
+            <textarea id="message" name="message" placeholder="What would you like to say?" required></textarea>
+        </div>    
+    </form>         
+    <div class="form-group">           
+        <button type="submit" class="green">SEND MESSAGE</button>
+    </div>    
+
+    </section>
+
+    <!-- Subscribe -->
+    <section id="subscribe">
+        <div class="top-layer">
+            <span>
+                Stay up to date on healthy living
+            </span>
+            <p>
+                Be the first to receive expert insights, practical advice, and exclusive content directly to your inbox.
+            </p>
+        </div>
+        <div class="bottom-layer">
+            <input type="email" placeholder="Enter your email">
+            <button>
+                SUBSCRIBE
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+          <div class="firstlayer">
+            <div class="logo-about">
+              <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+              <p>
+                simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
+                easy-to-use platform.
+              </p>
+              <div class="social-media">
+                <a href=""><img src="/images/Icons/google.png" alt="Google"></a>
+                <a href=""><img src="/images/Icons/facebook.png" alt="Facebook"></a>
+                <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
+                <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
+              </div>
+    
+            </div>
+            <div class="company">
+              <p><span>Company</span></p>
+              <a href="">Careers</a>
+              <a href="">About us</a>
+              <a href="">Our mission</a>
+              <a href="">Our Team</a>
+            </div>
+            <div class="company">
+              <p><span>Our Services</span></p>
+              <a href="">Clinic Search</a>
+              <a href="">See a Doctor</a>
+              <a href="">AI-Based Diagnosis</a>
+              <a href="">Contact Us</a>
+            </div>
+            <div class="company">
+              <p><span>Legal</span></p>
+              <a href="">Privacy</a>
+              <a href="">Terms</a>
+              <a href="">Security</a>
+            </div>
+          </div>
+          <!-- Back to top arrow -->
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="/images/Icons/up-arrow.svg" />
+          </button>
+    
+          <div class="lastlayer">
+            <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+            <div class="terms">
+              <p>Terms and Conditions</p>
+              <p>Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>  
+</html>
