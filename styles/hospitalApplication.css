@@ -8,7 +8,6 @@
 
 body{
   font-family: "Work Sans", sans-serif;
-  background-color: #FAFAFA;
 }
 
 h2{
@@ -64,6 +63,24 @@ nav a:hover{
   border: 2px solid #44C853;
   color: #44C853;
   cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #002366;
+  margin: 5px 0;
+  transition: 0.4s;
 }
 
 /* Services Dropdown Menu Styling */
@@ -139,6 +156,7 @@ nav a:hover{
   gap: 20px;
   padding-block: 20px;
   padding-inline: 100px;
+  background-color: #FAFAFA;
 }
 .big-logo{
   display: flex;
@@ -536,28 +554,53 @@ label{
 
 /* X-small devices (potrait phones, less than 576px) */
 @media (max-width: 576px){
-  header{
-    padding: 0px 10px;
-    height: 60px;
-  }
-  .brand-logo{
-    width: 50px;
-    height: 30px;
-  }
-  nav{
-    width: 200px;
-  }
-  nav a{
-    font-size: 8px;
-  }
-  .dropdown{
-    width: 7px;
-  }
-  .green{
-    width: 80px;
-    height: 30px;
-    font-size: 8px;
-  }
+  header {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.head {
+    margin-left: -20px;
+}
+
+.hamburger-menu {
+    display: block;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.hamburger-menu .bar {
+    background-color: #3325B2;
+}
+
+.navigation {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* Hide off-screen initially */
+    width: 100%;
+    background-color: #EFEDFF;
+    gap: 10px;
+    transition: left 0.4s;
+    flex-direction: column;
+    padding: 30px;
+    z-index: 9;
+}
+
+nav a {
+    color: #3325B2;
+}
+
+.navigation.show {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+}
+.green {
+    display: none;
+}
   /* Hero Styling */
   #hero{
     gap: 20px;
