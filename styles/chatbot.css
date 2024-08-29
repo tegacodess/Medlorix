@@ -35,7 +35,7 @@ a {
 
 
 /*==================== Header section ===================*/
-header {
+header{
     padding: 0px 100px;
     height: 100px;
     background-color: #FFFFFF;
@@ -43,38 +43,46 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-.brand-logo {
-    width: 150px;
-    height: 30px;
-}
-
-nav {
+  }
+  
+  nav{
     width: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-nav a {
+  }
+  nav a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
     text-decoration: none;
     font-size: 14px;
     color: #5A5555;
     font-weight: 600;
-}
-
-.green {
+  }
+  nav a:hover{
+    color: #3325B2;
+  }
+  
+  .green{
     width: 150px;
     height: 35px;
     font-size: 14px;
     font-weight: 600;
-    padding: 10px 0;
+    padding:10px 0;
     background-color: #44C853;
     color: #FFFFFF;
     border: none;
     border-radius: 15px;
-}
+    transition: 0.5s ease-in-out;
+  }
+  .green:hover{
+    background-color: #FFFFFF;
+    border: 2px solid #44C853;
+    color: #44C853;
+    cursor: pointer;
+  }
 
 /* Hamburger Menu */
 .hamburger-menu {
@@ -92,47 +100,6 @@ nav a {
     background-color: #002366;
     margin: 5px 0;
     transition: 0.4s;
-}
-
-/* Header Styling */
-header {
-    padding: 0px 100px;
-    height: 100px;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav {
-    width: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-nav a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #5A5555;
-    font-weight: 600;
-}
-
-.green {
-    width: 150px;
-    height: 40px;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 10px;
-    background-color: #44C853;
-    border: none;
-    color: white;
-    border-radius: 32px;
-}
-
-.green:hover {
-    background-color: #077a43;
 }
 
 /* Services Dropdown Menu Styling */
