@@ -445,6 +445,8 @@ header{
     padding: 100px 100px;
     background:#EFEDFF;
   }
+
+  
   .tips h2{
     color:#44C853;
   }
@@ -658,7 +660,6 @@ header{
 
 
 /* Responsive Styling */
-/* X-large devices (large desktops, less than 1400px*/
 /* Large devices (desktops, less than 1200px) */
 @media(max-width: 1200px){
 
@@ -738,6 +739,15 @@ header{
 
 /* Medium devices (tablets, less than 992px) */
 @media(max-width:992px){
+   h3{
+    font-size: 24px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  p{
+    font-size: 16px;
+  }  
 
   /* Nav */
   header{
@@ -750,7 +760,6 @@ header{
   }
 
   /* Hero */ 
-  /* Needs further adjustments */
   .hero{
     gap:50px;
     padding:50px 70px;
@@ -767,16 +776,267 @@ header{
     width: 200px;
     margin-left: 200px;
   }
-  .hero-im{
+  .im{
     width:400px;
-    
+  }
+
+  .hero-text button{
+    width:160px;
+    margin-top: 60px;
+  }
+
+  /* Mission */
+  .mission-text h3{
+    font-size: 24px;
+  }
+  .mission-text h2{
+    font-size: 30px;
+  }
+
+  .mission p{
+    font-size: 16px;
+  }
+  .mission .im{
+    width:450px;
+    height:400px;
+  }
+  .mission .green{
+    margin-top: 60px;
+    width: 160px;
+  }
+
+  /* Why Medlorix */
+  .intro p{
+     font-size: 16px;
+  } 
+  .intro img{
+    width: 400px;
+    height: 370px;
+  }
+
+  .feature-item p{
+    font-size: 14px;
+  }
+
+  .why-section button{
+    width:160px;
+    height:50px;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-top: 60px;
+  }
+
+  /* Build */
+  .left-card p{
+    font-size: 16px;
+  }
+  .build-container{
+    padding: 0px 30px;
+  }
+
+  /* Tips */
+  .tip-p{
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .tips{
+    padding: 80px 40px;
+  }
+
+  .section-grid{
+    /* grid-template-columns: 1fr; do this for 576pxs screen and below */
+    gap: 30px;
+  }
+
+  .tip-card{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width:270px;
+  }
+
+  .tip-text{
+    text-align: center;
+  }
+
+  .tip-card p{
+    font-size: 16px;
+  }
+ 
+
+  /* Footer */
+  .firstlayer{
+    padding-left: 200px;
+    gap:70px;
   }
 
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media(max-width:768px){
+  /* Nav */
+  header{
+    padding: 0px 30px;
+  } 
+  .green{
+    width: 150px;
+    height: 40px;
+    padding: 10px 10px;
+  }
 
+  /* Hero */
+  .hero{
+    gap:50px;
+    /* flex-direction: column; */
+    padding: 50px;
+    gap:0;
+  }  
+  .hero-text img{
+    margin-left: 150px;
+    width:170px;
+  }
+
+  .hero h2{
+    font-size: 25px;
+  }
+  .hero p{
+    font-size: 14px;
+    width: 300px;
+  } 
+
+  .im{
+    border-radius: 50%;
+    width:330px;
+  }
+
+  /* Mission */
+  .mission{
+    gap:50px;
+    padding: 50px;
+  }
+  .mission-text h3{
+    font-size: 20px;
+  }
+  .mission-texth2{
+    font-size: 25px;
+  }
+  .mission p{
+    font-size: 14px;
+  }
+  .mission .im{
+    width: 300px;
+    height: 300px;
+  }
+  .mission button{
+    margin-right: 200px;
+  }
+
+  /* Services */
+  .services{
+    padding:50px;
+  }
+  .services h4{
+    font-size:22px;
+  }
+  .services p{
+    font-size: 14px;
+  }
+  .services-container {
+    gap:30px;
+  }
+  .service-card{
+    width:200px;
+  }
+  .services .green{
+    margin-top: 40px;
+  } 
+
+  /* Why Medlorix */
+  .why-section{
+    padding: 50px;
+  }
+  .intro h2{
+    font-size: 25px;
+  }
+  .intro h3{
+    font-size: 22px;
+  }
+  .intro{
+    gap:30px;
+  }
+  .intro img{
+    border-radius: 40%;
+    width: 330px;
+    height: 300px;
+  }
+  .intro p{
+    font-size: 14px;
+  }
+  .feature-item p{
+    font-size: 12px;
+  }
+
+  /* Build */
+  .build-container {
+    width: 90%; 
+    height: auto; 
+    padding: 20px;
+  }
+
+  .left-card span {
+    width: 100%; 
+  }
+  .left card h2{
+    font-size: 30px;
+  } 
+
+ .left-card p {
+    width: 100%; 
+  }
+
+ .left-card button {
+    width: 170px; 
+    height: 45px; 
+    font-size: 12px;
+  }
+
+  .right-card img {
+    width: 300px;
+  }   
+
+  .shadow_color {
+    width: 90%; 
+    height: 20px; 
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  /* Tips */
+  .tips{
+    padding: 50px;
+  }
+  .tip-card h4{
+    font-size: 16px;
+  }
+  .tip-card p{
+    font-size: 12px;
+  } 
+  .tip-card a{
+    font-size: 12px;
+  }
+
+  /* Subscribe */
+  #subscribe{
+    padding: 50px;
+  }
+
+  /* Footer */
+  
+  .firstlayer{
+    padding-left: 100px;
+    gap:50px;
+  }
 }
 
 /* X-Small devices (less than 576px) */
@@ -826,3 +1086,5 @@ header{
   }
 
 } 
+
+/* X-Small devices (portrait phones, less than 320px) */

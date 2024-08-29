@@ -205,13 +205,13 @@ header{
 }
 
 .chatbot-description h4 {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 700;
     color: #3325B2;
 }
 
 .chatbot-description p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -222,7 +222,7 @@ header{
 }
 
 .chatbot-description-2 p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     text-align: center;
 }
@@ -252,7 +252,7 @@ header{
     padding-right: 50px;
     background-color: #FAFAFA;
     color: #898384;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
 }
 
