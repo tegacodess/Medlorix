@@ -131,6 +131,7 @@
             <span class="next-line"> Less busy </span>
           </p>
         </div>
+
         <div class="phone">
           <p>
             <img
@@ -193,65 +194,70 @@
                 Your information is secure and not displayed to the public.
               </p>
             </div>
-
-            <div class="form-group">
-              <label for="first-name">First Name</label>
-              <input
-                type="text"
-                id="first-name"
-                name="first_name"
-                placeholder="John"
-              />
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input
-                type="text"
-                id="last-name"
-                name="last_name"
-                placeholder="Doe"
-              />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group"></div>
-            <div class="form-group" id="user-address">
-              <label for="address">Address</label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                placeholder="12, Mogaji Baboko street"
-              />
-            </div>
-            <div class="form-group" id="user-country">
-              <label for="country">Country</label>
-              <select id="country" name="country" class="custom-dropdown">
-                <option value="nigeria" selected>Nigeria</option>
-              </select>
+            <div class="form-test">
+              <div class="form-group" id="firstName">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  placeholder="John"
+                />
+              </div>
+              <div class="form-group" id="lastName">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  placeholder="Doe"
+                />
+              </div>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group"></div>
-            <div class="form-group" id="user-state">
-              <label for="state">State</label>
-              <select id="state" name="state" class="custom-dropdown">
-                <option value="kwara" selected>Kwara</option>
-              </select>
+            <div class="form-test">
+              <div class="form-group" id="user-address">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="12, Mogaji Baboko street"
+                />
+              </div>
+              <div class="form-group" id="user-country">
+                <label for="country">Country</label>
+                <select id="country" name="country" class="custom-dropdown">
+                  <option value="nigeria" selected>Nigeria</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="local-government"
-                >Local Government Area / Province</label
-              >
-              <select
-                id="local-government"
-                name="local_government"
-                class="custom-dropdown"
-              >
-                <option value="ilorin-west" selected>Ilorin West</option>
-              </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group"></div>
+            <div class="form-test">
+              <div class="form-group" id="user-state">
+                <label for="state">State</label>
+                <select id="state" name="state" class="custom-dropdown">
+                  <option value="kwara" selected>Kwara</option>
+                </select>
+              </div>
+              <div class="form-group" id="user-local">
+                <label for="local-government"
+                  >Local Government Area / Province</label
+                >
+                <select
+                  id="local-government"
+                  name="local_government"
+                  class="custom-dropdown"
+                >
+                  <option value="ilorin-west" selected>Ilorin West</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -269,24 +275,25 @@
                 your schedule.
               </p>
             </div>
-
-            <div class="form-group">
-              <label for="phone-number">Phone Number</label>
-              <input
-                type="text"
-                id="phone-number"
-                name="phone_number"
-                placeholder="08000000000"
-              />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="emailaddress@email.com"
-              />
+            <div class="form-test">
+              <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input
+                  type="text"
+                  id="phone-number"
+                  name="phone_number"
+                  placeholder="08000000000"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="emailaddress@email.com"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -305,34 +312,35 @@
                 your schedule.
               </p>
             </div>
-
-            <div class="form-group">
-              <label>Existing Patient?</label>
-              <div class="radio-group">
-                <label
-                  ><input
-                    type="radio"
-                    name="existing_patient"
-                    value="no"
-                    checked
-                  />
-                  No</label
-                >
-                <label
-                  ><input type="radio" name="existing_patient" value="yes" />
-                  Yes</label
-                >
+            <div class="form-test">
+              <div class="form-group">
+                <label>Existing Patient?</label>
+                <div class="radio-group">
+                  <label
+                    ><input
+                      type="radio"
+                      name="existing_patient"
+                      value="no"
+                      checked
+                    />
+                    No</label
+                  >
+                  <label
+                    ><input type="radio" name="existing_patient" value="yes" />
+                    Yes</label
+                  >
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="appointment-date"
-                >Select a date for your appointment</label
-              >
-              <input
-                type="date"
-                id="appointment-date"
-                name="appointment_date"
-              />
+              <div class="form-group">
+                <label for="appointment-date"
+                  >Select a date for your appointment</label
+                >
+                <input
+                  type="date"
+                  id="appointment-date"
+                  name="appointment_date"
+                />
+              </div>
             </div>
           </div>
           <div class="form-row">
@@ -342,6 +350,7 @@
               <label for="reason">Reason for Visit or Diagnosis</label>
               <textarea id="reason" name="reason" rows="4"></textarea>
             </div>
+
             <div class="form-group"></div>
           </div>
         </div>

@@ -7,6 +7,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -333,7 +334,8 @@ nav a:hover {
   font-size: 12px;
 }
 
-.form-row {
+.form-row,
+#doctor-info {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
@@ -911,10 +913,36 @@ hr {
 
   /* Hospital Details Section */
   .hospital-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hospital-details .edit {
+    width: 93px;
+    height: 41px;
+    margin-top: 10px;
+  }
+
+  .hospital-details #directions {
+    margin-left: 12px;
+  }
+  #direction-logo {
+    width: 40px;
+    margin-left: 20px;
+  }
+
+  #rating {
+    font-size: 24px;
+  }
+  /* .hospital-details {
     flex-direction: column;
     gap: 20px;
     margin: 30px 20px;
     padding: 20px;
+  }
+  .hospital-details .first-row {
+    display: flex;
+    flex-direction: column;
   }
 
   .hospital-details div {
@@ -928,9 +956,10 @@ hr {
 
   .hospital-details .edit {
     width: 80px;
-  }
+  } */
 
   /* Appointment Form Section */
+
   .appointment-form {
     margin: 30px 20px;
     padding: 20px;
@@ -941,8 +970,21 @@ hr {
   }
 
   .form-row {
-    gap: 10px;
+    display: unset;
+    gap: 20px;
+    margin-bottom: 20px;
   }
+  .form-test {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  #user-address,
+  #user-country {
+    margin-top: auto;
+  }
+
   .form-group input[type="text"],
   .form-group input[type="email"],
   .form-group input[type="date"],
@@ -956,22 +998,34 @@ hr {
     font-size: 20px;
   }
 
-  /* Doctor Section */
-  .doctor-section {
-    height: auto;
-    margin: 30px 20px;
-    padding: 20px;
-    text-align: center;
+  .form-group textarea {
+    width: 290px;
   }
+  #select-specialty,
+  #select-doctor {
+    max-width: 203px;
+  }
+  #reason-for-diagnosis {
+    margin: auto;
+  }
+  .appointment-form p {
+    margin-bottom: 10px;
+  }
+  .radio-group {
+    gap: 10px;
+  }
+
+  /* Doctor Section */
+
   .doctor-section .content {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 35%;
+    padding: 10px;
+  }
+
+  .doctor-section .content p {
+    font-size: 15px;
   }
   .doctor-section .content .heading {
-    font-size: 36px;
-  }
-  .doctor-section .content p {
-    font-size: 18px;
+    font-size: 34px;
   }
 }
