@@ -11,6 +11,7 @@
 
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
+    <script src="../bookAppointment.js" defer></script>
   </head>
 
   <body>
@@ -230,8 +231,13 @@
               </div>
               <div class="form-group" id="user-country">
                 <label for="country">Country</label>
-                <select id="country" name="country" class="custom-dropdown">
-                  <option value="nigeria" selected>Nigeria</option>
+                <select
+                  id="country"
+                  name="country"
+                  class="custom-dropdown"
+                  onchange="loadStates()"
+                >
+                  <option value="" selected>Select Country</option>
                 </select>
               </div>
             </div>
@@ -242,8 +248,13 @@
             <div class="form-test">
               <div class="form-group" id="user-state">
                 <label for="state">State</label>
-                <select id="state" name="state" class="custom-dropdown">
-                  <option value="kwara" selected>Kwara</option>
+                <select
+                  id="state"
+                  name="state"
+                  class="custom-dropdown"
+                  onchange="loadCities()"
+                >
+                  <option value="" selected>Select State</option>
                 </select>
               </div>
               <div class="form-group" id="user-local">
@@ -255,7 +266,7 @@
                   name="local_government"
                   class="custom-dropdown"
                 >
-                  <option value="ilorin-west" selected>Ilorin West</option>
+                  <option value="" selected>Ilorin West</option>
                 </select>
               </div>
             </div>
@@ -377,7 +388,7 @@
           providing the highest quality of care and changing how healthcare is
           delivered.
         </p>
-        <a href="/src/hospitalApplication.html" class="button"
+        <a href="/src/doctorApplication.html" class="button"
           >Become Our Partner</a
         >
       </div>
