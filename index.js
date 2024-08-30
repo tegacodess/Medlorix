@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navigation.classList.remove("show");
       headerLogo.classList.remove("hide");
     });
-  });
+  });     
 });
 
 

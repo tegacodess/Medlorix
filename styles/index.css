@@ -29,6 +29,18 @@ a{
   color: white;
 }
 
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
   display: none;
@@ -83,6 +95,7 @@ header{
   .green:hover {
     background-color: #077a43;
   } 
+
 /* Services Dropdown Menu Styling */
 /* Dropdown container */
 .dropdown {
@@ -171,9 +184,11 @@ header{
   line-height: 33.6px;
 }  
 
+
 .hero-text img{
   margin-left: 250px;
   margin-bottom: 10px;
+  animation: slideInFromLeft 1s ease-out;
 } 
 
 .hero-text button{
@@ -333,11 +348,14 @@ header{
   font-size: 24px;
   line-height: 28.8px;
 }
+.features{
+  margin-top:70px;
+}
 .feature-row {
   display: flex;
   justify-content: space-evenly;  
   gap: 50px;
-  margin-top: 70px;
+  margin-top: 20px;
   align-items: center;  
 }
 .feature-item{
@@ -534,7 +552,8 @@ header{
     color: #FEFCFF;
     font-size: 15px;
     font-weight: 400;
-  }.bottom-layer{
+  }
+  .bottom-layer{
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -625,24 +644,14 @@ header{
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
   .copyright{
     font-size: 15px;
     font-weight: 700;
     color: #FFFCFC;
   }
-  .terms{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
-  .terms p{
-    font-size: 15px;
-    font-weight: 700;
-    color: #FFFCFC;
-}
-
+  
 #myBtn {
   display: none;
   position: fixed;
@@ -657,6 +666,17 @@ header{
   padding: 15px;
   border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Responsive Styling */
@@ -762,22 +782,23 @@ header{
   /* Hero */ 
   .hero{
     gap:50px;
-    padding:50px 70px;
+    padding:50px 50px;
+    /* margin: 10px; */
   }
   .hero h2{
     font-size:30px;
   }
   .hero p{
     font-size: 16px;
-    width:300px;
+    width:auto;
   }
 
   .hero-text img{
     width: 200px;
-    margin-left: 200px;
+    margin-left: 170px;
   }
   .im{
-    width:400px;
+    width:300px;
   }
 
   .hero-text button{
@@ -845,7 +866,6 @@ header{
   }
 
   .section-grid{
-    /* grid-template-columns: 1fr; do this for 576pxs screen and below */
     gap: 30px;
   }
 
@@ -1045,13 +1065,15 @@ header{
    header {
     width: 90%;
     margin: 0 auto;
+    padding: 0;
   }
   .head {
     margin-left: -20px;
   }
+  
   .hamburger-menu {
     display: block;
-    margin-top: 10px;
+    margin: 20px;
   }
 
   .hamburger-menu .bar{
@@ -1085,6 +1107,106 @@ header{
     display: none;
   }
 
-} 
+  /* Hero */
+  .hero{
+    padding: 50px 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .hero p{
+    width:fit-content;
+  }
 
-/* X-Small devices (portrait phones, less than 320px) */
+  /* Mission */
+  .mission{
+    padding: 50px 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  /* Why Medlorix */
+  .intro{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .intro img{
+    border-radius: 25px;
+  }
+  .feature-row{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .feature-item{
+    width: 100%;
+  }
+
+  /* Build */
+  .build-container{
+    width: 80%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .left-card{
+    justify-content: center;
+    align-items: center;
+  }
+  .left-card span{
+    width: 100%;
+  }
+  .shadow_color{
+    width:75%;
+  }
+
+  /* Tips */
+  .tips{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .tip-card{
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .section-grid{
+    grid-template-columns: 1fr;
+  }
+
+  /* Subscribe */
+  #subscribe{
+    padding: 50px 20px;
+    /* width:80%; */
+  }
+  .top-layer p{
+    width: 100%;
+  }
+  .bottom-layer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .bottom-layer input{
+    width: 250px;
+  }
+
+  /* Footer */
+  .footer{
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+  }
+  .firstlayer{
+    flex-direction: column;
+    padding-left: 0px;
+    gap: 20px;
+    align-items:normal;
+  }
+  .lastlayer{
+    flex-direction: column;
+    gap: 20px;  
+    padding:25px;
+    align-items: center;
+  }
+} 
