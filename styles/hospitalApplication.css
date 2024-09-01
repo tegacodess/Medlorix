@@ -325,19 +325,9 @@ label{
   padding: 40px 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 .copyright{
-  font-size: 15px;
-  font-weight: 700;
-  color: #FFFCFC;
-}
-.terms{
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
-.terms p{
   font-size: 15px;
   font-weight: 700;
   color: #FFFCFC;

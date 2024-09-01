@@ -388,7 +388,7 @@ textarea::placeholder{
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
   .copyright{
     font-size: 12px;
@@ -705,10 +705,10 @@ textarea::placeholder{
       align-items:normal;
     }
     .lastlayer{
-      flex-direction
-      : column;
+      flex-direction:column;
       gap: 20px;  
       padding:25px;
+      justify-content: center;
       align-items: center;
     }
 }
