@@ -214,7 +214,7 @@ button[type="submit"]:hover {
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 170px;
   }
   .copyright{
