@@ -12,6 +12,15 @@
 
   <!-- JavaScript -->
   <script src="/index.js" defer></script>
+  <script src="/contact.js"></script>
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("7nhNllYOuWc2yt965");
+    })();
+  </script>
 </head>
 
 <body>
@@ -85,7 +94,7 @@
         </div>    
     </form>         
     <div class="form-group">           
-        <button type="submit" class="green form-btn">SEND MESSAGE</button>
+        <button type="submit" class="green form-btn" onclick="sendMail()">SEND MESSAGE</button>
     </div>    
 
     </section>
