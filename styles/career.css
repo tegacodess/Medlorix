@@ -238,6 +238,9 @@ nav a:hover {
     width: 350px;
     color: #FAFAFA;
 }
+/* .left-card button a{
+    text-decoration: none;
+} */
 
 .left-card button {
     width: 190px;
@@ -358,6 +361,7 @@ nav a:hover {
     align-items: center;
     background-color: #FAFAFA;
     font-family: "Lora", serif;
+    padding: 0px 100px;
 }
 
 #container h3{
@@ -367,9 +371,11 @@ nav a:hover {
 }
 
 .card-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
     padding: 4rem 2.5rem;
-    gap: 4rem;
+
 }
 
 .card{
@@ -766,7 +772,21 @@ nav a:hover {
         width: 600px;
         height: 20px;
     }
+    /* =============== Values Section ================= */
+    #container{
+        padding: 0px 50px;
+    }
 
+    #container h3{
+        font-size: 35px;
+    }
+    .card h2{
+        font-size: 20px;
+    }
+
+    .card p{
+        font-size: 15px;
+    }
     /*==================== Testimonial ===================*/
     #testimonial {
         height: 400px;
@@ -1064,6 +1084,27 @@ nav a:hover {
         height: 20px;
     }
 
+    /* =============== Values Section ================= */
+    #container{
+        padding: 0px 20px;
+    }
+
+    #container h3{
+        font-size: 30px;
+        margin-top: 1.5rem;
+    }
+
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+    .card h2{
+        font-size: 20px;
+    }
+
+    .card p{
+        font-size: 15px;
+    }
     /*==================== Testimonial ===================*/
     #testimonial {
         height: 400px;
@@ -1417,6 +1458,30 @@ nav a:hover {
         height: 15px;
     }
 
+    #container{
+        padding: 0px 10px;
+    }
+
+    #container h3{
+        font-size: 25px;
+        margin-top: 1.5rem;
+    }
+
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 15px;
+    }
+    .card img {
+        max-width: 50px;
+    }
+    .card h2{
+        font-size: 18px;
+    }
+
+    .card p{
+        font-size: 15px;
+    }
     /*==================== Testimonial ===================*/
     #testimonial {
         height: 400px;
