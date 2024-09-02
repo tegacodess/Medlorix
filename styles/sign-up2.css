@@ -13,14 +13,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* height: 100vh; */
     margin: 0;
 }
 
 .logo {
-    /* max-width: 0px;
-    width: 300px;
-    Height: 69px; */
     margin-bottom: 5px;
     margin-top: 50px;
 
@@ -85,12 +81,6 @@ p {
 }
 
 .input-group input {
-    /* width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #dedede;
-    font-size: 16px;
-    padding-right: 40px; */
     background-color: #fafafa;
     display: block; 
     width: 100%; 
