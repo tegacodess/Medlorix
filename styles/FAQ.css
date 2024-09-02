@@ -501,3 +501,224 @@ details p {
     padding: 15px;
     border-radius: 10px;
   }
+
+  /* Responsive styles for Medlorix */
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Medium screens */
+@media screen and (max-width: 1024px) {
+  header {
+      padding: 0 50px;
+  }
+
+  nav {
+      width: auto;
+  }
+
+  .content {
+      width: 90%;
+  }
+
+  .faq-content {
+      flex-direction: column;
+  }
+
+  .faq-image, .faq-questions {
+      max-width: 100%;
+  }
+
+  .faq-image img {
+      width: 100%;
+      height: auto;
+  }
+
+  form {
+      padding: 50px 20px;
+  }
+
+  input, textarea {
+      width: 100%;
+      margin: 15px 0;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .hamburger-menu {
+    display: block;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav.active {
+    display: flex;
+}
+
+nav a {
+    margin: 10px 0;
+}
+
+.green {
+    display: none;
+}
+
+      /* Footer */
+  .footer {
+    flex-direction: column;
+    margin: 30px 20px;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.firstlayer {
+    padding-left: 0;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+}
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  header {
+      padding: 0 20px;
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+      display: flex;
+  }
+
+  nav a {
+      margin: 10px 0;
+  }
+
+  .green {
+      display: none;
+  }
+
+  .content h2 {
+      font-size: 32px;
+  }
+
+  .content h3 {
+      font-size: 20px;
+  }
+
+  .content p {
+      font-size: 18px;
+  }
+
+  .main {
+      padding: 50px 20px;
+  }
+
+  .main h2 {
+      font-size: 32px;
+  }
+
+  #subscribe {
+      padding: 30px 20px;
+  }
+
+  .top-layer span {
+      font-size: 32px;
+  }
+
+  .top-layer p {
+      width: 100%;
+  }
+
+  .bottom-layer {
+      flex-direction: column;
+  }
+
+  .bottom-layer input, .bottom-layer button {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .firstlayer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 20px;
+  }
+
+  .logo-about {
+      padding-right: 0;
+      margin-bottom: 30px;
+  }
+
+  .company {
+      margin-bottom: 30px;
+  }
+
+  .lastlayer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .copyright {
+      margin-bottom: 20px;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .content h2 {
+      font-size: 28px;
+  }
+
+  .content h3 {
+      font-size: 18px;
+  }
+
+  .content p {
+      font-size: 16px;
+  }
+
+  .main h2 {
+      font-size: 28px;
+  }
+
+  .top-layer span {
+      font-size: 28px;
+  }
+}
