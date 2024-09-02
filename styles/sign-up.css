@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
@@ -36,7 +36,6 @@ body {
     width: 100%;
     max-width: 600px;
     text-align: center;
-    /* margin-top: 10px; */
 
 }
 
@@ -127,7 +126,6 @@ h1 {
 form{
     display: flex;
     flex-direction: column;
-    /* align-items: center */
 }
 .form-row {
     display: flex;
@@ -251,11 +249,7 @@ select {
 
 
 
-/* Media Queries */
-
-/* X-Small devices (less than 576px) */
 @media(max-width:576px){
-    /* Navigation */
     header {
      width: 90%;
      margin: 0 auto;
@@ -276,7 +270,7 @@ select {
      display: none;
      position: fixed;
      top: 0;
-     left: -100%; /* Hide off-screen initially */
+     left: -100%; 
      width: 100%;
      background-color:#EFEDFF;
      gap: 10px;
@@ -299,4 +293,276 @@ select {
      display: none;
    }
   
-  } 
+  }
+   */
+
+   @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1.3rem;
+    margin-top: 10px;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #44c853;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 2.375rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.subtitle, .step {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: center;
+    color: #898384;
+    margin-bottom: 20px;
+}
+
+.step {
+    color: #B5B3B3;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-button {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #fafafa;
+    cursor: pointer;
+    color: #352B3A;
+    margin-bottom: 1rem;
+    height: 50px;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.44;
+    text-align: center;
+    gap: 36px;
+}
+
+.google-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.divider {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: small;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9375rem;
+    color: #352B3A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+    line-height: 1.44;
+}
+
+input, select {
+    background-color: #fafafa;
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #5D5561;
+    border: none;
+    font-size: 0.875rem;
+    border-radius: 15px;
+    height: 50px;
+    font-weight: 400;
+    padding: 8px;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+    color: #9F9C9C;
+}
+
+.continue-button {
+    width: 100%;
+    max-width: 504px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    background-color: #3325B2;
+    border: none;
+    height: 60px;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+    font-family: "Work Sans", sans-serif;
+}
+
+.continue-button a {
+    color: white;
+}
+
+.button-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in, .sign-up {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 2.05;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sign-in {
+    margin-bottom: 1px;
+}
+
+.sign-in a {
+    color: #3325B2;
+}
+
+.sign-up a {
+    color: #4C4CFF;
+    text-decoration: none;
+}
+
+.lastlayer {
+    width: 100%;
+    padding: 26px 20px;
+    background-color: #150F49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 170px;
+}
+
+.copyright {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #FFFCFC;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    .subtitle, .step {
+        font-size: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .google-button, .continue-button {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle, .step {
+        font-size: 0.875rem;
+    }
+
+    .google-button, .continue-button {
+        height: 50px;
+        font-size: 0.875rem;
+    }
+}
