@@ -28,15 +28,9 @@ a{
   text-decoration: none;
   color: white;
 }
-
 /* Hamburger Menu */
 .hamburger-menu {
-  display: none;
-  cursor: pointer;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 10;
+  display: none;  
 }
 
 .hamburger-menu .bar {
@@ -44,7 +38,6 @@ a{
   height: 3px;
   background-color: #002366;
   margin: 5px 0;
-  transition: 0.4s;
 }
 
 /* Header Styling */
@@ -557,12 +550,14 @@ textarea::placeholder{
   .hamburger-menu {
     display: block;
     margin: 20px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    transition: top 0.3s;
   }
 
-  .hamburger-menu .bar{
-    background-color: #3325B2;
-  }
-  
+   
   .navigation {
     display: none;
     position: fixed;
@@ -698,17 +693,28 @@ textarea::placeholder{
       gap: 20px;
       margin: 20px;
     }
+    .main-footer{
+      margin: 7px;
+    }
+   
     .firstlayer{
-      flex-direction: column;
+      display: flexbox;
+      flex-wrap: wrap;
       padding-left: 0px;
       gap: 20px;
       align-items:normal;
+      margin:7px;
+      margin-top: 0px;
     }
     .lastlayer{
       flex-direction:column;
       gap: 20px;  
       padding:25px;
-      justify-content: center;
       align-items: center;
+    }
+
+    .copyright{
+      font-size: 12px;
+      text-align: center;
     }
 }
