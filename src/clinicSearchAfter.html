@@ -11,13 +11,14 @@
 
   <!-- JavaScript -->
   <script src="/index.js" defer></script>
+  <script src="../bookAppointment.js" defer></script>
   
   <title>Medlorix │ Clinic Search</title>
 </head>
 
 <body>
   <header>
-    <a href="/index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>
+    <a href="index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
     <!-- Hamburger Icon -->
     <div class="hamburger-menu">
       <div class="bar"></div>
@@ -56,19 +57,19 @@
       <a href="/src/faq.html">FAQS</a>
       <a href="/src/contact.html">CONTACT</a>
     </nav>
+    <!-- Green buttons -->
     <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
   </header>
 
   <!-- Hero Section -->
   <div id="hero">
     <div class="search">
-
-      <h2>
-        Search for a nearby Clinic
-      </h2>
+      <h2>Search for a nearby Clinic</h2>
       <p>
-        Easily find the nearest clinics across Africa by selecting your country, state, and local area. Our intuitive
-        search tool helps you locate the best healthcare facilities and nearby bus stops for quick access.
+        Easily find the nearest clinics across Africa by selecting your
+        country, state, and local area. Our intuitive search tool helps you
+        locate the best healthcare facilities and nearby bus stops for quick
+        access.
       </p>
     </div>
     <div class="location">
@@ -77,28 +78,57 @@
       </div>
       <div class="map-inputs">
         <div class="input-fields">
-          <input type="search" placeholder="Nigeria">
-          <div class="dropdown-container">
-            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
-          </div>
+          <select
+            type="search"
+            placeholder="Enter your Country"
+            id="country"
+            name="country"
+            onchange="loadStates()"
+            class="custom-dropdown"
+          >
+            <option value="" selected>Enter your Country</option>
+          </select>
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
         </div>
         <div class="input-fields">
-          <input type="search" placeholder="Kwara State">
-          <div class="dropdown-container">
-            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
-          </div>
+          <select
+            type="search"
+            placeholder="Enter your State"
+            id="state"
+            name="state"
+            onchange="loadCities()"
+            class="custom-dropdown"
+          >
+            <option value="" selected>Enter your State</option>
+          </select>
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
         </div>
         <div class="input-fields">
-          <input type="search" placeholder="Ilorin East">
-          <div class="dropdown-container">
-            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
-          </div>
+          <select
+            type="search"
+            placeholder="Enter your Local Government Area / Province"
+            id="local-government"
+            name="local_government"
+            class="custom-dropdown"
+          >
+            <option value="" selected>Enter your City</option>
+          </select>
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
         </div>
         <div class="input-fields">
-          <input type="search" placeholder="Tanke">
-          <div class="dropdown-container">
-            <img src="/images/Icons/dropdown_icon.png" alt="dropdown">
-          </div>
+          <input
+            type="search"
+            placeholder="Enter Nearest Bus Stop / Landmark"
+          />
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
         </div>
       </div>
       <div class="results">
@@ -346,7 +376,8 @@
   <!-- Footer Section -->
   <footer>
     <div class="footer">
-      <div class="firstlayer">
+
+      <div class="main-footer">
         <div class="logo-about">
           <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
           <p>
@@ -360,19 +391,21 @@
             <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
           </div>
         </div>
+      </div>
+      <div class="firstlayer">
         <div class="company">
           <p><span>Company</span></p>
-          <a href="">Careers</a>
-          <a href="">About us</a>
-          <a href="">Our mission</a>
-          <a href="">Our Team</a>
+          <a href="/src/career.html">Careers</a>
+          <a href="/src/about.html">About us</a>
+          <a href="/src/about.html">Our mission</a>
+          <a href="/src/about.html">Our Team</a>
         </div>
         <div class="company">
           <p><span>Our Services</span></p>
-          <a href="">Clinic Search</a>
-          <a href="">See a Doctor</a>
-          <a href="">AI-Based Diagnosis</a>
-          <a href="">Contact Us</a>
+          <a href="/src/clinicSearch.html">Clinic Search</a>
+          <a href="/src/bookAppointment.html">See a Doctor</a>
+          <a href="/src/sign-up.html">AI-Based Diagnosis</a>
+          <a href="/src/contact.html">Contact Us</a>
         </div>
         <div class="company">
           <p><span>Legal</span></p>
@@ -381,10 +414,14 @@
           <a href="">Security</a>
         </div>
       </div>
-      <div class="lastlayer">
-        <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
-        
-      </div>
+    </div>
+    <!-- Back to top arrow -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="/images/Icons/up-arrow.svg" />
+    </button>
+    <div class="lastlayer">
+      <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+      
     </div>
   </footer>
 </body>
