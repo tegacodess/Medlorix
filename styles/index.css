@@ -752,9 +752,14 @@ header{
     font-size: 16px;
   }  
 
-  /* Footer */
-  .firstlayer{
-    padding-left: 400px;
+  /* Nav */
+  header{
+    padding: 0px 50px;
+  }
+  .green{
+    width: 170px;
+    height:50px;
+    padding: 15px 15px;
   }
 
   /* Hero */ 
@@ -985,7 +990,7 @@ header{
   .left-card span {
     width: 100%; 
   }
-  .left card h2{
+  .left-card h2{
     font-size: 30px;
   } 
 
@@ -1071,7 +1076,7 @@ header{
     transition: left 0.4s;
     flex-direction: column;
     padding: 30px;
-    /* z-index: 9; */
+    z-index: 9;
   }
 
   nav a{
