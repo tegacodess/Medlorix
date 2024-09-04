@@ -247,23 +247,25 @@
 
     </div>
 
-    <!-- Subscribe -->
-    <section id="subscribe">
-        <div class="top-layer">
-            <span>
-                Stay up to date on healthy living
-            </span>
-            <p>
-                Be the first to receive expert insights, practical advice, and exclusive content directly to your inbox.
-            </p>
-        </div>
-        <div class="bottom-layer">
-            <input type="email" placeholder="Enter your email">
-            <button>
-                SUBSCRIBE
-            </button>
-        </div>
-    </section>
+    <!-- Subscribe Section -->
+<section id="subscribe">
+    <div class="top-layer">
+        <span>
+            Stay up to date on healthy living
+        </span>
+        <p>
+            Be the first to receive expert insights, practical advice, and exclusive content directly to your inbox.
+        </p>
+    </div>
+    <div class="bottom-layer">
+        <form id="subscription-form">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+        <div id="subscription-message"></div>
+    </div>
+</section>
+
     <!-- Footer -->
     <footer>
         <div class="footer">
@@ -317,7 +319,7 @@
         </div>
     </footer>
 
-    <script src="about.js"></script>
+    <script src="/about.js"></script>
 </body>
 
 </html>
