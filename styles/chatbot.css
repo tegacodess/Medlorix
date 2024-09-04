@@ -35,108 +35,88 @@ a {
 
 
 /*==================== Header section ===================*/
-header{
-    padding: 0px 100px;
-    height: 100px;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav{
-    width: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  nav a{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    color: #5A5555;
-    font-weight: 600;
-  }
-  nav a:hover{
-    color: #3325B2;
-  }
-  
-  .green{
-    width: 150px;
-    height: 35px;
-    font-size: 14px;
-    font-weight: 600;
-    padding:10px 0;
-    background-color: #44C853;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 15px;
-    transition: 0.5s ease-in-out;
-  }
-  .green:hover{
-    background-color: #FFFFFF;
-    border: 2px solid #44C853;
-    color: #44C853;
-    cursor: pointer;
-  }
-
 /* Hamburger Menu */
 .hamburger-menu {
     display: none;
-    cursor: pointer;
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    z-index: 10;
-}
-
-.hamburger-menu .bar {
+  }
+  
+  .hamburger-menu .bar {
     width: 25px;
     height: 3px;
     background-color: #002366;
     margin: 5px 0;
-    transition: 0.4s;
-}
-
-/* Services Dropdown Menu Styling */
-/* Dropdown container */
-.dropdown {
+  }
+  
+  /* Header Styling */
+  header{
+      padding: 0px 100px;
+      height: 100px;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+   nav{
+      width: 600px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+    nav a{
+      text-decoration: none;
+      font-size: 14px;
+      color: #5A5555;
+      font-weight: 600;
+  }
+    .green{
+      width: 150px;
+      height: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      padding:10px 10px;
+      background-color: #44C853;
+      border: none;
+      color:white;
+      border-radius: 32px;
+    }
+    .green:hover {
+      background-color: #077a43;
+    } 
+  
+  /* Services Dropdown Menu Styling */
+  /* Dropdown container */
+  .dropdown {
     position: relative;
     display: inline-block;
-}
-
-/* Dropdown button */
-.dropdown-down.rotate {
+  }
+  
+  /* Dropdown button */
+  .dropdown-down.rotate {
     transform: rotate(180deg);
-}
-
-.dropdown-icon,
-.dropdown-down {
+  }
+  .dropdown-icon, .dropdown-down{
     width: 10px;
     margin-left: 5px;
-}
-
-.dropbtn {
+  }
+  
+  .dropbtn {
     display: flex;
     align-items: center;
-}
-
-/* Dropdown content hidden by default */
-.dropdown-content {
+  }
+  
+  /* Dropdown content hidden by default */
+  .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
     flex-direction: row;
-}
-
-.dropdown-content a {
+  }
+  
+  .dropdown-content a {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,30 +124,29 @@ header{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
-
-.dropdown-content .dropdown-item {
+  }
+  
+  .dropdown-content .dropdown-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-}
-
-.dropdown-content a:hover {
+    gap: 10px; 
+  }
+  .dropdown-content a:hover {
     background-color: #f1f1f1;
     color:#3325B2;
-}
-
-.dropdown:hover .dropdown-content {
+  }
+  
+  .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.dropdown-content.show {
+  }
+  
+   .dropdown-content.show {
     display: block;
-}
-.nav-active{
+  }
+  .nav-active{
     color:#3325B2;
-}
+  }
 
 /* ================== ChatBot Styling ==================== */
 .chatbot {
@@ -288,25 +267,15 @@ header{
 }
 /* Medium devices (tablet, less than 992px)*/
 @media(max-width:992px) {
-    header{
-        padding: 0px 50px;
-        height: 100px;
-    }
-    .brand-logo{
-        width: 100px;
-        height: 30px;
-    }
-    nav{
-        width: 500px;
-    }
-    nav a{
-        font-size: 12px;
-    }
-    .green{
-        width: 100px;
-        height: 30px;
-        font-size: 10px;
-    }
+    /* Nav */
+  header{
+    padding: 0px 50px;
+  }
+  .green{
+    width: 170px;
+    height:50px;
+    padding: 15px 15px;
+  }
     /* ================== ChatBot Styling ==================== */
 
 .chatbot h3 {
@@ -387,25 +356,15 @@ header{
 }
 /* Small devices (landscape phones, less than 768px)*/
 @media(max-width:768px) {
-    header{
-        padding: 0px 20px;
-        height: 100px;
-      }
-      .brand-logo{
-        width: 80px;
-        height: 30px;
-      }
-      nav{
-        width: 450px;
-      }
-      nav a{
-        font-size: 12px;
-      }
-      .green{
-        width: 100px;
-        height: 30px;
-        font-size: 10px;
-      }
+    /* Nav */
+  header{
+    padding: 0px 30px;
+  } 
+  .green{
+    width: 150px;
+    height: 40px;
+    padding: 10px 10px;
+  }
     /* ================== ChatBot Styling ==================== */
 
 .chatbot h3 {
@@ -481,54 +440,52 @@ header{
 @media(max-width:576px) {
 
     /* Navigation */
-    header {
-        width: 90%;
-        margin: 0 auto;
-        position: relative;
-    }
+   header {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+  .head {
+    margin-left: -20px;
+  }
+  
+  .hamburger-menu {
+    display: block;
+    margin: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    transition: top 0.3s;
+  }
 
-    .head {
-        margin-left: -20px;
-    }
+  .navigation {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: -100%; /* Hide off-screen initially */
+    width: 100%;
+    background-color:#EFEDFF;
+    gap: 10px;
+    transition: left 0.4s;
+    flex-direction: column;
+    padding: 30px;
+    /* z-index: 9; */
+  }
 
-    .hamburger-menu {
-        display: block;
-        margin-top: 10px;
-        position: absolute;
-    }
+  nav a{
+    color:#3325B2;
+  }
 
-    .hamburger-menu .bar {
-        background-color: #3325B2;
-    }
-
-    .navigation {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: -100%;
-        /* Hide off-screen initially */
-        width: 100%;
-        background-color: #EFEDFF;
-        gap: 10px;
-        transition: left 0.4s;
-        flex-direction: column;
-        padding: 30px;
-        z-index: 9;
-    }
-
-    nav a {
-        color: #3325B2;
-    }
-
-    .navigation.show {
-        display: flex;
-        flex-direction: column;
-        left: 0;
-    }
-
-    .green {
-        display: none;
-    }
+  .navigation.show {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+  }
+  .green{
+    display: none;
+  }
      /* ================== ChatBot Styling ==================== */
 
     .chatbot h3 {
