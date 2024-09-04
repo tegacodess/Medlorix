@@ -35,22 +35,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 // Hamburger Menu functionlity
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
-  const navigation = document.querySelector(".navigation");
-  const headerLogo = document.querySelector(".brand-logo");
-  const navigationLinks = document.querySelectorAll(".navigation a");
-  
-  hamburgerMenu?.addEventListener("click", function () {
-    navigation.classList.toggle("show");
-    headerLogo.classList.toggle("hide");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navigation = document.querySelector(".navigation");
+const headerLogo = document.querySelector(".brand-logo");
+const navigationLinks = document.querySelectorAll(".navigation a");
+
+hamburgerMenu?.addEventListener("click", function () {
+  navigation.classList.toggle("show");
+  headerLogo.classList.toggle("hide");
+});
+
+navigationLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navigation.classList.remove("show");
+    headerLogo.classList.remove("hide");
   });
-  
-  navigationLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navigation.classList.remove("show");
-      headerLogo.classList.remove("hide");
-    });
-  });     
+});
+
+// Hide and show hamburger menu on scroll
+let lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+  const currentScroll = window.scrollY || document.documentElement.scrollTop;
+  if (currentScroll > lastScrollTop) {
+    // Downscroll
+    hamburgerMenu.style.top = "-50px"; 
+  } else {
+    // Upscroll
+    hamburgerMenu.style.top = "10px"; 
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+});
 });
 
 
