@@ -107,3 +107,4 @@ signupForm.addEventListener('submit', async function (event) {
         window.location.href = '/src/sign-up2.html';
     }
 });
+
