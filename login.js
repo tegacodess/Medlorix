@@ -73,6 +73,7 @@ form.addEventListener('submit', async function (event) {
 
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        console.log(userCredential, userCredential.user)
         const user = userCredential.user;
         
         localStorage.clear();
