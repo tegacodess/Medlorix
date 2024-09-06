@@ -16,10 +16,11 @@ body {
 
 .logo {
     max-width: 200px;
-    Height: 69px;
-    margin-bottom: 5px;
-    margin-top: 70px;
+    height: auto;
+    margin-bottom: 1.3rem;
+    margin-top: 10px;
 }
+
 .container {
     margin-top: 5px;
     background-color: white;
@@ -31,10 +32,10 @@ body {
     text-align: center;
 }
 
-.logo img {
+/* .logo img {
     width: 280px;
     margin-bottom: 20px;
-}
+} */
 
 h2 {
     color: #67b043;
@@ -53,7 +54,7 @@ p {
 
 .form-container form {
     text-align: left;
-    padding: 30px;
+    padding: 20px;
 }
 
 .input-group {
@@ -214,7 +215,7 @@ button[type="submit"]:hover {
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 170px;
   }
   .copyright{
@@ -227,4 +228,72 @@ button[type="submit"]:hover {
     flex-direction: row;
     gap: 15px;
   }
- 
+  
+  @media(max-width: 992px){
+    .footer{
+      padding-top: 60px;
+    }
+    .lastlayer{
+      padding: 40px 50px;
+    }
+    .copyright{
+      font-size: 15px;
+    }
+  }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    .subtitle, .step {
+        font-size: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .google-button, .continue-button {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle, .step {
+        font-size: 0.875rem;
+    }
+
+    .google-button, .continue-button {
+        height: 50px;
+        font-size: 0.875rem;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+      }
+      .lastlayer{
+        flex-direction: column;
+        gap: 20px;  
+        padding:25px;
+        align-items: center;
+      }
+}

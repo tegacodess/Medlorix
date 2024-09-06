@@ -33,19 +33,20 @@
                     <label for="terms">I have read and agreed to the<span> terms and conditions</span> of Medlorix.</label>
                 </div>
                 <div class="create">
-                    <button type="submit">Create Account</button>
+                    <button type="submit" id="submitButton">Create Accounting</button>
+                    <span id="loadingSpinner" style="display: none;">Loading...</span>
                  </div>
             </form>
             <p class="signin">Already have an account?<a href="/src/login.html">Sign in</a></p>
         </div>
     </div>
+    <!-- Footer Section -->
     <footer>
+        <div class="footer">
         <div class="lastlayer">
             <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
-            <div class="terms">
-                <p>Terms and Conditions</p>
-                <p>Privacy Policy</p>
-            </div>
+        
+        </div>
         </div>
     </footer>
     <script type="module" src="../firebase_config.js"></script>

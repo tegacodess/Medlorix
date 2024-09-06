@@ -165,16 +165,17 @@ select {
     border-radius: 35px;
     display: flex;
     justify-content: center;
-    background-color: #3325B2;
+    background-color: #3b4cca;
     border: none;
     height: 60px;
     cursor: pointer;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 1.125rem;
+    font-size: 0.5rem;
     font-weight: 700;
     line-height: 1;
     font-family: "Work Sans", sans-serif;
+    color: #fff;
 }
 
 .continue-button a {
@@ -208,20 +209,51 @@ select {
 }
 
 .lastlayer {
-    width: 100%;
-    padding: 26px 20px;
+    width: 1440px;
+    height: 123px;
+    padding: 26px 120px 37px 120px;
     background-color: #150F49;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 170px;
+    box-sizing: border-box;
 }
 
-.copyright {
-    font-size: 0.9375rem;
+.lastlayer{
+    background-color: #150F49;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 170px;
+  }
+  .copyright{
+    font-size: 15px;
     font-weight: 700;
     color: #FFFCFC;
-}
+  }
+  .terms{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .terms p{
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFCFC;
+} 
+
+@media(max-width: 992px){
+    .footer{
+      padding-top: 60px;
+    }
+    .lastlayer{
+      padding: 40px 50px;
+    }
+    .copyright{
+      font-size: 15px;
+    }
+  }
 
 @media (max-width: 768px) {
     .container {
@@ -267,4 +299,15 @@ select {
         height: 50px;
         font-size: 0.875rem;
     }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+      }
+      .lastlayer{
+        flex-direction: column;
+        gap: 20px;  
+        padding:25px;
+        align-items: center;
+      }
 }

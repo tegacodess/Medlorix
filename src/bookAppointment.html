@@ -16,12 +16,14 @@
 
   <body>
     <header>
-      <a href="index.html"
+
+      <a href="../index.html"
         ><img
           class="brand-logo"
           src="/images/Medlorix-logo.svg"
           alt="Medlorix logo"
       /></a>
+      
       <!-- Hamburger Icon -->
       <div class="hamburger-menu">
         <div class="bar"></div>
@@ -29,10 +31,10 @@
         <div class="bar"></div>
       </div>
       <nav class="navigation">
-        <a href="/index.html">HOME</a>
+        <a href="../index.html">HOME</a>
         <!-- Drop down menu for services -->
         <div class="dropdown">
-          <a href="#" class="dropbtn"
+          <a href="./services.html" class="dropbtn"
             >SERVICES
             <img
               class="dropdown-down"
@@ -41,27 +43,28 @@
             />
           </a>
           <div class="dropdown-content">
-            <a href="/src/services.html" class="dropdown-item"
+            <a href="./services.html" class="dropdown-item"
               >Our Services
               <span class="dropdown-icon">→</span>
             </a>
-            <a href="/src/clinicSearch.html" class="dropdown-item"
+            <a href="./clinicSearch.html" class="dropdown-item"
               >Clinic Search
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="/src/bookAppointment.html" class="dropdown-item"
+            <a href="./bookAppointment.html" class="dropdown-item"
               >See a Doctor
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="/src/sign-up.html" class="dropdown-item"
+            <a href="./sign-up.html" class="dropdown-item"
               >AI Diagnosis
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="/src/career.html" class="dropdown-item"
+            <a href="./career.html" class="dropdown-item"
               >Careers
+
               <span class="dropdown-icon">→</span>
             </a>
           </div>
@@ -71,11 +74,8 @@
         <a href="/src/contact.html">CONTACT</a>
       </nav>
       <!-- Green buttons -->
-      <a href="/src/services.html">
-        <button class="green">GET STARTED</button></a
-      >
+      <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
     </header>
-
     <!-- hero section -->
     <section class="appointment-section">
       <div class="overlay">
@@ -197,80 +197,77 @@
                 Your information is secure and not displayed to the public.
               </p>
             </div>
-            <div class="form-test">
-              <div class="form-group" id="firstName">
-                <label for="first-name">First Name</label>
-                <input
-                  type="text"
-                  id="first-name"
-                  name="first_name"
-                  placeholder="John"
-                />
-              </div>
-              <div class="form-group" id="lastName">
-                <label for="last-name">Last Name</label>
-                <input
-                  type="text"
-                  id="last-name"
-                  name="last_name"
-                  placeholder="Doe"
-                />
-              </div>
+
+            <div class="form-group" id="firstName">
+              <label for="first-name">First Name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first_name"
+                placeholder="John"
+              />
+            </div>
+            <div class="form-group" id="lastName">
+              <label for="last-name">Last Name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last_name"
+                placeholder="Doe"
+              />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group"></div>
-            <div class="form-test">
-              <div class="form-group" id="user-address">
-                <label for="address">Address</label>
-                <input
-                  type="text"
-                  id="address"
-                  name="address"
-                  placeholder="12, Mogaji Baboko street"
-                />
-              </div>
-              <div class="form-group" id="user-country">
-                <label for="country">Country</label>
-                <select
-                  id="country"
-                  name="country"
-                  class="custom-dropdown"
-                  onchange="loadStates()"
-                >
-                  <option value="" selected>Select Country</option>
-                </select>
-              </div>
+
+            <div class="form-group" id="user-address">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="12, Mogaji Baboko street"
+              />
+            </div>
+            <div class="form-group" id="user-country">
+              <label for="country">Country</label>
+              <select
+                id="country"
+                name="country"
+                class="custom-dropdown"
+                onchange="loadStates()"
+              >
+                <option value="" selected>Select Country</option>
+              </select>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group"></div>
-            <div class="form-test">
-              <div class="form-group" id="user-state">
-                <label for="state">State</label>
-                <select
-                  id="state"
-                  name="state"
-                  class="custom-dropdown"
-                  onchange="loadCities()"
-                >
-                  <option value="" selected>Select State</option>
-                </select>
-              </div>
-              <div class="form-group" id="user-local">
-                <label for="local-government"
-                  >Local Government Area / Province</label
-                >
-                <select
-                  id="local-government"
-                  name="local_government"
-                  class="custom-dropdown"
-                >
-                  <option value="" selected>Ilorin West</option>
-                </select>
-              </div>
+
+            <div class="form-group" id="user-state">
+              <label for="state">State</label>
+              <select
+                id="state"
+                name="state"
+                class="custom-dropdown"
+                onchange="loadCities()"
+              >
+                <option value="" selected>Select State</option>
+              </select>
+            </div>
+            <div class="form-group" id="user-local">
+              <label for="local-government"
+                >Local Government Area / Province</label
+              >
+              <select
+                id="local-government"
+                name="local_government"
+                class="custom-dropdown"
+              >
+                <option value="" selected>Ilorin West</option>
+              </select>
             </div>
           </div>
         </div>
@@ -288,25 +285,24 @@
                 your schedule.
               </p>
             </div>
-            <div class="form-test">
-              <div class="form-group">
-                <label for="phone-number">Phone Number</label>
-                <input
-                  type="text"
-                  id="phone-number"
-                  name="phone_number"
-                  placeholder="08000000000"
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="emailaddress@email.com"
-                />
-              </div>
+
+            <div class="form-group" id="user-phone">
+              <label for="phone-number">Phone Number</label>
+              <input
+                type="text"
+                id="phone-number"
+                name="phone_number"
+                placeholder="08000000000"
+              />
+            </div>
+            <div class="form-group" id="user-email">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="emailaddress@email.com"
+              />
             </div>
           </div>
         </div>
@@ -325,35 +321,34 @@
                 your schedule.
               </p>
             </div>
-            <div class="form-test">
-              <div class="form-group">
-                <label>Existing Patient?</label>
-                <div class="radio-group">
-                  <label
-                    ><input
-                      type="radio"
-                      name="existing_patient"
-                      value="no"
-                      checked
-                    />
-                    No</label
-                  >
-                  <label
-                    ><input type="radio" name="existing_patient" value="yes" />
-                    Yes</label
-                  >
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="appointment-date"
-                  >Select a date for your appointment</label
+
+            <div class="form-group">
+              <label>Existing Patient?</label>
+              <div class="radio-group">
+                <label
+                  ><input
+                    type="radio"
+                    name="existing_patient"
+                    value="no"
+                    checked
+                  />
+                  No</label
                 >
-                <input
-                  type="date"
-                  id="appointment-date"
-                  name="appointment_date"
-                />
+                <label
+                  ><input type="radio" name="existing_patient" value="yes" />
+                  Yes</label
+                >
               </div>
+            </div>
+            <div class="form-group">
+              <label for="appointment-date"
+                >Select a date for your appointment</label
+              >
+              <input
+                type="date"
+                id="appointment-date"
+                name="appointment_date"
+              />
             </div>
           </div>
           <div class="form-row">
@@ -399,48 +394,59 @@
       <div class="shadow_color"></div>
     </section>
 
-    <!-- footer -->
+    <!-- Subscribe -->
+    <section id="subscribe">
+      <div class="top-layer">
+        <span> Stay up to date on healthy living </span>
+        <p>
+          Be the first to receive expert insights, practical advice, and
+          exclusive content directly to your inbox.
+        </p>
+      </div>
+      <div class="bottom-layer">
+        <input type="email" placeholder="Enter your email" />
+        <button><a href=""> SUBSCRIBE </a></button>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
       <div class="footer">
-        <div class="firstlayer">
+        <div class="main-footer">
           <div class="logo-about">
-            <a href="/"
-              ><img
-                class="brand-logo"
-                src="/images/Medlorix-logo.svg"
-                alt="Brand Logo"
-            /></a>
+            <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
             <p>
-              simplifies healthcare by helping users find clinics, book
-              appointments, and AI diagnosis. <br />All in one easy-to-use
-              platform.
+              simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
+              easy-to-use platform.
             </p>
             <div class="social-media">
-              <a href=""><img src="/images/Icons/google.png" alt="Google" /></a>
-              <a href=""
-                ><img src="/images/Icons/facebook.png" alt="Facebook"
-              /></a>
-              <a href=""
-                ><img src="/images/Icons/twitter.png" alt="Twitter"
-              /></a>
-              <a href=""
-                ><img src="/images/Icons/instagram.png" alt="Instagram"
-              /></a>
+              <a href=""><img src="/images/Icons/google.png" alt="Google"></a>
+              <a href=""><img src="/images/Icons/facebook.png" alt="Facebook"></a>
+              <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
+              <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="back-to-top">
+              <a href="">
+                <img src="/icons/akar-icons_arrow-left.png" alt="" />
+                <span>Back to top</span>
+              </a>
             </div>
           </div>
+        </div>
+        <div class="firstlayer">
           <div class="company">
             <p><span>Company</span></p>
-            <a href="">Careers</a>
-            <a href="">About us</a>
-            <a href="">Our mission</a>
-            <a href="">Our Team</a>
+            <a href="/src/career.html">Careers</a>
+            <a href="/src/about.html">About us</a>
+            <a href="/src/about.html">Our mission</a>
+            <a href="/src/about.html">Our Team</a>
           </div>
           <div class="company">
             <p><span>Our Services</span></p>
-            <a href="">Clinic Search</a>
-            <a href="">See a Doctor</a>
-            <a href="">AI-Based Diagnosis</a>
-            <a href="">Contact Us</a>
+            <a href="/src/clinicSearch.html">Clinic Search</a>
+            <a href="/src/bookAppointment.html">See a Doctor</a>
+            <a href="/src/sign-up.html">AI-Based Diagnosis</a>
+            <a href="/src/contact.html">Contact Us</a>
           </div>
           <div class="company">
             <p><span>Legal</span></p>
@@ -449,16 +455,16 @@
             <a href="">Security</a>
           </div>
         </div>
-        <!-- Back to top arrow -->
-        <button onclick="topFunction()" id="myBtn" title="Go to top">
-          <img src="/images/Icons/up-arrow.svg" />
-        </button>
+      </div>
+      <!-- Back to top arrow -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="/images/Icons/up-arrow.svg" />
+      </button>
+      <div class="lastlayer">
+        <p class="copyright">
+          Copyright &copy; 2024. Medlorix. All rights reserved
+        </p>
 
-        <div class="lastlayer">
-          <p class="copyright">
-            Copyright &copy; 2024. Medlorix. All rights reserved
-          </p>        
-        </div>
       </div>
     </footer>
   </body>
