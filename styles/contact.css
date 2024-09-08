@@ -5,6 +5,7 @@
 * {
     font-family: "Work Sans", sans-serif;
     margin: 0;
+    box-sizing: border-box;
 }
 
 h2{
@@ -715,10 +716,10 @@ border-radius: 10px;
     height: 50px;
     padding: 0px;
     margin: 0px;
+    padding-left: 20px;
   }
   .bottom-layer input::placeholder {
     font-size: 12px;
-    padding-left: 20px;
   }
   .bottom-layer button {
     width: 300px;
