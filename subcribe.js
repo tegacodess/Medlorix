@@ -9,7 +9,11 @@ let emails = JSON.parse(localStorage.getItem("emails")) || [];
 // Event listener for subscribe button
 subscribeButton.addEventListener("click", function() {
   const email = emailInput.value.trim();  // Get email from input field and trim any extra spaces
-
+  if (!email.includes("@") || !email.includes(".")) {
+    messageDisplay.textContent = "Please enter a valid email address";
+    messageDisplay.style.color = 'red';
+    return;
+}
   if (email === "") {
     messageDisplay.textContent = "Please enter a valid email address.";
     messageDisplay.style.color = 'red';
