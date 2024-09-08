@@ -13,6 +13,15 @@
 
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
+    <script src="/subcribe.js" defer></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("WesP-F72yRnUJFma5");
+      })();
+    </script>
     <title>About Medlorix</title>
 </head>
 
@@ -249,23 +258,20 @@
     </div>
 
     <!-- Subscribe Section -->
-<section id="subscribe">
-    <div class="top-layer">
-        <span>
-            Stay up to date on healthy living
-        </span>
-        <p>
-            Be the first to receive expert insights, practical advice, and exclusive content directly to your inbox.
-        </p>
-    </div>
-    <div class="bottom-layer">
-        <form id="subscription-form">
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <button type="submit">SUBSCRIBE</button>
-        </form>
-        <div id="subscription-message"></div>
-    </div>
-</section>
+    <div id="subscribe">
+        <div class="top-layer">
+            <h2>Stay up to date on healthy living</h2>
+            <p>
+                Be the first to receive expert insights, practical advice, and
+                exclusive content directly to your inbox.
+            </p>
+        </div>
+        <div class="bottom-layer">
+            <input type="email" id="emailInput" placeholder="Enter your email" />
+            <button id="subscribeButton">SUBSCRIBE</button>
+        </div>
+        <p id="alertMessage"></p>
+      </div>
 
     <!-- Footer -->
     <footer>
