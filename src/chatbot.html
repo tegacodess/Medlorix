@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/chatbot.css">
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
+    <script type="module" src="/chatbot.js" defer></script>
 </head>
 
 <body>
@@ -54,9 +55,16 @@
           <a href="/src/faq.html">FAQS</a>
           <a href="/src/contact.html">CONTACT</a>
         </nav>
-        <!-- Green buttons -->
-        <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
-      </header>
+        <div class="icons">
+            <p id="userGreeting">Hi, {{ user_name }}</p>
+            <input
+              type="text"
+              name="search"
+              placeholder="Search"
+              class="search-bar"
+            />
+        </div>
+    </header>
 
     <!-- Services -->
     <section class="chatbot">
@@ -64,7 +72,7 @@
         <p class="tip-p">Chat with Medlorix AI</p>
 
         <div class="chat-card">
-            <div class="chatbot-description">
+            <!-- <div class="chatbot-description">
                 <h4>Hello! I’m Medlorix AI</h4>
                 <p>your health assistant.</p>
                 <div class="chatbot-description-2">
@@ -74,17 +82,32 @@
                         started! How can I assist you today?
                     </p>
                 </div>
+            </div> -->
+            <div class="main" id="main">
+                <div class="mainPlaceholder">
+                  <div class="defaultContent">
+                    <h1>Hello! I'm Medlorix AI</h1>
+                    <p>your health assistant.</p>
+                    <p>I can help you understand your symptoms and suggest possible diagnoses.
+                        Please remember that my advice is not a substitute for a doctor's consultation. Let's get
+                        started! How can I assist you today?</p>
+                  </div>
+                </div>
+                 <!-- Container for responses -->
+                 <div id="responseContainer"></div>
             </div>
-
+            
             <div class="chatbot-text">
                 <div class="input-wrapper">
                     <input type="text" placeholder="Enter keywords like: Headache, High temperature, etc"
-                        id="MedlorixAI">
-                    <img src="/images/ChatBot Page/arrow-send.png" alt="" name="send" class="box-icon">
+                        id="sendSymptom">
+                    <img src="/images/ChatBot Page/arrow-send.png" alt="" name="send" class="box-icon" id="symptomSearchBox">
                 </div>
             </div>
         </div>
+
         <p class="chatbot-text1">Please note that this diagnosis is only a suggestion and may not be 100% accurate. It's important to visit a healthcare professional for a thorough examination</p>
+       
     </section>
 </body>
 

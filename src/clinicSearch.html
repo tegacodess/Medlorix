@@ -10,6 +10,15 @@
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
     <script src="../bookAppointment.js" defer></script>
+    <script src="/subcribe.js" defer></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("WesP-F72yRnUJFma5");
+      })();
+    </script>
 
     <title>Medlorix │ Clinic Search</title>
   </head>
@@ -160,18 +169,19 @@
     <!-- Subscribe Section -->
     <div id="subscribe">
       <div class="top-layer">
-        <h2>Stay up to date on healthy living</h2>
-        <p>
-          Be the first to receive expert insights, practical advice, and
-          exclusive content directly to your inbox.
-        </p>
+          <h2>Stay up to date on healthy living</h2>
+          <p>
+              Be the first to receive expert insights, practical advice, and
+              exclusive content directly to your inbox.
+          </p>
       </div>
       <div class="bottom-layer">
-        <input type="email" placeholder="Enter your email" />
-        <button>SUBSCRIBE</button>
+          <input type="email" id="emailInput" placeholder="Enter your email" />
+          <button id="subscribeButton">SUBSCRIBE</button>
       </div>
+      <p id="alertMessage"></p>
     </div>
-
+    
     <!-- Footer Section -->
     <footer>
       <div class="footer">

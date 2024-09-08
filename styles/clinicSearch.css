@@ -570,6 +570,7 @@ border-radius: 10px;
     width: 600px;
     height: 20px;
   }
+  /* subscribe */
   #subscribe {
     padding: 40px 0;
     gap: 30px;
@@ -704,6 +705,7 @@ border-radius: 10px;
     width: 400px;
     height: 20px;
   }
+  /* subscribe */
   #subscribe {
     padding: 40px 0;
     gap: 30px;
@@ -876,6 +878,7 @@ border-radius: 10px;
     width: 250px;
     height: 15px;
   }
+  /* subcribe */
   #subscribe {
     padding: 40px 0;
     gap: 20px;
@@ -884,27 +887,28 @@ border-radius: 10px;
     gap: 10px;
   }
   .top-layer h2 {
-    font-size: 15px;
+    font-size: 18px;
   }
   .top-layer p {
     width: 300px;
-    font-size: 10px;
+    font-size: 13px;
   }
   .bottom-layer {
     gap: 10px;
+    flex-direction: column;
   }
   .bottom-layer input {
-    width: 200px;
-    height: 40px;
+    width: 300px;
+    height: 50px;
     padding-left: 20px;
   }
   .bottom-layer input::placeholder {
-    font-size: 10px;
+    font-size: 12px;
   }
   .bottom-layer button {
-    width: 70px;
+    width: 300px;
     height: 35px;
-    font-size: 10px;
+    font-size: 12px;
   }
   /* Footer */
   .footer{
