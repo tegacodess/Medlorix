@@ -171,11 +171,12 @@ select {
     cursor: pointer;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     font-weight: 700;
     line-height: 1;
     font-family: "Work Sans", sans-serif;
     color: #fff;
+    margin-top: 20px;
 }
 
 .continue-button a {
@@ -214,19 +215,13 @@ select {
     padding: 26px 120px 37px 120px;
     background-color: #150F49;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    margin-top: 170px;
 }
 
-.lastlayer{
-    background-color: #150F49;
-    padding: 40px 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 170px;
-  }
   .copyright{
     font-size: 15px;
     font-weight: 700px;
@@ -317,10 +312,6 @@ select {
         gap: 20px;
       }
       .lastlayer{
-        flex-direction: column;
-        gap: 20px;  
-        padding:25px;
-        align-items: center;
         width: 500px;
       }
 }
