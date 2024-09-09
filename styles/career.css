@@ -447,74 +447,66 @@ h2 {
 
 /* subscribe styling */
 #subscribe {
-    background-color: #150F49;
+    background-color: #150f49;
     display: flex;
     flex-direction: column;
     padding: 50px 0;
     align-items: center;
     text-align: center;
     gap: 30px;
-}
-
-.top-layer {
+  }
+  .top-layer {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
     gap: 10px;
-}
-
-.top-layer h2 {
+  }
+  .top-layer h2 {
     font-size: 40px;
     font-weight: 700;
-    color: #44C853;
-}
-
-.top-layer p {
+    color: #44c853;
+  }
+  .top-layer p {
     width: 500px;
-    color: #FEFCFF;
+    color: #fefcff;
     font-size: 15px;
     font-weight: 400;
-}
-
-.bottom-layer {
+  }
+  .bottom-layer {
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
-
-.bottom-layer input {
+  }
+  .bottom-layer input {
     width: 400px;
     height: 50px;
     padding-left: 20px;
     border-radius: 20px;
-}
-
-.bottom-layer input::placeholder {
+  }
+  .bottom-layer input::placeholder {
     color: #858088;
     font-size: 12px;
     font-weight: 400;
-}
-
-.bottom-layer button {
+  }
+  .bottom-layer button {
     width: 100px;
     height: 50px;
-    background-color: #44C853;
-    color: #FAFAFA;
+    background-color: #44c853;
+    color: #fafafa;
     font-size: 10px;
     font-weight: 600;
     border: none;
     border-radius: 32px;
     transition: 0.5s ease-in-out;
-}
-
-.bottom-layer button:hover {
-    background-color: #FFFFFF;
-    border: 2px solid #44C853;
-    color: #44C853;
+  }
+  .bottom-layer button:hover {
+    background-color: #ffffff;
+    border: 2px solid #44c853;
+    color: #44c853;
     cursor: pointer;
-}
+  }
 
 /* Footer styling */
 .footer{
@@ -804,43 +796,37 @@ h2 {
         margin-top: 50px;
     }
 
-    #subscribe {
-        padding: 40px 0;
-        gap: 30px;
-    }
-
-    .top-layer {
-        gap: 10px;
-    }
-
-    .top-layer h2 {
-        font-size: 30px;
-    }
-
-    .top-layer p {
-        width: 500px;
-        font-size: 15px;
-    }
-
-    .bottom-layer {
-        gap: 10px;
-    }
-
-    .bottom-layer input {
-        width: 300px;
-        height: 40px;
-        padding-left: 20px;
-    }
-
-    .bottom-layer input::placeholder {
-        font-size: 12px;
-    }
-
-    .bottom-layer button {
-        width: 80px;
-        height: 40px;
-        font-size: 10px;
-    }
+    /* subscribe */
+  #subscribe {
+    padding: 40px 0;
+    gap: 30px;
+  }
+  .top-layer {
+    gap: 10px;
+  }
+  .top-layer h2 {
+    font-size: 30px;
+  }
+  .top-layer p {
+    width: 500px;
+    font-size: 15px;
+  }
+  .bottom-layer {
+    gap: 10px;
+  }
+  .bottom-layer input {
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder {
+    font-size: 12px;
+  }
+  .bottom-layer button {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
 
      /* Footer */
   .firstlayer{
@@ -1046,43 +1032,37 @@ h2 {
         display: none;
     }
 
-    #subscribe {
-        padding: 40px 0;
-        gap: 30px;
-    }
-
-    .top-layer {
-        gap: 10px;
-    }
-
-    .top-layer h2 {
-        font-size: 20px;
-    }
-
-    .top-layer p {
-        width: 400px;
-        font-size: 13px;
-    }
-
-    .bottom-layer {
-        gap: 10px;
-    }
-
-    .bottom-layer input {
-        width: 300px;
-        height: 40px;
-        padding-left: 20px;
-    }
-
-    .bottom-layer input::placeholder {
-        font-size: 12px;
-    }
-
-    .bottom-layer button {
-        width: 80px;
-        height: 40px;
-        font-size: 10px;
-    }
+   /* subscribe */
+  #subscribe {
+    padding: 40px 0;
+    gap: 30px;
+  }
+  .top-layer {
+    gap: 10px;
+  }
+  .top-layer h2 {
+    font-size: 20px;
+  }
+  .top-layer p {
+    width: 400px;
+    font-size: 13px;
+  }
+  .bottom-layer {
+    gap: 10px;
+  }
+  .bottom-layer input {
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder {
+    font-size: 12px;
+  }
+  .bottom-layer button {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
 
     /* Footer */
   
@@ -1303,43 +1283,38 @@ h2 {
         gap: 10px;
     }
 
-    #subscribe {
-        padding: 40px 0;
-        gap: 20px;
-    }
-
-    .top-layer {
-        gap: 10px;
-    }
-
-    .top-layer h2 {
-        font-size: 15px;
-    }
-
-    .top-layer p {
-        width: 300px;
-        font-size: 10px;
-    }
-
-    .bottom-layer {
-        gap: 10px;
-    }
-
-    .bottom-layer input {
-        width: 200px;
-        height: 40px;
-        padding-left: 20px;
-    }
-
-    .bottom-layer input::placeholder {
-        font-size: 10px;
-    }
-
-    .bottom-layer button {
-        width: 70px;
-        height: 35px;
-        font-size: 10px;
-    }
+      /* subcribe */
+  #subscribe {
+    padding: 40px 0;
+    gap: 20px;
+  }
+  .top-layer {
+    gap: 10px;
+  }
+  .top-layer h2 {
+    font-size: 18px;
+  }
+  .top-layer p {
+    width: 300px;
+    font-size: 13px;
+  }
+  .bottom-layer {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .bottom-layer input {
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder {
+    font-size: 12px;
+  }
+  .bottom-layer button {
+    width: 300px;
+    height: 35px;
+    font-size: 12px;
+  }
 
     /* Footer */
   .footer{

@@ -215,6 +215,7 @@ select {
     padding: 26px 120px 37px 120px;
     background-color: #150F49;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;

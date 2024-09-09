@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="/styles/service.css">
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
+    <script src="/subcribe.js" defer></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("WesP-F72yRnUJFma5");
+      })();
+    </script>
 </head>
 
 <body>
@@ -38,17 +47,17 @@
                 <span class="dropdown-icon">→</span>
               </a>
     
-              <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
+              <!-- <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
                 <span class="dropdown-icon">→</span>
-              </a>
+              </a> -->
     
               <a href="/src/sign-up.html" class="dropdown-item">AI Diagnosis
                 <span class="dropdown-icon">→</span>
               </a>
     
-              <a href="/src/career.html" class="dropdown-item">Careers
+              <!-- <a href="/src/career.html" class="dropdown-item">Careers
                 <span class="dropdown-icon">→</span>
-              </a>
+              </a> -->
             </div>
           </div>
           <a href="/src/about.html">ABOUT US</a>
@@ -61,7 +70,6 @@
 
     <!-- Services -->
     <section class="services">
-        <h3>Our Services</h3>
         <h2>Our Healthcare Services</h2>
         <p class="tip-p">Explore our range of services</p>
 
@@ -78,7 +86,7 @@
                 <button class="card-btn"><a href="/src/clinicSearch.html">SEARCH NOW</a> </button>
             </div>
 
-            <div class="service-card">
+            <!-- <div class="service-card">
                 <div>
                     <img src="/images/servicePage/assets/Services/Image-2.png" alt="Image of a doctor and his patient ">
                     <h4>See a doctor</h4>
@@ -88,7 +96,7 @@
 
                 <button class="card-btn"><a href="/src/bookAppointment.html">BOOK NOW</a></button>
 
-            </div>
+            </div> -->
 
             <div class="service-card">
                 <div>
@@ -101,7 +109,7 @@
 
                 <button class="card-btn" id="btn-3"><a href="/src/sign-up.html">GET DIAGNOSIS NOW</a></button>
             </div>
-            <div class="service-card">
+            <!-- <div class="service-card">
                 <div>
                     <img src="/images/servicePage/assets/Services/Image-4.png" alt="Image of two doctors">
                     <h4>Emergency Guidance</h4>
@@ -113,9 +121,9 @@
                 </div>
 
                 <button class="card-btn"><a href="#">GET STARTED</a> </button>
-            </div>
+            </div> -->
 
-            <div class="service-card">
+            <!-- <div class="service-card">
                 <div>
                     <img src="/images/servicePage/assets/Services/Image-5.png" alt="Image of a doctor and his patient ">
                     <h4>Health Tips</h4>
@@ -126,9 +134,9 @@
 
                 <button class="card-btn"><a href="#">READ NOW</a></button>
 
-            </div>
+            </div> -->
 
-            <div class="service-card">
+            <!-- <div class="service-card">
                 <div>
                     <img src="/images/servicePage/assets/Services/Image-6.png" alt="Image of a phone ">
                     <h4>Mental Health Support</h4>
@@ -138,7 +146,7 @@
                 </div>
 
                 <button class="card-btn"><a href="#">EXPLORE NOW</a></button>
-            </div>
+            </div> -->
         </div>
 
 
@@ -201,15 +209,13 @@
             <div class="tip-card">
                 <img src="/images/servicePage/assets/Tips/ment2.png" alt="">
                 <div>
-                    <h5>Mental Health</h5>
+                    <h5>Wellness Tips</h5>
                     <h4>Managing and Reducing Stress </h4>
 
                     <p>
-                        A feeling of constant abnormal pressure, stress can originate from different aspects of
-                        day-to-day life. It can result in a variety of physical symptoms, including changes in behavior
-                        and experiencing strong emotions.
+                      Wellness is the dynamic process of working toward achieving your maximum potential in each dimension of wellness. 
                     </p>
-                    <a href="https://www.news-medical.net/health/Managing-and-Reducing-Stress.aspx">READ MORE <img
+                    <a href="https://www.geneseo.edu/cas/101-wellness-tips">READ MORE <img
                             src="/images/servicePage/assets/Icons/diagonal-upward-arrow.png" alt=""></a>
                 </div>
 
@@ -221,23 +227,21 @@
 
 
 
-    <!-- Subscribe -->
+    <!-- Subscribe Section -->
     <div id="subscribe">
-        <div class="top-layer">
-          <h2>
-            Stay up to date on healthy living
-          </h2>
+      <div class="top-layer">
+          <h2>Stay up to date on healthy living</h2>
           <p>
-            Be the first to receive expert insights, practical advice, and exclusive content directly to your inbox.
+              Be the first to receive expert insights, practical advice, and
+              exclusive content directly to your inbox.
           </p>
-        </div>
-        <div class="bottom-layer">
-          <input type="email" placeholder="Enter your email">
-          <button>
-            SUBSCRIBE
-          </button>
-        </div>
       </div>
+      <div class="bottom-layer">
+          <input type="email" id="emailInput" placeholder="Enter your email" />
+          <button id="subscribeButton">SUBSCRIBE</button>
+      </div>
+      <p id="alertMessage"></p>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -269,7 +273,7 @@
         <div class="company">
           <p><span>Our Services</span></p>
           <a href="/src/clinicSearch.html">Clinic Search</a>
-          <a href="/src/bookAppointment.html">See a Doctor</a>
+          <a href="#">See a Doctor</a>
           <a href="/src/sign-up.html">AI-Based Diagnosis</a>
           <a href="/src/contact.html">Contact Us</a>
         </div>

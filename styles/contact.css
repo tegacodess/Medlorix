@@ -5,6 +5,7 @@
 * {
     font-family: "Work Sans", sans-serif;
     margin: 0;
+    box-sizing: border-box;
 }
 
 h2{
@@ -260,60 +261,68 @@ textarea::placeholder{
     flex-direction: column;
 }
 
-/* Subscribe */
-#subscribe{
-    background-color: #150F49;
-    display: flex;
-    flex-direction: column;
-    padding: 50px 0;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
+/* subscribe styling */
+#subscribe {
+  background-color: #150f49;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
 }
-.top-layer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  .top-layer span{
-    font-size: 40px;
-    font-weight: 700;
-    color: #44C853;
-  }
-  .top-layer p{
-    width: 500px;
-    color: #FEFCFF;
-    font-size: 15px;
-    font-weight: 400;
-  }.bottom-layer{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-  }
-  .bottom-layer input{
-    width: 400px;
-    height: 50px;
-    padding-left: 20px;
-    border-radius: 32px;
-  }
-  .bottom-layer input::placeholder{
-    color: #858088;
-    font-size: 12px;
-    font-weight: 400;
-  }
-  .bottom-layer button{
-    width: 150px;
-    height: 63px;
-    background-color: #44C853;
-    color: #FAFAFA;
-    font-size: 10px;
-    font-weight: 600;
-    border: none;
-    border-radius: 32px;
+.top-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+.top-layer h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #44c853;
+}
+.top-layer p {
+  width: 500px;
+  color: #fefcff;
+  font-size: 15px;
+  font-weight: 400;
+}
+.bottom-layer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.bottom-layer input {
+  width: 400px;
+  height: 50px;
+  padding: 0px 0px 0px 20px;
+  border-radius: 20px;
+  margin: 0px;
+}
+.bottom-layer input::placeholder {
+  color: #858088;
+  font-size: 12px;
+  font-weight: 400;
+}
+.bottom-layer button {
+  width: 100px;
+  height: 50px;
+  background-color: #44c853;
+  color: #fafafa;
+  font-size: 10px;
+  font-weight: 600;
+  border: none;
+  border-radius: 32px;
+  transition: 0.5s ease-in-out;
+}
+.bottom-layer button:hover {
+  background-color: #ffffff;
+  border: 2px solid #44c853;
+  color: #44c853;
+  cursor: pointer;
 }
 
 
@@ -436,6 +445,37 @@ border-radius: 10px;
   .info{
     padding: 50px 50px;
   }
+  /* subscribe */
+  #subscribe {
+    padding: 40px 0;
+    gap: 30px;
+  }
+  .top-layer {
+    gap: 10px;
+  }
+  .top-layer h2 {
+    font-size: 30px;
+  }
+  .top-layer p {
+    width: 500px;
+    font-size: 15px;
+  }
+  .bottom-layer {
+    gap: 10px;
+  }
+  .bottom-layer input {
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder {
+    font-size: 12px;
+  }
+  .bottom-layer button {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
   /* Footer */
   .firstlayer{
     padding-left: 200px;
@@ -497,17 +537,36 @@ border-radius: 10px;
     font-size: 14px;
   }
 
-  /* Subscribe */
-  .top-layer span{
-    font-size: 30px;
+  /* subscribe */
+  #subscribe {
+    padding: 40px 0;
+    gap: 30px;
   }
-  .bottom-layer button {
-    width: 120px;
-    height: 40px;
+  .top-layer {
+    gap: 10px;
+  }
+  .top-layer h2 {
+    font-size: 20px;
+  }
+  .top-layer p {
+    width: 400px;
+    font-size: 13px;
+  }
+  .bottom-layer {
+    gap: 10px;
   }
   .bottom-layer input {
-    width: 400px;
+    width: 300px;
     height: 40px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder {
+    font-size: 12px;
+  }
+  .bottom-layer button {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
   }
 
   /* Footer */
@@ -600,7 +659,7 @@ border-radius: 10px;
 
   input, textarea {
     width: 100%;
-    max-width: fit-content;
+    /* max-width: fit-content; */
     height: auto;
     margin: 15px 0;
     padding: 15px;
@@ -633,42 +692,40 @@ border-radius: 10px;
       font-size: 12px;
     } 
   
-    /* Subscribe */
-    #subscribe{
-      padding: 20px 10px;
-      gap: 15px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .top-layer span{
-      font-size: 24px;
-    }
-    .top-layer p{
-      font-size: 14px;
-      width: 90%;
-    }
-    .bottom-layer{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-    }
-    .bottom-layer input{
-      width: 90%;
-      height: 40px;
-    }
-    .bottom-layer button{
-      width: 90%;
-      height: 40px;
-    }
-    .bottom-layer input::placeholder {
-      font-size: 10px;
-    }
-    .bottom-layer button {
-      font-size: 10px;
-    }
-  
+    /* subcribe */
+  #subscribe {
+    padding: 40px 0;
+    gap: 20px;
+  }
+  .top-layer {
+    gap: 10px;
+  }
+  .top-layer h2 {
+    font-size: 18px;
+  }
+  .top-layer p {
+    width: 300px;
+    font-size: 13px;
+  }
+  .bottom-layer {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .bottom-layer input {
+    width: 300px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+  }
+  .bottom-layer input::placeholder {
+    font-size: 12px;
+  }
+  .bottom-layer button {
+    width: 300px;
+    height: 35px;
+    font-size: 12px;
+  }
 
   
     /* Footer */
