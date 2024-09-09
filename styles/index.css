@@ -254,7 +254,7 @@ header{
 .services-container{
   display: flex;
   justify-content: space-evenly;
-  gap: 50px;
+  gap: 150px;
   flex-wrap: wrap;
   margin:40px 0;
 }
@@ -474,6 +474,7 @@ header{
   h5{
     color:#44C853;
     margin-bottom:7px;
+    margin-top: 1.5rem;
     font-size: 14px;
   }
   .tips h4{
@@ -497,7 +498,7 @@ header{
   }
 
   .tip-card p{
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
    .tip-card a{
     font-weight: 600;
