@@ -18,11 +18,11 @@ body {
     max-width: 200px;
     height: auto;
     margin-bottom: 1.3rem;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .container {
-    margin-top: 5px;
+    margin-top: 0px;
     background-color: white;
     padding: 2rem;
     border-radius: 20px;
@@ -31,11 +31,6 @@ body {
     max-width: 600px;
     text-align: center;
 }
-
-/* .logo img {
-    width: 280px;
-    margin-bottom: 20px;
-} */
 
 h2 {
     color: #67b043;
@@ -215,7 +210,7 @@ button[type="submit"]:hover {
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 170px;
   }
   .copyright{
@@ -305,10 +300,6 @@ button[type="submit"]:hover {
         gap: 20px;
       }
       .lastlayer{
-        flex-direction: column;
-        gap: 20px;  
-        padding:25px;
-        align-items: center;
         width: 500px;
       }
 }
@@ -318,4 +309,4 @@ button[type="submit"]:hover {
     .lastlayer {
       width: 300px;
     }
-    }
+}
