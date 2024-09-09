@@ -215,7 +215,7 @@ button[type="submit"]:hover {
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 170px;
   }
   .copyright{
@@ -305,10 +305,6 @@ button[type="submit"]:hover {
         gap: 20px;
       }
       .lastlayer{
-        flex-direction: column;
-        gap: 20px;  
-        padding:25px;
-        align-items: center;
         width: 500px;
       }
 }
