@@ -318,6 +318,6 @@ select {
 
 @media (max-width: 320px) {
     .lastlayer {
-      width: 300px;
+      width: 250px;
     }
 }

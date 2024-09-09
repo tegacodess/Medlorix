@@ -265,7 +265,7 @@ button[type="submit"]:hover {
   
   @media (max-width: 320px) {
     .container {
-      width: 90%;
+      width: 0%;
       padding: 1.5rem;
   }
 
@@ -273,6 +273,6 @@ button[type="submit"]:hover {
       padding: 20px;
   }
     .lastlayer {
-      width: 300px;
+      width: 250px;
     }
   }

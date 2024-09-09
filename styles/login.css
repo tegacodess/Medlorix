@@ -305,13 +305,13 @@ button[type="submit"]:hover {
         gap: 20px;
       }
       .lastlayer{
-        width: 500px;
+        width: 450px;
       }
 }
 
 
 @media (max-width: 320px) {
     .lastlayer {
-      width: 300px;
+      width: 250px;
     }
     }
