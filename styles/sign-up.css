@@ -224,12 +224,12 @@ select {
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 170px;
   }
   .copyright{
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 700px;
     color: #FFFCFC;
   }
   .terms{
@@ -248,7 +248,12 @@ select {
       padding-top: 60px;
     }
     .lastlayer{
-      padding: 40px 50px;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        padding: 40px 50px;
+        width: 1100px;
     }
     .copyright{
       font-size: 15px;
@@ -275,6 +280,13 @@ select {
 
     .google-button, .continue-button {
         max-width: 100%;
+    }
+    .lastlayer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        width: 800px;
     }
 }
 
@@ -309,5 +321,12 @@ select {
         gap: 20px;  
         padding:25px;
         align-items: center;
+        width: 500px;
       }
+}
+
+@media (max-width: 320px) {
+    .lastlayer {
+      width: 300px;
+    }
 }

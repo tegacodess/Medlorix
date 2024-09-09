@@ -239,6 +239,13 @@ button[type="submit"]:hover {
     .copyright{
       font-size: 15px;
     }
+    .lastlayer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        width: 1100px;
+    }
   }
 
 @media (max-width: 768px) {
@@ -261,6 +268,13 @@ button[type="submit"]:hover {
 
     .google-button, .continue-button {
         max-width: 100%;
+    }
+    .lastlayer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        width: 800px;
     }
 }
 
@@ -295,5 +309,13 @@ button[type="submit"]:hover {
         gap: 20px;  
         padding:25px;
         align-items: center;
+        width: 500px;
       }
 }
+
+
+@media (max-width: 320px) {
+    .lastlayer {
+      width: 300px;
+    }
+    }
