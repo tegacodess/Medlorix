@@ -1,7 +1,4 @@
-const config = {
-  cUrl: "https://api.countrystatecity.in/v1/countries",
-  ckey: "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
-};
+import config from "./config.js";
 
 const countrySelect = document.querySelector("#country"),
   stateSelect = document.querySelector("#state"),
