@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="/styles/clinicSearch.css" />
     <!-- JavaScript -->
     <script src="/index.js" defer></script>
-    <script src="../bookAppointment.js" defer></script>
+    <script type="module" src="../bookAppointment.js" defer></script>
     <script src="/subcribe.js" defer></script>
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-      (function(){
-          emailjs.init("WesP-F72yRnUJFma5");
+      (function () {
+        emailjs.init("WesP-F72yRnUJFma5");
       })();
     </script>
 
@@ -25,7 +26,12 @@
 
   <body>
     <header>
-      <a href="index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+      <a href="index.html"
+        ><img
+          class="brand-logo"
+          src="/images/Medlorix-logo.svg"
+          alt="Medlorix logo"
+      /></a>
       <!-- Hamburger Icon -->
       <div class="hamburger-menu">
         <div class="bar"></div>
@@ -36,25 +42,33 @@
         <a href="/index.html">HOME</a>
         <!-- Drop down menu for services -->
         <div class="dropdown">
-          <a href="#" class="dropbtn">SERVICES
-            <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+          <a href="#" class="dropbtn"
+            >SERVICES
+            <img
+              class="dropdown-down"
+              src="/images/Clinic Search Page/dropdownIcon.png"
+              alt=""
+            />
           </a>
           <div class="dropdown-content">
-            <a href="/src/services.html" class="dropdown-item">Our Services
+            <a href="/src/services.html" class="dropdown-item"
+              >Our Services
               <span class="dropdown-icon">→</span>
             </a>
-            <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+            <a href="/src/clinicSearch.html" class="dropdown-item"
+              >Clinic Search
               <span class="dropdown-icon">→</span>
             </a>
-  
+
             <!-- <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
               <span class="dropdown-icon">→</span>
             </a> -->
-  
-            <a href="/src/sign-up.html" class="dropdown-item">AI Diagnosis
+
+            <a href="/src/sign-up.html" class="dropdown-item"
+              >AI Diagnosis
               <span class="dropdown-icon">→</span>
             </a>
-  
+
             <!-- <a href="/src/career.html" class="dropdown-item">Careers
               <span class="dropdown-icon">→</span>
             </a> -->
@@ -65,7 +79,9 @@
         <a href="/src/contact.html">CONTACT</a>
       </nav>
       <!-- Green buttons -->
-      <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
+      <a href="/src/services.html">
+        <button class="green">GET STARTED</button></a
+      >
     </header>
 
     <!-- Hero Section -->
@@ -131,6 +147,7 @@
           <div class="input-fields">
             <input
               type="search"
+              id="landmark"
               placeholder="Enter Nearest Bus Stop / Landmark"
             />
             <!-- <div class="dropdown-container">
@@ -139,13 +156,23 @@
           </div>
         </div>
         <div>
-          <button>SEARCH</button>
+          <!-- <button>SEARCH</button> -->
+
+          <button class="book-button">SEARCH</button>
         </div>
       </div>
+
+      <!-- search results -->
+      <div id="loadingIndicator" style="display: none">Searching...</div>
+      <div class="results">
+        <p id="resultsCount">Results: (0)</p>
+        <img src="/images/Clinic Search Page/caution-Icon.png" alt="" />
+      </div>
+      <div id="resultGrid" class="searched-container"></div>
     </div>
 
     <!-- Build Section -->
-    <div id="build">
+    <!-- <div id="build">
       <div class="build-container">
         <div class="left-card">
           <h2>Build the future of healthcare with us</h2>
@@ -153,8 +180,7 @@
             Want to make an impact? Join us as we strive to provide the best
             healthcare experience to millions of people in Africa
           </p>
-          <a href="/src/career.html"> <button>BECOME OUR PARTNER</button>
-          </a>
+          <a href="/src/career.html"> <button>BECOME OUR PARTNER</button> </a>
         </div>
         <div class="right-card">
           <img
@@ -164,40 +190,51 @@
         </div>
       </div>
       <div class="shadow_color"></div>
-    </div>
+    </div> -->
 
     <!-- Subscribe Section -->
     <div id="subscribe">
       <div class="top-layer">
-          <h2>Stay up to date on healthy living</h2>
-          <p>
-              Be the first to receive expert insights, practical advice, and
-              exclusive content directly to your inbox.
-          </p>
+        <h2>Stay up to date on healthy living</h2>
+        <p>
+          Be the first to receive expert insights, practical advice, and
+          exclusive content directly to your inbox.
+        </p>
       </div>
       <div class="bottom-layer">
-          <input type="email" id="emailInput" placeholder="Enter your email" />
-          <button id="subscribeButton">SUBSCRIBE</button>
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="subscribeButton">SUBSCRIBE</button>
       </div>
       <p id="alertMessage"></p>
     </div>
-    
+
     <!-- Footer Section -->
     <footer>
       <div class="footer">
-  
         <div class="main-footer">
           <div class="logo-about">
-            <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+            <a href="/"
+              ><img
+                class="brand-logo"
+                src="/images/Medlorix-logo.svg"
+                alt="Brand Logo"
+            /></a>
             <p>
-              simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
-              easy-to-use platform.
+              simplifies healthcare by helping users find clinics, book
+              appointments, and AI diagnosis. <br />All in one easy-to-use
+              platform.
             </p>
             <div class="social-media">
-              <a href=""><img src="/images/Icons/google.png" alt="Google"></a>
-              <a href=""><img src="/images/Icons/facebook.png" alt="Facebook"></a>
-              <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
-              <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
+              <a href=""><img src="/images/Icons/google.png" alt="Google" /></a>
+              <a href=""
+                ><img src="/images/Icons/facebook.png" alt="Facebook"
+              /></a>
+              <a href=""
+                ><img src="/images/Icons/twitter.png" alt="Twitter"
+              /></a>
+              <a href=""
+                ><img src="/images/Icons/instagram.png" alt="Instagram"
+              /></a>
             </div>
           </div>
         </div>
@@ -229,9 +266,15 @@
         <img src="/images/Icons/up-arrow.svg" />
       </button>
       <div class="lastlayer">
-        <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
-        
+        <p class="copyright">
+          Copyright &copy; 2024. Medlorix. All rights reserved
+        </p>
       </div>
     </footer>
+    <!-- Include Axios for making HTTP requests -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Link to your JavaScript file -->
+    <script type="module" src="../hospitalSearch.js"></script>
   </body>
 </html>
