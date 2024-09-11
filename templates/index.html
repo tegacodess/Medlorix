@@ -24,10 +24,7 @@
 
 <body>
   <header>
-    <a href="/">
-      <img class="brand-logo" src="{{ url_for('static', filename='images/Home Page/Services/Image-3.png') }}" alt="Image of a phone">
-    </a>
-    
+    <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
     <!-- Hamburger Icon -->
     <div class="hamburger-menu">
       <div class="bar"></div>
@@ -39,9 +36,8 @@
       <!-- Drop down menu for services -->
       <div class="dropdown">
         <a href="#" class="dropbtn">SERVICES
-          <img class="dropdown-down" src="{{ url_for('static', filename='images/Clinic Search Page/dropdownIcon.png') }}" alt="">
+          <img class="dropdown-down" src="/static/images/Clinic Search Page/dropdownIcon.png" alt="">
         </a>
-
         <div class="dropdown-content">
           <a href="/services" class="dropdown-item">Our Services
             <span class="dropdown-icon">→</span>
@@ -135,7 +131,7 @@
 
       <div class="service-card">
         <div>
-          <img src="{{ url_for('static', filename='images/Home Page/Services/Image-3.png) }}" alt="Image of a phone ">
+          <img src="/static/images/Home Page/Services/Image-3.png" alt="Image of a phone ">
           <h4>AI-based Diagnosis</h4>
           <p>Input your symptoms and receive a preliminary diagnosis from our AI-driven tool. While not a substitute for
             professional advice, it offers insights to guide your next steps and encourages consulting a doctor for
@@ -161,16 +157,14 @@
       </div>
 
       <div class="why-us-image">
-        <img src="{{ url_for('static', filename='images/Home Page/Why/feature-1.png') }}" alt="stethoscope">
+        <img src="/pulic/images/Home Page/Why/why-main.png" alt="">
       </div>
     </div>
 
     <section class="features">
       <div class="feature-row">
         <div class="feature-item">
-          <img src="{{ url_for('static', filename='images/Home Page/Why/feature-1.png') }}" alt="stethoscope">
-
-
+          <img src="/images/Home Page/Why/feature-1.png" alt="stethoscope">
           <div class="feature-text">
             <h4>Wide Range of Health Tools for your use</h4>
             <p>With our tailor-made health tools, you can get reliable results and insights into your health - quickly
@@ -179,7 +173,7 @@
         </div>
 
         <div class="feature-item">
-          <img src="{{ url_for('static', filename='images/Home Page/Why/feature-2.png') }}" alt="stethoscope on a doctor">
+          <img src="/static/images/Home Page/Why/feature-2.png" alt="stethoscope on a doctor">
           <div class="feature-text">
             <h4>Fast, Reliable and Confidential results</h4>
             <p>Our innovative technology is designed to provide accurate and reliable diagnosis based on the symptoms
@@ -315,6 +309,7 @@
       <div class="firstlayer">
         <div class="company">
           <p><span>Company</span></p>
+          <a href="/career">Careers</a>
           <a href="/about">About us</a>
           <a href="/about">Our mission</a>
           <a href="/about">Our Team</a>
@@ -322,6 +317,7 @@
         <div class="company">
           <p><span>Our Services</span></p>
           <a href="/clinicSearch">Clinic Search</a>
+          <a href="#">See a Doctor</a>
           <a href="/sign-up">AI-Based Diagnosis</a>
           <a href="/contact">Contact Us</a>
         </div>
@@ -339,10 +335,7 @@
     </button>
     <div class="lastlayer">
       <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
-      <div>
-        <p>Terms and Conditions </p>
-        <p>Privacy Policy</p>
-      </div>
+      
     </div>
   </footer>
 </body>
