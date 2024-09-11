@@ -1,4 +1,4 @@
-import { auth, db } from './firebase_config.js';
+import { auth, db } from '/static/js/firebase_config.js';
 import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 import { setDoc, doc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 
@@ -205,7 +205,7 @@ if (signupForm) {
 
             // Redirect to a welcome page or dashboard
             setTimeout(() => {
-                window.location.href = '/src/chatbot.html'; // Ensure the path is correct
+                window.location.href = '/chatbot'; // Ensure the path is correct
             }, 2000); // Redirect after 2 seconds to show the success message
         }
     });

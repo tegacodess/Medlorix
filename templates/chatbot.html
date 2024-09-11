@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Diagnosis</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/FAVICON.png">
-    <link rel="stylesheet" href="/styles/chatbot.css">
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png">
+    <link rel="stylesheet" href="/static/css/chatbot.css">
     <!-- JavaScript -->
-    <script src="/index.js" defer></script>
-    <script type="module" src="/chatbot.js" defer></script>
+    <script src="/static/js/index.js" defer></script>
+    <script type="module" src="/static/js/chatbot.js" defer></script>
 </head>
 
 <body>
     <!-- Header section -->
     <header>
-        <a href="index.html"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+        <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
         <!-- Hamburger Icon -->
         <div class="hamburger-menu">
           <div class="bar"></div>
@@ -24,17 +24,17 @@
           <div class="bar"></div>
         </div>
         <nav class="navigation">
-          <a href="/index.html">HOME</a>
+          <a href="/">HOME</a>
           <!-- Drop down menu for services -->
           <div class="dropdown">
             <a href="#" class="dropbtn">SERVICES
-              <img class="dropdown-down" src="/images/Clinic Search Page/dropdownIcon.png" alt="">
+              <img class="dropdown-down" src="/static/images/Clinic Search Page/dropdownIcon.png" alt="">
             </a>
             <div class="dropdown-content">
-              <a href="/src/services.html" class="dropdown-item">Our Services
+              <a href="/services" class="dropdown-item">Our Services
                 <span class="dropdown-icon">→</span>
               </a>
-              <a href="/src/clinicSearch.html" class="dropdown-item">Clinic Search
+              <a href="/clinicSearch" class="dropdown-item">Clinic Search
                 <span class="dropdown-icon">→</span>
               </a>
     
@@ -42,7 +42,7 @@
                 <span class="dropdown-icon">→</span>
               </a> -->
     
-              <a href="/src/sign-up.html" class="dropdown-item">AI Diagnosis
+              <a href="/sign-up" class="dropdown-item">AI Diagnosis
                 <span class="dropdown-icon">→</span>
               </a>
     
@@ -51,9 +51,9 @@
               </a> -->
             </div>
           </div>
-          <a href="/src/about.html">ABOUT US</a>
-          <a href="/src/faq.html">FAQS</a>
-          <a href="/src/contact.html">CONTACT</a>
+          <a href="/about">ABOUT US</a>
+          <a href="/faq">FAQS</a>
+          <a href="/contact">CONTACT</a>
         </nav>
         <div class="icons">
             <p id="userGreeting">Hi, {{ user_name }}</p>
@@ -101,7 +101,7 @@
                 <div class="input-wrapper">
                     <input type="text" placeholder="Enter keywords like: Headache, High temperature, etc"
                         id="sendSymptom">
-                    <img src="/images/ChatBot Page/arrow-send.png" alt="" name="send" class="box-icon" id="symptomSearchBox">
+                    <img src="/static/images/ChatBot Page/arrow-send.png" alt="" name="send" class="box-icon" id="symptomSearchBox">
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@
 // });
 
 
-import { auth, db } from './firebase_config.js';
+import { auth, db } from '/static/js/firebase_config.js';
 import { setDoc, doc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 
 // Get the form element
@@ -91,11 +91,9 @@ signupForm.addEventListener('submit', async function (event) {
     }
 
     // Validate Phone (optional, add your specific validation if needed)
-    // Validate Gender (optional, add your specific validation if needed)
-    // Validate Country (optional, add your specific validation if needed)
+
 
     if (isValid) {
-        // Store the data in localStorage to pass to the next step
         localStorage.setItem('firstName', firstName.value);
         localStorage.setItem('lastName', lastName.value);
         localStorage.setItem('email', email.value);
@@ -103,8 +101,7 @@ signupForm.addEventListener('submit', async function (event) {
         localStorage.setItem('gender', gender.value);
         localStorage.setItem('country', country.value);
 
-        // Redirect to the second sign-up page
-        window.location.href = '/src/sign-up2.html';
+        window.location.href = '/sign-up2';
     }
 });
 

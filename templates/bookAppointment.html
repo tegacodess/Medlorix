@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medlorix │ Welcome</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/FAVICON.png" />
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/styles/bookAppointment.css" />
+    <link rel="stylesheet" href="/static/css/bookAppointment.css" />
 
     <!-- JavaScript -->
-    <script src="/index.js" defer></script>
-    <script src="../bookAppointment.js" defer></script>
-    <script src="/subcribe.js" defer></script>
+    <script src="/static/js/index.js" defer></script>
+    <script src="/static/js/bookAppointment.js" defer></script>
+    <script src="/static/js/subcribe.js" defer></script>
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -26,10 +26,10 @@
   <body>
     <header>
 
-      <a href="../index.html"
+      <a href="/"
         ><img
           class="brand-logo"
-          src="/images/Medlorix-logo.svg"
+          src="/static/images/Medlorix-logo.svg"
           alt="Medlorix logo"
       /></a>
       
@@ -40,56 +40,56 @@
         <div class="bar"></div>
       </div>
       <nav class="navigation">
-        <a href="../index.html">HOME</a>
+        <a href="/">HOME</a>
         <!-- Drop down menu for services -->
         <div class="dropdown">
-          <a href="./services.html" class="dropbtn"
+          <a href="/services" class="dropbtn"
             >SERVICES
             <img
               class="dropdown-down"
-              src="/images/Clinic Search Page/dropdownIcon.png"
+              src="/static/images/Clinic Search Page/dropdownIcon.png"
               alt=""
             />
           </a>
           <div class="dropdown-content">
-            <a href="./services.html" class="dropdown-item"
+            <a href="/services" class="dropdown-item"
               >Our Services
               <span class="dropdown-icon">→</span>
             </a>
-            <a href="./clinicSearch.html" class="dropdown-item"
+            <a href="/clinicSearch" class="dropdown-item"
               >Clinic Search
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="./bookAppointment.html" class="dropdown-item"
+            <a href="/bookAppointment" class="dropdown-item"
               >See a Doctor
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="./sign-up.html" class="dropdown-item"
+            <a href="/sign-up" class="dropdown-item"
               >AI Diagnosis
               <span class="dropdown-icon">→</span>
             </a>
 
-            <a href="./career.html" class="dropdown-item"
+            <a href="/career" class="dropdown-item"
               >Careers
 
               <span class="dropdown-icon">→</span>
             </a>
           </div>
         </div>
-        <a href="/src/about.html">ABOUT US</a>
-        <a href="/src/faq.html">FAQS</a>
-        <a href="/src/contact.html">CONTACT</a>
+        <a href="/about">ABOUT US</a>
+        <a href="/faq">FAQS</a>
+        <a href="/contact">CONTACT</a>
       </nav>
       <!-- Green buttons -->
-      <a href="/src/services.html"> <button class="green">GET STARTED</button></a>
+      <a href="/services"> <button class="green">GET STARTED</button></a>
     </header>
     <!-- hero section -->
     <section class="appointment-section">
       <div class="overlay">
         <img
-          src="../images/Home Page/Services/book-appointment.jfif"
+          src="/static/images/Home Page/Services/book-appointment.jfif"
           alt="Doctor with patient"
           class="background-image"
         />
@@ -115,7 +115,7 @@
         </div>
         <div class="location">
           <img
-            src="../images/Clinic Search Page/icon.png"
+            src="/static/images/Clinic Search Page/icon.png"
             alt="location icon"
             id="location"
           />
@@ -128,11 +128,11 @@
           <p id="rating">
             3.9
             <span class="next-line">
-              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-              <img src="../images/Clinic Search Page/Star 12.png" alt="star" />
-              <img src="../images/Clinic Search Page/Star 12.png" alt="star"
+              <img src="/static/images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src="/static/images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src="/static/images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src="/static/images/Clinic Search Page/Star 12.png" alt="star" />
+              <img src=/static/images/Clinic Search Page/Star 12.png" alt="star"
             /></span>
           </p>
 
@@ -145,7 +145,7 @@
         <div class="phone">
           <p>
             <img
-              src="../images/Clinic Search Page/Phone call.png"
+              src="/static/images/Clinic Search Page/Phone call.png"
               alt="phone call"
               id="phonecall"
             />
@@ -156,7 +156,7 @@
         </div>
         <div class="column">
           <img
-            src="../images/Clinic Search Page/ri_direction-line.png"
+            src=" static/images/Clinic Search Page/ri_direction-line.png"
             alt="direction"
             id="direction-logo"
           />
@@ -383,7 +383,7 @@
     <section id="doctor">
       <div class="doctor-section">
         <img
-          src="../images/Home Page/Services/see-a-doctor.jfif"
+          src="/static/images/Home Page/Services/see-a-doctor.jfif"
           alt="Doctor"
           class="background-image"
         />
@@ -395,7 +395,7 @@
             providing the highest quality of care and changing how healthcare is
             delivered.
           </p>
-          <a href="/src/doctorApplication.html" class="button"
+          <a href="/doctorApplication" class="button"
             >Become Our Partner</a
           >
         </div>
@@ -424,16 +424,16 @@
       <div class="footer">
         <div class="main-footer">
           <div class="logo-about">
-            <a href="/"><img class="brand-logo" src="/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+            <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Brand Logo"></a>
             <p>
               simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
               easy-to-use platform.
             </p>
             <div class="social-media">
-              <a href=""><img src="/images/Icons/google.png" alt="Google"></a>
-              <a href=""><img src="/images/Icons/facebook.png" alt="Facebook"></a>
-              <a href=""><img src="/images/Icons/twitter.png" alt="Twitter"></a>
-              <a href=""><img src="/images/Icons/instagram.png" alt="Instagram"></a>
+              <a href=""><img src="/static/images/Icons/google.png" alt="Google"></a>
+              <a href=""><img src="/static/images/Icons/facebook.png" alt="Facebook"></a>
+              <a href=""><img src="static/images/Icons/twitter.png" alt="Twitter"></a>
+              <a href=""><img src="static/images/Icons/instagram.png" alt="Instagram"></a>
             </div>
             <div class="back-to-top">
               <a href="">
