@@ -1,4 +1,7 @@
-import config from "./config.js";
+// import config from "./config.js";
+
+const cUrl = process.env.NEXT_PUBLIC_CSCAPI_URL;
+const ckey = process.env.NEXT_PUBLIC_CSCAPI_KEY;
 
 const countrySelect = document.querySelector("#country"),
   stateSelect = document.querySelector("#state"),
@@ -6,8 +9,10 @@ const countrySelect = document.querySelector("#country"),
 
 // Function to load the list of countries
 function loadCountries() {
-  fetch(config.cUrl, {
-    headers: { "X-CSCAPI-KEY": config.ckey },
+  // fetch(config.cUrl, {
+  fetch(cUrl, {
+    headers: { "X-CSCAPI-KEY": ckey },
+    // headers: { "X-CSCAPI-KEY": config.ckey },
   })
     .then((response) => response.json())
     .then((data) => {
@@ -41,8 +46,10 @@ function loadStates() {
   citySelect.style.pointerEvents = "none";
 
   // Fetch states based on the selected country code
-  fetch(`${config.cUrl}/${selectedCountryCode}/states`, {
-    headers: { "X-CSCAPI-KEY": config.ckey },
+  fetch(`${cUrl}/${selectedCountryCode}/states`, {
+    // fetch(`${config.cUrl}/${selectedCountryCode}/states`, {
+    headers: { "X-CSCAPI-KEY": ckey },
+    // headers: { "X-CSCAPI-KEY": config.ckey },
   })
     .then((response) => response.json())
     .then((data) => {
@@ -70,7 +77,8 @@ function loadCities() {
   fetch(
     `${config.cUrl}/${selectedCountryCode}/states/${selectedStateCode}/cities`,
     {
-      headers: { "X-CSCAPI-KEY": config.ckey },
+      headers: { "X-CSCAPI-KEY": ckey },
+      // headers: { "X-CSCAPI-KEY": config.ckey },
     }
   )
     .then((response) => response.json())
