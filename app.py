@@ -5,10 +5,13 @@ import os
 
 load_dotenv()
 
-app = Flask(__name__)
+
+app = Flask(__name__, static_folder='static')
+
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 OPENCAGE_API_KEY = os.getenv('OPENCAGE_API_KEY')
+
 
 @app.route('/')
 def home():
