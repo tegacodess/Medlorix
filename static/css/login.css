@@ -210,7 +210,7 @@ button[type="submit"]:hover {
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 170px;
   }
   .copyright{
@@ -218,10 +218,15 @@ button[type="submit"]:hover {
     font-weight: 700;
     color: #FFFCFC;
   }
-  .terms{
+  .lastlayer div{
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
+  }
+  .lastlayer div p{
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFCFC;
   }
   
   @media(max-width: 992px){
@@ -264,12 +269,16 @@ button[type="submit"]:hover {
     .google-button, .continue-button {
         max-width: 100%;
     }
-    .lastlayer {
+    .lastlayer{
+        padding: 20px 100px;
         flex-direction: column;
-        height: auto;
-        padding: 20px;
+        align-items: center;
         text-align: center;
-        width: 800px;
+        gap: 10px;
+    }
+    .lastlayer div{
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
@@ -301,6 +310,22 @@ button[type="submit"]:hover {
       }
       .lastlayer{
         width: 500px;
+      }
+      .lastlayer{
+        flex-direction: column;
+        gap: 10px;  
+        padding:25px;
+        align-items: center;
+      }
+      .copyright{
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+      .lastlayer div p{
+        text-decoration: underline;
+        font-size: 12px;
+        font-weight: 600;
       }
 }
 
