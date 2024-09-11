@@ -3,3 +3,4 @@ config.js
 node_modules/
 .env.local
 venv
+_env.local

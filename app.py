@@ -1,10 +1,68 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, jsonify
+import requests
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
+
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+OPENCAGE_API_KEY = os.getenv('OPENCAGE_API_KEY')
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/clinicSearch')
+def clinicSearch():
+    return render_template('clinicSearch.html')
+
+@app.route('/geocode', methods=['POST'])
+def geocode():
+    data = request.json
+    city = data.get('city')
+    landmark = data.get('landmark')
+    query = f"{city} {landmark}"
+    
+    url = f"https://api.opencagedata.com/geocode/v1/json?q={query}&key={OPENCAGE_API_KEY}"
+    
+    response = requests.get(url)
+    if response.status_code == 200:
+        results = response.json().get('results', [])
+        if results:
+            location = results[0]['geometry']
+            return jsonify(location)
+    
+    return jsonify({'error': 'Geocoding failed'}), 400
+
+@app.route('/nearby-search', methods=['POST'])
+def nearby_search():
+    data = request.json
+    location = data.get('location')
+    radius = data.get('radius', 1500)
+    type = data.get('type')
+    
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type={type}&key={GOOGLE_API_KEY}"
+    
+    response = requests.get(url)
+    if response.status_code == 200:
+        return jsonify(response.json())
+    
+    return jsonify({'error': 'Nearby search failed'}), 400
+
+@app.route('/place-details', methods=['POST'])
+def place_details():
+    data = request.json
+    place_id = data.get('place_id')
+    
+    url = f"https://maps.googleapis.com/maps/api/place/details/json?place_id={place_id}&fields=name,formatted_phone_number,formatted_address,opening_hours,geometry&key={GOOGLE_API_KEY}"
+    
+    response = requests.get(url)
+    if response.status_code == 200:
+        return jsonify(response.json())
+    
+    return jsonify({'error': 'Place details fetch failed'}), 400
 
 @app.route('/book-appointment', methods=['GET', 'POST'])
 def book_appointment():
