@@ -1,4 +1,7 @@
-import config from "./config.js";
+// import config from "./config.js";
+
+const openCageApiKey = process.env.NEXT_PUBLIC_OPENCAGE_API_KEY;
+const googleApiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
 const configuration = {
   radius: 1500,
@@ -11,7 +14,8 @@ async function getLatLngFromGeocoding(city, landmark) {
   const query = `${city} ${landmark}`;
   const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(
     query
-  )}&key=${config.openCageApiKey}`;
+  )}&key=${openCageApiKey}`;
+  // )}&key=${config.openCageApiKey}`;
 
   try {
     console.log("Fetching geocoding data...");
@@ -32,11 +36,13 @@ async function getLatLngFromGeocoding(city, landmark) {
 
 // URL building functions
 function buildNearbySearchUrl(location, type) {
-  return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${configuration.radius}&type=${type}&key=${config.googleApiKey}`;
+  return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${configuration.radius}&type=${type}&key=${googleApiKey}`;
+  // return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${configuration.radius}&type=${type}&key=${config.googleApiKey}`;
 }
 
 function buildPlaceDetailsUrl(placeId) {
-  return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,formatted_phone_number,formatted_address,opening_hours,geometry&key=${config.googleApiKey}`;
+  return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,formatted_phone_number,formatted_address,opening_hours,geometry&key=${googleApiKey}`;
+  // return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,formatted_phone_number,formatted_address,opening_hours,geometry&key=${config.googleApiKey}`;
 }
 
 // Fetching functions
@@ -119,7 +125,7 @@ function createResultCard(place) {
               </div>
             </div>
             <div class="card-secondlayer">
-              <p>General Hospital</p>
+              <p>Hospital</p>
               <img src="/images/Clinic Search Page/icon.png" alt="" />
               <p>
                 <span>${place.address}</span>
