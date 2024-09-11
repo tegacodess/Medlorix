@@ -19,7 +19,7 @@ def home():
 
 @app.route('/clinicSearch')
 def clinicSearch():
-    return render_template('clinicSearch.html')
+    return render_template('clinicSearch.html', google_maps_api_key=GOOGLE_API_KEY)
 
 @app.route('/geocode', methods=['POST'])
 def geocode():
@@ -45,13 +45,19 @@ def nearby_search():
     location = data.get('location')
     radius = data.get('radius', 1500)
     type = data.get('type')
-    
+
     url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type={type}&key={GOOGLE_API_KEY}"
-    
+
     response = requests.get(url)
     if response.status_code == 200:
-        return jsonify(response.json())
-    
+        results = response.json().get('results', [])
+        for result in results:
+            result['geometry']['location'] = {
+                'lat': result['geometry']['location']['lat'],
+                'lng': result['geometry']['location']['lng']
+            }
+        return jsonify({'results': results})
+
     return jsonify({'error': 'Nearby search failed'}), 400
 
 @app.route('/place-details', methods=['POST'])
