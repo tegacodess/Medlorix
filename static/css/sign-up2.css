@@ -175,23 +175,13 @@ button[type="submit"]:hover {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.lastlayer {
-    width: 1440px;
-    height: 123px;
-    padding: 26px 120px 37px 120px;
-    background-color: #150F49;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
 .lastlayer{
     background-color: #150F49;
     padding: 40px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 50px;
     margin-top: 170px;
   }
   .copyright{
@@ -199,10 +189,15 @@ button[type="submit"]:hover {
     font-weight: 700;
     color: #FFFCFC;
   }
-  .terms{
+  .lastlayer div{
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
+  }
+  .lastlayer div p{
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFCFC;
   }
 
   @media screen and (min-width: 1440px) {
@@ -239,28 +234,36 @@ button[type="submit"]:hover {
       max-width: 100%;
   }
   
-    .lastlayer {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        text-align: center;
-        width: 800px;
-    }
-  
-    .copyright {
-        margin-bottom: 10px;
-    }
-  
-    .terms {
-        flex-direction: column;
-        align-items: center;
-    }
+  .lastlayer{
+    padding: 20px 100px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  .lastlayer div{
+    flex-direction: column;
+    gap: 15px;
+  }
   }
   
   @media (max-width: 480px) {
-    .lastlayer {
-      width: 500px;
-    }
+    .lastlayer{
+        flex-direction: column;
+        gap: 20px;  
+        padding:25px;
+        align-items: center;
+      }
+      .copyright{
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+      .lastlayer div p{
+        text-decoration: underline;
+        font-size: 12px;
+        font-weight: 600;
+      }
   }
   
   @media (max-width: 320px) {

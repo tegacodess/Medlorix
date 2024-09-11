@@ -216,7 +216,7 @@ select {
     background-color: #150F49;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     margin-top: 170px;
@@ -228,17 +228,16 @@ select {
     font-weight: 700px;
     color: #FFFCFC;
   }
-  .terms{
+  .lastlayer div{
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
   }
-  .terms p{
+  .lastlayer div p{
     font-size: 15px;
     font-weight: 700;
     color: #FFFCFC;
-} 
-
+  }
 @media(max-width: 992px){
     .footer{
       padding-top: 60px;
@@ -277,13 +276,17 @@ select {
     .google-button, .continue-button {
         max-width: 100%;
     }
-    .lastlayer {
+    .lastlayer{
+        padding: 20px 100px;
         flex-direction: column;
-        height: auto;
-        padding: 20px;
+        align-items: center;
         text-align: center;
-        width: 800px;
-    }
+        gap: 15px;
+      }
+      .lastlayer div{
+        flex-direction: column;
+        gap: 15px;
+      }
 }
 
 @media (max-width: 480px) {
@@ -313,7 +316,20 @@ select {
         gap: 20px;
       }
       .lastlayer{
-        width: 500px;
+        flex-direction: column;
+        gap: 20px;  
+        padding:25px;
+        align-items: center;
+      }
+      .copyright{
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+      .lastlayer div p{
+        text-decoration: underline;
+        font-size: 12px;
+        font-weight: 600;
       }
 }
 

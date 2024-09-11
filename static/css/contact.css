@@ -340,7 +340,7 @@ textarea::placeholder{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 650px;
+  padding-left: 450px;
   gap:100px;
   align-items: center;
 }
@@ -389,9 +389,19 @@ textarea::placeholder{
   padding: 40px 100px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 .copyright{
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFCFC;
+}
+.lastlayer div{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.lastlayer div p{
   font-size: 15px;
   font-weight: 700;
   color: #FFFCFC;
@@ -575,7 +585,17 @@ border-radius: 10px;
     padding-left: 100px;
     gap:50px;
   }
-
+  .lastlayer{
+    padding: 20px 100px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  .lastlayer div{
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 
@@ -748,10 +768,29 @@ border-radius: 10px;
     margin:7px;
     margin-top: 0px;
   }
+  .logo-about p{
+    text-decoration: underline;
+  }
+  .company p{
+    text-decoration: underline;
+  }
+  .company a{
+    text-decoration: underline;
+  }
   .lastlayer{
     flex-direction: column;
     gap: 20px;  
     padding:25px;
     align-items: center;
+  }
+  .copyright{
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  .lastlayer div p{
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 600;
   }
 }
