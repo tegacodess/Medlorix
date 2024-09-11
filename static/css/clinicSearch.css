@@ -555,7 +555,7 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 450px;
+  padding-left: 300px;
   gap: 100px;
   align-items: center;
 }
