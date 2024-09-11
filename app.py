@@ -99,10 +99,6 @@ def chatbot():
 def faq():
     return render_template('faq.html')
 
-@app.route('/clinicSearch')
-def clinicSearch():
-    return render_template('clinicSearch.html')
-
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
