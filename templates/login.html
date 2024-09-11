@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medlorix Signup</title>
-    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <body>
     <div class="logo">
-        <img src="/images/Medlorix-logo.svg" alt="Medlorix Logo">
+    </div>
+    <a href="/"><img src="/static/images/Medlorix-logo.svg" alt="Medlorix Logo"  class="logo"></a> 
+  </div>
     </div>
     <div class="container">
         <div class="form-container">
@@ -34,7 +36,7 @@
                     <button type="submit">LOGIN</button>
                  </div>
             </form>
-            <p class="signin">Don't have an account? <a href="/src/sign-up.html">Register</a></p>
+            <p class="signin">Don't have an account? <a href="/sign-up">Register</a></p>
         </div>
     </div>
     <!-- Footer Section -->
@@ -46,7 +48,7 @@
         </div>
         </div>
     </footer>
-    <script type="module" src="../firebase_config.js"></script>
-    <script type="module" src="../login.js"></script>
+    <script type="module" src="/static/js/firebase_config.js"></script>
+    <script type="module" src="/static/js/login.js"></script>
 </body>
 </html>

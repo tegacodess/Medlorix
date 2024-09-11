@@ -1,4 +1,4 @@
-import { auth } from './firebase_config.js';
+import { auth } from '/static/js/firebase_config.js';
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
 
@@ -85,7 +85,7 @@ form.addEventListener('submit', async function (event) {
         submitButton.parentNode.insertBefore(successMessage, submitButton);
 
         setTimeout(() => {
-            window.location.href = '/src/chatbot.html';
+            window.location.href = '/chatbot';
         }, 500);
 
     } catch (error) {
