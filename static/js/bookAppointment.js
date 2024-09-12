@@ -1,22 +1,12 @@
-// import config from "./config.js";
-
-const cUrl = process.env.NEXT_PUBLIC_CSCAPI_URL;
-const ckey = process.env.NEXT_PUBLIC_CSCAPI_KEY;
-
-const countrySelect = document.querySelector("#country"),
-  stateSelect = document.querySelector("#state"),
-  citySelect = document.querySelector("#local-government");
+const countrySelect = document.querySelector("#country");
+const stateSelect = document.querySelector("#state");
+const citySelect = document.querySelector("#local-government");
 
 // Function to load the list of countries
 function loadCountries() {
-  // fetch(config.cUrl, {
-  fetch(cUrl, {
-    headers: { "X-CSCAPI-KEY": ckey },
-    // headers: { "X-CSCAPI-KEY": config.ckey },
-  })
+  fetch("/api/countries")
     .then((response) => response.json())
     .then((data) => {
-      // Populate the country dropdown with fetched data
       data.forEach((country) => {
         const option = document.createElement("option");
         option.value = country.iso2;
@@ -28,32 +18,21 @@ function loadCountries() {
 
   stateSelect.disabled = true;
   citySelect.disabled = true;
-  stateSelect.style.pointerEvents = "none";
-  citySelect.style.pointerEvents = "none";
 }
 
+// Function to load the list of states based on the selected country
 function loadStates() {
   const selectedCountryCode = countrySelect.value;
 
   stateSelect.disabled = false;
   stateSelect.innerHTML = '<option value="">Select State</option>';
 
-  // Disable and reset the city dropdown
   citySelect.disabled = true;
   citySelect.innerHTML = '<option value="">Select City</option>';
 
-  stateSelect.style.pointerEvents = "auto";
-  citySelect.style.pointerEvents = "none";
-
-  // Fetch states based on the selected country code
-  fetch(`${cUrl}/${selectedCountryCode}/states`, {
-    // fetch(`${config.cUrl}/${selectedCountryCode}/states`, {
-    headers: { "X-CSCAPI-KEY": ckey },
-    // headers: { "X-CSCAPI-KEY": config.ckey },
-  })
+  fetch(`/api/states/${selectedCountryCode}`)
     .then((response) => response.json())
     .then((data) => {
-      // Populate the state dropdown with fetched data
       data.forEach((state) => {
         const option = document.createElement("option");
         option.value = state.iso2;
@@ -71,23 +50,15 @@ function loadCities() {
 
   citySelect.disabled = false;
   citySelect.innerHTML = '<option value="">Select City</option>';
-  citySelect.style.pointerEvents = "auto";
 
-  // Fetch cities based on the selected country and state codes
-  fetch(
-    `${config.cUrl}/${selectedCountryCode}/states/${selectedStateCode}/cities`,
-    {
-      headers: { "X-CSCAPI-KEY": ckey },
-      // headers: { "X-CSCAPI-KEY": config.ckey },
-    }
-  )
+  fetch(`/api/cities/${selectedCountryCode}/${selectedStateCode}`)
     .then((response) => response.json())
     .then((data) => {
       data.forEach((city) => {
         const option = document.createElement("option");
         option.value = city.name;
         option.textContent = city.name;
-        citySelect.appendChild(option); // Add option to the city dropdown
+        citySelect.appendChild(option);
       });
     })
     .catch((error) => console.error("Error loading cities:", error));
@@ -99,3 +70,6 @@ window.onload = loadCountries;
 // Event listeners to load states and cities when a country/state is selected
 countrySelect.addEventListener("change", loadStates);
 stateSelect.addEventListener("change", loadCities);
+
+// Export the functions to be used in hospitalSearch.js
+export { loadCountries, loadStates, loadCities };
