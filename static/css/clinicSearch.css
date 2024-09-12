@@ -213,7 +213,8 @@ nav a {
 
   font-size: 15px;
   color: #333;
-  background-image: url("/images/Icons/dropdown_icon.png");
+  /* background-image: url("/images/Icons/dropdown_icon.png"); */
+  background-image: url("../images/Icons/dropdown_icon.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 16px;
@@ -611,15 +612,15 @@ nav a {
   font-weight: 700;
   color: #fffcfc;
 }
-.lastlayer div{
+.lastlayer div {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.lastlayer div p{
+.lastlayer div p {
   font-size: 15px;
   font-weight: 700;
-  color: #FFFCFC;
+  color: #fffcfc;
 }
 
 #myBtn {
@@ -994,14 +995,14 @@ nav a {
     padding-left: 100px;
     gap: 50px;
   }
-  .lastlayer{
+  .lastlayer {
     padding: 20px 100px;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 15px;
   }
-  .lastlayer div{
+  .lastlayer div {
     flex-direction: column;
     gap: 15px;
   }
@@ -1194,27 +1195,27 @@ nav a {
     margin: 7px;
     margin-top: 0px;
   }
-  .logo-about p{
+  .logo-about p {
     text-decoration: underline;
   }
-  .company p{
+  .company p {
     text-decoration: underline;
   }
-  .company a{
+  .company a {
     text-decoration: underline;
   }
-  .lastlayer{
+  .lastlayer {
     flex-direction: column;
-    gap: 20px;  
-    padding:25px;
+    gap: 20px;
+    padding: 25px;
     align-items: center;
   }
-  .copyright{
+  .copyright {
     font-size: 12px;
     font-weight: 500;
     text-decoration: underline;
   }
-  .lastlayer div p{
+  .lastlayer div p {
     text-decoration: underline;
     font-size: 12px;
     font-weight: 600;
