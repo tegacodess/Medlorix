@@ -15,6 +15,8 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&libraries=places"></script>
+</head>
     <script type="text/javascript">
       (function () {
         emailjs.init("WesP-F72yRnUJFma5");
@@ -46,7 +48,7 @@
             >SERVICES
             <img
               class="dropdown-down"
-              src="/static/images/Clinic Search Page/dropdownIcon.png"
+              src="/static/images/ClinicSearchPage/dropdownIcon.png"
               alt=""
             />
           </a>
@@ -166,7 +168,7 @@
       <div id="loadingIndicator" style="display: none">Searching...</div>
       <div class="results">
         <p id="resultsCount">Results: (0)</p>
-        <img src="/static/images/Clinic Search Page/caution-Icon.png" alt="" />
+        <img src="/static/images/ClinicSearchPage/caution-Icon.png" alt="" />
       </div>
       <div id="resultGrid" class="searched-container"></div>
     </div>

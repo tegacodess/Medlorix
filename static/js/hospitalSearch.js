@@ -269,6 +269,44 @@ const configuration = {
   healthKeywords: ["hospital", "clinic"],
 };
 
+let map;
+let markers = [];
+
+function initMap(lat, lng) {
+  const mapOptions = {
+    center: { lat, lng },
+    zoom: 13
+  };
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+function addMarker(place) {
+  const marker = new google.maps.Marker({
+    position: { lat: place.geometry.location.lat, lng: place.geometry.location.lng },
+    map: map,
+    title: place.name
+  });
+
+  const infoWindow = new google.maps.InfoWindow({
+    content: `
+      <h3>${place.name}</h3>
+      <p>${place.vicinity}</p>
+      <p>Rating: ${place.rating || 'N/A'}</p>
+    `
+  });
+
+  marker.addListener('click', () => {
+    infoWindow.open(map, marker);
+  });
+
+  markers.push(marker);
+}
+
+function clearMarkers() {
+  markers.forEach(marker => marker.setMap(null));
+  markers = [];
+}
+
 async function getLatLngFromGeocoding(city, landmark) {
   const response = await fetch('/geocode', {
     method: 'POST',
@@ -421,6 +459,7 @@ async function performSearch() {
 
   try {
     const { lat, lng } = await getLatLngFromGeocoding(city, landmark);
+    initMap(lat, lng);
     const location = `${lat},${lng}`;
 
     const allPlaces = await fetchAllPlaces(location);
@@ -428,10 +467,13 @@ async function performSearch() {
     const relevantPlaces = filterRelevantPlaces(allPlaces);
     console.log("Relevant places:", relevantPlaces);
 
+    clearMarkers();
+
     for (const place of relevantPlaces) {
       const fullDetails = await fetchPlaceDetails(place.place_id);
       const transformedDetails = transformPlaceDetails(place, fullDetails);
       resultGridDiv.innerHTML += createResultCard(transformedDetails);
+      addMarker(place);
     }
     setupAppointmentButtons();
 
