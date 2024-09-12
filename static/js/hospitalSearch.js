@@ -1,385 +1,55 @@
-// // import config from "./config.js";
-
-// const openCageApiKey = process.env.NEXT_PUBLIC_OPENCAGE_API_KEY;
-// const googleApiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
-
-// const configuration = {
-//   radius: 1500,
-//   types: ["hospital", "clinic"],
-//   healthKeywords: ["hospital", "clinic"],
-// };
-
-// // Geocoding function
-// async function getLatLngFromGeocoding(city, landmark) {
-//   const query = `${city} ${landmark}`;
-//   const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(
-//     query
-//   )}&key=${openCageApiKey}`;
-//   // )}&key=${config.openCageApiKey}`;
-
-//   try {
-//     console.log("Fetching geocoding data...");
-//     const response = await axios.get(url);
-//     console.log("Geocoding response:", response.data);
-//     if (response.data.results && response.data.results.length > 0) {
-//       const { lat, lng } = response.data.results[0].geometry;
-//       console.log(`Location: ${lat}, ${lng}`);
-//       return { lat, lng };
-//     } else {
-//       throw new Error("No results found for the given location");
-//     }
-//   } catch (error) {
-//     console.error("Error fetching geolocation data:", error);
-//     throw new Error("Failed to get location data: " + error.message);
-//   }
-// }
-
-// // URL building functions
-// function buildNearbySearchUrl(location, type) {
-//   return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${configuration.radius}&type=${type}&key=${googleApiKey}`;
-//   // return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${configuration.radius}&type=${type}&key=${config.googleApiKey}`;
-// }
-
-// function buildPlaceDetailsUrl(placeId) {
-//   return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,formatted_phone_number,formatted_address,opening_hours,geometry&key=${googleApiKey}`;
-//   // return `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,formatted_phone_number,formatted_address,opening_hours,geometry&key=${config.googleApiKey}`;
-// }
-
-// // Fetching functions
-// async function fetchPlacesByType(location, type) {
-//   try {
-//     console.log(`Fetching ${type} places...`);
-//     const response = await axios.get(buildNearbySearchUrl(location, type));
-//     console.log(`${type} places response:`, response.data);
-//     return response.data.results;
-//   } catch (error) {
-//     console.error(`Error fetching ${type}:`, error);
-//     return [];
-//   }
-// }
-
-// async function fetchPlaceDetails(placeId) {
-//   try {
-//     console.log(`Fetching details for place ${placeId}...`);
-//     const response = await axios.get(buildPlaceDetailsUrl(placeId));
-//     console.log("Place details response:", response.data);
-//     return response.data.result;
-//   } catch (error) {
-//     console.error(`Error fetching place details:`, error);
-//     return null;
-//   }
-// }
-
-// // Data transformation function
-// function transformPlaceDetails(place, details) {
-//   return {
-//     name: place.name,
-//     types: place.types[0],
-//     address: place.vicinity,
-//     rating: place.rating || "No Rating Available",
-//     availability:
-//       place.business_status === "OPERATIONAL" ? "Available" : "Closed",
-//     phone: details?.formatted_phone_number || "No Phone Number Available",
-//     directions: `https://www.google.com/maps/dir/?api=1&destination=${details?.geometry?.location?.lat},${details?.geometry?.location?.lng}`,
-//   };
-// }
-
-// // Fetch and filter functions
-// async function fetchAllPlaces(location) {
-//   const allPlacesPromises = configuration.types.map((type) =>
-//     fetchPlacesByType(location, type)
-//   );
-//   const results = await Promise.all(allPlacesPromises);
-//   return results.flat();
-// }
-
-// function filterRelevantPlaces(places) {
-//   return places.filter((place) =>
-//     place.types.some((type) => configuration.healthKeywords.includes(type))
-//   );
-// }
-
-// // Result card creation function
-// function createResultCard(place) {
-//   return `
-//       <div class="searched-cardpreview">
-//           <div class="card-firstlayer">
-//               <div class="hospital-name-card">
-//                 <div class="hospital-name">
-//                   <p>${place.name}</p>
-//                   </div>
-//                 <div class="rating">
-//                 ${"★".repeat(Math.round(place.rating))}${"☆".repeat(
-//     5 - Math.round(place.rating)
-//   )} (${place.rating})
-//                 </div>
-//               </div>
-//               <div class="direction">
-//                 <img
-//                   src="/images/Clinic Search Page/ri_direction-line.png"
-//                   alt=""
-//                 />
-//                 <p><a href="${
-//                   place.directions
-//                 }" class="directions" target="_blank">Directions</a></p>
-//               </div>
-//             </div>
-//             <div class="card-secondlayer">
-//               <p>Hospital</p>
-//               <img src="/images/Clinic Search Page/icon.png" alt="" />
-//               <p>
-//                 <span>${place.address}</span>
-//               </p>
-//             </div>
-//             <div class="card-thirdlayer">
-//               <div class="no-card">
-//                 <div class="phone-no">
-//                   <img src="/images/Clinic Search Page/Phone call.png" alt="" />
-//                   <p>${place.phone}</p>
-//                 </div>
-//                 <div class="available ${place.availability.toLowerCase()}">
-//                   <p><span>${place.availability}</span></p>
-//                 </div>
-//               </div>
-//               <div class="book-appointment">
-//                 <button id="book-appointment-${
-//                   place.place_id
-//                 }">BOOK APPOINTMENT</button>
-//               </div>
-//             </div>
-//           </div>
-//       `;
-// }
-
-// function setupAppointmentButtons() {
-//   document.querySelectorAll(".book-appointment button").forEach((button) => {
-//     button.addEventListener("click", () => {
-//       alert("This feature is coming soon!");
-//     });
-//   });
-// }
-// // Main search function
-// async function performSearch() {
-//   const cityElement = document.getElementById("local-government");
-//   const landmarkElement = document.getElementById("landmark");
-//   const resultGridDiv = document.getElementById("resultGrid");
-//   const resultsCountDiv = document.getElementById("resultsCount");
-//   const loadingIndicator = document.getElementById("loadingIndicator");
-
-//   if (
-//     !cityElement ||
-//     !landmarkElement ||
-//     !resultGridDiv ||
-//     !resultsCountDiv ||
-//     !loadingIndicator
-//   ) {
-//     console.error("One or more required elements are missing");
-//     return;
-//   }
-
-//   const city = cityElement.value;
-//   const landmark = landmarkElement.value;
-
-//   if (!city || !landmark) {
-//     alert("Please enter both city and landmark");
-//     return;
-//   }
-
-//   loadingIndicator.style.display = "block";
-//   resultGridDiv.innerHTML = "";
-//   resultsCountDiv.textContent = "";
-
-//   try {
-//     const { lat, lng } = await getLatLngFromGeocoding(city, landmark);
-//     const location = `${lat},${lng}`;
-
-//     const allPlaces = await fetchAllPlaces(location);
-//     console.log("All places:", allPlaces);
-//     const relevantPlaces = filterRelevantPlaces(allPlaces);
-//     console.log("Relevant places:", relevantPlaces);
-
-//     for (const place of relevantPlaces) {
-//       const fullDetails = await fetchPlaceDetails(place.place_id);
-//       const transformedDetails = transformPlaceDetails(place, fullDetails);
-//       resultGridDiv.innerHTML += createResultCard(transformedDetails);
-//     }
-//     setupAppointmentButtons();
-
-//     resultsCountDiv.textContent = `Results (${relevantPlaces.length})`;
-//     resultsCountDiv.style.display = "block";
-//   } catch (error) {
-//     console.error("An error occurred:", error);
-//     resultGridDiv.innerHTML =
-//       "<p>An error occurred while searching for hospitals. Please try again.</p>";
-//   } finally {
-//     loadingIndicator.style.display = "none";
-//   }
-// }
-
-// // Debounce function
-// function debounce(func, wait) {
-//   let timeout;
-//   return function executedFunction(...args) {
-//     const later = () => {
-//       clearTimeout(timeout);
-//       func(...args);
-//     };
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//   };
-// }
-
-// // Debounced search function
-// const debouncedPerformSearch = debounce(performSearch, 300);
-
-// // Initialize CORS Anywhere
-// (function () {
-//   var cors_api_host = "cors-anywhere.herokuapp.com";
-//   var cors_api_url = "https://" + cors_api_host + "/";
-//   var slice = [].slice;
-//   var origin = window.location.protocol + "//" + window.location.host;
-//   var open = XMLHttpRequest.prototype.open;
-//   XMLHttpRequest.prototype.open = function () {
-//     var args = slice.call(arguments);
-//     var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
-//     if (
-//       targetOrigin &&
-//       targetOrigin[0].toLowerCase() !== origin &&
-//       targetOrigin[1] !== cors_api_host
-//     ) {
-//       args[1] = cors_api_url + args[1];
-//     }
-//     return open.apply(this, args);
-//   };
-// })();
-
-// // Event listener for DOM content loaded
-// document.addEventListener("DOMContentLoaded", function () {
-//   const searchButton = document.querySelector(".book-button");
-//   if (searchButton) {
-//     searchButton.addEventListener("click", debouncedPerformSearch);
-//   } else {
-//     console.error("Search button not found");
-//   }
-// });
-
-const configuration = {
-  radius: 1500,
-  types: ["hospital", "clinic"],
-  healthKeywords: ["hospital", "clinic"],
-};
-
-let map;
-let markers = [];
-
-function initMap(lat, lng) {
-  const mapOptions = {
-    center: { lat, lng },
-    zoom: 13
-  };
-  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-}
-
-function addMarker(place) {
-  const marker = new google.maps.Marker({
-    position: { lat: place.geometry.location.lat, lng: place.geometry.location.lng },
-    map: map,
-    title: place.name
-  });
-
-  const infoWindow = new google.maps.InfoWindow({
-    content: `
-      <h3>${place.name}</h3>
-      <p>${place.vicinity}</p>
-      <p>Rating: ${place.rating || 'N/A'}</p>
-    `
-  });
-
-  marker.addListener('click', () => {
-    infoWindow.open(map, marker);
-  });
-
-  markers.push(marker);
-}
-
-function clearMarkers() {
-  markers.forEach(marker => marker.setMap(null));
-  markers = [];
-}
-
 async function getLatLngFromGeocoding(city, landmark) {
-  const response = await fetch('/geocode', {
-    method: 'POST',
+  const response = await fetch("/geocode", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({ city, landmark }),
   });
 
   if (!response.ok) {
-    throw new Error('Geocoding failed');
+    throw new Error("Geocoding failed");
   }
 
   return response.json();
 }
 
-async function fetchPlacesByType(location, type) {
-  const response = await fetch('/nearby-search', {
-    method: 'POST',
+async function fetchNearbyPlaces(location, type) {
+  const response = await fetch("/nearby-search", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ location, type, radius: configuration.radius }),
+    body: JSON.stringify({ location: `${location.lat},${location.lng}`, type }),
   });
 
   if (!response.ok) {
-    throw new Error(`Error fetching ${type}`);
+    throw new Error("Nearby search failed");
   }
 
-  const data = await response.json();
-  return data.results;
+  return response.json();
 }
 
 async function fetchPlaceDetails(placeId) {
-  const response = await fetch('/place-details', {
-    method: 'POST',
+  const response = await fetch("/place-details", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({ place_id: placeId }),
   });
 
   if (!response.ok) {
-    throw new Error('Error fetching place details');
+    throw new Error("Place details fetch failed");
   }
 
-  const data = await response.json();
-  return data.result;
-}
-
-function transformPlaceDetails(place, details) {
-  return {
-    name: place.name,
-    types: place.types[0],
-    address: place.vicinity,
-    rating: place.rating || "No Rating Available",
-    availability: place.business_status === "OPERATIONAL" ? "Available" : "Closed",
-    phone: details?.formatted_phone_number || "No Phone Number Available",
-    directions: `https://www.google.com/maps/dir/?api=1&destination=${details?.geometry?.location?.lat},${details?.geometry?.location?.lng}`,
-  };
-}
-
-async function fetchAllPlaces(location) {
-  const allPlacesPromises = configuration.types.map((type) =>
-    fetchPlacesByType(location, type)
-  );
-  const results = await Promise.all(allPlacesPromises);
-  return results.flat();
+  return response.json();
 }
 
 function filterRelevantPlaces(places) {
+  const healthKeywords = ["hospital", "clinic", "doctor"];
   return places.filter((place) =>
-    place.types.some((type) => configuration.healthKeywords.includes(type))
+    place.types.some((type) => healthKeywords.includes(type.toLowerCase()))
   );
 }
 
@@ -392,119 +62,144 @@ function createResultCard(place) {
             <p>${place.name}</p>
           </div>
           <div class="rating">
-            ${"★".repeat(Math.round(place.rating))}${"☆".repeat(5 - Math.round(place.rating))} (${place.rating})
+            ${"★".repeat(Math.round(place.rating))}${"☆".repeat(
+    5 - Math.round(place.rating)
+  )} (${place.rating || "No Rating Available"})
           </div>
         </div>
         <div class="direction">
-          <img src="/static/images/Clinic Search Page/ri_direction-line.png" alt="" />
-          <p><a href="${place.directions}" class="directions" target="_blank">Directions</a></p>
+          <img src="/static/images/ClinicSearchPage/ri_direction-line.png" alt="" />
+          <p><a href="https://www.google.com/maps/dir/?api=1&destination=${
+            place.geometry.location.lat
+          },${
+    place.geometry.location.lng
+  }" class="directions" target="_blank">Directions</a></p>
         </div>
       </div>
       <div class="card-secondlayer">
-        <p>Hospital</p>
-        <img src="/static/images/Clinic Search Page/icon.png" alt="" />
+        <p>${
+          place.types[0].charAt(0).toUpperCase() + place.types[0].slice(1)
+        }</p>
+        <img src="/static/images/ClinicSearchPage/icon.png" alt="" />
         <p>
-          <span>${place.address}</span>
+          <span>${place.formatted_address || place.vicinity}</span>
         </p>
       </div>
       <div class="card-thirdlayer">
         <div class="no-card">
           <div class="phone-no">
-            <img src="/static/images/Clinic Search Page/Phone call.png" alt="" />
-            <p>${place.phone}</p>
+            <img src="/static/images/ClinicSearchPage/Phonecall.png" alt="" />
+            <p>${
+              place.formatted_phone_number || "No Phone Number Available"
+            }</p>
           </div>
-          <div class="available ${place.availability.toLowerCase()}">
-            <p><span>${place.availability}</span></p>
-          </div>
+        <div class="available ">
+                  <p><span>${
+                    place.business_status === "OPERATIONAL"
+                      ? "Available"
+                      : "Closed"
+                  }</span></p>
+                </div>
         </div>
         <div class="book-appointment">
-          <button id="book-appointment-${place.place_id}">BOOK APPOINTMENT</button>
+          <button data-place-id="${place.place_id}">BOOK APPOINTMENT</button>
         </div>
       </div>
     </div>
   `;
 }
 
-function setupAppointmentButtons() {
-  document.querySelectorAll(".book-appointment button").forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("This feature is coming soon!");
-    });
-  });
-}
-
+// Main search function
 async function performSearch() {
-  const cityElement = document.getElementById("local-government");
-  const landmarkElement = document.getElementById("landmark");
+  const country = document.getElementById("country").value;
+  const state = document.getElementById("state").value;
+  const city = document.getElementById("local-government").value;
+  const landmark = document.getElementById("landmark").value;
   const resultGridDiv = document.getElementById("resultGrid");
   const resultsCountDiv = document.getElementById("resultsCount");
   const loadingIndicator = document.getElementById("loadingIndicator");
+  const resultsDiv = document.querySelector(".results");
 
-  if (!cityElement || !landmarkElement || !resultGridDiv || !resultsCountDiv || !loadingIndicator) {
-    console.error("One or more required elements are missing");
-    return;
-  }
-
-  const city = cityElement.value;
-  const landmark = landmarkElement.value;
-
-  if (!city || !landmark) {
-    alert("Please enter both city and landmark");
+  if (!country || !state || !city || !landmark) {
+    alert("Please fill in all location fields");
     return;
   }
 
   loadingIndicator.style.display = "block";
   resultGridDiv.innerHTML = "";
-  resultsCountDiv.textContent = "";
+  resultsCountDiv.textContent = "Results: (0)";
+  resultsDiv.style.display = "none";
 
   try {
-    const { lat, lng } = await getLatLngFromGeocoding(city, landmark);
-    initMap(lat, lng);
-    const location = `${lat},${lng}`;
+    const location = await getLatLngFromGeocoding(
+      `${country}, ${state}, ${city}`,
+      landmark
+    );
+    const hospitalsResponse = await fetchNearbyPlaces(location, "hospital");
+    const clinicsResponse = await fetchNearbyPlaces(location, "clinic");
 
-    const allPlaces = await fetchAllPlaces(location);
-    console.log("All places:", allPlaces);
+    const allPlaces = [
+      ...hospitalsResponse.results,
+      ...clinicsResponse.results,
+    ];
     const relevantPlaces = filterRelevantPlaces(allPlaces);
-    console.log("Relevant places:", relevantPlaces);
+    if (relevantPlaces.length === 0) {
+      // No hospitals found
+      resultGridDiv.innerHTML = `
+        <div class="no-results-message">
+          <p>No hospitals or clinics found in the specified location.</p>
+          <p>Please try a different location or expand your search area.</p>
+        </div>
+      `;
+      resultsCountDiv.textContent = "Results: (0)";
+    } else {
+      for (const place of relevantPlaces) {
+        const detailsResponse = await fetchPlaceDetails(place.place_id);
+        const placeWithDetails = { ...place, ...detailsResponse.result };
+        resultGridDiv.innerHTML += createResultCard(placeWithDetails);
+      }
 
-    clearMarkers();
+      resultsCountDiv.textContent = `Results: (${relevantPlaces.length})`;
+      resultsDiv.style.display = "flex";
 
-    for (const place of relevantPlaces) {
-      const fullDetails = await fetchPlaceDetails(place.place_id);
-      const transformedDetails = transformPlaceDetails(place, fullDetails);
-      resultGridDiv.innerHTML += createResultCard(transformedDetails);
-      addMarker(place);
+      // Add event listeners to "BOOK APPOINTMENT" buttons
+      document
+        .querySelectorAll(".book-appointment button")
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            const placeId = button.getAttribute("data-place-id");
+            // Implement booking functionality or navigation to booking page
+            console.log(`Booking appointment for place ID: ${placeId}`);
+            // For now, just show an alert
+            alert("Booking functionality coming soon!");
+          });
+        });
     }
-    setupAppointmentButtons();
-
-    resultsCountDiv.textContent = `Results (${relevantPlaces.length})`;
-    resultsCountDiv.style.display = "block";
   } catch (error) {
     console.error("An error occurred:", error);
-    resultGridDiv.innerHTML = "<p>An error occurred while searching for hospitals. Please try again.</p>";
+    if (error.message.includes("ZERO_RESULTS")) {
+      resultGridDiv.innerHTML = `
+        <div class="no-results-message">
+          <p>No hospitals or clinics found in the specified location.</p>
+          <p>Please try a different location or expand your search area.</p>
+        </div>
+      `;
+    } else {
+      resultGridDiv.innerHTML =
+        "<p>An error occurred while searching for healthcare facilities. Please try again.</p>";
+    }
+    resultsCountDiv.textContent = "Results: (0)";
   } finally {
     loadingIndicator.style.display = "none";
+    resultsDiv.style.display = "flex";
   }
 }
 
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-const debouncedPerformSearch = debounce(performSearch, 300);
-
-document.addEventListener("DOMContentLoaded", function () {
+// Event listener for search button
+document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.querySelector(".book-button");
   if (searchButton) {
-    searchButton.addEventListener("click", debouncedPerformSearch);
+    searchButton.addEventListener("click", performSearch);
   } else {
     console.error("Search button not found");
   }
