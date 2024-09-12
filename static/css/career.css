@@ -522,7 +522,7 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 300px;
+    padding-left: 500px;
     gap:100px;
     align-items: center;
   }
