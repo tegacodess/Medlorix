@@ -121,3 +121,8 @@ fetch("https://symptomai-y0zm.onrender.com/diagnose", {
 });
 })
 
+// Event listener for chatbot send button
+sendSymptomButton.addEventListener('click', function(){
+  symptomSearchBox.value= "...";
+  console.log("Search button clicked" );
+}) 

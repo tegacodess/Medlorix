@@ -180,7 +180,7 @@ a {
 }
 
 .chatbot p {
-    font-size: 24px;
+    font-size:10px;
     font-weight: 400;
 }
 
@@ -304,7 +304,7 @@ a {
     font-size: 25px;
 }
 .chatbot p {
-    font-size: 20px;
+    font-size: 10px;
 }
 
 .chat-card {
@@ -409,7 +409,7 @@ a {
     font-size: 22px;
 }
 .chatbot p {
-    font-size: 18px;
+    font-size: 10px;
 }
 
 .chat-card {
@@ -530,7 +530,7 @@ a {
         font-size: 18px;
     }
     .chatbot p {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .chat-card {
