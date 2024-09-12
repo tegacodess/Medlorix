@@ -43,7 +43,7 @@ def geocode():
 def nearby_search():
     data = request.json
     location = data.get('location')
-    radius = data.get('radius', 1500)
+    radius = data.get('radius', 3000)
     type = data.get('type')
 
     url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type={type}&key={GOOGLE_API_KEY}"
@@ -111,6 +111,28 @@ def faq():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+
+@app.route('/api/countries')
+def get_countries():
+    url = "https://api.countrystatecity.in/v1/countries"
+    headers = {"X-CSCAPI-KEY": os.getenv('CSCAPI_KEY')}
+    response = requests.get(url, headers=headers)
+    return jsonify(response.json())
+
+@app.route('/api/states/<country_code>')
+def get_states(country_code):
+    url = f"https://api.countrystatecity.in/v1/countries/{country_code}/states"
+    headers = {"X-CSCAPI-KEY": os.getenv('CSCAPI_KEY')}
+    response = requests.get(url, headers=headers)
+    return jsonify(response.json())
+
+@app.route('/api/cities/<country_code>/<state_code>')
+def get_cities(country_code, state_code):
+    url = f"https://api.countrystatecity.in/v1/countries/{country_code}/states/{state_code}/cities"
+    headers = {"X-CSCAPI-KEY": os.getenv('CSCAPI_KEY')}
+    response = requests.get(url, headers=headers)
+    return jsonify(response.json())
 
 if __name__ == '__main__':
     app.run(debug=True)

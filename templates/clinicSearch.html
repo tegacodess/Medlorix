@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="/static/css/clinicSearch.css" />
     <!-- JavaScript -->
     <script src="/static/js/index.js" defer></script>
-    <script type="module" src="../bookAppointment.js" defer></script>
+    <!-- <script type="module" src="../bookAppointment.js" defer></script> -->
     <script src="/static/js/subcribe.js" defer></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&libraries=places"></script>
-</head>
+
     <script type="text/javascript">
       (function () {
         emailjs.init("WesP-F72yRnUJFma5");
@@ -81,9 +81,7 @@
         <a href="/contact">CONTACT</a>
       </nav>
       <!-- Green buttons -->
-      <a href="/services">
-        <button class="green">GET STARTED</button></a
-      >
+      <a href="/services"> <button class="green">GET STARTED</button></a>
     </header>
 
     <!-- Hero Section -->
@@ -227,7 +225,9 @@
               platform.
             </p>
             <div class="social-media">
-              <a href=""><img src="/static/images/Icons/google.png" alt="Google" /></a>
+              <a href=""
+                ><img src="/static/images/Icons/google.png" alt="Google"
+              /></a>
               <a href=""
                 ><img src="/static/images/Icons/facebook.png" alt="Facebook"
               /></a>
@@ -279,6 +279,15 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- Link to your JavaScript file -->
-    <script type="module" src="/static/js/hospitalSearch.js"></script>
+    <!-- <script type="module" src="/static/js/hospitalSearch.js"></script> -->
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/bookAppointment.js') }}"
+    ></script>
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/hospitalSearch.js') }}"
+      defer
+    ></script>
   </body>
 </html>
