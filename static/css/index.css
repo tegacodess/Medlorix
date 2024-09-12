@@ -596,7 +596,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 650px;
+    padding-left: 500px;
     gap:100px;
     align-items: center;
   }
