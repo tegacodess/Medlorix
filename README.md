@@ -141,8 +141,4 @@ This guide will walk you through the process of setting up the Flask environment
 Remember to never commit sensitive information like API keys to version control. Always use environment variables for such sensitive data.
 
 
-I successfully designed and implemented the User Interface (UI) for the Sign Up and Login pages, ensuring a seamless and responsive layout across all screen sizes. I prioritized the development of these essential features to support user authentication and access to our platform.
-In addition to UI design, I played a key role in implementing user authentication using Firebase. This integration allowed for secure user management, including registration and login functionalities, enhancing the overall security and user experience of our application.
-Furthermore, I helped in setting up the server-side architecture of the project, got our server up and running. I created the endpoints that the frontend fetched from, which helps everything work together smoothly.. My work on the server-side ensured efficient data flow and processing, supporting the various features, routing and functionalities of our web application.
-
 
