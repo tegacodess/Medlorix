@@ -75,7 +75,7 @@ This guide will walk you through the process of setting up the Flask environment
 
 1. **Clone the Repository**
    ```
-   git clone <(https://github.com/tegacodess/Medlorix.git)>
+   git clone <https://github.com/tegacodess/Medlorix.git>
    cd Medlorix
    ```
 
