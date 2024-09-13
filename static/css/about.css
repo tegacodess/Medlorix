@@ -125,7 +125,7 @@ header{
   /* first section styling */
 
 #container {
-    background: linear-gradient(rgba(22, 73, 27, 0.7), rgba(22, 73, 27, 0.7)), url(../images/About\ Page/background-image.jpg) !important;
+    background: linear-gradient(rgba(22, 73, 27, 0.7), rgba(22, 73, 27, 0.7)), url(../images/AboutPage/background-image.jpg) !important;
     background-position: center center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;

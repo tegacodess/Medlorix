@@ -214,7 +214,7 @@ nav a {
   font-size: 15px;
   color: #333;
   /* background-image: url("/images/Icons/dropdown_icon.png"); */
-  background-image: url("../images/Icons/dropdown_icon.png");
+  background-image: url("/static/images/Icons/dropdown_icon.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 16px;
