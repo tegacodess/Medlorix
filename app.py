@@ -112,6 +112,10 @@ def faq():
 def contact():
     return render_template('contact.html')
 
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
 
 @app.route('/api/countries')
 def get_countries():
