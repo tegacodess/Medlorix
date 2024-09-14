@@ -5,7 +5,7 @@ Medlorix is a system that assists users book appointments with doctors, search f
 
 ## Team Members
 - **Team Lead & Backend Developer:** [Ope Fawaz Ademola](https://github.com/Hamfit) (same as [Physayo](https://github.com/Physayo))
-- **UI/UX Designer:** [Bolaji Abdullah Mogaji](https://github.com/Mogaji-Bolaji-Abdullah)
+- **UI/UX Designer:** [Mogaji Bolaji Abdullah](https://github.com/Mogaji-Bolaji-Abdullah)
 - **Frontend Developer:** [Ukpong Zion](https://github.com/tegacodess)
 - **Frontend Developer:** [Ezema Mabel](https://github.com/Maiybel)
 - **Frontend Developer:** [Abioye Olajide](https://github.com/Olajcodes)
