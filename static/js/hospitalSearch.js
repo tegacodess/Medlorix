@@ -120,7 +120,7 @@ async function performSearch() {
   const loadingIndicator = document.getElementById("loadingIndicator");
   const resultsDiv = document.querySelector(".results");
 
-  if (!country || !state || !city || !landmark) {
+  if (!country || !state || !landmark) {
     alert("Please fill in all location fields");
     return;
   }
