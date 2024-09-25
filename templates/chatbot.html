@@ -1,96 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Diagnosis</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/static/images/FAVICON.png">
-    <link rel="stylesheet" href="/static/css/chatbot.css">
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
+    <link rel="stylesheet" href="/static/css/chatbot.css" />
     <!-- JavaScript -->
     <script src="/static/js/index.js" defer></script>
     <script type="module" src="/static/js/chatbot.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header section -->
     <header>
-        <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
-        <!-- Hamburger Icon -->
-        <div class="hamburger-menu">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <nav class="navigation">
-          <a href="/">HOME</a>
-          <!-- Drop down menu for services -->
-          <div class="dropdown">
-            <a href="#" class="dropbtn">SERVICES
-              <img class="dropdown-down" src="/static/images/ClinicSearchPage/dropdownIcon.png" alt="">
-            </a>
-            <div class="dropdown-content">
-              <a href="/services" class="dropdown-item">Our Services
-                <span class="dropdown-icon">→</span>
-              </a>
-              <a href="/clinicSearch" class="dropdown-item">Clinic Search
-                <span class="dropdown-icon">→</span>
-              </a>
-    
-              <a href="/sign-up" class="dropdown-item">AI Diagnosis
-                <span class="dropdown-icon">→</span>
-              </a>
-  
-            </div>
-          </div>
-          <a href="/about">ABOUT US</a>
-          <a href="/faq">FAQS</a>
-          <a href="/contact">CONTACT</a>
-        </nav>
-        <div class="icons">
-            <p id="userGreeting">Hi, {{ user_name }}</p>
-            <input
-              type="text"
-              name="search"
-              placeholder="Search"
-              class="search-bar"
+      <a href="/"
+        ><img
+          class="brand-logo"
+          src="/static/images/Medlorix-logo.svg"
+          alt="Medlorix logo"
+      /></a>
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="navigation">
+        <a href="/">HOME</a>
+        <!-- Drop down menu for services -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn"
+            >SERVICES
+            <img
+              class="dropdown-down"
+              src="/static/images/Clinic Search Page/dropdownIcon.png"
+              alt=""
             />
+          </a>
+          <div class="dropdown-content">
+            <a href="/services" class="dropdown-item"
+              >Our Services
+              <span class="dropdown-icon">→</span>
+            </a>
+            <a href="/clinicSearch" class="dropdown-item"
+              >Clinic Search
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/bookAppointment" class="dropdown-item"
+              >See a Doctor
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/sign-up" class="dropdown-item"
+              >AI Diagnosis
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/career" class="dropdown-item"
+              >Careers
+              <span class="dropdown-icon">→</span>
+            </a>
+          </div>
         </div>
+        <a href="/about">ABOUT US</a>
+        <a href="/faq">FAQS</a>
+        <a href="/contact">CONTACT</a>
+      </nav>
+      <div class="icons">
+        <p id="userGreeting">Hi, {{ user_name }}</p>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search"
+          class="search-bar"
+        />
+      </div>
     </header>
 
     <!-- Services -->
     <section class="chatbot">
-        <h3>AI Diagnosis</h3>
-        <p class="tip-p">Chat with Medlorix AI</p>
+      <h3>AI Diagnosis</h3>
+      <p class="tip-p">Chat with Medlorix AI</p>
 
-        <div class="chat-card">
-            <div class="main" id="main">
-                <div class="mainPlaceholder">
-                  <div class="defaultContent">
-                    <h1>Hello! I'm Medlorix AI</h1>
-                    <p>your health assistant.</p>
-                    <p>I can help you understand your symptoms and suggest possible diagnoses.
-                        Please remember that my advice is not a substitute for a doctor's consultation. Let's get
-                        started! How can I assist you today?</p>
-                  </div>
-                </div>
-                 <!-- Container for responses -->
-                 <div id="responseContainer"></div>
+      <div class="chat-card">
+        <div class="main" id="main">
+          <div class="mainPlaceholder">
+            <div class="defaultContent">
+              <h1>Hello! I'm Medlorix AI</h1>
+              <p>your health assistant.</p>
+              <p>
+                I can help you understand your symptoms and suggest possible
+                diagnoses. Please remember that my advice is not a substitute
+                for a doctor's consultation. Let's get started! How can I assist
+                you today?
+              </p>
             </div>
-            
-            <div class="chatbot-text">
-                <div class="input-wrapper">
-                    <input type="text" placeholder="Enter keywords like: Headache"
-                        id="sendSymptom">
-                    <img src="/static/images/ChatBotPage/arrow-send.png" alt="" name="send" class="box-icon" id="symptomSearchBox">
-                </div>
-            </div>
+          </div>
+          <!-- Container for responses -->
+          <div id="responseContainer"></div>
         </div>
 
-        <p class="chatbot-text1">Please note that this diagnosis is only a suggestion and may not be 100% accurate. It's important to visit a healthcare professional for a thorough examination</p>
-       
-    </section>
-</body>
+        <div class="chatbot-text">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              placeholder="Enter keywords like: Headache"
+              id="sendSymptom"
+            />
+            <img
+              src="/static/images/ChatBotPage/arrow-send.png"
+              alt=""
+              name="send"
+              class="box-icon"
+              id="symptomSearchBox"
+            />
+          </div>
+        </div>
+      </div>
 
+      <p class="chatbot-text1">
+        Please note that this diagnosis is only a suggestion and may not be 100%
+        accurate. It's important to visit a healthcare professional for a
+        thorough examination
+      </p>
+    </section>
+  </body>
 </html>

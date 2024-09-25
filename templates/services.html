@@ -1,300 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medlorix | Services Page</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/static/images/FAVICON.png">
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/static/css/service.css">
+    <link rel="stylesheet" href="/static/css/service.css" />
     <!-- JavaScript -->
     <script src="/static/js/index.js" defer></script>
     <script src="/static/js/subcribe.js" defer></script>
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-      (function(){
-          emailjs.init("WesP-F72yRnUJFma5");
+      (function () {
+        emailjs.init("WesP-F72yRnUJFma5");
       })();
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header section -->
     <header>
-        <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
-        <!-- Hamburger Icon -->
-        <div class="hamburger-menu">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <nav class="navigation">
-          <a href="/">HOME</a>
-          <!-- Drop down menu for services -->
-          <div class="dropdown">
-            <a href="#" class="dropbtn">SERVICES
-              <img class="dropdown-down" src="/static/images/Clinic Search Page/dropdownIcon.png" alt="">
+      <a href="/"
+        ><img
+          class="brand-logo"
+          src="/static/images/Medlorix-logo.svg"
+          alt="Medlorix logo"
+      /></a>
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="navigation">
+        <a href="/">HOME</a>
+        <!-- Drop down menu for services -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn"
+            >SERVICES
+            <img
+              class="dropdown-down"
+              src="/static/images/Clinic Search Page/dropdownIcon.png"
+              alt=""
+            />
+          </a>
+          <div class="dropdown-content">
+            <a href="/services" class="dropdown-item"
+              >Our Services
+              <span class="dropdown-icon">→</span>
             </a>
-            <div class="dropdown-content">
-              <a href="/services" class="dropdown-item">Our Services
-                <span class="dropdown-icon">→</span>
-              </a>
-              <a href="/clinicSearch" class="dropdown-item">Clinic Search
-                <span class="dropdown-icon">→</span>
-              </a>
-    
-              <!-- <a href="/src/bookAppointment.html" class="dropdown-item">See a Doctor
-                <span class="dropdown-icon">→</span>
-              </a> -->
-    
-              <a href="/sign-up" class="dropdown-item">AI Diagnosis
-                <span class="dropdown-icon">→</span>
-              </a>
-    
-              <!-- <a href="/src/career.html" class="dropdown-item">Careers
-                <span class="dropdown-icon">→</span>
-              </a> -->
-            </div>
+            <a href="/clinicSearch" class="dropdown-item"
+              >Clinic Search
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/bookAppointment" class="dropdown-item"
+              >See a Doctor
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/sign-up" class="dropdown-item"
+              >AI Diagnosis
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/career" class="dropdown-item"
+              >Careers
+              <span class="dropdown-icon">→</span>
+            </a>
           </div>
-          <a href="/about">ABOUT US</a>
-          <a href="/faq">FAQS</a>
-          <a href="/contact">CONTACT</a>
-        </nav>
-        <!-- Green buttons -->
-        <a href="/services"> <button class="green">GET STARTED</button></a>
-      </header>
+        </div>
+        <a href="/about">ABOUT US</a>
+        <a href="/faq">FAQS</a>
+        <a href="/contact">CONTACT</a>
+      </nav>
+      <!-- Green buttons -->
+      <a href="/services"> <button class="green">GET STARTED</button></a>
+    </header>
 
     <!-- Services -->
     <section class="services">
-        <h2>Our Healthcare Services</h2>
-        <p class="tip-p">Explore our range of services</p>
+      <h2>Our Healthcare Services</h2>
+      <p class="tip-p">Explore our range of services</p>
 
-        <div class="services-container">
-            <div class="service-card">
-                <div>
-                    <img src="/static/images/servicePage/assets/Services/Image-1.png" alt="Image of two doctors">
-                    <h4>Clinic Search</h4>
-                    <p>Easily find the nearest clinics across Africa by selecting your country, state, and local area.
-                        Our intuitive search tool helps you locate the best healthcare facilities and nearby bus stops
-                        for quick access.</p>
-                </div>
+      <div class="services-container">
+        <div class="service-card">
+          <div>
+            <img
+              src="/static/images/servicePage/assets/Services/Image-1.png"
+              alt="Image of two doctors"
+            />
+            <h4>Clinic Search</h4>
+            <p>
+              Easily find the nearest clinics across Africa by selecting your
+              country, state, and local area. Our intuitive search tool helps
+              you locate the best healthcare facilities and nearby bus stops for
+              quick access.
+            </p>
+          </div>
 
-                <button class="card-btn"><a href="/clinicSearch">SEARCH NOW</a> </button>
-            </div>
-
-            <!-- <div class="service-card">
-                <div>
-                    <img src="/images/servicePage/assets/Services/Image-2.png" alt="Image of a doctor and his patient ">
-                    <h4>See a doctor</h4>
-                    <p>Book appointments effortlessly with your chosen hospital. View real-time availability, read
-                        customer reviews, and schedule your visit.</p>
-                </div>
-
-                <button class="card-btn"><a href="/src/bookAppointment.html">BOOK NOW</a></button>
-
-            </div> -->
-
-            <div class="service-card">
-                <div>
-                    <img src="/static/images/servicePage/assets/Services/Image-3.png" alt="Image of a phone ">
-                    <h4>AI-based Diagnosis</h4>
-                    <p>Input your symptoms and receive a preliminary diagnosis from our AI-driven tool. While not a
-                        substitute for professional advice, it offers insights to guide your next steps and encourages
-                        consulting a doctor for confirmation</p>
-                </div>
-
-                <button class="card-btn" id="btn-3"><a href="/sign-up">GET DIAGNOSIS NOW</a></button>
-            </div>
-            <!-- <div class="service-card">
-                <div>
-                    <img src="/images/servicePage/assets/Services/Image-4.png" alt="Image of two doctors">
-                    <h4>Emergency Guidance</h4>
-                    <p>
-                        In an emergency? Describe your situation, and our AI provides immediate first aid steps
-                        to help you manage the situation until professional help arrives.
-
-                    </p>
-                </div>
-
-                <button class="card-btn"><a href="#">GET STARTED</a> </button>
-            </div> -->
-
-            <!-- <div class="service-card">
-                <div>
-                    <img src="/images/servicePage/assets/Services/Image-5.png" alt="Image of a doctor and his patient ">
-                    <h4>Health Tips</h4>
-                    <p>Stay informed with the latest health and nutrition articles. Explore a curated selection of
-                        research and expert content
-                        to keep you updated on wellness and medical advancements.</p>
-                </div>
-
-                <button class="card-btn"><a href="#">READ NOW</a></button>
-
-            </div> -->
-
-            <!-- <div class="service-card">
-                <div>
-                    <img src="/images/servicePage/assets/Services/Image-6.png" alt="Image of a phone ">
-                    <h4>Mental Health Support</h4>
-                    <p>Access mental health consultations and counseling from certified experts.
-                        Our upcoming feature will offer dedicated support for psychological well-being and personal
-                        growth.</p>
-                </div>
-
-                <button class="card-btn"><a href="#">EXPLORE NOW</a></button>
-            </div> -->
+          <button class="card-btn">
+            <a href="/clinicSearch">SEARCH NOW</a>
+          </button>
         </div>
 
+        <div class="service-card">
+          <div>
+            <img
+              src="/images/servicePage/assets/Services/Image-2.png"
+              alt="Image of a doctor and his patient "
+            />
+            <h4>See a doctor</h4>
+            <p>
+              Book appointments effortlessly with your chosen hospital. View
+              real-time availability, read customer reviews, and schedule your
+              visit.
+            </p>
+          </div>
 
+          <button class="card-btn">
+            <a href="/bookAppointment">BOOK NOW</a>
+          </button>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <img
+              src="/static/images/servicePage/assets/Services/Image-3.png"
+              alt="Image of a phone "
+            />
+            <h4>AI-based Diagnosis</h4>
+            <p>
+              Input your symptoms and receive a preliminary diagnosis from our
+              AI-driven tool. While not a substitute for professional advice, it
+              offers insights to guide your next steps and encourages consulting
+              a doctor for confirmation
+            </p>
+          </div>
+
+          <button class="card-btn" id="btn-3">
+            <a href="/sign-up">GET DIAGNOSIS NOW</a>
+          </button>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <img
+              src="/images/servicePage/assets/Services/Image-4.png"
+              alt="Image of two doctors"
+            />
+            <h4>Emergency Guidance</h4>
+            <p>
+              In an emergency? Describe your situation, and our AI provides
+              immediate first aid steps to help you manage the situation until
+              professional help arrives.
+            </p>
+          </div>
+
+          <button class="card-btn"><a href="#">GET STARTED</a></button>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <img
+              src="/images/servicePage/assets/Services/Image-5.png"
+              alt="Image of a doctor and his patient "
+            />
+            <h4>Health Tips</h4>
+            <p>
+              Stay informed with the latest health and nutrition articles.
+              Explore a curated selection of research and expert content to keep
+              you updated on wellness and medical advancements.
+            </p>
+          </div>
+
+          <button class="card-btn"><a href="#">READ NOW</a></button>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <img
+              src="/images/servicePage/assets/Services/Image-6.png"
+              alt="Image of a phone "
+            />
+            <h4>Mental Health Support</h4>
+            <p>
+              Access mental health consultations and counseling from certified
+              experts. Our upcoming feature will offer dedicated support for
+              psychological well-being and personal growth.
+            </p>
+          </div>
+
+          <button class="card-btn"><a href="#">EXPLORE NOW</a></button>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonial -->
     <section id="testimonial">
-        <div class="testimonial-container">
-            <div class="first-layer">
-                <p>
-                    What Our Customers Say About Us.
-                </p>
-            </div>
-            <div class="second-layer">
-                <div class="text">
-                    <p>
-                        Medlorix made finding and booking my hospital appointment so easy. I love the real-time
-                        availability and customer reviews that helped me choose the right clinic. Highly recommend!
-                    </p>
-                </div>
-                <div class="review">
-                    <div class="review-img">
-                        <img src="/static/images/servicePage/assets/Services/Avatar.png" alt="">
-                    </div>
-                    <div class="review-star">
-                        <h3>Mogaji Bolanle</h3>
-                        <img src="/static/images/servicePage/assets/Icons/review-star.png" alt="">
-                        <p>20 March, 2024</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-arrow">
-                <img src="/static/images/servicePage/assets/Icons/review-arrow.png" alt="">
-            </div>
+      <div class="testimonial-container">
+        <div class="first-layer">
+          <p>What Our Customers Say About Us.</p>
         </div>
-
+        <div class="second-layer">
+          <div class="text">
+            <p>
+              Medlorix made finding and booking my hospital appointment so easy.
+              I love the real-time availability and customer reviews that helped
+              me choose the right clinic. Highly recommend!
+            </p>
+          </div>
+          <div class="review">
+            <div class="review-img">
+              <img
+                src="/static/images/servicePage/assets/Services/Avatar.png"
+                alt=""
+              />
+            </div>
+            <div class="review-star">
+              <h3>Mogaji Bolanle</h3>
+              <img
+                src="/static/images/servicePage/assets/Icons/review-star.png"
+                alt=""
+              />
+              <p>20 March, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-arrow">
+          <img
+            src="/static/images/servicePage/assets/Icons/review-arrow.png"
+            alt=""
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Tips -->
     <section class="tips">
-        <h2>Health & Wellness Tips</h2>
-        <p class="tip-p">Stay informed with evidence-based health contents that boosts your living experiences</p>
+      <h2>Health & Wellness Tips</h2>
+      <p class="tip-p">
+        Stay informed with evidence-based health contents that boosts your
+        living experiences
+      </p>
 
-        <div class="section-grid">
-            <div class="tip-card">
-                <img src="/static/images/servicePage/assets/Tips/ment1.png" alt="">
-                <div>
-                    <h5>Mental Health</h5>
-                    <h4>Managing and Reducing Stress </h4>
+      <div class="section-grid">
+        <div class="tip-card">
+          <img src="/static/images/servicePage/assets/Tips/ment1.png" alt="" />
+          <div>
+            <h5>Mental Health</h5>
+            <h4>Managing and Reducing Stress</h4>
 
-                    <p>
-                        A feeling of constant abnormal pressure, stress can originate from different aspects of
-                        day-to-day life. It can result in a variety of physical symptoms, including changes in behavior
-                        and experiencing strong emotions.
-                    </p>
-                    <a href="https://www.news-medical.net/health/Managing-and-Reducing-Stress.aspx" target="_blank">READ MORE <img
-                            src="/static/images/servicePage/assets/Icons/diagonal-upward-arrow.png" alt=""></a>
-                </div>
-            </div>
-            <div class="tip-card">
-                <img src="/static/images/servicePage/assets/Tips/ment2.png" alt="">
-                <div>
-                    <h5>Wellness Tips</h5>
-                    <h4>Managing and Reducing Stress </h4>
-
-                    <p>
-                      Wellness is the dynamic process of working toward achieving your maximum potential in each dimension of wellness. 
-                    </p>
-                    <a href="https://www.geneseo.edu/cas/101-wellness-tips" target="_blank">READ MORE <img
-                            src="/static/images/servicePage/assets/Icons/diagonal-upward-arrow.png" alt=""></a>
-                </div>
-
-            </div>
+            <p>
+              A feeling of constant abnormal pressure, stress can originate from
+              different aspects of day-to-day life. It can result in a variety
+              of physical symptoms, including changes in behavior and
+              experiencing strong emotions.
+            </p>
+            <a
+              href="https://www.news-medical.net/health/Managing-and-Reducing-Stress.aspx"
+              target="_blank"
+              >READ MORE
+              <img
+                src="/static/images/servicePage/assets/Icons/diagonal-upward-arrow.png"
+                alt=""
+            /></a>
+          </div>
         </div>
+        <div class="tip-card">
+          <img src="/static/images/servicePage/assets/Tips/ment2.png" alt="" />
+          <div>
+            <h5>Wellness Tips</h5>
+            <h4>Managing and Reducing Stress</h4>
 
-        <button><a href="https://www.medicinenet.com/healthy_living/article.htm" target="_blank">READ MORE HEALTH TIPS</a> </button>
+            <p>
+              Wellness is the dynamic process of working toward achieving your
+              maximum potential in each dimension of wellness.
+            </p>
+            <a
+              href="https://www.geneseo.edu/cas/101-wellness-tips"
+              target="_blank"
+              >READ MORE
+              <img
+                src="/static/images/servicePage/assets/Icons/diagonal-upward-arrow.png"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <button>
+        <a
+          href="https://www.medicinenet.com/healthy_living/article.htm"
+          target="_blank"
+          >READ MORE HEALTH TIPS</a
+        >
+      </button>
     </section>
-
-
 
     <!-- Subscribe Section -->
     <div id="subscribe">
       <div class="top-layer">
-          <h2>Stay up to date on healthy living</h2>
-          <p>
-              Be the first to receive expert insights, practical advice, and
-              exclusive content directly to your inbox.
-          </p>
+        <h2>Stay up to date on healthy living</h2>
+        <p>
+          Be the first to receive expert insights, practical advice, and
+          exclusive content directly to your inbox.
+        </p>
       </div>
       <div class="bottom-layer">
-          <input type="email" id="emailInput" placeholder="Enter your email" />
-          <button id="subscribeButton">SUBSCRIBE</button>
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="subscribeButton">SUBSCRIBE</button>
       </div>
       <p id="alertMessage"></p>
     </div>
 
     <!-- Footer -->
     <footer>
-    <div class="footer">
-
-      <div class="main-footer">
-        <div class="logo-about">
-          <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Brand Logo"></a>
-          <p>
-            simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
-            easy-to-use platform.
-          </p>
-          <div class="social-media">
-            <a href=""><img src="/static/images/Icons/google.png" alt="Google"></a>
-            <a href=""><img src="/static/images/Icons/facebook.png" alt="Facebook"></a>
-            <a href=""><img src="/static/images/Icons/twitter.png" alt="Twitter"></a>
-            <a href=""><img src="/static/images/Icons/instagram.png" alt="Instagram"></a>
+      <div class="footer">
+        <div class="main-footer">
+          <div class="logo-about">
+            <a href="/"
+              ><img
+                class="brand-logo"
+                src="/static/images/Medlorix-logo.svg"
+                alt="Brand Logo"
+            /></a>
+            <p>
+              simplifies healthcare by helping users find clinics, book
+              appointments, and AI diagnosis. <br />All in one easy-to-use
+              platform.
+            </p>
+            <div class="social-media">
+              <a href=""
+                ><img src="/static/images/Icons/google.png" alt="Google"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/facebook.png" alt="Facebook"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/twitter.png" alt="Twitter"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/instagram.png" alt="Instagram"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="firstlayer">
+          <div class="company">
+            <p><span>Company</span></p>
+            <a href="/about">About us</a>
+            <a href="/about">Our mission</a>
+            <a href="/about">Our Team</a>
+          </div>
+          <div class="company">
+            <p><span>Our Services</span></p>
+            <a href="/clinicSearch">Clinic Search</a>
+            <a href="/sign-up">AI-Based Diagnosis</a>
+            <a href="/contact">Contact Us</a>
+          </div>
+          <div class="company">
+            <p><span>Legal</span></p>
+            <a href="/terms">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/terms">Security</a>
           </div>
         </div>
       </div>
-      <div class="firstlayer">
-        <div class="company">
-          <p><span>Company</span></p>
-          <a href="/about">About us</a>
-          <a href="/about">Our mission</a>
-          <a href="/about">Our Team</a>
-        </div>
-        <div class="company">
-          <p><span>Our Services</span></p>
-          <a href="/clinicSearch">Clinic Search</a>
-          <a href="/sign-up">AI-Based Diagnosis</a>
-          <a href="/contact">Contact Us</a>
-        </div>
-        <div class="company">
-          <p><span>Legal</span></p>
-          <a href="/terms">Privacy</a>
-          <a href="/terms">Terms</a>
-          <a href="/terms">Security</a>
+      <!-- Back to top arrow -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="/static/images/Icons/up-arrow.svg" />
+      </button>
+      <div class="lastlayer">
+        <p class="copyright">
+          Copyright &copy; 2024. Medlorix. All rights reserved
+        </p>
+        <div>
+          <a href="/terms"><p>Terms and Conditions</p></a>
+          <a href="/terms"><p>Privacy Policy</p></a>
         </div>
       </div>
-    </div>
-    <!-- Back to top arrow -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
-      <img src="/static/images/Icons/up-arrow.svg" />
-    </button>
-    <div class="lastlayer">
-      <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
-      <div>
-        <a href="/terms"><p>Terms and Conditions </p></a>
-        <a href="/terms"><p>Privacy Policy</p></a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
