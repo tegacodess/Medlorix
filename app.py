@@ -130,7 +130,7 @@ def services():
 def about():
     return render_template('about.html')
 
-@app.route('/careers')
+@app.route('/career')
 def careers():
     return render_template('career.html')
 
