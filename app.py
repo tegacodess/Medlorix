@@ -132,7 +132,7 @@ def about():
 
 @app.route('/careers')
 def careers():
-    return render_template('careers.html')
+    return render_template('career.html')
 
 @app.route('/login')
 def login():
