@@ -2,9 +2,9 @@ blinker==1.8.2
 certifi==2024.8.30
 charset-normalizer==3.3.2
 click==8.1.7
-python-dotenv==1.0.1
 Flask==3.0.3
 Flask-Cors==5.0.0
+Flask-WTF==1.2.1
 gunicorn==23.0.0
 idna==3.8
 itsdangerous==2.2.0
@@ -22,3 +22,4 @@ requests==2.32.3
 uritemplate==4.1.1
 urllib3==2.2.2
 Werkzeug==3.0.4
+WTForms==3.1.2

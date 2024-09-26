@@ -1,9 +1,24 @@
 from flask import Flask, render_template, request, jsonify
 import requests
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from dotenv import load_dotenv
+from datetime import datetime
+from models import Appointment
 import os
 
 load_dotenv()
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Appointments.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+db.init_app(app)
+
+
+from models import Appointment
 
 
 app = Flask(__name__, static_folder='static')
@@ -73,9 +88,38 @@ def place_details():
     
     return jsonify({'error': 'Place details fetch failed'}), 400
 
-@app.route('/book-appointment', methods=['GET', 'POST'])
+@app.route('/bookAppointment', methods=['GET', 'POST'])
 def book_appointment():
-    pass
+    return render_template('bookAppointment.html')
+
+@app.route('/book-appointment', methods=['GET', 'POST'])
+def booking_api():
+    if request.method == 'POST':
+        new_booking = Appointment(
+            doctor=request.form['doctor'],
+            specialty=request.form['specialty'],
+            first_name=request.form['firstName'],
+            last_name=request.form['lastName'],
+            address=request.form['address'],
+            country=request.form['country'],
+            state=request.form['state'],
+            lg=request.form['local-government'],
+            phone_number=request.form['phone-number'],
+            email=request.form['email'],
+            existing_patient=request.form['existing_patient'] == 'yes',
+            appointment_date=datetime.strptime(request.form['appointment_date'], '%Y-%m-%d').date(),
+            reason=request.form['reason']
+        )
+        try:
+            db.session.add(new_booking)
+            db.session.commit()
+            return jsonify({"message": "Appointment booked successfully!"}), 200
+        except Exception as e:
+            db.session.rollback()
+            app.logger.error(f"Error booking appointment: {e}")
+            return jsonify({"error": "An error occurred while booking the appointment."}), 500
+    
+    return render_template('booking.html')
 
 @app.route('/appointment-confirmation')
 def appointment_confirmation():
@@ -88,6 +132,10 @@ def services():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/careers')
+def careers():
+    return render_template('careers.html')
 
 @app.route('/login')
 def login():
@@ -138,5 +186,16 @@ def get_cities(country_code, state_code):
     response = requests.get(url, headers=headers)
     return jsonify(response.json())
 
+def init_db():
+    db_path = 'appointments.db'
+    if os.path.exists(db_path):
+        os.remove(db_path)
+    with app.app_context():
+        db.create_all()
+        print("Database initialized.")
+        
+
+
 if __name__ == '__main__':
+    init_db()
     app.run(debug=True)
