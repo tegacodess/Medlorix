@@ -10,7 +10,7 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Appointments.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///Appointments.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -189,9 +189,8 @@ def init_db():
     db_path = 'appointments.db'
     if os.path.exists(db_path):
         os.remove(db_path)
-    with app.app_context():
-        db.create_all()
-        print("Database initialized.")
+    db.create_all()
+    print("Database initialized.")
         
 
 
