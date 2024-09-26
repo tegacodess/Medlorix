@@ -15,7 +15,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-db.init_app(app)
 
 
 from models import Appointment
@@ -119,7 +118,7 @@ def booking_api():
             app.logger.error(f"Error booking appointment: {e}")
             return jsonify({"error": "An error occurred while booking the appointment."}), 500
     
-    return render_template('booking.html')
+    return render_template('bookAppointment.html')
 
 @app.route('/appointment-confirmation')
 def appointment_confirmation():
