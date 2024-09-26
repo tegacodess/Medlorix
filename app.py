@@ -2,25 +2,23 @@ from flask import Flask, render_template, request, jsonify
 import requests
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+
+from models import db, Appointment
 from dotenv import load_dotenv
 from datetime import datetime
-from models import Appointment
 import os
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///Appointments.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db = SQLAlchemy(app)
+db.init_app(app)
 migrate = Migrate(app, db)
 
 
-from models import Appointment
-
-
-app = Flask(__name__, static_folder='static')
+from models import db, Appointment
 
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
@@ -186,7 +184,7 @@ def get_cities(country_code, state_code):
     return jsonify(response.json())
 
 def init_db():
-    db_path = 'appointments.db'
+    db_path = 'Appointments.db'
     if os.path.exists(db_path):
         os.remove(db_path)
     db.create_all()
