@@ -247,7 +247,7 @@ nav a {
   color: #3325b2;
   cursor: pointer;
 }
-/* styling for searching hospitals */
+/* styling for searching hospitals and displaying searched hospital results */
 .results {
   display: flex;
   flex-direction: row;
@@ -266,7 +266,8 @@ nav a {
 }
 .searched-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
   column-gap: 20px;
 }
