@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/css/adminAppointment.css" />
+    <!-- JavaScript -->
+    <script src="/static/js/index.js" defer></script>
+    
+    <title>Medlorix │ Admin Dashboard Appointment</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/"
+        ><img
+          class="brand-logo"
+          src="/static/images/Medlorix-logo.svg"
+          alt="Medlorix logo"
+      /></a>
+      <div class="search">
+        <input type="search" placeholder="Search" class="custom-dropdown">
+      </div>
+      <div class="admin">
+        <div class="admin-box">
+          <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+          <div class="profile-name">
+            <h3>Mogaji Bolaji</h3>
+            <p>Admin</p>
+          </div>
+        </div>
+        <div class="notifications">
+          <img src="/static/images/AdminPage/NotificationVector.png" alt="" class="img-tools">
+        </div>
+        <div class="settings">
+          <img src="/static/images/AdminPage/SettingsVector.png" alt="" class="img-tools">
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+      <a href="" class="p-appointment">
+        <img src="/static/images/AdminPage/teenyicons_appointments-solid.png" alt="">
+        <p >Appointments</p>
+      </a>
+      <a href="">
+        <img src="/static/images/AdminPage/material-symbols_add-task.png" alt="">
+        <p>Requests</p>
+      </a>
+      <a href="">
+        <img src="/static/images/AdminPage/fontisto_doctor.png" alt="">
+        <p>Doctors</p>
+      </a>
+      <a href="">
+        <img src="/static/images/AdminPage/mdi_users.png" alt="">
+        <p>Patients</p>
+      </a>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div id="appointment-requests">
+        <div class="top-div">
+          <h1>Appointment Requests</h1>
+          <p>See All</p>
+        </div>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>USERNAME</th>
+                <th>ID</th>
+                <th>PHONE NUMBER</th>
+                <th>REQUEST DETAIL</th>
+                <th>ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="parent-div">
+                    <div class="child-div1">
+                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+                    </div>
+                    <div class="child-div2">
+                      <h3>Bola Taiwo</h3>
+                      <p>Stroke</p>
+                    </div>
+                  </div>
+                </td>
+                <td>12345678</td>
+                <td>812-4297-144</td>
+                <td>01/10/2024  - 5PM</td>
+                <td><p class="approved">Approved</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="parent-div">
+                    <div class="child-div1">
+                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+                    </div>
+                    <div class="child-div2">
+                      <h3>Jide Babs</h3>
+                      <p>Stroke</p>
+                    </div>
+                  </div>
+                </td>
+                <td>12345678</td>
+                <td>812-4297-144</td>
+                <td>01/10/2024  - 5PM</td>
+                <td><p class="approved">Approved</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="parent-div">
+                    <div class="child-div1">
+                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+                    </div>
+                    <div class="child-div2">
+                      <h3>Bola Johnson</h3>
+                      <p>Stroke</p>
+                    </div>
+                  </div>
+                </td>
+                <td>12345678</td>
+                <td>812-4297-144</td>
+                <td>01/10/2024  - 5PM</td>
+                <td><p class="approved">Approved</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="recent-patients">
+        <div class="top-div">
+          <h1>Recent Patients</h1>
+          <p>See All</p>
+        </div>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>USERNAME</th>
+                <th>ID</th>
+                <th>PHONE NUMBER</th>
+                <th>DIAGNOSIS</th>
+                <th>DATE</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="parent-div">
+                    <div class="child-div1">
+                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+                    </div>
+                    <div class="child-div2">
+                      <h3>Jide Babs</h3>
+                    </div>
+                  </div>
+                </td>
+                <td>12345678</td>
+                <td>812-4297-144</td>
+                <td>Diabetes</td>
+                <td>01/10/2024</td>
+                <td>Outpatient</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="parent-div">
+                    <div class="child-div1">
+                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+                    </div>
+                    <div class="child-div2">
+                      <h3>Bola Taiwo</h3>
+                    </div>
+                  </div>
+                </td>
+                <td>12345678</td>
+                <td>812-4297-144</td>
+                <td>Diabetes</td>
+                <td>01/10/2024</td>
+                <td>Outpatient</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="parent-div">
+                    <div class="child-div1">
+                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+                    </div>
+                    <div class="child-div2">
+                      <h3>Bola Johnson</h3>
+                    </div>
+                  </div>
+                </td>
+                <td>12345678</td>
+                <td>812-4297-144</td>
+                <td>Diabetes</td>
+                <td>01/10/2024</td>
+                <td>Outpatient</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+      <div class="lastlayer">
+        <p class="copyright">
+          Copyright &copy; 2024. Medlorix. All rights reserved
+        </p>
+        <div>
+          <a href="/terms"><p>Terms and Conditions</p></a>
+          <a href="/terms"><p>Privacy Policy</p></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
