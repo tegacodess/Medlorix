@@ -13,26 +13,26 @@
     <script src="/static/js/index.js" defer></script>
     <script src="/static/js/bookAppointment.js" defer></script>
     <script src="/static/js/subcribe.js" defer></script>
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-      (function(){
-          emailjs.init("WesP-F72yRnUJFma5");
+      (function () {
+        emailjs.init("WesP-F72yRnUJFma5");
       })();
     </script>
   </head>
 
   <body>
     <header>
-
       <a href="/"
         ><img
           class="brand-logo"
           src="/static/images/Medlorix-logo.svg"
           alt="Medlorix logo"
       /></a>
-      
+
       <!-- Hamburger Icon -->
       <div class="hamburger-menu">
         <div class="bar"></div>
@@ -107,7 +107,8 @@
 
     <!-- Hospital details -->
     <section class="details">
-      <div class="hospital-details">
+      <p class="steps">Step 1 of 2</p>
+      <!-- <div class="hospital-details">
         <div class="column">
           <p id="hospital-name">Gbobi Hospital</p>
           <p></p>
@@ -163,7 +164,7 @@
           <p id="directions">Directions</p>
         </div>
         <div><button class="edit">Edit</button></div>
-      </div>
+      </div> -->
     </section>
     <!-- Appointment details -->
 
@@ -364,7 +365,9 @@
             <div class="form-group"></div>
 
             <div id="reason-for-diagnosis" class="form-group">
-              <label for="reason">Reason for Visit or Diagnosis</label>
+              <label for="reason"
+                >Tell us about your symptoms to help the doctor prepare</label
+              >
               <textarea id="reason" name="reason" rows="4"></textarea>
             </div>
 
@@ -374,7 +377,9 @@
         <div class="action-buttons">
           <div class="form-button">
             <p id="cancel">CANCEL</p>
-            <p id="book-appointment">BOOK APPOINTMENT</p>
+            <p id="book-appointment">
+              <a href="./bookAppointment2.html"></a>PROCEED
+            </p>
           </div>
         </div>
       </form>
@@ -395,9 +400,7 @@
             providing the highest quality of care and changing how healthcare is
             delivered.
           </p>
-          <a href="/doctorApplication" class="button"
-            >Become Our Partner</a
-          >
+          <a href="/doctorApplication" class="button">Become Our Partner</a>
         </div>
       </div>
       <div class="shadow_color"></div>
@@ -406,15 +409,15 @@
     <!-- Subscribe Section -->
     <div id="subscribe">
       <div class="top-layer">
-          <h2>Stay up to date on healthy living</h2>
-          <p>
-              Be the first to receive expert insights, practical advice, and
-              exclusive content directly to your inbox.
-          </p>
+        <h2>Stay up to date on healthy living</h2>
+        <p>
+          Be the first to receive expert insights, practical advice, and
+          exclusive content directly to your inbox.
+        </p>
       </div>
       <div class="bottom-layer">
-          <input type="email" id="emailInput" placeholder="Enter your email" />
-          <button id="subscribeButton">SUBSCRIBE</button>
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="subscribeButton">SUBSCRIBE</button>
       </div>
       <p id="alertMessage"></p>
     </div>
@@ -424,16 +427,30 @@
       <div class="footer">
         <div class="main-footer">
           <div class="logo-about">
-            <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+            <a href="/"
+              ><img
+                class="brand-logo"
+                src="/static/images/Medlorix-logo.svg"
+                alt="Brand Logo"
+            /></a>
             <p>
-              simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
-              easy-to-use platform.
+              simplifies healthcare by helping users find clinics, book
+              appointments, and AI diagnosis. <br />All in one easy-to-use
+              platform.
             </p>
             <div class="social-media">
-              <a href=""><img src="/static/images/Icons/google.png" alt="Google"></a>
-              <a href=""><img src="/static/images/Icons/facebook.png" alt="Facebook"></a>
-              <a href=""><img src="/static/images/Icons/twitter.png" alt="Twitter"></a>
-              <a href=""><img src="/static/images/Icons/instagram.png" alt="Instagram"></a>
+              <a href=""
+                ><img src="/static/images/Icons/google.png" alt="Google"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/facebook.png" alt="Facebook"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/twitter.png" alt="Twitter"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/instagram.png" alt="Instagram"
+              /></a>
             </div>
           </div>
         </div>
@@ -467,7 +484,7 @@
           Copyright &copy; 2024. Medlorix. All rights reserved
         </p>
         <div>
-          <a href="/terms"><p>Terms and Conditions </p></a>
+          <a href="/terms"><p>Terms and Conditions</p></a>
           <a href="/terms"><p>Privacy Policy</p></a>
         </div>
       </div>
