@@ -170,7 +170,8 @@
 
     <section class="appointment-form">
       <p id="first-heading">You would like to make an appointment with:</p>
-      <form action="#" method="post">
+
+      <form id="appointmentForm" action="javascript:void(0);" method="post">
         <!-- Doctor and Specialty Section -->
         <div class="doc-and-specialty">
           <div class="form-row" id="doctor-info">
@@ -215,6 +216,7 @@
                 id="first-name"
                 name="first_name"
                 placeholder="John"
+                required
               />
             </div>
             <div class="form-group" id="lastName">
@@ -224,6 +226,7 @@
                 id="last-name"
                 name="last_name"
                 placeholder="Doe"
+                required
               />
             </div>
           </div>
@@ -238,6 +241,7 @@
                 id="address"
                 name="address"
                 placeholder="12, Mogaji Baboko street"
+                required
               />
             </div>
             <div class="form-group" id="user-country">
@@ -303,6 +307,7 @@
                 id="phone-number"
                 name="phone_number"
                 placeholder="08000000000"
+                required
               />
             </div>
             <div class="form-group" id="user-email">
@@ -312,6 +317,7 @@
                 id="email"
                 name="email"
                 placeholder="emailaddress@email.com"
+                required
               />
             </div>
           </div>
@@ -377,9 +383,7 @@
         <div class="action-buttons">
           <div class="form-button">
             <p id="cancel">CANCEL</p>
-            <p id="book-appointment">
-              <a href="./bookAppointment2.html"></a>PROCEED
-            </p>
+            <button type="submit" id="book-appointment">PROCEED</button>
           </div>
         </div>
       </form>
@@ -489,5 +493,19 @@
         </div>
       </div>
     </footer>
+    <!-- Include Axios for making HTTP requests -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Link to your JavaScript file -->
+    <!-- <script type="module" src="/static/js/hospitalSearch.js"></script> -->
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/bookAppointment.js') }}"
+    ></script>
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/hospitalSearch.js') }}"
+      defer
+    ></script>
   </body>
 </html>
