@@ -135,9 +135,29 @@ def appointment_confirmation():
 def services():
     return render_template('services.html')
 
+@app.route('/doctor-login')
+def doctor_login():
+    return render_template('doctorApplication.html')
+
 @app.route('/admin-sign-in')
 def admin_signin():
-    return render_template('adminsignIn.html')
+    return render_template('adminSignIn.html')
+
+@app.route('/admin-appointment')
+def adminAppointment():
+    return render_template('adminAppointment.html')
+
+@app.route('/admin-doctors')
+def adminDoctors():
+    return render_template('adminDoctors.html')
+
+@app.route('/admin-Requests')
+def adminRequests():
+    return render_template('adminRequests.html')
+
+@app.route('/admin-patients')
+def adminPatients():
+    return render_template('adminPatients.html')
 
 @app.route('/about')
 def about():
