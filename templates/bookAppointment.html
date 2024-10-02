@@ -493,5 +493,19 @@
         </div>
       </div>
     </footer>
+    <!-- Include Axios for making HTTP requests -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Link to your JavaScript file -->
+    <!-- <script type="module" src="/static/js/hospitalSearch.js"></script> -->
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/bookAppointment.js') }}"
+    ></script>
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/hospitalSearch.js') }}"
+      defer
+    ></script>
   </body>
 </html>
