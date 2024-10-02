@@ -420,3 +420,66 @@ a {
     }
 }
 
+/* Bouncing dots styling */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Input field styling */
+input {
+  flex-grow: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 30px;
+  font-size: 16px;
+  /* width: calc(100% - 60px);  */
+  box-sizing: border-box;
+}
+
+.box-icon{
+  width:30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+/* Bouncing dots container */
+.dots {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 30px;
+}
+
+.dots span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+.dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
