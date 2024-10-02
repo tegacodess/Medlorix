@@ -85,42 +85,51 @@ def place_details():
     
     return jsonify({'error': 'Place details fetch failed'}), 400
 
-@app.route('/bookAppointment', methods=['GET', 'POST'])
-def book_appointment():
+@app.route('/bookAppointment', methods=['GET'])
+def book_appointment_page():
     return render_template('bookAppointment.html')
 
-@app.route('/book-appointment', methods=['GET', 'POST'])
-def booking_api():
-    if request.method == 'POST':
-        new_booking = Appointment(
-            doctor=request.form['doctor'],
-            specialty=request.form['specialty'],
-            first_name=request.form['firstName'],
-            last_name=request.form['lastName'],
-            address=request.form['address'],
-            country=request.form['country'],
-            state=request.form['state'],
-            lg=request.form['local-government'],
-            phone_number=request.form['phone-number'],
-            email=request.form['email'],
-            existing_patient=request.form['existing_patient'] == 'yes',
-            appointment_date=datetime.strptime(request.form['appointment_date'], '%Y-%m-%d').date(),
-            reason=request.form['reason']
-        )
+@app.route('/book-appointment', methods=['POST'])
+def submit_appointment():
+    if request.is_json:
+        # Handle JSON data from Step 2
+        data = request.json
         try:
+            new_booking = Appointment(
+                doctor=data.get('doctor'),
+                specialty=data.get('specialty'),
+                first_name=data.get('first_name'),
+                last_name=data.get('last_name'),
+                address=data.get('address'),
+                country=data.get('country'),
+                state=data.get('state'),
+                lg=data.get('local-government'),
+                phone_number=data.get('phone-number'),
+                email=data.get('email'),
+                existing_patient=data.get('existing_patient') == 'yes',
+                appointment_date=datetime.strptime(data.get('appointment_date'), '%Y-%m-%d').date(),
+                reason=data.get('reason')
+            )
             db.session.add(new_booking)
             db.session.commit()
-            return jsonify({"message": "Appointment booked successfully!"}), 200
+            return jsonify({"success": True, "message": "Appointment booked successfully"}), 200
         except Exception as e:
             db.session.rollback()
             app.logger.error(f"Error booking appointment: {e}")
-            return jsonify({"error": "An error occurred while booking the appointment."}), 500
-    
-    return render_template('bookAppointment.html')
+            return jsonify({"success": False, "error": str(e)}), 400
+    else:
+        # Handle form data submission (if needed)
+        app.logger.error("Non-JSON request received")
+        return jsonify({"success": False, "error": "Invalid request format"}), 400
+
+
+@app.route('/bookAppointment2')
+def book_appointment2():
+    return render_template('bookAppointment2.html')
 
 @app.route('/appointment-confirmation')
 def appointment_confirmation():
-    return render_template('appointment_confirmation.html')
+    return render_template('bookAppointmentConfirmation.html')
 
 @app.route('/services')
 def services():
