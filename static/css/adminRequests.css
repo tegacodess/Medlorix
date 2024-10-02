@@ -183,21 +183,28 @@ td{
   color: #433E3F;
   font-weight: 700
 }
-.btn{
-    width: 128px;
-    margin-inline: 36rem;
-    background-color: #3325B2;
-    color: #FAFAFA;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 30px;
-}
-
-.dot img{
-    margin-left: 2rem;
-}
-
+.button-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .button-div button{
+  font-size: 14px;
+  font-weight: 600;
+  color:#FAFAFA;
+  background-color: #3325B2;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+ }
+ .button-div button:hover{
+  color: #3325B2;
+  background-color: #FAFAFA;
+  border: 1px solid #3325B2;
+  cursor: pointer;
+ }
 /* Footer styling */
 .footer {
   display: flex;
@@ -254,15 +261,105 @@ td{
 }
 /* Medium devices (tablet, less than 992px)*/
 @media (max-width: 992px) {
-  /* Nav */
   header {
     padding: 0px 50px;
   }
-  .green {
-    width: 170px;
-    height: 50px;
-    padding: 15px 15px;
-  }
+
+.custom-dropdown {
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 10px;
+  max-width: 200px;
+  font-size: 14px;
+  background-position: left 10px center;
+  background-size: 20px;
+}
+.admin{
+  gap: 20px;
+
+}
+.profile-pic{
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+.admin-box{
+  gap: 10px;
+}
+.admin-box h3{
+  font-size: 18px;
+}
+.admin-box p{
+  font-size: 16px;
+  ;
+}
+.img-tools{
+  height: 30px;
+  width: 30px;
+}
+
+/* Navigations Styling */
+nav{
+  padding: 50px 50px;
+}
+nav a{
+  gap: 10px;
+}
+nav a img{
+  width: 30px;
+  height: 30px;
+}
+nav a p{
+  font-size: 20px;
+  font-weight: 600;
+}
+.p-appointment{
+  padding: 10px 20px;
+}
+/* Hero Styling */
+#hero{
+  padding: 0px 50px;
+}
+#appointment-requests, #recent-patients{
+  padding: 30px;
+  border-radius: 10px;
+}
+.top-div h3{
+  font-size: 25px;
+}
+.top-div p{
+  font-size: 18px;
+}
+#recent-patients{
+  margin-block: 40px;
+}
+#appointment-requests td,#appointment-requests th{
+  /* border: 1px solid #ddd; */
+  height: 50px;
+  width: 25%;
+}
+#recent-patients td,#recent-patients th{
+  /* border: 1px solid #ddd; */
+  height: 50px;
+  width: 20%;
+}
+th{
+  font-size: 18px;
+}
+td{
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+.approved{
+  font-size: 15px;
+}
+.parent-div{
+  gap: 10px;
+}
+.child-div2{
+  gap: 5px;
+}
+
 }
 /* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 768px) {
@@ -270,10 +367,92 @@ td{
   header {
     padding: 0px 30px;
   }
-  .green {
-    width: 150px;
-    height: 40px;
+  .custom-dropdown {
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 10px;
+    max-width: 150px;
+    font-size: 13px;
+    background-position: left 10px center;
+    background-size: 20px;
+  }
+  .admin{
+    gap: 15px;
+  
+  }
+  .profile-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+  }
+  .admin-box{
+    gap: 10px;
+  }
+  .admin-box h3{
+    font-size: 16px;
+  }
+  .admin-box p{
+    font-size: 14px;
+    ;
+  }
+  .img-tools{
+    height: 30px;
+    width: 30px;
+  }
+  
+  /* Navigations Styling */
+  nav{
+    padding: 50px 30px;
+  }
+  nav a{
+    gap: 10px;
+  }
+  nav a img{
+    width: 20px;
+    height: 20px;
+  }
+  nav a p{
+    font-size: 17px;
+  }
+  .p-appointment{
     padding: 10px 10px;
+  }
+  /* Hero Styling */
+  #hero{
+    padding: 0px 30px;
+  }
+  #appointment-requests, #recent-patients{
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .top-div h3{
+    font-size: 20px;
+  }
+  .top-div p{
+    font-size: 15px;
+  }
+  #recent-patients{
+    margin-block: 40px;
+  }
+  #appointment-requests td,#appointment-requests th{
+    /* border: 1px solid #ddd; */
+    height: 50px;
+    width: 25%;
+  }
+  #recent-patients td,#recent-patients th{
+    /* border: 1px solid #ddd; */
+    height: 50px;
+    width: 20%;
+  }
+  th{
+    font-size: 15px;
+  }
+  td{
+    font-size: 11px;
+    padding-bottom: 20px;
+  }
+  .approved{
+    font-size: 12px;
   }
 
   /* Footer */
@@ -295,52 +474,79 @@ td{
 @media (max-width: 576px) {
   /* Navigation */
   header {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-  }
-  .head {
-    margin-left: -20px;
-  }
-
-  .hamburger-menu {
-    display: block;
-    margin: 20px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-    transition: top 0.3s;
-  }
-
-  .navigation {
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: -100%; /* Hide off-screen initially */
-    width: 100%;
-    background-color: #efedff;
+    padding: 10px 10px;
+    flex-direction: column;
     gap: 10px;
-    transition: left 0.4s;
+    height: 160px;
+  }
+  .custom-dropdown {
+    padding: 10px;
+    max-width: 200px;
+    padding-left: 40px;
+    font-size: 13px;
+  }
+  .profile-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+  }
+  
+  /* Navigations Styling */
+  nav{
+    padding: 50px 30px;
     flex-direction: column;
-    padding: 30px;
-    /* z-index: 9; */
-  }
 
-  nav a {
-    color: #3325b2;
   }
-
-  .navigation.show {
-    display: flex;
-    flex-direction: column;
-    left: 0;
+  nav a{
+    gap: 10px;
+    padding-bottom: 10px;
   }
-  .green {
-    display: none;
+  .p-appointment{
+    padding: 10px 10px;
   }
-
+  /* Hero Styling */
+  #hero{
+    padding: 0px 0px;
+  }
+  #appointment-requests, #recent-patients{
+    padding: 15px;
+  }
+  .top-div h3{
+    font-size: 18px;
+  }
+  .top-div p{
+    font-size: 13px;
+  }
+  #recent-patients{
+    margin-block: 40px;
+  }
+  #appointment-requests td,#appointment-requests th{
+    /* border: 1px solid #ddd; */
+    height: 50px;
+    width: 25%;
+  }
+  #recent-patients td,#recent-patients th{
+    /* border: 1px solid #ddd; */
+    height: 50px;
+    width: 20%;
+  }
+  th{
+    font-size: 12px;
+  }
+  td{
+    font-size: 10px;
+    padding-bottom: 20px;
+  }
+  .approved{
+    font-size: 12px;
+  }
+  .parent-div{
+    gap: 10px;
+  }
+  .child-div2{
+    gap: 5px;
+  }
+  
   /* Footer */
   .footer {
     flex-direction: column;
@@ -366,5 +572,33 @@ td{
     text-decoration: underline;
     font-size: 12px;
     font-weight: 600;
+  }
+}
+
+/* X-small devices (potrait phones, less than 576px) */
+@media (max-width: 469px) {
+  
+  #appointment-requests td,#appointment-requests th{
+    /* border: 1px solid #ddd; */
+    height: 50px;
+    width: 25%;
+  }
+  #recent-patients td,#recent-patients th{
+    /* border: 1px solid #ddd; */
+    height: 50px;
+    width: 20%;
+  }
+  th{
+    font-size: 10px;
+  }
+  td{
+    font-size: 8px;
+    padding-bottom: 20px;
+  }
+  .approved{
+    font-size: 12px;
+  }
+  .pdf{
+    width: 50px;
   }
 }
