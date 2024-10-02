@@ -89,38 +89,63 @@ def place_details():
 def book_appointment():
     return render_template('bookAppointment.html')
 
-@app.route('/book-appointment', methods=['GET', 'POST'])
-def booking_api():
-    if request.method == 'POST':
-        new_booking = Appointment(
-            doctor=request.form['doctor'],
-            specialty=request.form['specialty'],
-            first_name=request.form['firstName'],
-            last_name=request.form['lastName'],
-            address=request.form['address'],
-            country=request.form['country'],
-            state=request.form['state'],
-            lg=request.form['local-government'],
-            phone_number=request.form['phone-number'],
-            email=request.form['email'],
-            existing_patient=request.form['existing_patient'] == 'yes',
-            appointment_date=datetime.strptime(request.form['appointment_date'], '%Y-%m-%d').date(),
-            reason=request.form['reason']
-        )
-        try:
-            db.session.add(new_booking)
-            db.session.commit()
-            return jsonify({"message": "Appointment booked successfully!"}), 200
-        except Exception as e:
-            db.session.rollback()
-            app.logger.error(f"Error booking appointment: {e}")
-            return jsonify({"error": "An error occurred while booking the appointment."}), 500
+# @app.route('/book-appointment', methods=['GET', 'POST'])
+# def booking_api():
+#     if request.method == 'POST':
+#         new_booking = Appointment(
+#             doctor=request.form['doctor'],
+#             specialty=request.form['specialty'],
+#             first_name=request.form['firstName'],
+#             last_name=request.form['lastName'],
+#             address=request.form['address'],
+#             country=request.form['country'],
+#             state=request.form['state'],
+#             lg=request.form['local-government'],
+#             phone_number=request.form['phone-number'],
+#             email=request.form['email'],
+#             existing_patient=request.form['existing_patient'] == 'yes',
+#             appointment_date=datetime.strptime(request.form['appointment_date'], '%Y-%m-%d').date(),
+#             reason=request.form['reason']
+#         )
+#         try:
+#             db.session.add(new_booking)
+#             db.session.commit()
+#             return jsonify({"message": "Appointment booked successfully!"}), 200
+#         except Exception as e:
+#             db.session.rollback()
+#             app.logger.error(f"Error booking appointment: {e}")
+#             return jsonify({"error": "An error occurred while booking the appointment."}), 500
     
-    return render_template('bookAppointment.html')
+#     return render_template('bookAppointment.html')
 
-@app.route('/appointment-confirmation')
-def appointment_confirmation():
-    return render_template('appointment_confirmation.html')
+@app.route('/bookAppointment2')
+def book_appointment2():
+    return render_template('bookAppointment2.html')
+
+@app.route('/admin-sign-in')
+def adminSignIn():
+    return render_template('adminSignIn.html')
+
+@app.route('/admin-appointment')
+def adminAppointment():
+    return render_template('adminAppointment.html')
+
+
+@app.route('/adminPatients')
+def adminPatients():
+    return render_template('adminPatients.html')
+
+@app.route('/adminDoctors')
+def adminDoctors():
+    return render_template('adminDoctors.html')
+
+@app.route('/adminRequests')
+def adminRequests():
+    return render_template('adminRequests.html')
+
+@app.route('/doctor-login')
+def doctorApplication():
+    return render_template('/doctorApplication.html')
 
 @app.route('/services')
 def services():
