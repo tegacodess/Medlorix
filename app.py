@@ -135,6 +135,10 @@ def appointment_confirmation():
 def services():
     return render_template('services.html')
 
+@app.route('/admin-sign-in')
+def admin_signin():
+    return render_template('adminsignIn.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html')
