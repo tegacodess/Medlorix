@@ -1,4 +1,6 @@
-function sendMail() {
+const sendMessage = document.getElementById("send-message");
+
+sendMessage.addEventListener("click", function() {
   var params = {
     from_name : document.getElementById("name").value,
     email : document.getElementById("email").value,
@@ -22,4 +24,4 @@ function sendMail() {
       alert("Your message sent successfully!!!");
     })
     .catch((err) => console.log(err));
-}
+});
