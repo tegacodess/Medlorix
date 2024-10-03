@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 import requests
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-from models import db, Appointment
+from models import db, Appointment, DoctorApplication
 from dotenv import load_dotenv
 from datetime import datetime
-import os
+import os, random
 
 load_dotenv()
 
@@ -121,6 +121,47 @@ def submit_appointment():
         # Handle form data submission (if needed)
         app.logger.error("Non-JSON request received")
         return jsonify({"success": False, "error": "Invalid request format"}), 400
+    
+
+@app.route('/doctor-login1', methods=['POST'])
+def doctor_application():
+    if request.method == 'POST':
+        firstname=request.form['firstname']
+        lastname=request.form['lastname']
+        email=request.form['email']
+        phonenumber=request.form['phonenumber']
+        gender=request.form['gender']
+        country=request.form['country']
+        cv=request.files['cv'] if 'cv' in request.files else None
+        cover_letter=request.files['coverLetter'] if 'coverLetter' in request.files else None
+        privacy_policy=True if 'privacyPolicy' in request.form else False
+
+    
+        cv_filename=cv.filename if cv else None
+        cover_letter_filename=cover_letter.filename if cover_letter else None
+        
+        # Save to database
+        new_application = DoctorApplication(
+            firstname=firstname,
+            lastname=lastname,
+            email=email,
+            phonenumber=phonenumber,
+            gender=gender,
+            country=country,
+            cv=cv_filename,
+            cover_letter=cover_letter_filename,
+            privacy_policy=privacy_policy
+        )
+        
+        try:
+            db.session.add(new_application)
+            db.session.commit()
+            return jsonify({"success": True, "redirect": url_for('adminRequests')})
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({"success": False, "error": str(e)}), 500
+
+    return jsonify({"success": False, "error": "Method not allowed"}), 405
 
 
 @app.route('/bookAppointment2')
@@ -154,6 +195,35 @@ def adminDoctors():
 @app.route('/admin-Requests')
 def adminRequests():
     return render_template('adminRequests.html')
+
+@app.route('/admin-Requests-page')
+def admin_requests():
+    # Fetch all doctor applications from the database
+    applications = DoctorApplication.query.all()
+    
+    applications_data = []
+    for app in applications:
+        display_id = f"{random.randint(100000, 999999)}"
+
+        cv_url = url_for('static', filename=f'uploads/{app.cv}') if app.cv else None
+        applications_data.append({
+            'id': app.id,
+            'display_id': display_id,
+            'firstname': app.firstname,
+            'lastname': app.lastname,
+            'email': app.email,
+            'phonenumber': app.phonenumber,
+            'gender': app.gender,
+            'country': app.country,
+            'cv': cv_url,
+            'cover_letter': bool(app.cover_letter),
+            'privacy_policy': app.privacy_policy,
+            'created_at': app.created_at.isoformat() if hasattr(app, 'created_at') else datetime.now().isoformat()
+        })
+    
+    return jsonify(applications_data)
+
+
 
 @app.route('/admin-patients')
 def adminPatients():

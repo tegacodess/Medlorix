@@ -21,3 +21,16 @@ class Appointment(db.Model):
     
     def __repr__(self):
         return f'<Appointment {self.id}: {self.first_name} {self.last_name}>'
+    
+
+class DoctorApplication(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(100), nullable=False)
+    lastname = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    phonenumber = db.Column(db.String(20), nullable=False)
+    gender = db.Column(db.String(10), nullable=False)
+    country = db.Column(db.String(100), nullable=False)
+    cv = db.Column(db.String(255), nullable=True)
+    cover_letter = db.Column(db.String(255), nullable=True)
+    privacy_policy = db.Column(db.Boolean, nullable=False)

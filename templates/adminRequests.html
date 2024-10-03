@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon -->
+  
     <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
-    <!-- Stylesheet -->
+ 
     <link rel="stylesheet" href="/static/css/adminRequests.css" />
-    <!-- JavaScript -->
+   
     <script src="/static/js/index.js" defer></script>
     
     <title>Medlorix │ Admin Dashboard Requests</title>
@@ -41,7 +41,7 @@
       </div>
     </header>
 
-    <!-- Navigation Section -->
+    
     <nav>
       <a href="/admin-appointment" class="p-appointment">
         <img src="/static/images/AdminPage/Vector.png" alt="">
@@ -60,7 +60,7 @@
         <p>Patients</p>
       </a>
     </nav>
-    <!-- Hero Section -->
+  
     <section id="hero">
         <div id="appointment-requests">
           <div class="top-div">
@@ -208,7 +208,7 @@
         </div>
     </section>
     
-    <!-- Footer Section -->
+ 
     <footer>
       <div class="lastlayer">
         <p class="copyright">
@@ -220,5 +220,348 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          displayApplications();
+      });
+  
+      function displayApplications() {
+          const storedData = localStorage.getItem('doctorApplicationData');
+          if (storedData) {
+              const application = JSON.parse(storedData);
+              const tableBody = document.querySelector('#requestsTable tbody');
+              tableBody.innerHTML = ''; 
+  
+              const row = createTableRow(application);
+              tableBody.appendChild(row);
+          } else {
+              console.log('No application data found in localStorage');
+          }
+      }
+  
+      function createTableRow(application) {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+              <td>
+                  <div class="parent-div">
+                      <div class="child-div1">
+                          <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                      </div>
+                      <div class="child-div2">
+                          <h3>Dr. ${application.firstname} ${application.lastname}</h3>
+                      </div>
+                  </div>
+              </td>
+              <td>${generateRandomId()}</td>
+              <td><img src="/static/images/AdminPage/pdf.png"></td>
+              <td>${new Date().toLocaleDateString()}</td>
+              <td><p class="pending">Pending</p></td>
+              <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+          `;
+          return row;
+      }
+  
+      function generateRandomId() {
+          return Math.floor(10000000 + Math.random() * 90000000).toString();
+      }
+      </script>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/css/adminRequests.css" />
+    <!-- JavaScript -->
+    <script src="/static/js/index.js" defer></script>
+    <title>Medlorix │ Admin Dashboard Requests</title>
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo" />
+        </a>
+        <div class="search">
+            <input type="search" placeholder="Search" class="custom-dropdown">
+        </div>
+        <div class="admin">
+            <div class="admin-box">
+                <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
+                <div class="profile-name">
+                    <h3>Mogaji Bolaji</h3>
+                    <p>Admin</p>
+                </div>
+            </div>
+            <div class="notifications">
+                <img src="/static/images/AdminPage/NotificationVector.png" alt="" class="img-tools">
+            </div>
+            <div class="settings">
+                <img src="/static/images/AdminPage/SettingsVector.png" alt="" class="img-tools">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="/admin-appointment" class="p-appointment">
+            <img src="/static/images/AdminPage/Vector.png" alt="">
+            <p>Appointments</p>
+        </a>
+        <a href="/admin-Requests" class="r-request">
+            <img src="/static/images/AdminPage/rq-img.png" alt="">
+            <p>Requests</p>
+        </a>
+        <a href="/admin-doctors">
+            <img src="/static/images/AdminPage/fontisto_doctor.png" alt="">
+            <p>Doctors</p>
+        </a>
+        <a href="/admin-patients">
+            <img src="/static/images/AdminPage/mdi_users.png" alt="">
+            <p>Patients</p>
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- <section id="hero">
+        <div id="appointment-requests">
+            <div class="top-div">
+                <h1>List of Requests</h1>
+            </div>
+            <div class="table">
+                <table id="requestsTable">
+                    <thead>
+                        <tr>
+                            <th>USERNAME</th>
+                            <th>ID</th>
+                            <th>DOCUMENT</th>
+                            <th>REQUEST DATE</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>g
+                        <tr>
+                            <td>
+                            <div class="parent-div">
+                                <div class="child-div1">
+                                    <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                                </div>
+                                <div class="child-div2">
+                                <h3>Dr. Mogaji Bolaji</h3>
+                                </div>
+                            </div>
+                            </td>
+                            <td>12345678</td>
+                            <td><img src="/static/images/AdminPage/pdf.png"></td>
+                            <td>01/10/2024</td>
+                            <td><p class="pending">Pending</td>
+                            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="parent-div">
+                                <div class="child-div1">
+                                    <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                                </div>
+                                <div class="child-div2">
+                                <h3>Dr. Mogaji Bolaji</h3>
+                                </div>
+                            </div>
+                            </td>
+                            <td>12345678</td>
+                            <td><img src="/static/images/AdminPage/pdf.png"></td>
+                            <td>01/10/2024</td>
+                            <td><p class="approved">Approved</td>
+                            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="parent-div">
+                                <div class="child-div1">
+                                    <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                                </div>
+                                <div class="child-div2">
+                                <h3>Dr. Mogaji Bolaji</h3>
+                                </div>
+                            </div>
+                            </td>
+                            <td>12345678</td>
+                            <td><img src="/static/images/AdminPage/pdf.png"></td>
+                            <td>01/10/2024</td>
+                            <td><p class="declined">Declined</td>
+                            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="parent-div">
+                                <div class="child-div1">
+                                    <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                                </div>
+                                <div class="child-div2">
+                                <h3>Dr. Mogaji Bolaji</h3>
+                                </div>
+                            </div>
+                            </td>
+                            <td>12345678</td>
+                            <td><img src="/static/images/AdminPage/pdf.png"></td>
+                            <td>01/10/2024</td>
+                            <td><p class="pending">Pending</td>
+                            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="parent-div">
+                                <div class="child-div1">
+                                    <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                                </div>
+                                <div class="child-div2">
+                                <h3>Dr. Mogaji Bolaji</h3>
+                                </div>
+                            </div>
+                            </td>
+                            <td>12345678</td>
+                            <td><img src="/static/images/AdminPage/pdf.png"></td>
+                            <td>01/10/2024</td>
+                            <td><p class="approved">Approved</td>
+                            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="parent-div">
+                                <div class="child-div1">
+                                    <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                                </div>
+                                <div class="child-div2">
+                                <h3>Dr. Mogaji Bolaji</h3>
+                                </div>
+                            </div>
+                            </td>
+                            <td>12345678</td>
+                            <td><img src="/static/images/AdminPage/pdf.png"></td>
+                            <td>01/10/2024</td>
+                            <td><p class="declined">Declined</td>
+                            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="parent-div">
+                                <div class="child-div1">
+                                    <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                                </div>
+                                <div class="child-div2">
+                                <h3>Dr. Mogaji Bolaji</h3>
+                                </div>
+                            </div>
+                            </td>
+                            <td>12345678</td>
+                            <td><img src="/static/images/AdminPage/pdf.png"></td>
+                            <td>01/10/2024</td>
+                            <td><p class="pending">Pending</td>
+                            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+                        </tr>
+                  
+                    </tbody>
+                </table>
+                <a href="">
+                    <button class="btn">VIEW MORE</button>
+                </a>
+            </div>
+        </div>
+    </section> -->
+    <section id="hero">
+        <div id="appointment-requests">
+            <div class="top-div">
+                <h1>List of Doctor Requests</h1>
+            </div>
+            <div class="table">
+                <table id="requestsTable">
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>ID</th>
+                            <th>CV</th>
+                            <th>COVER LETTER</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table body will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <a href="">
+                    <button class="btn">VIEW MORE</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="lastlayer">
+            <p class="copyright">
+                Copyright &copy; 2024. Medlorix. All rights reserved
+            </p>
+            <div>
+                <a href="/terms"><p>Terms and Conditions</p></a>
+                <a href="/privacy"><p>Privacy Policy</p></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchDoctorApplications();
+        });
+
+        async function fetchDoctorApplications() {
+            try {
+                const response = await fetch('/admin-Requests-page');
+                const applications = await response.json();
+                const tableBody = document.querySelector('#requestsTable tbody');
+                tableBody.innerHTML = ''; // Clear existing rows
+
+                applications.forEach(app => {
+                    const row = createTableRow(app);
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error fetching doctor applications:', error);
+            }
+        }
+
+        function createTableRow(app) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>
+                    <div class="parent-div">
+                        <div class="child-div1">
+                            <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                        </div>
+                        <div class="child-div2">
+                            <h3>Dr. ${app.firstname} ${app.lastname}</h3>
+                        </div>
+                    </div>
+                </td>
+                <td>${app.display_id}</td>
+                <td>
+                ${app.cv_url 
+                    ? `<a href="${app.cv_url}" target="_blank"><img src="/static/images/AdminPage/pdf.png" alt="CV" title="Click to view CV"></a>`
+                    : '<img src="/static/images/AdminPage/pdf.png" alt="No CV" title="No CV uploaded">'
+                }
+                </td>
+                <td>${new Date(app.created_at).toLocaleDateString()}</td>
+
+                <td><p class="pending">Pending</p></td>
+                <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+            `;
+            return row;
+        }
+    </script>
+</body>
 </html>

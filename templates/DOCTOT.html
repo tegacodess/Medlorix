@@ -75,7 +75,6 @@
       >
     </header>
 
-   
     <div id="hero">
       <div class="big-logo">
         <img src="/static/images/Medlorix-logo.svg" alt="Medlorix logo" />
@@ -86,8 +85,8 @@
           <p>Thanks for taking the bold step to join our team</p>
         </div>
         <div class="layer-2">
-          <form id="doctorApplicationForm" action="/doctor-login1" method="POST">
-         
+          <!-- <form id="doctorApplicationForm"> -->
+            <form id="doctorApplicationForm" action="/doctor-login1" method="POST"></form>
             <div class="input-section">
               <div class="input-preview">
                 <label for="firstname">First Name</label>
@@ -96,7 +95,6 @@
                   name="firstname"
                   type="text"
                   placeholder="Enter your First Name"
-                  required
                 />
               </div>
               <div class="input-preview">
@@ -106,7 +104,6 @@
                   name="lastname"
                   type="text"
                   placeholder="Enter your Last Name"
-                  required
                 />
               </div>
               <div class="input-preview">
@@ -114,9 +111,8 @@
                 <input
                   id="email"
                   name="email"
-                  type="text"
+                  type="email"
                   placeholder="Enter your Email"
-                  required
                 />
               </div>
               <div class="input-preview">
@@ -124,9 +120,8 @@
                 <input
                   id="phonenumber"
                   name="phonenumber"
-                  type="number"
+                  type="tel"
                   placeholder="Enter your Phone Number"
-                  required
                 />
               </div>
               <div class="input-preview">
@@ -144,12 +139,10 @@
                   name="country"
                   type="text"
                   placeholder="Enter your Country"
-                  required
                 />
               </div>
             </div>
 
-           
             <div class="upload">
               <div class="upload-resume">
                 <div>
@@ -162,7 +155,6 @@
                   name="cv"
                   style="display: none"
                   accept=".pdf,.doc,.docx,.rtf"
-                 
                 />
                 <label for="cv" id="cvPlaceholder">UPLOAD FILE</label>
               </div>
@@ -177,50 +169,13 @@
                   name="coverLetter"
                   style="display: none"
                   accept=".pdf,.doc,.docx,.rtf"
-                 
                 />
                 <label for="coverLetter" id="coverLetterPlaceholder">UPLOAD FILE</label>
               </div>
             </div>
 
-            <div class="upload">
-              <div class="upload-resume">
-                <div>
-                  <label for="">Upload your CV/Resume</label>
-                  <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
-                </div>
-                <input
-                  type="file"
-                  id="cv"
-                  style="display: none"
-                  accept=".txt,.pdf,.docx"
-                  
-                />
-                <label for="fileInput" id="customPlaceholder"
-                  >UPLOAD FILE</label
-                >
-              </div>
-              <div class="cover-letter">
-                <div>
-                  <label for="">Upload your Cover Letter</label>
-                  <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
-                </div>
-                <input
-                  type="file"
-                  id="coverLetter"
-                  style="display: none"
-                  accept=".txt,.pdf,.docx"
-                  
-                />
-                <label for="fileInput" id="customPlaceholder"
-                  >UPLOAD FILE</label
-                >
-              </div>
-            </div>
-
-         
             <div class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" id="privacyPolicy" name="privacyPolicy" />
               <p>
                 I have read the privacy policy and I hereby give my consent to
                 Medlorix Health to process and handle my personal data given in
@@ -228,47 +183,73 @@
                 the recruitment process as set forth in the privacy policy.
               </p>
             </div>
-            <div class="layer-3">
-              <button type="submit" id="submitButton">SUBMIT</button>
-              <div>
           </form>
         </div>
-        <!-- <div class="layer-3">
+        <div class="layer-3">
           <button type="submit" id="submitButton">SUBMIT</button>
-          <div> -->
+          <div>
             <p>Already have an account?</p>
-            <a href="">Sign In</a>
+            <a href="/signin">Sign In</a>
           </div>
         </div>
       </div>
     </div>
 
- 
     <footer>
-      <div class="footer">
-        <div class="lastlayer">
-          <p class="copyright">
-            Copyright &copy; 2024. Medlorix. All rights reserved
-          </p>
-        </div>
-      </div>
+      <!-- Your existing footer content -->
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('doctorApplicationForm');
+        const submitButton = document.getElementById('submitButton');
+        const cvInput = document.getElementById('cv');
+        const cvPlaceholder = document.getElementById('cvPlaceholder');
+        const coverLetterInput = document.getElementById('coverLetter');
+        const coverLetterPlaceholder = document.getElementById('coverLetterPlaceholder');
+
+        // Load saved data from localStorage
+        const savedData = JSON.parse(localStorage.getItem('doctorApplicationData')) || {};
+        Object.keys(savedData).forEach(key => {
+          const field = form.elements[key];
+          if (field) {
+            if (field.type === 'checkbox') {
+              field.checked = savedData[key];
+            } else if (field.type !== 'file') {
+              field.value = savedData[key];
+            }
+          }
+        });
+
+        // Handle file input labels
+        cvInput.addEventListener('change', function() {
+          const fileName = cvInput.files[0] ? cvInput.files[0].name : 'UPLOAD FILE';
+          cvPlaceholder.textContent = fileName;
+        });
+
+        coverLetterInput.addEventListener('change', function() {
+          const fileName = coverLetterInput.files[0] ? coverLetterInput.files[0].name : 'UPLOAD FILE';
+          coverLetterPlaceholder.textContent = fileName;
+        });
+
+        // Handle form submission
+        submitButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+          
+          // Handle file inputs separately
+          data.cv = cvInput.files[0] ? cvInput.files[0].name : '';
+          data.coverLetter = coverLetterInput.files[0] ? coverLetterInput.files[0].name : '';
+          
+          // Save to localStorage
+          localStorage.setItem('doctorApplicationData', JSON.stringify(data));
+          
+          console.log('Form data saved:', data);
+          alert('Your application has been saved successfully!');
+        });
+      });
+    </script>
   </body>
-  <script>
-    const fileInput = document.getElementById("coverLetter");
-    const customPlaceholder = document.getElementById("customPlaceholder");
-
-    fileInput.addEventListener("change", function () {
-      const fileName = fileInput.files[0]
-        ? fileInput.files[0].name
-        : "Choose a file";
-      customPlaceholder.textContent = fileName;
-    });
-  </script>
-  <script src="/static/js/doctorlogin.js"></script>
 </html>
-
-
-
-
- 
