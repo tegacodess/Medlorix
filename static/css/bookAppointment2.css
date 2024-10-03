@@ -357,10 +357,6 @@ select {
   font-weight: 600;
 }
 
-.book-now:hover {
-  background-color: #4040d1;
-}
-
 /* see a doctor section */
 #doctor {
   display: flex;
@@ -1009,7 +1005,7 @@ select {
     margin: 20px;
   }
 
-  t .main-footer {
+  .main-footer {
     margin: 7px;
   }
 
@@ -1064,6 +1060,9 @@ select {
   }
   .first-place {
     margin-left: -35px;
+  }
+  body {
+    width: 300px;
   }
 
   i {
@@ -1170,4 +1169,3 @@ select {
     font-size: 12px;
   }
 }
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */

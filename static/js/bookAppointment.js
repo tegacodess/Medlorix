@@ -71,9 +71,6 @@ window.onload = loadCountries;
 countrySelect.addEventListener("change", loadStates);
 stateSelect.addEventListener("change", loadCities);
 
-// Export the functions to be used in hospitalSearch.js
-export { loadCountries, loadStates, loadCities };
-
 // To ensure all input and select fields are filled before the user can proceed to step 2 of 2
 // For the first form (bookAppointment.html)
 // Constants for debugging and configuration
@@ -197,3 +194,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeStep1();
   initializeStep2();
 });
+
+// Export the functions to be used in hospitalSearch.js
+// export { loadCountries, loadStates, loadCities };
+// window.loadCountries = loadCountries;
+// window.loadStates = loadStates;
+// window.loadCities = loadCities;
