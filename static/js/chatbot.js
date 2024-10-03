@@ -82,8 +82,17 @@ fetch("https://symptomai-y0zm.onrender.com/diagnose", {
 });
 })
 
+
 // Event listener for chatbot send button
+const dots = document.getElementById("dots");
 sendSymptomButton.addEventListener('click', function(){
-  symptomSearchBox.value= "...";
+  symptomSearchBox.value= "";
+  dots.style.display = "flex";
   console.log("Search button clicked" );
+   
+//   Bouncing dots functionality
+  setTimeout(function() {
+    dots.style.display = "none";  // Hide bouncing dots after loading
+  }, 3000);
 }) 
+

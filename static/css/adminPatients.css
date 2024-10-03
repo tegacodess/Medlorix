@@ -143,7 +143,7 @@ nav a p{
   align-items: center;
   gap: 10px;
   border: 2px solid #CCCBCB;
-  padding: 30px 30px 10px 30px ;
+  padding: 30px;
   border-radius: 30px;
  }
  .dot-option{
@@ -200,9 +200,8 @@ nav a p{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-right: 2.5rem;
   margin-top: 10px;
-  gap: 30px;
+  gap: 10px;
  }
 
  .address-div1 h6{
@@ -308,10 +307,73 @@ nav a p{
 }
 /* Medium devices (tablet, less than 992px)*/
 @media (max-width: 992px) {
-  /* Nav */
   header {
     padding: 0px 50px;
   }
+
+.custom-dropdown {
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 10px;
+  max-width: 200px;
+  font-size: 14px;
+  background-position: left 10px center;
+  background-size: 20px;
+}
+.admin{
+  gap: 20px;
+
+}
+.profile-pic{
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+.admin-box{
+  gap: 10px;
+}
+.admin-box h3{
+  font-size: 18px;
+}
+.admin-box p{
+  font-size: 16px;
+  ;
+}
+.img-tools{
+  height: 30px;
+  width: 30px;
+}
+
+/* Navigations Styling */
+nav{
+  padding: 50px 50px;
+}
+nav a{
+  gap: 10px;
+}
+nav a img{
+  width: 30px;
+  height: 30px;
+}
+nav a p{
+  font-size: 20px;
+  font-weight: 600;
+}
+.p-appointment{
+  padding: 10px 20px;
+}
+/* Hero Styling */
+#hero{
+  padding: 0px 50px;
+}
+#appointment-requests, #recent-patients{
+  padding: 30px;
+  border-radius: 10px;
+}
+.middle-div{
+  grid-template-columns: 1fr 1fr;
+}
+
 }
 /* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 768px) {
@@ -319,7 +381,67 @@ nav a p{
   header {
     padding: 0px 30px;
   }
-
+  .custom-dropdown {
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 10px;
+    max-width: 150px;
+    font-size: 13px;
+    background-position: left 10px center;
+    background-size: 20px;
+  }
+  .admin{
+    gap: 15px;
+  
+  }
+  .profile-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+  }
+  .admin-box{
+    gap: 10px;
+  }
+  .admin-box h3{
+    font-size: 16px;
+  }
+  .admin-box p{
+    font-size: 14px;
+    ;
+  }
+  .img-tools{
+    height: 30px;
+    width: 30px;
+  }
+  
+  /* Navigations Styling */
+  nav{
+    padding: 50px 30px;
+  }
+  nav a{
+    gap: 10px;
+  }
+  nav a img{
+    width: 20px;
+    height: 20px;
+  }
+  nav a p{
+    font-size: 17px;
+  }
+  .p-appointment{
+    padding: 10px 10px;
+  }
+  /* Hero Styling */
+  #hero{
+    padding: 0px 30px;
+  }
+  #appointment-requests, #recent-patients{
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .middle-div{
+    grid-template-columns: 1fr 1fr;
+  }
   /* Footer */
 
   .lastlayer {
@@ -339,12 +461,46 @@ nav a p{
 @media (max-width: 576px) {
   /* Navigation */
   header {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
+    padding: 10px 10px;
+    flex-direction: column;
+    gap: 10px;
+    height: 160px;
+  }
+  .custom-dropdown {
+    padding: 10px;
+    max-width: 200px;
+    padding-left: 40px;
+    font-size: 13px;
+  }
+  .profile-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
   }
   
+  /* Navigations Styling */
+  nav{
+    padding: 50px 30px;
+    flex-direction: column;
+
+  }
+  nav a{
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+  .p-appointment{
+    padding: 10px 10px;
+  }
+  /* Hero Styling */
+  #hero{
+    padding: 0px 0px;
+  }
+  #appointment-requests, #recent-patients{
+    padding: 15px;
+  }
+  .middle-div{
+    grid-template-columns: 1fr;
+  }
   /* Footer */
   .footer {
     flex-direction: column;
