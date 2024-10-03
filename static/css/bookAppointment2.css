@@ -288,7 +288,7 @@ select {
 
 .doctor-card {
   background-color: white;
-  width: 600px;
+  max-width: 600px;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -370,7 +370,7 @@ select {
 }
 .doctor-section {
   position: relative;
-  width: 1235px;
+  max-width: 1200px;
   height: 469px;
   border-radius: 15px;
   overflow: hidden;
@@ -430,7 +430,7 @@ select {
   font-size: 14px;
 }
 .shadow_color {
-  width: 1195px;
+  width: 1100px;
   height: 25px;
   background-color: #dfdcf8;
   border-bottom-left-radius: 50px;
@@ -471,12 +471,15 @@ select {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .bottom-layer input {
   width: 400px;
   height: 50px;
   padding-left: 20px;
   border-radius: 20px;
+  margin: 0px;
 }
 .bottom-layer input::placeholder {
   color: #858088;
@@ -493,6 +496,8 @@ select {
   border: none;
   border-radius: 32px;
   transition: 0.5s ease-in-out;
+  margin: 0px;
+  padding: 0px;
 }
 .bottom-layer button:hover {
   background-color: #ffffff;
@@ -619,7 +624,7 @@ select {
   }
 
   .doctor-card {
-    width: 480px;
+    max-width: 450px;
   }
 
   /* see a doctor section */
@@ -636,7 +641,7 @@ select {
   }
   /* Footer */
   .firstlayer {
-    padding-left: 400px;
+    padding-left: 200px;
   }
 }
 
@@ -666,21 +671,24 @@ select {
   }
 
   .doctor-card {
-    width: 430px;
+    max-width: 430px;
   }
   /* see a doctor section */
 
   .doctor-section {
-    margin: 30px 42px;
-    width: 910px;
+    /* margin: 30px 42px; */
+    width: 750px;
   }
   .doctor-section .content {
     left: 30%;
   }
   .shadow_color {
-    margin-top: -30px;
-    width: 875px;
+    margin-top: -5px;
+    width: 690px;
     height: 25px;
+  }
+  .content{
+    margin-left: 40px;
   }
   /* subscribe */
   #subscribe {
@@ -715,7 +723,7 @@ select {
   }
   /* Footer */
   .firstlayer {
-    padding-left: 200px;
+    padding-left: 150px;
     gap: 70px;
   }
 }
@@ -726,15 +734,15 @@ select {
     padding: 0px 30px;
   }
   .green {
-    width: 150px;
-    height: 40px;
+    width: 110px;
+    height: 60px;
     padding: 10px 10px;
   }
 
   /* Hero Section */
 
   .appointment-section .content p {
-    width: 689px;
+    width: 500px;
   }
 
   /* doctor specialty section */
@@ -747,12 +755,13 @@ select {
   /* doctor list styling */
   .doctor-list {
     gap: 20px;
-
+    display: grid;
+    grid-template-columns: 1fr;
     margin-left: -20px;
   }
 
   .doctor-card {
-    width: 330px;
+    max-width:500px;
   }
 
   /* Doctor Section */
@@ -763,7 +772,7 @@ select {
   }
   .doctor-section {
     position: relative;
-    width: 700px;
+    width: 570px;
     height: 469px;
   }
 
@@ -777,7 +786,7 @@ select {
     font-size: 42px;
   }
   .shadow_color {
-    width: 665px;
+    width: 500px;
     height: 20px;
   }
   /* subscribe */
@@ -814,7 +823,7 @@ select {
   /* Footer */
 
   .firstlayer {
-    padding-left: 100px;
+    padding-left: 20px;
     gap: 50px;
   }
   .lastlayer {
@@ -857,7 +866,7 @@ select {
     display: none;
     position: fixed;
     top: 0px;
-    left: -100%; /* Hide off-screen initially */
+    left: -100%; /*Hide off-screen initially*/
     width: 100%;
     background-color: #efedff;
     gap: 10px;
@@ -880,6 +889,17 @@ select {
   .green {
     display: none;
   }
+  /* Hero styling */
+  .appointment-section .content h1 {
+    font-size: 18px;
+    width: 300px;
+    text-align: center;
+  }
+  .appointment-section .content p {
+    font-size: 15px;
+    width: 300px;
+    text-align: center;
+  }
   /* doctor specialty section */
   .first-place {
     flex-direction: column;
@@ -890,11 +910,11 @@ select {
   }
   .details h2 {
     text-align: left;
-    width: 700px;
+    /* width: 700px; */
   }
 
   .select-container {
-    width: 500px;
+    width: 300px;
   }
   .filter-options {
     margin: 0;
@@ -907,34 +927,33 @@ select {
     flex-direction: column;
     gap: 20px;
   }
-  .doctor-card {
-    width: 100%;
-  }
+  /* .custom-dropdown{
+    width: 500px;
+  } */
   .details {
     display: flex;
     flex-direction: column;
   }
   .doctor-card {
-    width: 350px;
+    max-width: 300px;
     margin: 0 auto;
   }
   /* Doctor Section */
 
   .doctor-section {
-    width: 320px;
-
+    width: 300px;
     margin: 0 auto;
     height: 600px;
   }
 
   .doctor-section .background-image {
-    width: 330px;
+    width: 320px;
     object-fit: unset;
   }
 
   .doctor-section .content {
     margin-top: 50px;
-    left: 35%;
+    /* left: 35%; */
     padding: 10px;
   }
 
@@ -1033,11 +1052,11 @@ select {
 @media (max-width: 320px) {
   /* Hero Section */
   .appointment-section .content h1 {
-    font-size: 24px;
+    font-size: 15px;
   }
   .appointment-section .content p {
     font-size: 12px;
-    width: 280px;
+    width: 200px;
   }
   /* doctor specialty section */
   .select-container {
@@ -1052,7 +1071,7 @@ select {
   }
 
   .select-container {
-    width: 380px;
+    width: 250px;
   }
   .filter-options {
     margin: 0;
@@ -1060,7 +1079,7 @@ select {
   }
   /* doctor list styling */
   .doctor-card {
-    width: 280px;
+    width: 250px;
     margin-left: -30px;
   }
   .doctor-name {
@@ -1081,7 +1100,7 @@ select {
   /* Doctor Section */
 
   .doctor-section {
-    width: 290px;
+    width: 250px;
     height: 600px;
     /* overflow: auto; */
     margin: 0 auto;
@@ -1094,37 +1113,34 @@ select {
 
   .doctor-section .content {
     position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     color: #ffffff;
     text-align: center;
   }
 
   .doctor-section .content .heading {
-    font-size: 32px;
+    font-size: 15px;
     width: 216px;
-    line-height: 38.4px;
+    line-height: 8.4px;
     font-weight: 700;
   }
 
   .doctor-section .content p {
-    font-size: 14px;
-    width: 237px;
-    margin-top: -20px;
-    margin-bottom: -20px;
-    max-width: 468px;
-    line-height: 19.2px;
+    font-size: 11px;
+    /* margin-top: -20px;
+    margin-bottom: -20px; */
+    max-width: 200px;
+    line-height: 15.2px;
     color: #fafafa;
   }
 
   .doctor-section .button {
     padding: 10px 20px;
-    margin-top: -80px;
+    /* margin-top: -80px; */
     font-size: 14px;
   }
   .shadow_color {
-    width: 260px;
+    width: 230px;
     height: 20px;
   }
 

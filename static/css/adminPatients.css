@@ -146,6 +146,9 @@ nav a p{
   padding: 30px;
   border-radius: 30px;
  }
+ .doctorscard:hover{
+  border-color: #3325B2;
+ }
  .dot-option{
   width: 25px;
   align-self: flex-start;
