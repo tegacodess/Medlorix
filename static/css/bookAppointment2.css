@@ -357,10 +357,6 @@ select {
   font-weight: 600;
 }
 
-.book-now:hover {
-  background-color: #4040d1;
-}
-
 /* see a doctor section */
 #doctor {
   display: flex;
@@ -880,6 +876,16 @@ select {
   .green {
     display: none;
   }
+
+  /* Hero Section */
+
+  .appointment-section .content h1 {
+    font-size: 28px;
+  }
+  .appointment-section .content p {
+    font-size: 16px;
+    width: 320px;
+  }
   /* doctor specialty section */
   .first-place {
     flex-direction: column;
@@ -890,11 +896,11 @@ select {
   }
   .details h2 {
     text-align: left;
-    width: 700px;
+    width: 00px;
   }
 
   .select-container {
-    width: 500px;
+    width: 300px;
   }
   .filter-options {
     margin: 0;
@@ -915,7 +921,7 @@ select {
     flex-direction: column;
   }
   .doctor-card {
-    width: 350px;
+    width: 300px;
     margin: 0 auto;
   }
   /* Doctor Section */
@@ -990,7 +996,7 @@ select {
     margin: 20px;
   }
 
-  t .main-footer {
+  .main-footer {
     margin: 7px;
   }
 
@@ -1045,6 +1051,9 @@ select {
   }
   .first-place {
     margin-left: -35px;
+  }
+  body {
+    width: 300px;
   }
 
   i {
@@ -1154,4 +1163,3 @@ select {
     font-size: 12px;
   }
 }
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
