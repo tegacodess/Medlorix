@@ -67,14 +67,7 @@ function createResultCard(place) {
   )} (${place.rating || "No Rating Available"})
           </div>
         </div>
-        <div class="direction">
-          <img src="/static/images/ClinicSearchPage/ri_direction-line.png" alt="" />
-          <p><a href="https://www.google.com/maps/dir/?api=1&destination=${
-            place.geometry.location.lat
-          },${
-    place.geometry.location.lng
-  }" class="directions" target="_blank">Directions</a></p>
-        </div>
+<div></div>
       </div>
       <div class="card-secondlayer">
         <p>${
@@ -101,8 +94,13 @@ function createResultCard(place) {
                   }</span></p>
                 </div>
         </div>
-        <div class="book-appointment">
-          <button data-place-id="${place.place_id}">BOOK APPOINTMENT</button>
+              <div class="direction book-appointment">
+          <img src="/static/images/ClinicSearchPage/ri_direction-line.png" alt="" />
+          <p><a href="https://www.google.com/maps/dir/?api=1&destination=${
+            place.geometry.location.lat
+          },${
+    place.geometry.location.lng
+  }" class="directions" target="_blank">Directions</a></p>
         </div>
       </div>
     </div>
