@@ -474,6 +474,7 @@
             </div>
         </div>
     </section> -->
+    
     <section id="hero">
         <div id="appointment-requests">
             <div class="top-div">
@@ -485,8 +486,8 @@
                         <tr>
                             <th>NAME</th>
                             <th>ID</th>
-                            <th>CV</th>
-                            <th>COVER LETTER</th>
+                            <th>DOCUMENT</th>
+                            <th>DOCUMENT</th>
                             <th>STATUS</th>
                             <th>ACTION</th>
                         </tr>
@@ -524,7 +525,7 @@
                 const response = await fetch('/admin-Requests-page');
                 const applications = await response.json();
                 const tableBody = document.querySelector('#requestsTable tbody');
-                tableBody.innerHTML = ''; // Clear existing rows
+                tableBody.innerHTML = ''; 
 
                 applications.forEach(app => {
                     const row = createTableRow(app);

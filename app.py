@@ -11,7 +11,9 @@ import os, random
 load_dotenv()
 
 app = Flask(__name__, static_folder='static')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///Appointments.db')
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///Appointments.db')
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'Appointments.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
@@ -297,4 +299,10 @@ def init_db():
 
 if __name__ == '__main__':
     init_db()
+    try:
+        with app.app_context():
+            db.create_all()
+    except Exception as e:
+        print(f"Error initializing database: {e}")
+        
     app.run(debug=True)
