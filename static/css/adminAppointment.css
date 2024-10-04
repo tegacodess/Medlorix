@@ -114,6 +114,7 @@ nav a p{
   padding: 0px 100px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 #appointment-requests, #recent-patients{
   background-color: #FFFFFF;
@@ -140,7 +141,7 @@ nav a p{
 }
 #appointment-requests td,#appointment-requests th{
   /* border: 1px solid #ddd; */
-  text-align: left;
+  text-align: center;
   height: 50px;
   width: 25%;
   font-weight: 600;
@@ -164,6 +165,8 @@ td{
 .approved{
   color: #3325B2;
   font-size: 15px;
+  background-color: white;
+  border: none;
 }
 .parent-div{
   display: flex;

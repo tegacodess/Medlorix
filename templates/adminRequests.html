@@ -610,19 +610,39 @@
             }
             </td>
             <td>${new Date(app.created_at).toLocaleDateString()}</td>
-            <td><select class="status-select" data-id="${app.id}">
+            <td>
+                <select class="status-select" data-id="${app.id}">
                 <option value="pending" ${app.status === 'pending' ? 'selected' : ''}>Pending</option>
                 <option value="approved" ${app.status === 'approved' ? 'selected' : ''}>Approved</option>
-            </select></td>
+                <option value="cancel" ${app.status === 'cancel' ? 'selected' : ''}>Cancel</option>
+                </select>
+            </td>
+
             <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
         `;
 
         const statusSelect = row.querySelector('.status-select');
+        
+        // Update color on initial load
+        updateSelectColor(statusSelect);
+
         statusSelect.addEventListener('change', function() {
             updateStatus(app.id, this.value);
+            updateSelectColor(this); // Update color on change
         });
 
         return row;
+    }
+
+    function updateSelectColor(selectElement) {
+        const selectedValue = selectElement.value;
+        if (selectedValue === 'approved') {
+            selectElement.style.color = 'Purple'; // Change to yellow for approved
+        } else if (selectedValue === 'cancel') {
+            selectElement.style.color = 'red'; // Change to red for cancel
+        } else {
+            selectElement.style.color = 'orange'; // Default to white for pending
+        }
     }
 
     async function updateStatus(id, status) {
@@ -648,49 +668,32 @@
     }
 
     async function sendToBookAppointment2(id) {
-    try {
-        const response = await fetch('/bookAppointment', {
-            method: 'GET',
-        });
+        try {
+            const response = await fetch('/bookAppointment', {
+                method: 'GET',
+            });
 
-        if (!response.ok) {
-            throw new Error('Failed to fetch appointment details');
+            if (!response.ok) {
+                throw new Error('Failed to fetch appointment details');
+            }
+
+            const doctors = await response.json();
+
+            // Check if the doctor is in the approved list
+            const doctor = doctors.find(d => d.id === id);
+            if (doctor) {
+                console.log('Doctor approved:', doctor);
+                // Proceed with booking logic
+            } else {
+                console.error('Doctor is not approved yet');
+            }
+        } catch (error) {
+            console.error('Error sending to book appointment:', error);
         }
-
-        const doctors = await response.json();
-
-        // Check if the doctor is in the approved list
-        const doctor = doctors.find(d => d.id === id);
-        if (doctor) {
-            console.log('Doctor approved:', doctor);
-            // Proceed with booking logic
-        } else {
-            console.error('Doctor is not approved yet');
-        }
-    } catch (error) {
-        console.error('Error sending to book appointment:', error);
     }
-}
+</script>
 
-    // async function sendToBookAppointment2(id) {
-    //     try {
-    //         const response = await fetch('/bookAppointment2', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({ id }),
-    //         });
 
-    //         if (!response.ok) {
-    //             throw new Error('Failed to send details to bookAppointment2');
-    //         }
-
-    //         console.log('Details sent to bookAppointment2 successfully');
-    //     } catch (error) {
-    //         console.error('Error sending details to bookAppointment2:', error);
-    //     }
-    // }
 </script>
 </body>
 </html>

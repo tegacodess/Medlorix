@@ -125,6 +125,40 @@ def submit_appointment():
         return jsonify({"success": False, "error": "Invalid request format"}), 400
     
 
+@app.route('/patient_details')
+def patient_details():
+    # Fetch all appointments from the database
+    appointments = Appointment.query.all()
+    
+    appointment_data = []
+    
+    for appointment in appointments:
+        # Generate a random display ID for the appointment
+        display_id = f"{random.randint(100000, 999999)}"
+        
+        # Construct the appointment details dictionary
+        appointment_data.append({
+            'id': appointment.id,
+            'display_id': display_id,
+            'first_name': appointment.first_name,
+            'last_name': appointment.last_name,
+            'email': appointment.email,
+            'phone_number': appointment.phone_number,
+            'doctor': appointment.doctor,
+            'specialty': appointment.specialty,
+            'country': appointment.country,
+            'state': appointment.state,
+            'lg': appointment.lg,  # Local government field
+            'existing_patient': appointment.existing_patient,
+            'appointment_date': appointment.appointment_date.isoformat() if appointment.appointment_date else None,
+            'reason': appointment.reason,
+            'created_at': appointment.created_at.isoformat() if hasattr(appointment, 'created_at') else datetime.now().isoformat()
+        })
+    
+    # Return the appointment details as a JSON response
+    return jsonify(appointment_data), 200
+
+
 @app.route('/doctor-login1', methods=['POST'])
 def doctor_application():
     if request.method == 'POST':
