@@ -13,7 +13,7 @@ class Appointment(db.Model):
     country = db.Column(db.String(100), nullable=False)
     state = db.Column(db.String(100), nullable=False)  
     lg = db.Column(db.String(100), nullable=True)  
-    phone_number = db.Column(db.String(100), nullable=False)
+    phone_number = db.Column(db.String(100), nullable=True)
     email = db.Column(db.String(100), nullable=False)
     existing_patient = db.Column(db.Boolean, nullable=False) 
     appointment_date = db.Column(db.Date, nullable=False)  
