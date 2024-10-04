@@ -158,7 +158,7 @@ def doctor_application():
         try:
             db.session.add(new_application)
             db.session.commit()
-            return jsonify({"success": True, "redirect": url_for('adminRequests')})
+            return jsonify({"success": True, "redirect": url_for('doctor_confirmation')})
         except Exception as e:
             db.session.rollback()
             return jsonify({"success": False, "error": str(e)}), 500
@@ -173,6 +173,10 @@ def book_appointment2():
 @app.route('/appointment-confirmation')
 def appointment_confirmation():
     return render_template('bookAppointmentConfirmation.html')
+
+@app.route('/doctor-confirmation')
+def doctor_confirmation():
+    return render_template('DoctorConfirmation.html')
 
 @app.route('/services')
 def services():
