@@ -515,7 +515,7 @@
             </div>
         </div>
     </footer>
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
             fetchDoctorApplications();
         });
@@ -565,4 +565,134 @@
         }
     </script>
 </body>
+</html> -->
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        fetchDoctorApplications();
+    });
+
+    async function fetchDoctorApplications() {
+        try {
+            const response = await fetch('/admin-Requests-page');
+            const applications = await response.json();
+            const tableBody = document.querySelector('#requestsTable tbody');
+            tableBody.innerHTML = ''; 
+
+            applications.forEach(app => {
+                const row = createTableRow(app);
+                tableBody.appendChild(row);
+            });
+        } catch (error) {
+            console.error('Error fetching doctor applications:', error);
+        }
+    }
+
+    function createTableRow(app) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>
+                <div class="parent-div">
+                    <div class="child-div1">
+                        <img src="/static/images/AdminPage/Ellipse 95.png" alt="" class="profile-pic">
+                    </div>
+                    <div class="child-div2">
+                        <h3>Dr. ${app.firstname} ${app.lastname}</h3>
+                    </div>
+                </div>
+            </td>
+            <td>${app.display_id}</td>
+            <td>
+            ${app.cv_url 
+                ? `<a href="${app.cv_url}" target="_blank"><img src="/static/images/AdminPage/pdf.png" alt="CV" title="Click to view CV"></a>`
+                : '<img src="/static/images/AdminPage/pdf.png" alt="No CV" title="No CV uploaded">'
+            }
+            </td>
+            <td>${new Date(app.created_at).toLocaleDateString()}</td>
+            <td><select class="status-select" data-id="${app.id}">
+                <option value="pending" ${app.status === 'pending' ? 'selected' : ''}>Pending</option>
+                <option value="approved" ${app.status === 'approved' ? 'selected' : ''}>Approved</option>
+            </select></td>
+            <td class="dot"><img src="/static/images/AdminPage/dot.png"></td>
+        `;
+
+        const statusSelect = row.querySelector('.status-select');
+        statusSelect.addEventListener('change', function() {
+            updateStatus(app.id, this.value);
+        });
+
+        return row;
+    }
+
+    async function updateStatus(id, status) {
+        try {
+            const response = await fetch('/update_status', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id, status }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to update status');
+            }
+
+            if (status === 'approved') {
+                sendToBookAppointment2(id);
+            }
+        } catch (error) {
+            console.error('Error updating status:', error);
+        }
+    }
+
+    async function sendToBookAppointment2(id) {
+    try {
+        const response = await fetch('/bookAppointment', {
+            method: 'GET',
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch appointment details');
+        }
+
+        const doctors = await response.json();
+
+        // Check if the doctor is in the approved list
+        const doctor = doctors.find(d => d.id === id);
+        if (doctor) {
+            console.log('Doctor approved:', doctor);
+            // Proceed with booking logic
+        } else {
+            console.error('Doctor is not approved yet');
+        }
+    } catch (error) {
+        console.error('Error sending to book appointment:', error);
+    }
+}
+
+    // async function sendToBookAppointment2(id) {
+    //     try {
+    //         const response = await fetch('/bookAppointment2', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({ id }),
+    //         });
+
+    //         if (!response.ok) {
+    //             throw new Error('Failed to send details to bookAppointment2');
+    //         }
+
+    //         console.log('Details sent to bookAppointment2 successfully');
+    //     } catch (error) {
+    //         console.error('Error sending details to bookAppointment2:', error);
+    //     }
+    // }
+</script>
+</body>
 </html>
+
+

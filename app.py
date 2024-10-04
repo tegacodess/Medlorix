@@ -225,6 +225,38 @@ def admin_requests():
     
     return jsonify(applications_data)
 
+@app.route('/update_status', methods=['POST'])
+def update_status():
+    data = request.json
+    doctor_id = data.get('id')
+    new_status = data.get('status')
+    
+    # Here, you would update the status in your database
+    # For example:
+    # doctor = Doctor.query.get(doctor_id)
+    # doctor.status = new_status
+    # db.session.commit()
+    
+    if new_status == 'approved':
+        print("stautus loaded ")
+        print(doctor_id)
+        # Perform any necessary actions for approved doctors
+        # For example, you might want to add them to a different table
+        pass
+    
+    return jsonify({"success": True, "message": f"Status updated to {new_status}"})
+
+@app.route('/bookAppointment', methods=['GET'])
+def book_appointment():
+    # Fetch only approved doctors from the database
+    approved_doctors = DoctorApplication.query.filter_by(status='approved').all()
+    
+    # Return the approved doctors' details as JSON
+    doctors_data = [{"id": doctor.id, "name": doctor.name, "specialty": doctor.specialty} for doctor in approved_doctors]
+    return jsonify(doctors_data), 200
+
+
+
 
 
 @app.route('/admin-patients')
