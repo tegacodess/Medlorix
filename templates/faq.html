@@ -18,14 +18,12 @@
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("7-FwW8mWvheQpOpno");
+        emailjs.init({
+          publicKey: "7-FwW8mWvheQpOpno",
+        });
       })();
     </script>
     <script src="/static/js/subcribe.js" defer></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
     <script type="text/javascript">
       (function () {
         emailjs.init("WesP-F72yRnUJFma5");
@@ -256,7 +254,7 @@
         </div>
       </form>
       <div class="form-group">
-        <button type="submit" class="green form-btn" id="sendMessage">
+        <button type="submit" class="green form-btn" onclick="sendMail()">
           SEND MESSAGE
         </button>
       </div>

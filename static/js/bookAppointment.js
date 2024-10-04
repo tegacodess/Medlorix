@@ -361,6 +361,36 @@ function initializePage() {
 document.addEventListener("DOMContentLoaded", initializePage);
 
 
+// For Email alert notification
+function sendMail() {
+  var params = {
+    first_name : document.getElementById("first-name").value,
+    last_name : document.getElementById("last-name").value,
+    email : document.getElementById("email").value,
+    doctor : document.getElementById("doctor").value,
+    specialty : document.getElementById("specialty").value,
+    number : document.getElementById("phone-number").value,
+    address : document.getElementById("address").value
+  };
+  
+  const serviceID = "service_d3ea1r5";
+  const templateID = "template_mj9t41f";
+  
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res)  => {
+      document.getElementById("first-name").value = "";
+      document.getElementById("last-name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("doctor").value = "";
+      document.getElementById("specialty").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("address").value = "";
+      console.log(res);
+      alert("Your message sent successfully!!!");
+    })
+    .catch((err) => console.log(err));
+};
 
 
 

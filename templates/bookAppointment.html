@@ -19,6 +19,13 @@
     ></script>
     <script type="text/javascript">
       (function () {
+        emailjs.init({
+          publicKey: "7nhNllYOuWc2yt965",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      (function () {
         emailjs.init("WesP-F72yRnUJFma5");
       })();
     </script>
@@ -384,7 +391,7 @@
         <div class="action-buttons">
           <div class="form-button">
             <p id="cancel">CANCEL</p>
-            <button type="submit" id="book-appointment">PROCEED</button>
+            <button type="submit" id="book-appointment" onclick="sendMail()">PROCEED</button>
           </div>
         </div>
       </form>

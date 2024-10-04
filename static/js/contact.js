@@ -1,6 +1,4 @@
-const sendMessage = document.getElementById("send-message");
-
-sendMessage.addEventListener("onclick", function() {
+function sendMail() {
   var params = {
     from_name : document.getElementById("name").value,
     email : document.getElementById("email").value,
@@ -24,4 +22,4 @@ sendMessage.addEventListener("onclick", function() {
       alert("Your message sent successfully!!!");
     })
     .catch((err) => console.log(err));
-});
+};
