@@ -3,24 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>Medlorix │ Welcome</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/static/css/contact.css" />
+    <link rel="stylesheet" href="/static/css/bookAppointmentConfirmation.css" />
 
     <!-- JavaScript -->
     <script src="/static/js/index.js" defer></script>
-    <script src="/static/js/contact.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("7-FwW8mWvheQpOpno");
-      })();
-    </script>
+    <script src="/static/js/bookAppointment.js" defer></script>
     <script src="/static/js/subcribe.js" defer></script>
     <script
       type="text/javascript"
@@ -41,6 +32,7 @@
           src="/static/images/Medlorix-logo.svg"
           alt="Medlorix logo"
       /></a>
+
       <!-- Hamburger Icon -->
       <div class="hamburger-menu">
         <div class="bar"></div>
@@ -51,11 +43,11 @@
         <a href="/">HOME</a>
         <!-- Drop down menu for services -->
         <div class="dropdown">
-          <a href="#" class="dropbtn"
+          <a href="/services" class="dropbtn"
             >SERVICES
             <img
               class="dropdown-down"
-              src="/static/images/Clinic Search Page/dropdownIcon.png"
+              src="/static/images/ClinicSearchPage/dropdownIcon.png"
               alt=""
             />
           </a>
@@ -81,6 +73,7 @@
 
             <a href="/career" class="dropdown-item"
               >Careers
+
               <span class="dropdown-icon">→</span>
             </a>
           </div>
@@ -92,108 +85,30 @@
       <!-- Green buttons -->
       <a href="/services"> <button class="green">GET STARTED</button></a>
     </header>
+    <!-- hero section -->
+    <div class="container">
+      <div class="appointment-confirmation">
+        <img
+          src="../static/images/rafiki.png"
+          alt="Appointment Calendar"
+          class="confirmation-image"
+        />
 
-    <!-- Main -->
-    <section class="main">
-      <h4>Send a message to us</h4>
-      <h2>Drop a message for any query</h2>
-      <p>If you have an idea, we would love to hear about it.</p>
-
-      <form action="/contact" method="POST">
-        <div class="form-group"></div>
-        <div class="form-group">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email address"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Phone number"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <textarea
-            id="message"
-            name="message"
-            placeholder="What would you like to say?"
-            required
-          ></textarea>
-        </div>
-      </form>
-      <div class="form-group">
-        <button type="submit" class="green form-btn" id="sendMessage">
-          SEND MESSAGE
-        </button>
-      </div>
-    </section>
-
-    <!-- Info -->
-    <section class="info">
-      <div class="info-group">
-        <img src="/static/images/Icons/location.png" alt="" />
-        <div class="info-item">
-          <h3>Location</h3>
-          <p>123, Medlorix Street, Lagos, Nigeria</p>
-        </div>
-      </div>
-      <div class="info-group">
-        <img src="/static/images/Icons/mail.png" alt="" />
-        <div class="info-item">
-          <h3>Email</h3>
-          <p>medlorix@gmail.com</p>
-        </div>
-      </div>
-      <div class="info-group">
-        <img src="/static/images/Icons/phone.png" alt="" />
-        <div class="info-item">
-          <h3>Phone</h3>
-          <p>+234 807 655 3044</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Subscribe Section -->
-    <div id="subscribe">
-      <div class="top-layer">
-        <h2>Stay up to date on healthy living</h2>
         <p>
-          Be the first to receive expert insights, practical advice, and
-          exclusive content directly to your inbox.
+          Your Application has been successfully submitted! <br />Kindly check
+          your email.
         </p>
-      </div>
-      <div class="bottom-layer">
-        <input type="email" id="emailInput" placeholder="Enter your email" />
-        <button id="subscribeButton">SUBSCRIBE</button>
-      </div>
-      <p id="alertMessage"></p>
-    </div>
 
+        <div class="button-container">
+          <button class="edit-appointment">
+            <a href="bookAppointment.html">Edit Application</a>
+          <!-- </button>
+          <button class="new-appointment">
+            <a href="bookAppointment.html">Book New Appointment</a>
+          </button> -->
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer>
       <div class="footer">
@@ -211,33 +126,33 @@
               platform.
             </p>
             <div class="social-media">
-              <a href="medlorix@gmail.com"
+              <a href=""
                 ><img src="/static/images/Icons/google.png" alt="Google"
               /></a>
-              <a href="wa.me/+2348076553044"
+              <a href=""
                 ><img src="/static/images/Icons/facebook.png" alt="Facebook"
               /></a>
               <a href=""
                 ><img src="/static/images/Icons/twitter.png" alt="Twitter"
               /></a>
-             <!-- <a href=""
+              <a href=""
                 ><img src="/static/images/Icons/instagram.png" alt="Instagram"
-              /></a> -->
+              /></a>
             </div>
           </div>
         </div>
         <div class="firstlayer">
           <div class="company">
             <p><span>Company</span></p>
-            <a href="/about">About us</a>
-            <a href="/about">Our mission</a>
-            <a href="/about">Our Team</a>
+            <a href="/src/about.html">About us</a>
+            <a href="/src/about.html">Our mission</a>
+            <a href="/src/about.html">Our Team</a>
           </div>
           <div class="company">
             <p><span>Our Services</span></p>
-            <a href="/clinicSearch">Clinic Search</a>
-            <a href="/sign-up">AI-Based Diagnosis</a>
-            <a href="/contact">Contact Us</a>
+            <a href="/src/clinicSearch.html">Clinic Search</a>
+            <a href="/src/sign-up.html">AI-Based Diagnosis</a>
+            <a href="/src/contact.html">Contact Us</a>
           </div>
           <div class="company">
             <p><span>Legal</span></p>

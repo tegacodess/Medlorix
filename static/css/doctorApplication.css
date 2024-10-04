@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
 *{
   padding: 0;
   margin: 0;
@@ -231,6 +233,7 @@ label{
 }
 /* Upload Styling */
 .upload{
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px
@@ -242,7 +245,8 @@ label{
   justify-content: space-between;
 }
 .upload p{
-  font-size: 12px;
+  margin-top: 10px;
+  font-size: 10px;
   font-weight: 400;
   color: #9F9C9C;
   padding-top: 3px;
@@ -264,6 +268,7 @@ label{
 }
 /* Checkbox Styling */
 .checkbox{
+  margin-top: 30px;
   width: 400px;
   display: flex;
   flex-direction: row;
@@ -274,9 +279,10 @@ label{
   align-self: center;
 }
 .checkbox p{
-  color: #898384;
-  font-size: 12px;
+  color: #352B3A;
+  font-size: 11px;
   font-weight: 400;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .layer-3{
   display: flex;

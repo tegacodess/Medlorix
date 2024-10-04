@@ -140,8 +140,8 @@
         </div>
         <p><i class="fas fa-sliders-h"></i> Filter Results</p>
 
-        <section class="doctor-list">
-          <div class="doctor-card">
+        <section class="doctor-list" id="doctor-list">
+          <!-- <div class="doctor-card">
             <div class="image-details">
               <img
                 src="../static/images/Stethoscopeimage.png"
@@ -149,121 +149,12 @@
               />
               <div class="doctor-info">
                 <p class="doctor-name">Mogaji Bolaji A.</p>
-                <p class="specialty">Psychologist</p>
-                <div class="available-distance">
-                  <p class="availability unavailable">Available</p>
-                  <p class="distance">20km</p>
-                </div>
               </div>
             </div>
             <button class="book-now">
               <a href="./bookAppointment3.html"></a>Book Now
             </button>
-          </div>
-          <div class="doctor-card">
-            <div class="image-details">
-              <img
-                src="../static/images/Stethoscopeimage.png"
-                alt="Doctor's photo"
-              />
-              <div class="doctor-info">
-                <p class="doctor-name">Mogaji Bolaji A.</p>
-                <p class="specialty">Psychologist</p>
-                <div class="available-distance">
-                  <p class="availability available">Available</p>
-                  <p class="distance">20km</p>
-                </div>
-              </div>
-            </div>
-            <button class="book-now">
-              <a href="./bookAppointment3.html"></a>Book Now
-            </button>
-          </div>
-          <div class="doctor-card">
-            <div class="image-details">
-              <img
-                src="../static/images/Stethoscopeimage.png"
-                alt="Doctor's photo"
-              />
-              <div class="doctor-info">
-                <p class="doctor-name">Mogaji Bolaji A.</p>
-                <p class="specialty">Psychologist</p>
-                <div class="available-distance">
-                  <p class="availability available">Available</p>
-                  <p class="distance">20km</p>
-                </div>
-              </div>
-            </div>
-            <button class="book-now">Book Now</button>
-          </div>
-          <div class="doctor-card">
-            <div class="image-details">
-              <img
-                src="../static/images/Stethoscopeimage.png"
-                alt="Doctor's photo"
-              />
-              <div class="doctor-info">
-                <p class="doctor-name">Mogaji Bolaji A.</p>
-                <p class="specialty">Psychologist</p>
-                <div class="available-distance">
-                  <p class="availability available">Available</p>
-                  <p class="distance">20km</p>
-                </div>
-              </div>
-            </div>
-            <button class="book-now">Book Now</button>
-          </div>
-          <div class="doctor-card">
-            <div class="image-details">
-              <img
-                src="../static/images/Stethoscopeimage.png"
-                alt="Doctor's photo"
-              />
-              <div class="doctor-info">
-                <p class="doctor-name">Mogaji Bolaji A.</p>
-                <p class="specialty">Psychologist</p>
-                <div class="available-distance">
-                  <p class="availability available">Available</p>
-                  <p class="distance">20km</p>
-                </div>
-              </div>
-            </div>
-            <button class="book-now">Book Now</button>
-          </div>
-          <div class="doctor-card">
-            <div class="image-details">
-              <img
-                src="../static/images/Stethoscopeimage.png"
-                alt="Doctor's photo"
-              />
-              <div class="doctor-info">
-                <p class="doctor-name">Mogaji Bolaji A.</p>
-                <p class="specialty">Psychologist</p>
-                <div class="available-distance">
-                  <p class="availability available">Available</p>
-                  <p class="distance">20km</p>
-                </div>
-              </div>
-            </div>
-            <button class="book-now">Book Now</button>
-          </div>
-          <div class="doctor-card">
-            <div class="image-details">
-              <img
-                src="../static/images/Stethoscopeimage.png"
-                alt="Doctor's photo"
-              />
-              <div class="doctor-info">
-                <p class="doctor-name">Mogaji Bolaji A.</p>
-                <p class="specialty">Psychologist</p>
-                <div class="available-distance">
-                  <p class="availability available">Available</p>
-                  <p class="distance">20km</p>
-                </div>
-              </div>
-            </div>
-            <button class="book-now">Book Now</button>
-          </div>
+          </div> -->
 
           <!-- Repeat doctor card as needed -->
         </section>
@@ -375,5 +266,53 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const doctorList = document.getElementById('doctor-list');
+
+  // Function to create doctor card HTML with static image, availability, and distance
+  function createDoctorCard(doctor) {
+    return `
+      <div class="doctor-card">
+        <div class="image-details">
+          <!-- Static Image URL -->
+          <img src="/static/images/Stethoscopeimage.png" alt="Doctor's photo" />
+          <div class="doctor-info">
+            <p class="doctor-name">${doctor.name}</p>
+            <div class="available-distance">
+              <!-- Hardcoded availability and distance -->
+              <p class="availability available">Available</p>
+              <p class="distance">20km</p>
+            </div>
+          </div>
+        </div>
+        <button class="book-now">
+          <a href="./bookAppointment3.html">Book Now</a>
+        </button>
+      </div>
+    `;
+  }
+
+  // Fetch doctor data from backend (only fetching the doctor's name)
+  fetch('/bookAppointment')
+    .then(response => response.json())
+    .then(data => {
+      // Clear the doctor list
+      doctorList.innerHTML = '';
+
+      // Loop through the data and create doctor cards
+      data.doctors.forEach(doctor => {
+        const doctorCard = createDoctorCard(doctor);
+        doctorList.insertAdjacentHTML('beforeend', doctorCard);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching doctors:', error);
+      doctorList.innerHTML = '<p>Failed to load doctor information.</p>';
+    });
+});
+
+
+    </script>
   </body>
 </html>

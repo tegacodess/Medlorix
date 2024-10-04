@@ -164,64 +164,28 @@
                   accept=".pdf,.doc,.docx,.rtf"
                  
                 />
-                <label for="cv" id="cvPlaceholder">UPLOAD FILE</label>
+                <label for="cv" id="customPlaceholder">UPLOAD FILE</label>
               </div>
-              <div class="cover-letter">
+              <!-- <div class="cover-letter">
                 <div>
-                  <label for="coverLetter">Upload your Cover Letter</label>
-                  <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
+                  <label for="headshot">Upload your Headshot/Image</label>
+                  <p>(.jpg .jpeg .png | Max.: 10Mb)</p>
                 </div>
                 <input
                   type="file"
-                  id="coverLetter"
-                  name="coverLetter"
+                  id="headshot"
+                  name="headshot"
                   style="display: none"
-                  accept=".pdf,.doc,.docx,.rtf"
-                 
+                  accept=".jpg,.jpeg,.png"
                 />
-                <label for="coverLetter" id="coverLetterPlaceholder">UPLOAD FILE</label>
+                <label for="headshot" id="customPlaceholder">UPLOAD IMAGE</label>
               </div>
-            </div>
-
-            <div class="upload">
-              <div class="upload-resume">
-                <div>
-                  <label for="">Upload your CV/Resume</label>
-                  <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
-                </div>
-                <input
-                  type="file"
-                  id="cv"
-                  style="display: none"
-                  accept=".txt,.pdf,.docx"
-                  
-                />
-                <label for="fileInput" id="customPlaceholder"
-                  >UPLOAD FILE</label
-                >
-              </div>
-              <div class="cover-letter">
-                <div>
-                  <label for="">Upload your Cover Letter</label>
-                  <p>(.pdf .doc .docx .rtf | Max.: 10Mb)</p>
-                </div>
-                <input
-                  type="file"
-                  id="coverLetter"
-                  style="display: none"
-                  accept=".txt,.pdf,.docx"
-                  
-                />
-                <label for="fileInput" id="customPlaceholder"
-                  >UPLOAD FILE</label
-                >
-              </div>
-            </div>
-
+              
+            </div> -->
          
             <div class="checkbox">
               <input type="checkbox" />
-              <p>
+              <p> 
                 I have read the privacy policy and I hereby give my consent to
                 Medlorix Health to process and handle my personal data given in
                 the application form and in my CV for the purpose of preparing
@@ -255,7 +219,7 @@
     </footer>
   </body>
   <script>
-    const fileInput = document.getElementById("coverLetter");
+    const fileInput = document.getElementById("cv");
     const customPlaceholder = document.getElementById("customPlaceholder");
 
     fileInput.addEventListener("change", function () {
@@ -264,6 +228,7 @@
         : "Choose a file";
       customPlaceholder.textContent = fileName;
     });
+    
   </script>
   <script src="/static/js/doctorlogin.js"></script>
 </html>

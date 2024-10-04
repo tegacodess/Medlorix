@@ -79,10 +79,10 @@ form.addEventListener('submit', async function (event) {
         localStorage.clear();
 
 
-        const successMessage = document.createElement('p');
-        successMessage.textContent = 'Login successful! Redirecting...';
-        successMessage.style.color = 'green';
-        submitButton.parentNode.insertBefore(successMessage, submitButton);
+        // const successMessage = document.createElement('p');
+        // successMessage.textContent = 'Login successful! Redirecting...';
+        // successMessage.style.color = 'green';
+        // submitButton.parentNode.insertBefore(successMessage, submitButton);
 
         setTimeout(() => {
             window.location.href = '/chatbot';

@@ -198,10 +198,10 @@ if (signupForm) {
             // Clear localStorage
             localStorage.clear();
             
-            const successMessage = document.createElement('p');
-            successMessage.textContent = 'Sign up successful! Redirecting...';
-            successMessage.style.color = 'green';
-            submitButton.parentNode.appendChild(successMessage);                    
+            // const successMessage = document.createElement('p');
+            // successMessage.textContent = 'Sign up successful! Redirecting...';
+            // successMessage.style.color = 'green';
+            // submitButton.parentNode.appendChild(successMessage);                    
 
             // Redirect to a welcome page or dashboard
             setTimeout(() => {

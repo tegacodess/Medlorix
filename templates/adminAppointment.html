@@ -63,162 +63,101 @@
     <!-- Hero Section -->
     <section id="hero">
       <div id="appointment-requests">
-        <div class="top-div">
-          <h1>Appointment Requests</h1>
-          <p>See All</p>
-        </div>
-        <div class="table">
-          <table>
-            <thead>
-              <tr>
-                <th>USERNAME</th>
-                <th>ID</th>
-                <th>PHONE NUMBER</th>
-                <th>REQUEST DETAIL</th>
-                <th>ACTIONS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="parent-div">
-                    <div class="child-div1">
-                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
-                    </div>
-                    <div class="child-div2">
-                      <h3>Bola Taiwo</h3>
-                      <p>Stroke</p>
-                    </div>
-                  </div>
-                </td>
-                <td>12345678</td>
-                <td>812-4297-144</td>
-                <td>01/10/2024  - 5PM</td>
-                <td><p class="approved">Approved</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="parent-div">
-                    <div class="child-div1">
-                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
-                    </div>
-                    <div class="child-div2">
-                      <h3>Jide Babs</h3>
-                      <p>Stroke</p>
-                    </div>
-                  </div>
-                </td>
-                <td>12345678</td>
-                <td>812-4297-144</td>
-                <td>01/10/2024  - 5PM</td>
-                <td><p class="approved">Approved</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="parent-div">
-                    <div class="child-div1">
-                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
-                    </div>
-                    <div class="child-div2">
-                      <h3>Bola Johnson</h3>
-                      <p>Stroke</p>
-                    </div>
-                  </div>
-                </td>
-                <td>12345678</td>
-                <td>812-4297-144</td>
-                <td>01/10/2024  - 5PM</td>
-                <td><p class="approved">Approved</p></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <div class="top-div">
+              <h1>Appointment Requests</h1>
+              <p>See All</p>
+          </div>
+          <div class="table">
+              <table id="appointmentTable">
+                  <thead>
+                      <tr>
+                          <th>USERNAME</th>
+                          <th>ID</th>
+                          <th>PHONE NUMBER</th>
+                          <th>REQUEST DETAIL</th>
+                          <th>ACTIONS</th>
+                      </tr>
+                  </thead>
+                  <tbody id="appointmentTableBody">
+                      <!-- Table body will be populated dynamically -->
+                  </tbody>
+              </table>
+          </div>
       </div>
-      <div id="recent-patients">
-        <div class="top-div">
-          <h1>Recent Patients</h1>
-          <p>See All</p>
-        </div>
-        <div class="table">
-          <table>
-            <thead>
-              <tr>
-                <th>USERNAME</th>
-                <th>ID</th>
-                <th>PHONE NUMBER</th>
-                <th>DIAGNOSIS</th>
-                <th>DATE</th>
-                <th>STATUS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="parent-div">
-                    <div class="child-div1">
-                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
-                    </div>
-                    <div class="child-div2">
-                      <h3>Jide Babs</h3>
-                    </div>
-                  </div>
-                </td>
-                <td>12345678</td>
-                <td>812-4297-144</td>
-                <td>Diabetes</td>
-                <td>01/10/2024</td>
-                <td>Outpatient</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="parent-div">
-                    <div class="child-div1">
-                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
-                    </div>
-                    <div class="child-div2">
-                      <h3>Bola Taiwo</h3>
-                    </div>
-                  </div>
-                </td>
-                <td>12345678</td>
-                <td>812-4297-144</td>
-                <td>Diabetes</td>
-                <td>01/10/2024</td>
-                <td>Outpatient</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="parent-div">
-                    <div class="child-div1">
-                      <img src="/static/images/AdminPage/Image User 1.png" alt="" class="profile-pic">
-                    </div>
-                    <div class="child-div2">
-                      <h3>Bola Johnson</h3>
-                    </div>
-                  </div>
-                </td>
-                <td>12345678</td>
-                <td>812-4297-144</td>
-                <td>Diabetes</td>
-                <td>01/10/2024</td>
-                <td>Outpatient</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  </section>
+  <footer>
+    <div class="lastlayer">
+      <p class="copyright">
+        Copyright &copy; 2024. Medlorix. All rights reserved
+      </p>
+      <div>
+        <a href="/terms"><p>Terms and Conditions</p></a>
+        <a href="/terms"><p>Privacy Policy</p></a>
       </div>
-    </section>
-    <!-- Footer Section -->
-    <footer>
-      <div class="lastlayer">
-        <p class="copyright">
-          Copyright &copy; 2024. Medlorix. All rights reserved
-        </p>
-        <div>
-          <a href="/terms"><p>Terms and Conditions</p></a>
-          <a href="/terms"><p>Privacy Policy</p></a>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
+  <script>
+    // Function to fetch appointment data from the API
+    async function fetchAppointments() {
+        try {
+            const response = await fetch('/patient_details');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log("Fetched appointments data:", data); // Log the response to check the structure
+            return data;
+        } catch (error) {
+            console.error("Could not fetch appointment data:", error);
+            return [];
+        }
+    }
+
+    // Function to populate the table with appointment data
+    function populateTable(appointments) {
+        const tableBody = document.getElementById('appointmentTableBody');
+        tableBody.innerHTML = ''; // Clear existing rows
+
+        // Loop through each appointment and append a row to the table
+        appointments.forEach(appointment => {
+            const row = document.createElement('tr');
+
+            // Format the appointment date
+            const appointmentDate = appointment.appointment_date ? new Date(appointment.appointment_date).toLocaleDateString() : 'N/A';
+
+            row.innerHTML = `
+                <td>
+                    <div class="parent-div">
+                        <div class="child-div1">
+                            <!-- Use the static image from the static folder -->
+                            <img src="/static/images/AdminPage/Image User 1.png" alt="User Profile" class="profile-pic">
+                        </div>
+                        <div class="child-div2">
+                            <h3>${appointment.first_name} ${appointment.last_name}</h3>
+                            <p>${appointment.reason || 'No specific reason provided'}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>${appointment.id}</td>
+                <td>${appointment.phone_number}</td>
+                <td>${appointmentDate}</td>
+                <td><button class="approved">Approved</button></td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Function to initialize the page
+    async function init() {
+        const appointments = await fetchAppointments(); // Fetch appointments from the server
+        populateTable(appointments); // Populate the table with the fetched data
+    }
+
+    // Call init when the page loads
+    window.addEventListener('load', init);
+</script>
+
+
+  
   </body>
 </html>

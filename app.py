@@ -11,7 +11,9 @@ import os, random
 load_dotenv()
 
 app = Flask(__name__, static_folder='static')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///Appointments.db')
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///Appointments.db')
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'Appointments.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
@@ -123,6 +125,40 @@ def submit_appointment():
         return jsonify({"success": False, "error": "Invalid request format"}), 400
     
 
+@app.route('/patient_details')
+def patient_details():
+    # Fetch all appointments from the database
+    appointments = Appointment.query.all()
+    
+    appointment_data = []
+    
+    for appointment in appointments:
+        # Generate a random display ID for the appointment
+        display_id = f"{random.randint(100000, 999999)}"
+        
+        # Construct the appointment details dictionary
+        appointment_data.append({
+            'id': appointment.id,
+            'display_id': display_id,
+            'first_name': appointment.first_name,
+            'last_name': appointment.last_name,
+            'email': appointment.email,
+            'phone_number': appointment.phone_number,
+            'doctor': appointment.doctor,
+            'specialty': appointment.specialty,
+            'country': appointment.country,
+            'state': appointment.state,
+            'lg': appointment.lg,  # Local government field
+            'existing_patient': appointment.existing_patient,
+            'appointment_date': appointment.appointment_date.isoformat() if appointment.appointment_date else None,
+            'reason': appointment.reason,
+            'created_at': appointment.created_at.isoformat() if hasattr(appointment, 'created_at') else datetime.now().isoformat()
+        })
+    
+    # Return the appointment details as a JSON response
+    return jsonify(appointment_data), 200
+
+
 @app.route('/doctor-login1', methods=['POST'])
 def doctor_application():
     if request.method == 'POST':
@@ -156,7 +192,7 @@ def doctor_application():
         try:
             db.session.add(new_application)
             db.session.commit()
-            return jsonify({"success": True, "redirect": url_for('adminRequests')})
+            return jsonify({"success": True, "redirect": url_for('doctor_confirmation')})
         except Exception as e:
             db.session.rollback()
             return jsonify({"success": False, "error": str(e)}), 500
@@ -171,6 +207,10 @@ def book_appointment2():
 @app.route('/appointment-confirmation')
 def appointment_confirmation():
     return render_template('bookAppointmentConfirmation.html')
+
+@app.route('/doctor-confirmation')
+def doctor_confirmation():
+    return render_template('DoctorConfirmation.html')
 
 @app.route('/services')
 def services():
@@ -222,6 +262,38 @@ def admin_requests():
         })
     
     return jsonify(applications_data)
+
+@app.route('/update_status', methods=['POST'])
+def update_status():
+    data = request.json
+    doctor_id = data.get('id')
+    new_status = data.get('status')
+    
+    # Here, you would update the status in your database
+    # For example:
+    # doctor = Doctor.query.get(doctor_id)
+    # doctor.status = new_status
+    # db.session.commit()
+    
+    if new_status == 'approved':
+        print("stautus loaded ")
+        print(doctor_id)
+        # Perform any necessary actions for approved doctors
+        # For example, you might want to add them to a different table
+        pass
+    
+    return jsonify({"success": True, "message": f"Status updated to {new_status}"})
+
+@app.route('/bookAppointment', methods=['GET'])
+def book_appointment():
+    # Fetch only approved doctors from the database
+    approved_doctors = DoctorApplication.query.filter_by(status='approved').all()
+    
+    # Return the approved doctors' details as JSON
+    doctors_data = [{"id": doctor.id, "name": doctor.name, "specialty": doctor.specialty} for doctor in approved_doctors]
+    return jsonify(doctors_data), 200
+
+
 
 
 
@@ -297,4 +369,10 @@ def init_db():
 
 if __name__ == '__main__':
     init_db()
+    try:
+        with app.app_context():
+            db.create_all()
+    except Exception as e:
+        print(f"Error initializing database: {e}")
+        
     app.run(debug=True)

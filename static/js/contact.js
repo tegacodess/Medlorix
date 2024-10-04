@@ -1,6 +1,6 @@
 const sendMessage = document.getElementById("send-message");
 
-sendMessage.addEventListener("click", function() {
+sendMessage.addEventListener("onclick", function() {
   var params = {
     from_name : document.getElementById("name").value,
     email : document.getElementById("email").value,

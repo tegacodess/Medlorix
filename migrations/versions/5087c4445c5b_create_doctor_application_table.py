@@ -1,8 +1,8 @@
 """Create doctor_application table
 
-Revision ID: 0478a90c8548
+Revision ID: 5087c4445c5b
 Revises: 7b73d430b14e
-Create Date: 2024-10-03 11:03:28.638621
+Create Date: 2024-10-03 19:55:56.754676
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '0478a90c8548'
+revision = '5087c4445c5b'
 down_revision = '7b73d430b14e'
 branch_labels = None
 depends_on = None
