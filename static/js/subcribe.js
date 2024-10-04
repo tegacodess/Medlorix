@@ -13,7 +13,7 @@ subscribeButton.addEventListener("click", function() {
     messageDisplay.textContent = "Please enter a valid email address";
     messageDisplay.style.color = 'red';
     return;
-}
+  }
   if (email === "") {
     messageDisplay.textContent = "Please enter a valid email address.";
     messageDisplay.style.color = 'red';

@@ -22,4 +22,4 @@ function sendMail() {
       alert("Your message sent successfully!!!");
     })
     .catch((err) => console.log(err));
-}
+};
