@@ -91,6 +91,14 @@ def place_details():
 def book_appointment_page():
     return render_template('bookAppointment.html')
 
+# @app.route('/proxy', methods=['POST'])
+# def proxy():
+#     try:
+#         response = requests.post('https://calendly.com/amablebless/becky', json=request.json)
+#         return (response.content, response.status_code, dict(response.headers))
+#     except Exception as e:
+#         return jsonify({'error': str(e)}), 500
+
 @app.route('/book-appointment', methods=['POST'])
 def submit_appointment():
     if request.is_json:
@@ -263,26 +271,65 @@ def admin_requests():
     
     return jsonify(applications_data)
 
+@app.route('/get-approved-doctors', methods=['GET'])
+def get_approved_doctors():
+    approved_doctors = DoctorApplication.query.filter_by(status='approved').all()
+    
+    doctors_list = []
+    for doctor in approved_doctors:
+        doctor_data = {
+            "id": doctor.id,
+            "firstname": doctor.firstname,
+            "lastname": doctor.lastname,
+            "speciality": doctor.speciality,
+        }
+        doctors_list.append(doctor_data)
+    
+    return jsonify(doctors_list)
+
 @app.route('/update_status', methods=['POST'])
 def update_status():
     data = request.json
     doctor_id = data.get('id')
     new_status = data.get('status')
     
-    # Here, you would update the status in your database
-    # For example:
-    # doctor = Doctor.query.get(doctor_id)
-    # doctor.status = new_status
-    # db.session.commit()
-    
-    if new_status == 'approved':
-        print("stautus loaded ")
-        print(doctor_id)
-        # Perform any necessary actions for approved doctors
-        # For example, you might want to add them to a different table
-        pass
+
+    doctor = DoctorApplication.query.get(doctor_id)
+    if doctor:
+        doctor.status = new_status 
+        db.session.commit()
+
+        if new_status == 'approved':
+            print(f"Doctor {doctor.firstname} {doctor.lastname} is approved.")
+    else:
+        return jsonify({"success": False, "message": "Doctor not found"}), 404
     
     return jsonify({"success": True, "message": f"Status updated to {new_status}"})
+
+
+# @app.route('/update_status', methods=['POST'])
+# def update_status():
+#     data = request.json
+#     doctor_id = data.get('id')
+#     new_status = data.get('status')
+#     doctor = data.get('doctorName')
+    
+#     # Here, you would update the status in your database
+#     # For example:
+#     # doctor = Doctor.query.get(doctor_id)
+#     # doctor.status = new_status
+#     # db.session.commit()
+    
+#     if new_status == 'approved':
+#         print(new_status)
+#         print("status loaded ")
+#         print(doctor_id)
+#         print(doctor)
+#         # Perform any necessary actions for approved doctors
+#         # For example, you might want to add them to a different table
+#         pass
+    
+#     return jsonify({"success": True, "message": f"Status updated to {new_status}"})
 
 @app.route('/bookAppointment', methods=['GET'])
 def book_appointment():

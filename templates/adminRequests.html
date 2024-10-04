@@ -611,7 +611,7 @@
             </td>
             <td>${new Date(app.created_at).toLocaleDateString()}</td>
             <td>
-                <select class="status-select" data-id="${app.id}">
+                <select class="status-select" data-id="${app.id}" data-name="${app.firstname} ${app.lastname}">
                 <option value="pending" ${app.status === 'pending' ? 'selected' : ''}>Pending</option>
                 <option value="approved" ${app.status === 'approved' ? 'selected' : ''}>Approved</option>
                 <option value="cancel" ${app.status === 'cancel' ? 'selected' : ''}>Cancel</option>
@@ -631,6 +631,14 @@
             updateSelectColor(this); // Update color on change
         });
 
+        statusSelect.addEventListener('change', function() {
+        const newStatus = this.value;
+        const doctorId = this.dataset.id;
+        const doctorName = this.dataset.firstname;
+        updateStatus(doctorId, newStatus, doctorName);
+        updateSelectColor(this);
+    });
+
         return row;
     }
 
@@ -645,27 +653,34 @@
         }
     }
 
-    async function updateStatus(id, status) {
-        try {
-            const response = await fetch('/update_status', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ id, status }),
-            });
+    async function updateStatus(id, status, doctorName) {
+    try {
+        const response = await fetch('/update_status', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id, status, doctorName }),
+        });
 
-            if (!response.ok) {
-                throw new Error('Failed to update status');
-            }
-
-            if (status === 'approved') {
-                sendToBookAppointment2(id);
-            }
-        } catch (error) {
-            console.error('Error updating status:', error);
+        if (!response.ok) {
+            throw new Error('Failed to update status');
         }
+
+        const result = await response.json();
+        // console.log(`Status updated successfully for Dr. ${doctorName}:`, result);
+
+        // alert(`Status for Dr. ${doctorName} has been updated to ${status}.`);
+
+        if (status === 'approved') {
+            await sendToBookAppointment2(id);
+        }
+    } catch (error) {
+        console.error('Error updating status:', error);
+        // Optionally, revert the select element to its previous state
+        // and show an error message to the user
     }
+}
 
     async function sendToBookAppointment2(id) {
         try {

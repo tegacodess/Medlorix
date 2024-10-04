@@ -32,5 +32,6 @@ class DoctorApplication(db.Model):
     gender = db.Column(db.String(10), nullable=False)
     country = db.Column(db.String(100), nullable=False)
     cv = db.Column(db.String(255), nullable=True)
+    status = db.Column(db.String(50), default='pending')
     cover_letter = db.Column(db.String(255), nullable=True)
     privacy_policy = db.Column(db.Boolean, nullable=False)

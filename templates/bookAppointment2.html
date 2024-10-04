@@ -1,24 +1,308 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medlorix │ Welcome</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="/static/css/bookAppointment2.css" />
-    <!-- font awesome -->
     <head>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       />
     </head>
+    <script src="/static/js/index.js" defer></script>
+    <script src="/static/js/bookAppointment.js" defer></script>
+    <script src="/static/js/subcribe.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("WesP-F72yRnUJFma5");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a href="/"
+        ><img
+          class="brand-logo"
+          src="/static/images/Medlorix-logo.svg"
+          alt="Medlorix logo"
+      /></a>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="navigation">
+        <a href="/">HOME</a>
+        <div class="dropdown">
+          <a href="/services" class="dropbtn"
+            >SERVICES
+            <img
+              class="dropdown-down"
+              src="/static/images/ClinicSearchPage/dropdownIcon.png"
+              alt=""
+            />
+          </a>
+          <div class="dropdown-content">
+            <a href="/services" class="dropdown-item"
+              >Our Services
+              <span class="dropdown-icon">→</span>
+            </a>
+            <a href="/clinicSearch" class="dropdown-item"
+              >Clinic Search
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/bookAppointment" class="dropdown-item"
+              >See a Doctor
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/sign-up" class="dropdown-item"
+              >AI Diagnosis
+              <span class="dropdown-icon">→</span>
+            </a>
+
+            <a href="/career" class="dropdown-item"
+              >Careers
+
+              <span class="dropdown-icon">→</span>
+            </a>
+          </div>
+        </div>
+        <a href="/about">ABOUT US</a>
+        <a href="/faq">FAQS</a>
+        <a href="/contact">CONTACT</a>
+      </nav>
+
+      <a href="/services"> <button class="green">GET STARTED</button></a>
+    </header>
+  
+    <section class="appointment-section">
+      <div class="overlay">
+        <img
+          src="/static/images/HomePage/Services/book-appointment.jfif"
+          alt="Doctor with patient"
+          class="background-image"
+        />
+      </div>
+      <div class="content">
+        <h1>Book an appointment</h1>
+        <p>
+          To request an appointment using our website, please complete the form
+          below. After you submit this information, a representative will
+          contact you by phone within two business days.
+          <strong>If you have a medical emergency, please dial 911.</strong>
+        </p>
+      </div>
+    </section>
+    <section class="details">
+      <p class="steps">Step 2 of 2</p>
+
+      <div class="container">
+        <div class="first-place">
+          <section class="header">
+            <h2>Select Doctor's Speciality</h2>
+            <div class="specialty-dropdown select-container">
+              <select id="speciality" class="custom-dropdown">
+                <option value="psychology">Psychology</option>
+                <option value="gynecology">Gynecology</option>
+            
+              </select>
+            </div>
+          </section>
+
+          <section class="filter-options">
+            <h2>Filter Options</h2>
+            <label>
+              <input type="checkbox" name="alphabetical" /> Alphabetical Order
+            </label>
+            <label> <input type="checkbox" name="distance" /> Distance </label>
+          </section>
+        </div>
+        <p><i class="fas fa-sliders-h"></i> Filter Results</p>
+
+        <section class="doctor-list" id="doctor-list">
+
+        </section>
+      </div>
+    </section>
+
+   
+    <section id="doctor">
+      <div class="doctor-section">
+        <img
+          src="/static/images/HomePage/Services/see-a-doctor.jfif"
+          alt="Doctor"
+          class="background-image"
+        />
+        <div class="overlay"></div>
+        <div class="content">
+          <p class="heading">Are you a doctor?</p>
+          <p>
+            Join our continent-wide network of clinical specialists dedicated to
+            providing the highest quality of care and changing how healthcare is
+            delivered.
+          </p>
+          <a href="/doctorApplication" class="button">Become Our Partner</a>
+        </div>
+      </div>
+      <div class="shadow_color"></div>
+    </section>
+
+    <div id="subscribe">
+      <div class="top-layer">
+        <h2>Stay up to date on healthy living</h2>
+        <p>
+          Be the first to receive expert insights, practical advice, and
+          exclusive content directly to your inbox.
+        </p>
+      </div>
+      <div class="bottom-layer">
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="subscribeButton">SUBSCRIBE</button>
+      </div>
+      <p id="alertMessage"></p>
+    </div>
+
+
+    <footer>
+      <div class="footer">
+        <div class="main-footer">
+          <div class="logo-about">
+            <a href="/"
+              ><img
+                class="brand-logo"
+                src="/static/images/Medlorix-logo.svg"
+                alt="Brand Logo"
+            /></a>
+            <p>
+              simplifies healthcare by helping users find clinics, book
+              appointments, and AI diagnosis. <br />All in one easy-to-use
+              platform.
+            </p>
+            <div class="social-media">
+              <a href=""
+                ><img src="/static/images/Icons/google.png" alt="Google"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/facebook.png" alt="Facebook"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/twitter.png" alt="Twitter"
+              /></a>
+              <a href=""
+                ><img src="/static/images/Icons/instagram.png" alt="Instagram"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="firstlayer">
+          <div class="company">
+            <p><span>Company</span></p>
+            <a href="/src/about.html">About us</a>
+            <a href="/src/about.html">Our mission</a>
+            <a href="/src/about.html">Our Team</a>
+          </div>
+          <div class="company">
+            <p><span>Our Services</span></p>
+            <a href="/src/clinicSearch.html">Clinic Search</a>
+            <a href="/src/sign-up.html">AI-Based Diagnosis</a>
+            <a href="/src/contact.html">Contact Us</a>
+          </div>
+          <div class="company">
+            <p><span>Legal</span></p>
+            <a href="/terms">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/terms">Security</a>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="/static/images/Icons/up-arrow.svg" />
+      </button>
+      <div class="lastlayer">
+        <p class="copyright">
+          Copyright &copy; 2024. Medlorix. All rights reserved
+        </p>
+        <div>
+          <a href="/terms"><p>Terms and Conditions</p></a>
+          <a href="/terms"><p>Privacy Policy</p></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const doctorList = document.getElementById('doctor-list');
+
+ 
+  function createDoctorCard(doctor) {
+    return `
+      <div class="doctor-card">
+        <div class="image-details">
+         
+          <img src="/static/images/Stethoscopeimage.png" alt="Doctor's photo" />
+          <div class="doctor-info">
+            <p class="doctor-name">{doctor.name}</p>
+            <div class="available-distance">
+             
+              <p class="availability available">Available</p>
+              <p class="distance">20km</p>
+            </div>
+          </div>
+        </div>
+        <button class="book-now">
+          <a href="./bookAppointment3.html">Book Now</a>
+        </button>
+      </div>
+    `;
+  }
+
+  fetch('/bookAppointment')
+    .then(response => response.json())
+    .then(data => {
+ 
+      doctorList.innerHTML = '';
+
+ 
+      data.doctors.forEach(doctor => {
+        const doctorCard = createDoctorCard(doctor);
+        doctorList.insertAdjacentHTML('beforeend', doctorCard);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching doctors:', error);
+      doctorList.innerHTML = '<p>Failed to load doctor information.</p>';
+    });
+});
+
+
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medlorix │ Book Appointment</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/css/bookAppointment.css" />
 
     <!-- JavaScript -->
     <script src="/static/js/index.js" defer></script>
-    <script src="/static/js/bookAppointment.js" defer></script>
     <script src="/static/js/subcribe.js" defer></script>
     <script
       type="text/javascript"
@@ -80,7 +364,6 @@
 
             <a href="/career" class="dropdown-item"
               >Careers
-
               <span class="dropdown-icon">→</span>
             </a>
           </div>
@@ -92,112 +375,30 @@
       <!-- Green buttons -->
       <a href="/services"> <button class="green">GET STARTED</button></a>
     </header>
-    <!-- hero section -->
-    <section class="appointment-section">
-      <div class="overlay">
-        <img
-          src="/static/images/HomePage/Services/book-appointment.jfif"
-          alt="Doctor with patient"
-          class="background-image"
-        />
-      </div>
-      <div class="content">
-        <h1>Book an appointment</h1>
-        <p>
-          To request an appointment using our website, please complete the form
-          below. After you submit this information, a representative will
-          contact you by phone within two business days.
-          <strong>If you have a medical emergency, please dial 911.</strong>
-        </p>
-      </div>
-    </section>
 
-    <!-- Hospital details -->
-    <section class="details">
-      <p class="steps">Step 2 of 2</p>
+    <!-- Main content -->
+    <main>
+      <h1>Book Your Appointment</h1>
+      
+      <!-- Appointment form -->
+      <form id="appointmentForm">
+        <label for="speciality">Speciality:</label>
+        <select id="speciality" name="speciality" required>
+          <option value="">Select a speciality</option>
+          <option value="general">General Practitioner</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="dermatology">Dermatology</option>
+          <!-- Add more specialities as needed -->
+        </select>
 
-      <!--  -->
-      <div class="container">
-        <div class="first-place">
-          <section class="header">
-            <h2>Select Doctor's Speciality</h2>
-            <div class="specialty-dropdown select-container">
-              <select id="speciality" class="custom-dropdown">
-                <option value="psychology">Psychology</option>
-                <option value="gynecology">Gynecology</option>
-                <!-- Add more specialities as needed -->
-              </select>
-            </div>
-          </section>
+        <!-- Add more form fields as necessary -->
 
-          <section class="filter-options">
-            <h2>Filter Options</h2>
-            <label>
-              <input type="checkbox" name="alphabetical" /> Alphabetical Order
-            </label>
-            <label> <input type="checkbox" name="distance" /> Distance </label>
-          </section>
-        </div>
-        <p><i class="fas fa-sliders-h"></i> Filter Results</p>
+        <button type="submit">Search for Doctors</button>
+      </form>
 
-        <section class="doctor-list" id="doctor-list">
-          <!-- <div class="doctor-card">
-            <div class="image-details">
-              <img
-                src="../static/images/Stethoscopeimage.png"
-                alt="Doctor's photo"
-              />
-              <div class="doctor-info">
-                <p class="doctor-name">Mogaji Bolaji A.</p>
-              </div>
-            </div>
-            <button class="book-now">
-              <a href="./bookAppointment3.html"></a>Book Now
-            </button>
-          </div> -->
-
-          <!-- Repeat doctor card as needed -->
-        </section>
-      </div>
-    </section>
-
-    <!-- see a doctor section -->
-    <section id="doctor">
-      <div class="doctor-section">
-        <img
-          src="/static/images/HomePage/Services/see-a-doctor.jfif"
-          alt="Doctor"
-          class="background-image"
-        />
-        <div class="overlay"></div>
-        <div class="content">
-          <p class="heading">Are you a doctor?</p>
-          <p>
-            Join our continent-wide network of clinical specialists dedicated to
-            providing the highest quality of care and changing how healthcare is
-            delivered.
-          </p>
-          <a href="/doctorApplication" class="button">Become Our Partner</a>
-        </div>
-      </div>
-      <div class="shadow_color"></div>
-    </section>
-
-    <!-- Subscribe Section -->
-    <div id="subscribe">
-      <div class="top-layer">
-        <h2>Stay up to date on healthy living</h2>
-        <p>
-          Be the first to receive expert insights, practical advice, and
-          exclusive content directly to your inbox.
-        </p>
-      </div>
-      <div class="bottom-layer">
-        <input type="email" id="emailInput" placeholder="Enter your email" />
-        <button id="subscribeButton">SUBSCRIBE</button>
-      </div>
-      <p id="alertMessage"></p>
-    </div>
+      <!-- Container for dynamically loaded doctor cards -->
+      <div id="doctor-cards-container"></div>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -234,15 +435,15 @@
         <div class="firstlayer">
           <div class="company">
             <p><span>Company</span></p>
-            <a href="/src/about.html">About us</a>
-            <a href="/src/about.html">Our mission</a>
-            <a href="/src/about.html">Our Team</a>
+            <a href="/about">About us</a>
+            <a href="/about">Our mission</a>
+            <a href="/about">Our Team</a>
           </div>
           <div class="company">
             <p><span>Our Services</span></p>
-            <a href="/src/clinicSearch.html">Clinic Search</a>
-            <a href="/src/sign-up.html">AI-Based Diagnosis</a>
-            <a href="/src/contact.html">Contact Us</a>
+            <a href="/clinicSearch">Clinic Search</a>
+            <a href="/sign-up">AI-Based Diagnosis</a>
+            <a href="/contact">Contact Us</a>
           </div>
           <div class="company">
             <p><span>Legal</span></p>
@@ -266,53 +467,118 @@
         </div>
       </div>
     </footer>
+
+    <!-- JavaScript for dynamic doctor loading and appointment booking -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-  const doctorList = document.getElementById('doctor-list');
+      // Retrieve appointment details from local storage
+      function getAppointmentDetails() {
+          const appointmentDetails = JSON.parse(localStorage.getItem('appointmentDetails'));
+          if (!appointmentDetails) {
+              console.error('No appointment details found in local storage');
+              return null;
+          }
+          return appointmentDetails;
+      }
 
-  // Function to create doctor card HTML with static image, availability, and distance
-  function createDoctorCard(doctor) {
-    return `
-      <div class="doctor-card">
-        <div class="image-details">
-          <!-- Static Image URL -->
-          <img src="/static/images/Stethoscopeimage.png" alt="Doctor's photo" />
-          <div class="doctor-info">
-            <p class="doctor-name">${doctor.name}</p>
-            <div class="available-distance">
-              <!-- Hardcoded availability and distance -->
-              <p class="availability available">Available</p>
-              <p class="distance">20km</p>
-            </div>
-          </div>
-        </div>
-        <button class="book-now">
-          <a href="./bookAppointment3.html">Book Now</a>
-        </button>
-      </div>
-    `;
-  }
+      // Populate the form with retrieved details
+      function populateForm(details) {
+          if (!details) return;
+          document.getElementById('speciality').value = details.speciality || '';
+          // Add more fields as necessary
+      }
 
-  // Fetch doctor data from backend (only fetching the doctor's name)
-  fetch('/bookAppointment')
-    .then(response => response.json())
-    .then(data => {
-      // Clear the doctor list
-      doctorList.innerHTML = '';
+      // Fetch approved doctors and create cards
+      async function loadApprovedDoctors() {
+          try {
+              const response = await fetch('/get-approved-doctors');
+              if (!response.ok) {
+                  throw new Error('Failed to fetch approved doctors');
+              }
+              const doctors = await response.json();
+              const container = document.getElementById('doctor-cards-container');
+              container.innerHTML = ''; // Clear existing cards
 
-      // Loop through the data and create doctor cards
-      data.doctors.forEach(doctor => {
-        const doctorCard = createDoctorCard(doctor);
-        doctorList.insertAdjacentHTML('beforeend', doctorCard);
+              doctors.forEach(doctor => {
+                  const card = createDoctorCard(doctor);
+                  container.appendChild(card);
+              });
+          } catch (error) {
+              console.error('Error loading approved doctors:', error);
+          }
+      }
+
+      // Create a doctor card element
+      function createDoctorCard(doctor) {
+          const card = document.createElement('div');
+          card.className = 'doctor-card';
+          card.dataset.doctorId = doctor.id;
+
+          card.innerHTML = `
+              <img src="${doctor.profilePicUrl || '/static/images/default-doctor.png'}" alt="Dr. ${doctor.firstname} ${doctor.lastname}">
+              <h3>Dr. ${doctor.firstname} ${doctor.lastname}</h3>
+              <p>Speciality: ${doctor.speciality}</p>
+              <button class="book-now">Book Now</button>
+          `;
+
+          card.querySelector('.book-now').addEventListener('click', function() {
+              bookAppointment(doctor.id);
+          });
+
+          return card;
+      }
+
+      // Handle the booking process
+      async function bookAppointment(doctorId) {
+          const appointmentDetails = getAppointmentDetails();
+          if (!appointmentDetails) {
+              alert('Please complete the first step of the appointment booking process.');
+              return;
+          }
+
+          const finalBookingDetails = {
+              ...appointmentDetails,
+              doctorId: doctorId
+          };
+
+          try {
+              const response = await fetch('/book-appointment', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(finalBookingDetails),
+              });
+
+              if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+              }
+
+              const result = await response.json();
+              alert('Appointment booked successfully!');
+              localStorage.removeItem('appointmentDetails');
+              window.location.href = '/booking-confirmation';
+          } catch (error) {
+              console.error('Error booking appointment:', error);
+              alert('There was an error booking your appointment. Please try again.');
+          }
+      }
+
+      // Run when the page loads
+      document.addEventListener('DOMContentLoaded', function() {
+          const details = getAppointmentDetails();
+          populateForm(details);
+          loadApprovedDoctors();
+
+          // Handle form submission
+          document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              const speciality = document.getElementById('speciality').value;
+              // Save form data to local storage
+              localStorage.setItem('appointmentDetails', JSON.stringify({ speciality }));
+              // Reload approved doctors (you might want to filter by speciality here)
+              loadApprovedDoctors();
+          });
       });
-    })
-    .catch(error => {
-      console.error('Error fetching doctors:', error);
-      doctorList.innerHTML = '<p>Failed to load doctor information.</p>';
-    });
-});
-
-
     </script>
   </body>
 </html>
