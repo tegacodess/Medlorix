@@ -298,7 +298,7 @@ function handleFormSubmission(event) {
   // Add doctor information (you may want to modify this part based on your needs)
   jsonData.doctor = "Selected Doctor Name";
   jsonData.specialty = "Selected Specialty";
-  jsonData.lg = document.querySelector("#local-government").value; 
+  // jsonData.lg = document.querySelector("#local-government").value; 
 
   submitAppointment(jsonData);
 }
